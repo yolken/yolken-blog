@@ -12,11 +12,11 @@ Over the last few job searches, I've developed a strategy that has significantly
 performance on these questions, to the point that I'm now rarely phased by them. In this post, I'd
 like to share what I've learned.
 
-## Practice, Practice, Practice
+## Practice, practice, practice
 
 The key to doing an excellent job in a coding-oriented software interview is very simple- you
 *must* practice beforehand. The interesting thing about practice is that it's both more effective
-and more necessary than one would intuitively think. Let me explain more.
+and more necessary than one would intuitively think. Let me explain why.
 
 ### Why it's more effective than you think
 
@@ -66,30 +66,70 @@ realistic to me; they're either not the right level of difficulty, or they're si
 in a 45 minute interview. These questions may be fun to work through, but if your goal is to prep
 for interviews, solving them may not be the most efficient use of time.
 
-## Strategy
+Note that I have no official relationship with Leetcode. I just like them.
 
-I generally start practicing in Leetcode about 3 weeks before my first interview. My general
-strategy is:
+### Leetcode question difficulty
 
-1. **Pay for a one month premium subscription.** This allows you to sort the questions by frequency
-  (see item 2) and also provides some other benefits like getting access to locked questions.
-2. **Sort the questions in descending order of frequency.** There are over 1000 questions; sorting
-  by frequency is extremely helpful for focusing on the most common types of questions.
-3. **Start at the top, work down (roughly).** I generally don't do the questions in exact order;
-  in particular, I may skip harder questions at the beginning and then come back to them. Later
-  on in the process, as I feel more confident, I'll skip over easy questions or ones that are
-  very similar to questions I've already done.
+Leetcode classifies questions as either "easy", "medium", or "hard". I've found that
+the sweet spot for actual interviews typically begins at the middle of the "medium" tier and runs
+into the bottom (i.e., easier) chunk of "hard". "Easy" questions are fine to do as stepping stones
+to the "medium" tier, but you're less likely to see these types of questions in an actual interview.
+
+The hardest "hard" questions in Leetcode are annoying because they often require obscure
+algorithmic tricks to solve efficiently. I don't worry about these questions too much because,
+in the unlikely event that I were to get a question in this tier, the interviewer would (hopefully)
+provide hints. They also don't generalize as well as the easier questions, so studying them is not
+the most effective use of time.
+
+### Language choice
+
+Leetcode supports the languages that are most commonly used for interviews including C++, Java,
+Javascript, Python, and Ruby. You should obviously practice in the one(s) that you intend to use.
+
+I personally only interview in Python (for reasons to be explained in a future blog post), but
+if you feel more comfortable in another language, you should go with that.
+
+### General strategy
+
+I like doing my interview prep in a short, intensive burst starting about 3 weeks before my
+first interview. This ensures that the studying stays fresh in my mind and also minimizes the number
+of weeks during which interview prep interferes with the other activities in my life.
+
+When I'm ready to start, I pay for a one month premium subscription. It's a bit pricy (about $35 as
+of early 2019), but I find it worth the money because it removes a bunch of restrictions in the
+free product including access to locked questions and the ability to sort questions by frequency.
+
+I then sort the questions in decreasing order of frequency and go through them roughly in order.
+I say "roughly" because I like to initially focus on the easier questions, and then, as I get
+more confidence, shift to the ones in the medium-to-hard range which, as discussed above, are
+more typical in actual interviews. Also, some questions further down the list are just small
+variations on previous questions, which I usually skip over.
 
 My goal is to complete around 100 questions by the time of my first interview. I then continue
 practicing while interviews are ongoing until my one month subscription is over.
 
-### Aside: Picking a language
+### Missing question types
 
+Leetcode has good coverage for most types of coding questions, but I've definitely noticed some
+gaps over the course of my recent job hunts. In addition to practicing in Leetcode, you should also
+be aware of questions that involve:
 
-## The Hit Parade
+1. **"Design a class that does ...":** Leetcode has to provide an interface so that it can run test
+  cases against your solution. In a real interview, the interface might not be provided and,
+  moreover, designing it might be a big chunk of the question.
+2. **Concurrency:** Leetcode doesn't provide much coverage for concurrency-related problems. You may
+  want to brush up on concurrency primitives in your interview language, particularly if you don't
+  use these as part of your day-to-day work.
+3. **Network or file system operations:** Leetcode solutions run in a sandbox, and thus aren't
+  going to be making HTTP requests or reading files from the file system. These types of questions
+  aren't super common, but some companies do like them so you may want to brush up on how to do
+  them in your chosen interview language.
+
+## The "Hit Parade"
 
 During my most recent rounds of interviewing, there were some types of questions that came up
-over-and-over again. If you're on the market, 
+over-and-over again. If you're on the market, you may want to spend a little extra time to make
+sure you're comfortable with questions of these types.
 
 ### Searching and/or exploring in a 2D grid
 
