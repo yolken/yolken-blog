@@ -4,7 +4,7 @@ Having switched jobs a few times over the last few years, I've done a *a lot* of
 engineering interviews. In my most recent job search, for instance, I did around eight phone screens
 followed by six onsites.
 
-The most stressful part of any interview for me, and most likely for other job candidates,
+The most stressful part of any interview for me, and for many others as well,
 is the "technical coding" questions that inevitably get asked; most companies require you to solve
 at least one during a phone screen, and then another two to three once you get onsite.
 
@@ -111,12 +111,12 @@ practicing while interviews are ongoing until my one month subscription is over.
 ### Missing question types
 
 Leetcode has good coverage for most types of coding questions, but I've definitely noticed some
-gaps over the course of my recent job hunts. In addition to practicing in Leetcode, you should also
-be aware of questions that involve:
+gaps over the course of my recent job hunts. In particular, you may want to do some non-Leetcode
+preparation for coding questions that relate to:
 
-1. **"Design a class that does ...":** Leetcode has to provide an interface so that it can run test
+1. **Interface design:** Leetcode has to provide an interface so that it can run test
   cases against your solution. In a real interview, the interface might not be provided and,
-  moreover, designing it might be a big chunk of the question.
+  moreover, designing it might be a big part of the question.
 2. **Concurrency:** Leetcode doesn't provide much coverage for concurrency-related problems. You may
   want to brush up on concurrency primitives in your interview language, particularly if you don't
   use these as part of your day-to-day work.
