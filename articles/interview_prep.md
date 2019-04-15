@@ -31,7 +31,7 @@ particular, companies generally restrict their questions to those that:
 1. Can be explained in under 5 minutes
 2. Can be solved by a good candidate, starting from scratch, in under 30 minutes
 3. Don't require specialized, domain-specific knowledge
-  (e.g., around networking, databases, cryptography, graphical user interfaces (GUIs), etc.)
+  (e.g., around networking, databases, cryptography, graphical user interfaces, etc.)
 4. Don't require external data, documentation, hardware, or software libraries / code
 5. Touch on intro-undergraduate-level algorithms and data structures including
   sorting, searching, dynamic programming, lists, hashmaps, etc.
@@ -66,8 +66,8 @@ each question's discussion board.
 
 There are a bunch of other sites in the general, "code interview prep" space. I've been
 less satisfied with the ones that I've looked at, however, because their questions feel less
-realistic to me; they're often not the right level of difficulty, or they're simply too long to do
-in a 45 minute interview. These questions may be fun to work through, but if your goal is to prep
+realistic to me; they're often not at the right level of difficulty, or they're simply too long to
+do in a 45 minute interview. These questions may be fun to work through, but if your goal is to prep
 for interviews, solving them may not be the most efficient use of time.
 
 Note that I have no official relationship with Leetcode. I just like the site and want to tell
@@ -85,6 +85,10 @@ algorithmic tricks to solve efficiently. I don't worry about these questions too
 in the unlikely event that I were to get a question in this tier, the interviewer would (hopefully)
 provide hints. They also don't generalize as well as the easier questions, so studying them is not
 the most effective use of time.
+
+## Prep strategy
+
+Once you've gotten your Leetcode account set up, it's time to actually start preparing.
 
 ### Language choice
 
@@ -163,7 +167,7 @@ questions in the interview difficulty range (mid-medium to low-hard, as discusse
 get to this point after only a few dozen questions or, if you're particularly rusty, it may take
 many more than 100.
 
-### Leetcode gaps
+## Leetcode gaps
 
 Leetcode has good coverage for most types of coding questions, but I have noticed some
 gaps over the course of my recent job hunts. In particular, you may want to do some non-Leetcode
