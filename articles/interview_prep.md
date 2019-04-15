@@ -2,11 +2,11 @@
 
 Having switched jobs a few times over the last few years, I've done a *a lot* of software
 engineering interviews. In my most recent job search, for instance, I did around eight phone screens
-followed by six onsites.
+followed by six on-sites.
 
 The most stressful part of any interview for me, and for many others as well,
 is the "technical coding" questions that inevitably get asked; most companies require you to solve
-at least one during a phone screen, and then another two to three once you get onsite.
+at least one during a phone screen, and then another two to four once you get onsite.
 
 Over the last few job searches, I've developed a strategy that has significantly improved my
 performance on these questions, to the point that I'm now rarely phased by them. In this post, I'd
@@ -53,20 +53,23 @@ beyond your day-to-day work to really get a handle on them.
 
 ## Enter Leetcode
 
-Leetcode is a site designed for practicing interview-style coding questions. It has a large pool
-of questions and an online code editor that allows you to write up and submit solutions to these.
+[Leetcode](https://leetcode.com/) is a site designed for practicing interview-style coding
+questions. It has a large pool of questions and an online code editor that allows you to write up
+and submit solutions to them.
+
 Each submission is run against a set of question-specific test cases that verify both the
 correctness and efficiency of the solution. If you get stuck, you can get help by looking through
-official solution writeups (available for the most popular questions) or reading the messages on
+official solution write-ups (available for the most popular questions) or reading the messages on
 each question's discussion board.
 
-There are a bunch of other sites in the general "code interview prep" space. I've been
+There are a bunch of other sites in the general, "code interview prep" space. I've been
 less satisfied with the ones that I've looked at, however, because their questions feel less
-realistic to me; they're either not the right level of difficulty, or they're simply too long to do
+realistic to me; they're often not the right level of difficulty, or they're simply too long to do
 in a 45 minute interview. These questions may be fun to work through, but if your goal is to prep
 for interviews, solving them may not be the most efficient use of time.
 
-Note that I have no official relationship with Leetcode. I just like them.
+Note that I have no official relationship with Leetcode. I just like the site and want to tell
+others about it. :-)
 
 ### Leetcode question difficulty
 
@@ -86,31 +89,55 @@ the most effective use of time.
 Leetcode supports the languages that are most commonly used for interviews including C++, Java,
 Javascript, Python, and Ruby. You should obviously practice in the one(s) that you intend to use.
 
-I personally only interview in Python (for reasons to be explained in a future blog post), but
-if you feel more comfortable in another language, you should go with that.
+I would highly recommend choosing a single, high-level language for all of your interviews. I
+personally always use Python; Ruby is also a reasonable choice. C++, on the other hand, is probably
+not a great choice unless you happen to be a virtuoso in the language.
 
-### General strategy
+There are numerous advantages to choosing a high-level language like Python:
 
-I like doing my interview prep in a short, intensive burst starting about 3 weeks before my
-first interview. This ensures that the studying stays fresh in my mind and also minimizes the number
-of weeks during which interview prep interferes with the other activities in my life.
+1. Compact, less verbose code: Assuming a fixed typing or white boarding speed, this means that you
+  can construct solutions faster.
+2. No IDE required: Many interviews are still done on whiteboards or in bare-bones
+  text editors, so you can't always depend on having an IDE to help out.
+3. Rich standard libraries: Python, for instance for instance, provides binary search (in `bisect`),
+  permutations (in `itertools`), and heaps (in `heapq`), among other things that are helpful in
+  interviews.
 
-When I'm ready to start, I pay for a one month premium subscription. It's a bit pricy (about $35 as
-of early 2019), but I find it worth the money because it removes a bunch of restrictions in the
-free product including access to locked questions and the ability to sort questions by frequency.
+
+### Working through the questions
+
+When I'm ready to start, I pay for a premium Leetcode subscription. It's a bit pricey (about $35 /
+month as of early 2019), but I find it worth the money because it removes various restrictions
+in the free product including access to locked questions and the ability to sort questions by
+frequency.
 
 I then sort the questions in decreasing order of frequency and go through them roughly in order.
 I say "roughly" because I like to initially focus on the easier questions, and then, as I get
 more confidence, shift to the ones in the medium-to-hard range which, as discussed above, are
-more typical in actual interviews. Also, some questions further down the list are just small
-variations on previous questions, which I usually skip over.
+more typical in actual interviews. Also, some questions are just slight variations of ones
+above them in the list, so I'll skip over these if I already feel comfortable with them.
 
-My goal is to complete around 100 questions by the time of my first interview. I then continue
-practicing while interviews are ongoing until my one month subscription is over.
+Once I've decided to do a question, I'll work on it independently for about 20 minutes. If I
+can't get a reasonable solution within that time, I'll peek at the official solution for a few
+hints and then get back to work; this is similar to how it would work in an actual interview, with
+the difference being that in the real thing a person (i.e., your interviewer) would be offering
+these up.
 
-### Missing question types
+I stop working on the question when either I get all the test cases to pass or I hit the 45 minute
+mark. Whether I've gotten a working answer or not, I read through the solution to make sure
+that I have a correct understanding of the problem and the possible approaches to it. If I didn't
+get a fully working solution within 45 minutes, I'll go back and implement one of the
+approaches in the solution write-up, making sure I fully understand what I'm writing down.
 
-Leetcode has good coverage for most types of coding questions, but I've definitely noticed some
+### How much studying is enough?
+
+I usually feel ready to do real interviews after I've solved around 100 questions. Doing more
+than this has diminishing returns for me because the questions begin to look alike and thus they
+don't really improve my preparation. 
+
+### Leetcode gaps
+
+Leetcode has good coverage for most types of coding questions, but I have noticed some
 gaps over the course of my recent job hunts. In particular, you may want to do some non-Leetcode
 preparation for coding questions that relate to:
 
@@ -125,20 +152,29 @@ preparation for coding questions that relate to:
   aren't super common, but some companies do like them so you may want to brush up on how to do
   them in your chosen interview language.
 
-## The "Hit Parade"
+## Common question types
 
 During my most recent rounds of interviewing, there were some types of questions that came up
-over-and-over again. If you're on the market, you may want to spend a little extra time to make
+again and again. If you're on the market, you may want to spend a little extra time to make
 sure you're comfortable with questions of these types.
 
 ### Searching and/or exploring in a 2D grid
 
-See Leetcode 
+Interviewers love these questions because they hit on multiple 
 
 ### Evaluating arithmetic expressions
 
-Some examples here include 
+These questions are easy to explain and test, but can be challenging to implement. 
 
 ### Designing and implementing key/value stores or caches
 
-See Leetcode 
+These kinds of questions are popular because they 
+
+## Concluding thoughts
+
+
+
+## Acknowledgements
+
+I'd like to thank [John Mishanski](https://www.linkedin.com/in/johnmishanski/) for providing
+feedback on a draft of this post.
