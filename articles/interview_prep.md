@@ -1,5 +1,7 @@
 # Interview Prep
 
+## Introduction
+
 Having switched jobs a few times over the last few years, I've done a *a lot* of software
 engineering interviews. In my most recent job search, for instance, I did around eight phone screens
 followed by six on-sites.
@@ -34,7 +36,7 @@ particular, companies generally restrict their questions to those that:
 5. Touch on intro-undergraduate-level algorithms and data structures including
   sorting, searching, dynamic programming, lists, hashmaps, etc.
 
-These restrictions significantly reduce the surface area of possible questions. Even if you
+These restrictions significantly reduce the pool of possible questions. Even if you
 get a question that isn't exactly like one you covered in your practice, chances are that it
 has some similarities to one you have seen, and you can use those to your advantage.
 
@@ -95,19 +97,24 @@ not a great choice unless you happen to be a virtuoso in the language.
 
 There are numerous advantages to choosing a high-level language like Python:
 
-1. Compact, less verbose code: Assuming a fixed typing or white boarding speed, this means that you
-  can construct solutions faster.
-2. No IDE required: Many interviews are still done on whiteboards or in bare-bones
+1. **Compact, less verbose code:** Assuming a fixed typing or white boarding speed, this means that
+  you can construct solutions faster.
+2. **No IDE required:** Many interviews are still done on whiteboards or in bare-bones
   text editors, so you can't always depend on having an IDE to help out.
-3. Rich standard libraries: Python, for instance for instance, provides binary search (in `bisect`),
-  permutations (in `itertools`), and heaps (in `heapq`), among other things that are helpful in
-  interviews.
+3. **Rich standard libraries:** Python, for instance, provides binary search (in `bisect`),
+  permutations (in `itertools`), heaps (in `heapq`), and many other things that are helpful for
+  solving interview questions.
 
+Of course, the company you're interviewing at might use something else, like Java or C++. But,
+that's generally ok. In fact, in my many years of interviewing I've *never* had an interviewer
+complain about my use of Python or felt that it ever counted against me. The most important
+thing is to deliver clean, correct code; provided you do this, the language you choose isn't really
+an issue.
 
 ### Working through the questions
 
 When I'm ready to start, I pay for a premium Leetcode subscription. It's a bit pricey (about $35 /
-month as of early 2019), but I find it worth the money because it removes various restrictions
+month as of early 2019), but I find it worth the money because it removes restrictions
 in the free product including access to locked questions and the ability to sort questions by
 frequency.
 
@@ -117,37 +124,64 @@ more confidence, shift to the ones in the medium-to-hard range which, as discuss
 more typical in actual interviews. Also, some questions are just slight variations of ones
 above them in the list, so I'll skip over these if I already feel comfortable with them.
 
-Once I've decided to do a question, I'll work on it independently for about 20 minutes. If I
-can't get a reasonable solution within that time, I'll peek at the official solution for a few
-hints and then get back to work; this is similar to how it would work in an actual interview, with
-the difference being that in the real thing a person (i.e., your interviewer) would be offering
+Once I've decided to do a question, I'll work on it independently for about 20 minutes. If I can't
+get a reasonable solution within this time, I'll peek at the official solution for a few hints and
+then get back to work; this is similar to how it would work in an actual interview, with the
+difference being that in the real thing a person (i.e., your interviewer) would be offering
 these up.
 
 I stop working on the question when either I get all the test cases to pass or I hit the 45 minute
 mark. Whether I've gotten a working answer or not, I read through the solution to make sure
 that I have a correct understanding of the problem and the possible approaches to it. If I didn't
 get a fully working solution within 45 minutes, I'll go back and implement one of the
-approaches in the solution write-up, making sure I fully understand what I'm writing down.
+approaches in the solution write-up, making sure that I fully understand what I'm writing down.
+
+### Solution efficiency
+
+Many Leetcode questions, like the ones in actual interviews, can be solved in more than one way.
+Given a choice, I generally start with the simplest approach. Then, if this isn't good enough, I'll
+optimize.
+
+In a real interview, this push to optimize would be done by the interviewer. In the Leetcode
+case, you'll usually know you need to optimize because a test case will time out. In the rare
+event that a wildly suboptimal, naive solution passes all the test cases, you'll notice this by
+seeing that your solution is in the far right tail of the execution time histogram that Leetcode
+shows at the end.
+
+### Consulting external sources
+
+Most interviewers will allow you to look up
 
 ### How much studying is enough?
 
 I usually feel ready to do real interviews after I've solved around 100 questions. Doing more
-than this has diminishing returns for me because the questions begin to look alike and thus they
-don't really improve my preparation. 
+than this has diminishing returns for me because the questions begin to look alike and my
+performance doesn't significantly improve.
+
+Ultimately, the goal isn't to hit a specific number but rather to feel comfortable with arbitrary
+questions in the interview difficulty range (mid-medium to low-hard, as discussed above). You may
+get to this point after only a few dozen questions or, if you're particularly rusty, it may take
+many more than 100.
 
 ### Leetcode gaps
 
 Leetcode has good coverage for most types of coding questions, but I have noticed some
 gaps over the course of my recent job hunts. In particular, you may want to do some non-Leetcode
-preparation for coding questions that relate to:
+preparation for the following:
 
 1. **Interface design:** Leetcode has to provide an interface so that it can run test
   cases against your solution. In a real interview, the interface might not be provided and,
   moreover, designing it might be a big part of the question.
-2. **Concurrency:** Leetcode doesn't provide much coverage for concurrency-related problems. You may
+2. **Writing tests:** Leetcode provides its own test cases, so you don't have to write any. In
+  a real interview, you may be expected to test your solution, so you should feel comfortable
+  doing this (e.g., with `assert` statements) in your language of choice.
+3. **Big-O analysis:** Some interviewers like asking about time and space efficiency after you
+  write up a solution; Leetcode doesn't explicitly test this, although the official solutions
+  write-ups usually include some efficiency analysis.
+4. **Concurrency:** Leetcode doesn't provide much coverage for concurrency-related problems. You may
   want to brush up on concurrency primitives in your interview language, particularly if you don't
   use these as part of your day-to-day work.
-3. **Network or file system operations:** Leetcode solutions run in a sandbox, and thus aren't
+5. **Network and file system operations:** Leetcode solutions run in a sandbox, and thus aren't
   going to be making HTTP requests or reading files from the file system. These types of questions
   aren't super common, but some companies do like them so you may want to brush up on how to do
   them in your chosen interview language.
@@ -155,8 +189,8 @@ preparation for coding questions that relate to:
 ## Common question types
 
 During my most recent rounds of interviewing, there were some types of questions that came up
-again and again. If you're on the market, you may want to spend a little extra time to make
-sure you're comfortable with questions of these types.
+again and again. If you're on the market, you may want to spend some time making sure you're
+extra comfortable with questions of these types.
 
 ### Searching and/or exploring in a 2D grid
 
