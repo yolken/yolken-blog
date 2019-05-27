@@ -193,7 +193,8 @@ preparation for the following:
   moreover, designing it might be a big part of the question.
 2. **Writing tests:** Leetcode provides its own test cases, so you don't have to write any. In
   a real interview, you may be expected to test your solution, so you should feel comfortable
-  doing this (e.g., with `assert` statements) in your language of choice.
+  doing this in your language of choice. Using something simple like `assert`
+  statements is fine; there's usually no need for complicated unit testing frameworks.
 3. **Big-O analysis:** Some interviewers like asking about time and space efficiency after you
   write up a solution; Leetcode doesn't explicitly test this, although the official solutions
   write-ups usually include some efficiency analysis.
@@ -245,4 +246,4 @@ Good luck!!
 ## Acknowledgements
 
 I'd like to thank [John Mishanski](https://www.linkedin.com/in/johnmishanski/) for providing
-feedback on an early draft of this post.
+feedback on early drafts of this post.
