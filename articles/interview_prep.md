@@ -1,10 +1,10 @@
-# Interview Prep
+# Using Leetcode to Master Coding Interviews
 
 ## Introduction
 
-Having switched jobs a few times over the last few years, I've done a *a lot* of software
-engineering interviews. In my most recent job search, for instance, I did around eight phone screens
-followed by six on-sites.
+Having switched jobs [a few times](https://www.linkedin.com/in/yolken/) over the last few years,
+I've done a *a lot* of software engineering interviews. In my most recent job search, for instance,
+I did around eight phone screens followed by six on-sites.
 
 The most stressful part of any interview for me, and for many others as well,
 is the "technical coding" questions that inevitably get asked; most companies require you to solve
@@ -17,8 +17,8 @@ like to share what I've learned.
 ## Practice, practice, practice
 
 The key to doing an excellent job in a coding-oriented software interview is very simple- you
-*must* practice beforehand. The interesting thing about practice is that it's both more effective
-and more necessary than one would intuitively think. Let me explain why.
+*really, really* need to practice beforehand. The interesting thing about practice is that it's both
+more effective and more necessary than one would intuitively think. Let's explore why.
 
 ### Why it's more effective than you think
 
@@ -31,7 +31,7 @@ particular, companies generally restrict their questions to those that:
 1. Can be explained in under 5 minutes
 2. Can be solved by a good candidate, starting from scratch, in under 30 minutes
 3. Don't require specialized, domain-specific knowledge
-  (e.g., around networking, databases, cryptography, graphical user interfaces, etc.)
+  (e.g., networking, databases, cryptography, graphical user interfaces, etc.)
 4. Don't require external data, documentation, hardware, or software libraries / code
 5. Touch on intro-undergraduate-level algorithms and data structures including
   sorting, searching, dynamic programming, lists, hashmaps, etc.
@@ -120,19 +120,21 @@ an issue.
 When I'm ready to start, I pay for a premium Leetcode subscription. It's a bit pricey (about $35 /
 month as of early 2019), but I find it worth the money because it removes restrictions
 in the free product including access to locked questions and the ability to sort questions by
-frequency.
+frequency. You can still use Leetcode if you don't pay, but you'll have to do some offline
+research to figure out which questions are the most important ones to focus on.
 
-I then sort the questions in decreasing order of frequency and go through them roughly in order.
-I say "roughly" because I like to initially focus on the easier questions, and then, as I get
-more confidence, shift to the ones in the medium-to-hard range which, as discussed above, are
-more typical in actual interviews. Also, some questions are just slight variations of ones
-above them in the list, so I'll skip over these if I already feel comfortable with them.
+I then sort the questions in decreasing order of frequency (only available after paying for premium)
+and go through them roughly in order. I say "roughly" because I like to initially focus on the
+easier questions, and then, as I get more confidence, shift to the ones in the medium-to-hard range
+which, as discussed above, are more typical in actual interviews. Also, some questions are just
+slight variations of ones above them in the list, so I'll skip over these if I already feel
+comfortable with them.
 
 Once I've decided to do a question, I'll work on it independently for about 20 minutes. If I can't
 get a reasonable solution within this time, I'll peek at the official solution for a few hints and
 then get back to work; this is similar to how it would work in an actual interview, with the
 difference being that in the real thing a person (i.e., your interviewer) would be offering
-these up.
+these hints.
 
 I stop working on the question when either I get all the test cases to pass or I hit the 45 minute
 mark. Whether I've gotten a working answer or not, I read through the solution to make sure
@@ -142,9 +144,8 @@ approaches in the solution write-up, making sure that I fully understand what I'
 
 ### Solution efficiency
 
-Many Leetcode questions, like the ones in actual interviews, can be solved in more than one way.
-Given a choice, I generally start with the simplest approach. Then, if this isn't good enough, I'll
-optimize.
+Many Leetcode questions can be solved in more than one way. Given a choice, I generally start with
+the simplest approach. Then, if this isn't good enough, I'll optimize.
 
 In a real interview, this push to optimize would be done by the interviewer. In the Leetcode
 case, you'll usually know you need to optimize because a test case will time out. In the rare
@@ -154,18 +155,20 @@ shows at the end.
 
 ### Consulting external sources
 
-Most interviewers will allow you to look up
+Most interviewers will allow you to look up 
 
 ### How much studying is enough?
 
 I usually feel ready to do real interviews after I've solved around 100 questions. Doing more
 than this has diminishing returns for me because the questions begin to look alike and my
-performance doesn't significantly improve.
+performance doesn't significantly improve. It takes me at least 3 weeks to get through this many
+questions, assuming that I'm spending most of my weekends studying. 
 
 Ultimately, the goal isn't to hit a specific number but rather to feel comfortable with arbitrary
 questions in the interview difficulty range (mid-medium to low-hard, as discussed above). You may
 get to this point after only a few dozen questions or, if you're particularly rusty, it may take
-many more than 100.
+many more than 100. Likewise, the time required will also vary, from just a week or two to
+6 months or more.
 
 ## Leetcode gaps
 
@@ -190,7 +193,7 @@ preparation for the following:
   aren't super common, but some companies do like them so you may want to brush up on how to do
   them in your chosen interview language.
 
-## Common question types
+## Popular question types
 
 During my most recent rounds of interviewing, there were some types of questions that came up
 again and again. If you're on the market, you may want to spend some time making sure you're
@@ -198,21 +201,36 @@ extra comfortable with questions of these types.
 
 ### Searching and/or exploring in a 2D grid
 
-Interviewers love these questions because they hit on multiple 
+Interviewers love these questions because they hit on multiple topics at once: recursion,
+dynamic programming, 2D arrays/lists, spatial reasoning, etc. They also lend themselves nicely
+to follow-up challenges if you finish the question quickly and the interviewer wants to give you
+more.
+
+See Leetcode [200](https://leetcode.com/problems/number-of-islands/) and
+[62](https://leetcode.com/problems/unique-paths/) for examples.
 
 ### Evaluating arithmetic expressions
 
-These questions are easy to explain and test, but can be challenging to implement. 
+These questions are popular because they're easy to explain and test, but can be challenging to
+implement. See Leetcode [227](https://leetcode.com/problems/basic-calculator-ii/) for an example.
 
 ### Designing and implementing key/value stores or caches
 
-These kinds of questions are popular because they 
+Caches are practical and easy to explain, but, depending on the desired performance tradeoffs,
+require a good understanding of certain data structures and algorithms. Leetcode
+[146](https://leetcode.com/problems/lru-cache/) is a classic of this type.
 
 ## Concluding thoughts
 
+Preparing for coding questions makes these questions easier to solve and significantly
+increases your chances of doing well in job interviews. However, no strategy is perfect, and
+ultimately, no matter how smart or well-prepared you are, tech interviewing can still be a bit
+of a crapshoot. If you get rejected, use the experience to better understand your weak spots
+and further refine your preparation strategy.
 
+Good luck!!
 
 ## Acknowledgements
 
 I'd like to thank [John Mishanski](https://www.linkedin.com/in/johnmishanski/) for providing
-feedback on a draft of this post.
+feedback on an early draft of this post.
