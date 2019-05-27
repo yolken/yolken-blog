@@ -17,8 +17,8 @@ like to share what I've learned.
 ## Practice, practice, practice
 
 The key to doing an excellent job in a coding-oriented software interview is very simple- you
-*really, really* need to practice beforehand. The interesting thing about practice is that it's both
-more effective and more necessary than one would intuitively think. Let's explore why.
+*really, really* need to practice beforehand. The interesting thing about practice is that it's
+more effective, more necessary, and more profitable than one would intuitively think.
 
 ### Why it's more effective than you think
 
@@ -52,6 +52,14 @@ company.
 The reason for this gets back to the criteria listed above; day-to-day projects rarely,
 if ever, satisfy all of these. Most questions are completely synthetic and, thus, you need practice
 beyond your day-to-day work to really get a handle on them.
+
+### Why it's more profitable than you think
+
+What many people don't realize is that interview performance isn't just a binary, "hire or no hire"
+checkpoint on the way to a job offer. At many companies, even if you meet the hiring bar,
+your performance is used as an input in setting your starting level and compensation. Doing an
+excellent job on your coding interviews, as opposed to just a good one, may lead to a stronger
+initial offer and give you more negotiating leverage as you move through your job search.
 
 ## Enter Leetcode
 
@@ -155,7 +163,11 @@ shows at the end.
 
 ### Consulting external sources
 
-Most interviewers will allow you to look up 
+Most interviewers will allow you to look up general API docs or code snippets online if you ask.
+However, doing this can waste a lot of time and thus should be used sparingly in real interviews.
+It's fine to do lots of lookups early in your preparation, but by the end all of the basic tasks
+in your language of choice (e.g., iterating over a hash map, reading a file, etc.) should be
+committed to memory.
 
 ### How much studying is enough?
 
