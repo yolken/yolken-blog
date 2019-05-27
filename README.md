@@ -1,2 +1,2 @@
 # yolken-blog
-Blog contents
+Contents of personal blog.

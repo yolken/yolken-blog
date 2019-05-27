@@ -1,7 +1,13 @@
-# Using Leetcode to Master Coding Interviews
-
-## Introduction
-
+---
+layout: post
+title:  "Using Leetcode to master coding interviews"
+date:   2019-05-27 14:38:04 -0700
+categories: interviewing
+excerpt: |
+  Having switched jobs a few times over the last few years, I've done a a lot of software
+  engineering interviews. In my most recent job search, for instance, I did around eight phone
+  screens followed by six on-sites.
+---
 Having switched jobs [a few times](https://www.linkedin.com/in/yolken/) over the last few years,
 I've done a *a lot* of software engineering interviews. In my most recent job search, for instance,
 I did around eight phone screens followed by six on-sites.
@@ -219,8 +225,8 @@ dynamic programming, 2D arrays/lists, spatial reasoning, etc. They also lend the
 to follow-up challenges if you finish the question quickly and the interviewer wants to give you
 more.
 
-See Leetcode [200](https://leetcode.com/problems/number-of-islands/) and
-[62](https://leetcode.com/problems/unique-paths/) for examples.
+See Leetcode [62](https://leetcode.com/problems/unique-paths/) and
+[200](https://leetcode.com/problems/number-of-islands/) and for examples.
 
 ### Evaluating arithmetic expressions
 
@@ -243,7 +249,7 @@ and further refine your preparation strategy.
 
 Good luck!!
 
-## Acknowledgements
+### Acknowledgements
 
 I'd like to thank [John Mishanski](https://www.linkedin.com/in/johnmishanski/) for providing
 feedback on early drafts of this post.
