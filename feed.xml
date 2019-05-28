@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2019-05-27T18:22:02-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Using Leetcode to master coding interviews</title><link href="https://yolken.net/interviewing/2019/05/27/master-coding-interviews.html" rel="alternate" type="text/html" title="Using Leetcode to master coding interviews" /><published>2019-05-27T14:38:04-07:00</published><updated>2019-05-27T14:38:04-07:00</updated><id>https://yolken.net/interviewing/2019/05/27/master-coding-interviews</id><content type="html" xml:base="https://yolken.net/interviewing/2019/05/27/master-coding-interviews.html">&lt;p&gt;&lt;img src=&quot;/assets/leetcode.png&quot; alt=&quot;Leetcode image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having switched jobs &lt;a href=&quot;https://www.linkedin.com/in/yolken/&quot;&gt;a few times&lt;/a&gt; over the last few years,
+I’ve done a &lt;em&gt;a lot&lt;/em&gt; of software engineering interviews. In my most recent job search, for instance,
+I did around eight phone screens followed by six on-sites.&lt;/p&gt;
+
+&lt;p&gt;The most stressful part of any interview for me, and for many others as well,
+is the “technical coding” questions that inevitably get asked; most companies require you to solve
+at least one during a phone screen, and then another two to four once you get onsite.&lt;/p&gt;
+
+&lt;p&gt;Over the last few job searches, I’ve developed a strategy that has significantly improved my
+performance on these questions, to the point that I’m now rarely phased by them. In this post, I’d
+like to share what I’ve learned.&lt;/p&gt;
+
+&lt;h2 id=&quot;practice-practice-practice&quot;&gt;Practice, practice, practice&lt;/h2&gt;
+
+&lt;p&gt;The key to doing an excellent job in a coding-oriented software interview is very simple- you
+&lt;em&gt;really, really&lt;/em&gt; need to practice beforehand. The interesting thing about practice is that it’s
+more effective, more necessary, and more profitable than one would intuitively think.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-its-more-effective-than-you-think&quot;&gt;Why it’s more effective than you think&lt;/h3&gt;
+
+&lt;p&gt;Software is such a broad field and there are so many technologies and applications that could come
+up in an interview! Sure, practice can help, but how can it really make that much of a difference?&lt;/p&gt;
+
+&lt;p&gt;The reality, however, is that only a small subset of these are appropriate for an interview. In
+particular, companies generally restrict their questions to those that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Can be explained in under 5 minutes&lt;/li&gt;
+  &lt;li&gt;Can be solved by a good candidate, starting from scratch, in under 30 minutes&lt;/li&gt;
+  &lt;li&gt;Don’t require specialized, domain-specific knowledge
+  (e.g., networking, databases, cryptography, graphical user interfaces, etc.)&lt;/li&gt;
+  &lt;li&gt;Don’t require external data, documentation, hardware, or software libraries / code&lt;/li&gt;
+  &lt;li&gt;Touch on intro-undergraduate-level algorithms and data structures including
+  sorting, searching, dynamic programming, lists, hashmaps, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These restrictions significantly reduce the pool of possible questions. Even if you
+get a question that isn’t exactly like one you covered in your practice, chances are that it
+has some similarities to one you have seen, and you can use those to your advantage.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-its-more-necessary-than-you-think&quot;&gt;Why it’s more necessary than you think&lt;/h3&gt;
+
+&lt;p&gt;Another misconception is that if you’re already doing a lot of hands-on software development
+as part of your day-to-day job, this replaces the need for practice. That would make sense
+if companies only asked practical questions, but the reality is that most don’t. In fact,
+the vast, vast majority of questions I’ve gotten over the years have little direct overlap with the
+work I’ve done in the past or, most likely, the work that I would do if hired by the interviewer’s
+company.&lt;/p&gt;
+
+&lt;p&gt;The reason for this gets back to the criteria listed above; day-to-day projects rarely,
+if ever, satisfy all of these. Most questions are completely synthetic and, thus, you need practice
+beyond your day-to-day work to really get a handle on them.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-its-more-profitable-than-you-think&quot;&gt;Why it’s more profitable than you think&lt;/h3&gt;
+
+&lt;p&gt;What many people don’t realize is that interview performance isn’t just a binary, “hire or no hire”
+checkpoint on the way to a job offer. At many companies, even if you meet the hiring bar,
+your performance is used as an input in setting your starting level and compensation. Doing an
+excellent job on your coding interviews, as opposed to just a good one, may lead to a stronger
+initial offer and give you more negotiating leverage as you move through your job search.&lt;/p&gt;
+
+&lt;h2 id=&quot;enter-leetcode&quot;&gt;Enter Leetcode&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/&quot;&gt;Leetcode&lt;/a&gt; is a site designed for practicing interview-style coding
+questions. It has a large pool of questions and an online code editor that allows you to write up
+and submit solutions to them.&lt;/p&gt;
+
+&lt;p&gt;Each submission is run against a set of question-specific test cases that verify both the
+correctness and efficiency of the solution. If you get stuck, you can get help by looking through
+official solution write-ups (available for the most popular questions) or reading the messages on
+each question’s discussion board.&lt;/p&gt;
+
+&lt;p&gt;There are a bunch of other sites in the general, “code interview prep” space. I’ve been
+less satisfied with the ones that I’ve looked at, however, because their questions feel less
+realistic to me; they’re often not at the right level of difficulty, or they’re simply too long to
+do in a 45 minute interview. These questions may be fun to work through, but if your goal is to prep
+for interviews, solving them may not be the most efficient use of time.&lt;/p&gt;
+
+&lt;p&gt;Note that I have no official relationship with Leetcode. I just like the site and want to tell
+others about it. :-)&lt;/p&gt;
+
+&lt;h3 id=&quot;leetcode-question-difficulty&quot;&gt;Leetcode question difficulty&lt;/h3&gt;
+
+&lt;p&gt;Leetcode classifies questions as either “easy”, “medium”, or “hard”. I’ve found that
+the sweet spot for actual interviews typically begins at the middle of the “medium” tier and runs
+into the bottom (i.e., easier) chunk of “hard”. “Easy” questions are fine to do as stepping stones
+to the “medium” tier, but you’re less likely to see these types of questions in an actual interview.&lt;/p&gt;
+
+&lt;p&gt;The hardest “hard” questions in Leetcode are annoying because they often require obscure
+algorithmic tricks to solve efficiently. I don’t worry about these questions too much because,
+in the unlikely event that I were to get a question in this tier, the interviewer would (hopefully)
+provide hints. They also don’t generalize as well as the easier questions, so studying them is not
+the most effective use of time.&lt;/p&gt;
+
+&lt;h2 id=&quot;prep-strategy&quot;&gt;Prep strategy&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve gotten your Leetcode account set up, it’s time to actually start preparing.&lt;/p&gt;
+
+&lt;h3 id=&quot;language-choice&quot;&gt;Language choice&lt;/h3&gt;
+
+&lt;p&gt;Leetcode supports the languages that are most commonly used for interviews including C++, Java,
+Javascript, Python, and Ruby. You should obviously practice in the one(s) that you intend to use.&lt;/p&gt;
+
+&lt;p&gt;I would highly recommend choosing a single, high-level language for all of your interviews. I
+personally always use Python; Ruby is also a reasonable choice. C++, on the other hand, is probably
+not a great choice unless you happen to be a virtuoso in the language.&lt;/p&gt;
+
+&lt;p&gt;There are numerous advantages to choosing a high-level language like Python:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Compact, less verbose code:&lt;/strong&gt; Assuming a fixed typing or white boarding speed, this means that
+  you can construct solutions faster.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;No IDE required:&lt;/strong&gt; Many interviews are still done on whiteboards or in bare-bones
+  text editors, so you can’t always depend on having an IDE to help out.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rich standard libraries:&lt;/strong&gt; Python, for instance, provides binary search (in &lt;code class=&quot;highlighter-rouge&quot;&gt;bisect&lt;/code&gt;),
+  permutations (in &lt;code class=&quot;highlighter-rouge&quot;&gt;itertools&lt;/code&gt;), heaps (in &lt;code class=&quot;highlighter-rouge&quot;&gt;heapq&lt;/code&gt;), and many other things that are helpful for
+  solving interview questions.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, the company you’re interviewing at might use something else, like Java or C++. But,
+that’s generally ok. In fact, in my many years of interviewing I’ve &lt;em&gt;never&lt;/em&gt; had an interviewer
+complain about my use of Python or felt that it ever counted against me. The most important
+thing is to deliver clean, correct code; provided you do this, the language you choose isn’t really
+an issue.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-through-the-questions&quot;&gt;Working through the questions&lt;/h3&gt;
+
+&lt;p&gt;When I’m ready to start, I pay for a premium Leetcode subscription. It’s a bit pricey (about $35 /
+month as of early 2019), but I find it worth the money because it removes restrictions
+in the free product including access to locked questions and the ability to sort questions by
+frequency. You can still use Leetcode if you don’t pay, but you’ll have to do some offline
+research to figure out which questions are the most important ones to focus on.&lt;/p&gt;
+
+&lt;p&gt;I then sort the questions in decreasing order of frequency (only available after paying for premium)
+and go through them roughly in order. I say “roughly” because I like to initially focus on the
+easier questions, and then, as I get more confidence, shift to the ones in the medium-to-hard range
+which, as discussed above, are more typical in actual interviews. Also, some questions are just
+slight variations of ones above them in the list, so I’ll skip over these if I already feel
+comfortable with them.&lt;/p&gt;
+
+&lt;p&gt;Once I’ve decided to do a question, I’ll work on it independently for about 20 minutes. If I can’t
+get a reasonable solution within this time, I’ll peek at the official solution for a few hints and
+then get back to work; this is similar to how it would work in an actual interview, with the
+difference being that in the real thing a person (i.e., your interviewer) would be offering
+these hints.&lt;/p&gt;
+
+&lt;p&gt;I stop working on the question when either I get all the test cases to pass or I hit the 45 minute
+mark. Whether I’ve gotten a working answer or not, I read through the solution to make sure
+that I have a correct understanding of the problem and the possible approaches to it. If I didn’t
+get a fully working solution within 45 minutes, I’ll go back and implement one of the
+approaches in the solution write-up, making sure that I fully understand what I’m writing down.&lt;/p&gt;
+
+&lt;h3 id=&quot;solution-efficiency&quot;&gt;Solution efficiency&lt;/h3&gt;
+
+&lt;p&gt;Many Leetcode questions can be solved in more than one way. Given a choice, I generally start with
+the simplest approach. Then, if this isn’t good enough, I’ll optimize.&lt;/p&gt;
+
+&lt;p&gt;In a real interview, this push to optimize would be done by the interviewer. In the Leetcode
+case, you’ll usually know you need to optimize because a test case will time out. In the rare
+event that a wildly suboptimal, naive solution passes all the test cases, you’ll notice this by
+seeing that your solution is in the far right tail of the execution time histogram that Leetcode
+shows at the end.&lt;/p&gt;
+
+&lt;h3 id=&quot;consulting-external-sources&quot;&gt;Consulting external sources&lt;/h3&gt;
+
+&lt;p&gt;Most interviewers will allow you to look up general API docs or code snippets online if you ask.
+However, doing this can waste a lot of time and thus should be used sparingly in real interviews.
+It’s fine to do lots of lookups early in your preparation, but by the end all of the basic tasks
+in your language of choice (e.g., iterating over a hash map, reading a file, etc.) should be
+committed to memory.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-much-studying-is-enough&quot;&gt;How much studying is enough?&lt;/h3&gt;
+
+&lt;p&gt;I usually feel ready to do real interviews after I’ve solved around 100 questions. Doing more
+than this has diminishing returns for me because the questions begin to look alike and my
+performance doesn’t significantly improve. It takes me at least 3 weeks to get through this many
+questions, assuming that I’m spending most of my weekends studying.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, the goal isn’t to hit a specific number but rather to feel comfortable with arbitrary
+questions in the interview difficulty range (mid-medium to low-hard, as discussed above). You may
+get to this point after only a few dozen questions or, if you’re particularly rusty, it may take
+many more than 100. Likewise, the time required will also vary, from just a week or two to
+6 months or more.&lt;/p&gt;
+
+&lt;h2 id=&quot;leetcode-gaps&quot;&gt;Leetcode gaps&lt;/h2&gt;
+
+&lt;p&gt;Leetcode has good coverage for most types of coding questions, but I have noticed some
+gaps over the course of my recent job hunts. In particular, you may want to do some non-Leetcode
+preparation for the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Interface design:&lt;/strong&gt; Leetcode has to provide an interface so that it can run test
+  cases against your solution. In a real interview, the interface might not be provided and,
+  moreover, designing it might be a big part of the question.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Writing tests:&lt;/strong&gt; Leetcode provides its own test cases, so you don’t have to write any. In
+  a real interview, you may be expected to test your solution, so you should feel comfortable
+  doing this in your language of choice. Using something simple like &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;
+  statements is fine; there’s usually no need for complicated unit testing frameworks.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Big-O analysis:&lt;/strong&gt; Some interviewers like asking about time and space efficiency after you
+  write up a solution; Leetcode doesn’t explicitly test this, although the official solutions
+  write-ups usually include some efficiency analysis.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Concurrency:&lt;/strong&gt; Leetcode doesn’t provide much coverage for concurrency-related problems. You may
+  want to brush up on concurrency primitives in your interview language, particularly if you don’t
+  use these as part of your day-to-day work.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Network and file system operations:&lt;/strong&gt; Leetcode solutions run in a sandbox, and thus aren’t
+  going to be making HTTP requests or reading files from the file system. These types of questions
+  aren’t super common, but some companies do like them so you may want to brush up on how to do
+  them in your chosen interview language.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;popular-question-types&quot;&gt;Popular question types&lt;/h2&gt;
+
+&lt;p&gt;During my most recent rounds of interviewing, there were some types of questions that came up
+again and again. If you’re on the market, you may want to spend some time making sure you’re
+extra comfortable with questions of these types.&lt;/p&gt;
+
+&lt;h3 id=&quot;searching-andor-exploring-in-a-2d-grid&quot;&gt;Searching and/or exploring in a 2D grid&lt;/h3&gt;
+
+&lt;p&gt;Interviewers love these questions because they hit on multiple topics at once: recursion,
+dynamic programming, 2D arrays/lists, spatial reasoning, etc. They also lend themselves nicely
+to follow-up challenges if you finish the question quickly and the interviewer wants to give you
+more.&lt;/p&gt;
+
+&lt;p&gt;See Leetcode &lt;a href=&quot;https://leetcode.com/problems/unique-paths/&quot;&gt;62&lt;/a&gt; and
+&lt;a href=&quot;https://leetcode.com/problems/number-of-islands/&quot;&gt;200&lt;/a&gt; and for examples.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluating-arithmetic-expressions&quot;&gt;Evaluating arithmetic expressions&lt;/h3&gt;
+
+&lt;p&gt;These questions are popular because they’re easy to explain and test, but can be challenging to
+implement. See Leetcode &lt;a href=&quot;https://leetcode.com/problems/basic-calculator-ii/&quot;&gt;227&lt;/a&gt; for an example.&lt;/p&gt;
+
+&lt;h3 id=&quot;designing-and-implementing-keyvalue-stores-or-caches&quot;&gt;Designing and implementing key/value stores or caches&lt;/h3&gt;
+
+&lt;p&gt;Caches are practical and easy to explain, but, depending on the desired performance tradeoffs,
+require a good understanding of certain data structures and algorithms. Leetcode
+&lt;a href=&quot;https://leetcode.com/problems/lru-cache/&quot;&gt;146&lt;/a&gt; is a classic of this type.&lt;/p&gt;
+
+&lt;h2 id=&quot;concluding-thoughts&quot;&gt;Concluding thoughts&lt;/h2&gt;
+
+&lt;p&gt;Preparing for coding questions makes these questions easier to solve and significantly
+increases your chances of doing well in job interviews. However, no strategy is perfect, and
+ultimately, no matter how smart or well-prepared you are, tech interviewing can still be a bit
+of a crapshoot. If you get rejected, use the experience to better understand your weak spots
+and further refine your preparation strategy.&lt;/p&gt;
+
+&lt;p&gt;Good luck!!&lt;/p&gt;
+
+&lt;h3 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h3&gt;
+
+&lt;p&gt;I’d like to thank &lt;a href=&quot;https://www.linkedin.com/in/johnmishanski/&quot;&gt;John Mishanski&lt;/a&gt; for providing
+feedback on early drafts of this post.&lt;/p&gt;</content><author><name></name></author><summary type="html">Having switched jobs a few times over the last few years, I've done a a lot of software engineering interviews. In my most recent job search, for instance, I did around eight phone screens followed by six on-sites.</summary></entry></feed>
