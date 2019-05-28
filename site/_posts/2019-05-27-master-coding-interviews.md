@@ -8,6 +8,8 @@ excerpt: |
   engineering interviews. In my most recent job search, for instance, I did around eight phone
   screens followed by six on-sites.
 ---
+![Leetcode image](/assets/leetcode.png)
+
 Having switched jobs [a few times](https://www.linkedin.com/in/yolken/) over the last few years,
 I've done a *a lot* of software engineering interviews. In my most recent job search, for instance,
 I did around eight phone screens followed by six on-sites.

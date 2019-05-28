@@ -2,17 +2,18 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 2px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
+  background: #fcfcfc;
 
   // Positioning context for the mobile navigation icon
   position: relative;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
+  @include relative-font-size(1.825);
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -26,6 +27,15 @@
   &:visited {
     color: $grey-color-dark;
   }
+}
+
+.site-subtitle {
+  @include relative-font-size(1.05);
+  font-weight: 300;
+  margin-bottom: 0;
+  float: left;
+  padding: 5px 0 0 9px;
+  color: #aaa;
 }
 
 .site-nav {
@@ -123,6 +133,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
+  background: #fcfcfc;
   padding: $spacing-unit 0;
 }
 
@@ -222,7 +233,22 @@
   @include relative-font-size(1.5);
 }
 
+h3.post-header {
+  margin-bottom: 5px;
+}
 
+.full-width {
+  /* The image used */
+  background-image: url("/assets/sf.jpg");
+
+  /* Full height */
+  width: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /**
  * Posts
