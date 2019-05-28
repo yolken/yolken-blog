@@ -220,7 +220,7 @@ During my most recent rounds of interviewing, there were some types of questions
 again and again. If you're on the market, you may want to spend some time making sure you're
 extra comfortable with questions of these types.
 
-### Searching and/or exploring in a 2D grid
+#### Searching and/or exploring in a 2D grid
 
 Interviewers love these questions because they hit on multiple topics at once: recursion,
 dynamic programming, 2D arrays/lists, spatial reasoning, etc. They also lend themselves nicely
@@ -230,12 +230,12 @@ more.
 See Leetcode [62](https://leetcode.com/problems/unique-paths/) and
 [200](https://leetcode.com/problems/number-of-islands/) and for examples.
 
-### Evaluating arithmetic expressions
+#### Evaluating arithmetic expressions
 
 These questions are popular because they're easy to explain and test, but can be challenging to
 implement. See Leetcode [227](https://leetcode.com/problems/basic-calculator-ii/) for an example.
 
-### Designing and implementing key/value stores or caches
+#### Designing and implementing key/value stores or caches
 
 Caches are practical and easy to explain, but, depending on the desired performance tradeoffs,
 require a good understanding of certain data structures and algorithms. Leetcode
