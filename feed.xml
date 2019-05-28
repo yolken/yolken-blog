@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2019-05-27T20:20:46-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Using Leetcode to master coding interviews</title><link href="https://yolken.net/blog/master-coding-interviews" rel="alternate" type="text/html" title="Using Leetcode to master coding interviews" /><published>2019-05-27T14:38:04-07:00</published><updated>2019-05-27T14:38:04-07:00</updated><id>https://yolken.net/blog/master-coding-interviews</id><content type="html" xml:base="https://yolken.net/blog/master-coding-interviews">&lt;p&gt;&lt;img src=&quot;/assets/leetcode.png&quot; alt=&quot;Leetcode image&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2019-05-27T20:30:25-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Using Leetcode to master coding interviews</title><link href="https://yolken.net/blog/master-coding-interviews" rel="alternate" type="text/html" title="Using Leetcode to master coding interviews" /><published>2019-05-27T14:38:04-07:00</published><updated>2019-05-27T14:38:04-07:00</updated><id>https://yolken.net/blog/master-coding-interviews</id><content type="html" xml:base="https://yolken.net/blog/master-coding-interviews">&lt;p&gt;&lt;img src=&quot;/assets/leetcode.png&quot; alt=&quot;Leetcode image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Having switched jobs &lt;a href=&quot;https://www.linkedin.com/in/yolken/&quot;&gt;a few times&lt;/a&gt; over the last few years,
 I’ve done a &lt;em&gt;a lot&lt;/em&gt; of software engineering interviews. In my most recent job search, for instance,
@@ -216,7 +216,7 @@ preparation for the following:&lt;/p&gt;
 again and again. If you’re on the market, you may want to spend some time making sure you’re
 extra comfortable with questions of these types.&lt;/p&gt;
 
-&lt;h3 id=&quot;searching-andor-exploring-in-a-2d-grid&quot;&gt;Searching and/or exploring in a 2D grid&lt;/h3&gt;
+&lt;h4 id=&quot;searching-andor-exploring-in-a-2d-grid&quot;&gt;Searching and/or exploring in a 2D grid&lt;/h4&gt;
 
 &lt;p&gt;Interviewers love these questions because they hit on multiple topics at once: recursion,
 dynamic programming, 2D arrays/lists, spatial reasoning, etc. They also lend themselves nicely
@@ -226,12 +226,12 @@ more.&lt;/p&gt;
 &lt;p&gt;See Leetcode &lt;a href=&quot;https://leetcode.com/problems/unique-paths/&quot;&gt;62&lt;/a&gt; and
 &lt;a href=&quot;https://leetcode.com/problems/number-of-islands/&quot;&gt;200&lt;/a&gt; and for examples.&lt;/p&gt;
 
-&lt;h3 id=&quot;evaluating-arithmetic-expressions&quot;&gt;Evaluating arithmetic expressions&lt;/h3&gt;
+&lt;h4 id=&quot;evaluating-arithmetic-expressions&quot;&gt;Evaluating arithmetic expressions&lt;/h4&gt;
 
 &lt;p&gt;These questions are popular because they’re easy to explain and test, but can be challenging to
 implement. See Leetcode &lt;a href=&quot;https://leetcode.com/problems/basic-calculator-ii/&quot;&gt;227&lt;/a&gt; for an example.&lt;/p&gt;
 
-&lt;h3 id=&quot;designing-and-implementing-keyvalue-stores-or-caches&quot;&gt;Designing and implementing key/value stores or caches&lt;/h3&gt;
+&lt;h4 id=&quot;designing-and-implementing-keyvalue-stores-or-caches&quot;&gt;Designing and implementing key/value stores or caches&lt;/h4&gt;
 
 &lt;p&gt;Caches are practical and easy to explain, but, depending on the desired performance tradeoffs,
 require a good understanding of certain data structures and algorithms. Leetcode
