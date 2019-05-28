@@ -8,6 +8,7 @@ baseurl: ""
 url: "https://yolken.net"
 github_username: yolken
 show_excerpts: true
+permalink: /blog/:title
 
 # Build settings
 markdown: kramdown
