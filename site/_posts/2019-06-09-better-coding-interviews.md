@@ -12,8 +12,8 @@ and talk about conducting better interviews from the interviewer perspective.
 ## Goals of an interview
 
 Before digging into the details, it's worth reviewing what the purpose of an interview is-
-figuring out whether a random person who you probably don't know much about (i.e., the candidate)
-is a good match for a specific position at your company (i.e., the job).
+figuring out whether a random person who you probably don't know much about (i.e., "the candidate")
+is a good match for a specific position at your company (i.e., "the job").
 
 The most reliable way to figure out whether the candidate is a match for the job is to
 observe them doing the job or, at least, doing activities that are as close as possible to the
@@ -30,31 +30,32 @@ questions to be as practical and job-relevant as possible.
 
 ## The rules
 
-Now that we've
+Now that we've covered the purpose of interviewing, I'd like to share some "rules" for coding
+interviews to ensure that they're productive and provide good signal.
 
 ### Rule 1: Coding problems should be done on a computer, not a whiteboard
 
 Writing code on a whiteboard made sense 25 years ago, before laptops were ubiquitous and
 when compiling and testing small programs could be painful due to primitive dev tooling.
-Now, it's a really bad idea. Unless you happen to be at a company where software
+Now, there's really no good reason to do it. Unless you happen to be at a company where software
 is written without computers, having a candidate use a computer is much closer to the work in the
 actual job and, therefore, is a more accurate way to predict job performance.
 
 Beyond the high-level, philosophical reasons for doing coding problems on computers, there are
 a number of practical benefits for both the candidate and the interviewing company:
 
-1. Writing code on a computer allows the candidate to use the tooling that they feel comfortable
-  with and that makes them most productive. Since engineers at most companies are allowed to pick
-  their own tooling for each project (within reasonable limits), this better matches the conditions
-  of the actual job.
+1. Writing code on a computer, ideally their own computer, allows the candidate to use the tooling
+  that they feel comfortable with and that makes them productive. Since engineers at most
+  companies are allowed to pick their own tooling (within reasonable limits), this better matches
+  the conditions of the actual job.
 2. On a computer, you can't hand-wave away parts of your solution (e.g., "suppose we had a helper
   function that implemented a binary search"). The candidate has to either implement it themselves
   or find some existing code or library to use.
-3. Coding problems on computers usually require the candidate to write tests and then iteratively
+3. Coding problems on a computer requires the candidate to write tests and then iteratively
   debug problems that are found. These testing and debugging skills are an important part of
   software engineering work, but they're much harder to evaluate on a whiteboard.
 
-### Rule 2: Please, no algorithm or data structure trivia
+### Rule 2: Please, no algorithm trivia
 
 Understanding algorithms and data structures is a prerequisite for writing good software. Having
 them all committed to memory, however, is not, particularly for the long tail things that are
@@ -76,7 +77,7 @@ the key classes, fill in the blanks with basic implementations, then come back a
 as needed. At each stage, you get feedback from your peers (or, in some cases, your end users), and
 make course corrections as needed before continuing the next stage.
 
-Coding problems done in interviews should, ideally, be structured in a similar way. Instead of
+Coding problems done in interviews should ideally be structured in a similar way. Instead of
 just throwing a problem out and asking the candidate to solve it end-to-end in one burst, it's
 better to divide it into chunks and work through it in stages- first, have the candidate write
 a skeleton class, then ask them to add in a method to do X, then a method to do Y that uses X, etc.
@@ -98,11 +99,52 @@ interview-specific benefits:
 
 ## Other approaches to more practical interviews
 
-Over the course of my career, I've seen other
+Over the course of my career, I've seen companies take other approaches to make their
+interviews better match real work. These are less common and a bit more controversial than
+the rules above, so I'm putting them in their own section.
 
 ### Mini-projects
 
-Instead of asking smaller, 45-60 minute questions, some companies
+Instead of asking a bunch of smaller, 45-60 minute technical questions, some companies have their
+candidates do a single "mini-project". The work is either done at home, before the interview,
+or for a couple of hours on site. Ideally, the candidate doesn't just submit their code but also
+gets a chance to present their work and discuss why they took the approaches that they did with
+their interviewers.
+
+I think these projects can be a good way to make interviews more realistic and give candidates
+a chance to show off their skills. On the other hand, when the project is done at home (as is
+usually the case), there's pressure to spend a lot of time on it, way more than the suggested
+amount, to make a good impression. This can be unfair for candidates who have full-time jobs
+and/or significant personal obligations outside of work.
 
 ### Pairing
 
+The idea here is to have the candidate pair with a member of the team instead of solving interview
+problems independently. The pair can work together on either made-up interview questions or,
+in some cases, actual project work for the company. Ideally, the company has hardware set up
+that's designed for pairing, i.e. two monitors, mice, and keyboards connected to a single computer.
+
+The advantages over standard, non-paired interviews are that:
+
+1. The interview better tests collaboration, a big part of practical software work, by forcing the
+  candidate to work directly with someone else.
+2. The interviewer can step in and help the candidate make progress when they get stuck.
+3. If the pairing is on actual project work, the interview can be a more realistic test of how
+  well the candidate will perform on the job.
+
+I think there are good intentions here. In practice, though, there are a number of issues I've
+seen with pairing interviews that make me have mixed feeling about them:
+
+1. If the company provides its own hardware, then the candidate might be forced to use a setup
+  that's not ideal for them.
+2. Often, there really isn't much pairing going on- the interviewer just watches the candidate solve
+  the question like in a normal, non-paired interview.
+3. If the pairing is on actual project work, then the candidate is basically being forced to do
+  unpaid work. Aside from the potential legal issues involved here, this can come across as
+  exploitative.
+
+## Concluding thoughts
+
+Interviews should measure how well candidates do on realistic problems under job-like constraints.
+Despite the common sense behind this, I still see companies routinely asking abstract, one-shot,
+whiteboard coding questions. Just don't do this- it's not the way to hire the best people.
