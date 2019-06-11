@@ -3,6 +3,10 @@ layout: post
 title:  "The rules for better coding interviews"
 date:   2019-06-09 16:49:00 -0700
 categories: interviewing
+excerpt: |
+  In a previous post, I discussed preparing for coding
+  interviews as a candidate. In this post, I want to flip to the other side of the table
+  and talk about conducting better interviews from the interviewer perspective.
 ---
 
 In a [previous post](/blog/master-coding-interviews), I discussed preparing for coding
@@ -36,7 +40,7 @@ interviews to ensure that they're productive and provide good signal.
 ### Rule 1: Coding problems should be done on a computer, not a whiteboard
 
 Writing code on a whiteboard made sense 25 years ago, before laptops were ubiquitous and
-when compiling and testing small programs could be painful due to primitive dev tooling.
+when compiling and testing small programs could be painful due to primitive tooling.
 Now, there's really no good reason to do it. Unless you happen to be at a company where software
 is written without computers, having a candidate use a computer is much closer to the work in the
 actual job and, therefore, is a more accurate way to predict job performance.
@@ -58,16 +62,15 @@ a number of practical benefits for both the candidate and the interviewing compa
 ### Rule 2: Please, no algorithm trivia
 
 Understanding algorithms and data structures is a prerequisite for writing good software. Having
-them all committed to memory, however, is not, particularly for the long tail things that are
-rarely encountered in day-to-day work. Quizzing a candidate on lexicographic sorting, heap
+them all committed to memory, however, is not. This is particularly true for the long tail things
+that are rarely encountered in day-to-day work. Quizzing a candidate on lexicographic sorting, heap
 implementations, or reversing linked lists is usually just a waste of time- if you need to
 understand the details of these things on the job, you can just look them up.
 
 The same goes for trivia about programming language syntax, operating systems, hardware,
 or other technical topics. If it's something that people can either pick up on the job or look up
-as needed, you're not actually measuring something that's critical for success on the job; instead,
-you're picking up correlated skills (e.g., studying and memorization) that may not be completely
-relevant.
+as needed, you're not actually measuring something that's critical for job success; instead,
+you're picking up correlated skills (e.g., studying and memorization) that may not be relevant.
 
 ### Rule 3: Avoid one-shot, all or nothing problems
 
@@ -75,7 +78,7 @@ Most problems that engineers work on are done in stages. You usually don't deliv
 a single commit. Instead, you start with the high-level data models and interfaces, sketch out
 the key classes, fill in the blanks with basic implementations, then come back and optimize
 as needed. At each stage, you get feedback from your peers (or, in some cases, your end users), and
-make course corrections as needed before continuing the next stage.
+make course corrections as needed before continuing to the next stage.
 
 Coding problems done in interviews should ideally be structured in a similar way. Instead of
 just throwing a problem out and asking the candidate to solve it end-to-end in one burst, it's
@@ -120,7 +123,7 @@ and/or significant personal obligations outside of work.
 ### Pairing
 
 The idea here is to have the candidate pair with a member of the team instead of solving interview
-problems independently. The pair can work together on either made-up interview questions or,
+problems by themselves. The pair can work together on either made-up interview questions or,
 in some cases, actual project work for the company. Ideally, the company has hardware set up
 that's designed for pairing, i.e. two monitors, mice, and keyboards connected to a single computer.
 
@@ -140,7 +143,7 @@ seen with pairing interviews that make me have mixed feeling about them:
 2. Often, there really isn't much pairing going on- the interviewer just watches the candidate solve
   the question like in a normal, non-paired interview.
 3. If the pairing is on actual project work, then the candidate is basically being forced to do
-  unpaid work. Aside from the potential legal issues involved here, this can come across as
+  unpaid work. Aside from the potential legal issues involved here, this can feel
   exploitative.
 
 ## Concluding thoughts
