@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The rules for better coding interviews | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="The rules for better coding interviews" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In a previous post, I discussed preparing for coding interviews as a candidate. In this post, I want to flip to the other side of the table and talk about conducting better interviews from the interviewer perspective." />
+<meta property="og:description" content="In a previous post, I discussed preparing for coding interviews as a candidate. In this post, I want to flip to the other side of the table and talk about conducting better interviews from the interviewer perspective." />
+<link rel="canonical" href="https://yolken.net/blog/rules-for-better-interviews" />
+<meta property="og:url" content="https://yolken.net/blog/rules-for-better-interviews" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-09T16:49:00-07:00" />
+<script type="application/ld+json">
+{"description":"In a previous post, I discussed preparing for coding interviews as a candidate. In this post, I want to flip to the other side of the table and talk about conducting better interviews from the interviewer perspective.","@type":"BlogPosting","url":"https://yolken.net/blog/rules-for-better-interviews","headline":"The rules for better coding interviews","dateModified":"2019-06-09T16:49:00-07:00","datePublished":"2019-06-09T16:49:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/rules-for-better-interviews"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The rules for better coding interviews</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-09T16:49:00-07:00" itemprop="datePublished">Jun 9, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In a <a href="/blog/master-coding-interviews">previous post</a>, I discussed preparing for coding
+interviews as a candidate. In this post, I want to flip to the other side of the table
+and talk about conducting better interviews from the interviewer perspective.</p>
+
+<h2 id="goals-of-an-interview">Goals of an interview</h2>
+
+<p>Before digging into the details, it’s worth reviewing what the purpose of an interview is-
+figuring out whether a random person who you probably don’t know much about (i.e., “the candidate”)
+is a good match for a specific position at your company (i.e., “the job”).</p>
+
+<p>The most reliable way to figure out whether the candidate is a match for the job is to
+observe them doing the job or, at least, doing activities that are as close as possible to the
+work involved in the job. If you were interviewing a chef for a restaurant, you would ask
+them to cook a meal for you. Likewise, in the case of a software engineer, your interview should
+focus on things that software engineers actually do day-to-day- writing, testing, and running code
+on a computer, debugging issues in systems, and explaining technical ideas to colleagues, among
+other things.</p>
+
+<p>Questions that are not directly related to day-to-day work on the job may have some correlation
+with eventual job performance, but it’s not going to be as strong. Given the amount of time required
+for the interview on both sides as well as the risk of bad hiring decisions, it’s best for all
+questions to be as practical and job-relevant as possible.</p>
+
+<h2 id="the-rules">The rules</h2>
+
+<p>Now that we’ve covered the purpose of interviewing, I’d like to share some “rules” for coding
+interviews to ensure that they’re productive and provide good signal.</p>
+
+<h3 id="rule-1-coding-problems-should-be-done-on-a-computer-not-a-whiteboard">Rule 1: Coding problems should be done on a computer, not a whiteboard</h3>
+
+<p>Writing code on a whiteboard made sense 25 years ago, before laptops were ubiquitous and
+when compiling and testing small programs could be painful due to primitive tooling.
+Now, there’s really no good reason to do it. Unless you happen to be at a company where software
+is written without computers, having a candidate use a computer is much closer to the work in the
+actual job and, therefore, is a more accurate way to predict job performance.</p>
+
+<p>Beyond the high-level, philosophical reasons for doing coding problems on computers, there are
+a number of practical benefits for both the candidate and the interviewing company:</p>
+
+<ol>
+  <li>Writing code on a computer, ideally their own computer, allows the candidate to use the tooling
+  that they feel comfortable with and that makes them productive. Since engineers at most
+  companies are allowed to pick their own tooling (within reasonable limits), this better matches
+  the conditions of the actual job.</li>
+  <li>On a computer, you can’t hand-wave away parts of your solution (e.g., “suppose we had a helper
+  function that implemented a binary search”). The candidate has to either implement it themselves
+  or find some existing code or library to use.</li>
+  <li>Coding problems on a computer requires the candidate to write tests and then iteratively
+  debug problems that are found. These testing and debugging skills are an important part of
+  software engineering work, but they’re much harder to evaluate on a whiteboard.</li>
+</ol>
+
+<h3 id="rule-2-please-no-algorithm-trivia">Rule 2: Please, no algorithm trivia</h3>
+
+<p>Understanding algorithms and data structures is a prerequisite for writing good software. Having
+them all committed to memory, however, is not. This is particularly true for the long tail things
+that are rarely encountered in day-to-day work. Quizzing a candidate on lexicographic sorting, heap
+implementations, or reversing linked lists is usually just a waste of time- if you need to
+understand the details of these things on the job, you can just look them up.</p>
+
+<p>The same goes for trivia about programming language syntax, operating systems, hardware,
+or other technical topics. If it’s something that people can either pick up on the job or look up
+as needed, you’re not actually measuring something that’s critical for job success; instead,
+you’re picking up correlated skills (e.g., studying and memorization) that may not be relevant.</p>
+
+<h3 id="rule-3-avoid-one-shot-all-or-nothing-problems">Rule 3: Avoid one-shot, all or nothing problems</h3>
+
+<p>Most problems that engineers work on are done in stages. You usually don’t deliver a new system in
+a single commit. Instead, you start with the high-level data models and interfaces, sketch out
+the key classes, fill in the blanks with basic implementations, then come back and optimize
+as needed. At each stage, you get feedback from your peers (or, in some cases, your end users), and
+make course corrections as needed before continuing to the next stage.</p>
+
+<p>Coding problems done in interviews should ideally be structured in a similar way. Instead of
+just throwing a problem out and asking the candidate to solve it end-to-end in one burst, it’s
+better to divide it into chunks and work through it in stages- first, have the candidate write
+a skeleton class, then ask them to add in a method to do X, then a method to do Y that uses X, etc.
+Ideally, there should be a long list of these extensions so that even the best candidates never
+make it through all of them.</p>
+
+<p>In addition to being more like real projects, this approach has a number of other,
+interview-specific benefits:</p>
+
+<ol>
+  <li>Candidates are eased into the problem gradually. If they’re prone to interview anxiety
+  (as I often am), this makes them feel more comfortable.</li>
+  <li>Having seen the problem before is less of an advantage. The candidate may be able to get
+  an answer to the core parts very quickly, but then you can just ask harder and harder extensions
+  which they’re less likely to have prepared solutions for.</li>
+  <li>Performance is less likely to be binary. Even weak candidates should make some progress,
+  whereas stronger candidates will get to different parts of the problem depending on their
+  skills and background. This allows for more granular feedback than simply “they got the problem
+  so they passed” or “they didn’t get it so they failed”.</li>
+</ol>
+
+<h2 id="other-approaches-to-more-practical-interviews">Other approaches to more practical interviews</h2>
+
+<p>Over the course of my career, I’ve seen companies take other approaches to make their
+interviews better match real work. These are less common and a bit more controversial than
+the rules above, so I’m putting them in their own section.</p>
+
+<h3 id="mini-projects">Mini-projects</h3>
+
+<p>Instead of asking a bunch of smaller, 45-60 minute technical questions, some companies have their
+candidates do a single “mini-project”. The work is either done at home, before the interview,
+or for a couple of hours on site. Ideally, the candidate doesn’t just submit their code but also
+gets a chance to present their work and discuss why they took the approaches that they did with
+their interviewers.</p>
+
+<p>I think these projects can be a good way to make interviews more realistic and give candidates
+a chance to show off their skills. On the other hand, when the project is done at home (as is
+usually the case), there’s pressure to spend a lot of time on it, way more than the suggested
+amount, to make a good impression. This can be unfair for candidates who have full-time jobs
+and/or significant personal obligations outside of work.</p>
+
+<h3 id="pairing">Pairing</h3>
+
+<p>The idea here is to have the candidate pair with a member of the team instead of solving interview
+problems by themselves. The pair can work together on either made-up interview questions or,
+in some cases, actual project work for the company. Ideally, the company has hardware set up
+that’s designed for pairing, i.e. two monitors, mice, and keyboards connected to a single computer.</p>
+
+<p>The advantages over standard, non-paired interviews are that:</p>
+
+<ol>
+  <li>The interview better tests collaboration, a big part of practical software work, by forcing the
+  candidate to work directly with someone else.</li>
+  <li>The interviewer can step in and help the candidate make progress when they get stuck.</li>
+  <li>If the pairing is on actual project work, the interview can be a more realistic test of how
+  well the candidate will perform on the job.</li>
+</ol>
+
+<p>I think there are good intentions here. In practice, though, there are a number of issues I’ve
+seen with pairing interviews that make me have mixed feeling about them:</p>
+
+<ol>
+  <li>If the company provides its own hardware, then the candidate might be forced to use a setup
+  that’s not ideal for them.</li>
+  <li>Often, there really isn’t much pairing going on- the interviewer just watches the candidate solve
+  the question like in a normal, non-paired interview.</li>
+  <li>If the pairing is on actual project work, then the candidate is basically being forced to do
+  unpaid work. Aside from the potential legal issues involved here, this can feel
+  exploitative.</li>
+</ol>
+
+<h2 id="concluding-thoughts">Concluding thoughts</h2>
+
+<p>Interviews should measure how well candidates do on realistic problems under job-like constraints.
+Despite the common sense behind this, I still see companies routinely asking abstract, one-shot,
+whiteboard coding questions. Just don’t do this- it’s not the way to hire the best people.</p>
+
+  </div><a class="u-url" href="/blog/rules-for-better-interviews" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+      <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
