@@ -9,5 +9,5 @@ were generated using [Jekyll](https://jekyllrb.com/) with the
 Run the following inside the `site` directory:
 
 ```
-JEKYLL_ENV=production jekyll build -d ~/Desktop/_site
+JEKYLL_ENV=production jekyll build -d [destination]
 ```
