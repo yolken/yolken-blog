@@ -15,10 +15,9 @@ git checkout gh-pages
 cp -R $PUB_DIR/* .
 CHANGED=$(git diff-index --name-only HEAD --)
 
-echo "Changes are: $CHANGED"
-
 if [ -n "$CHANGED" ]; then
   echo "Publishing changes"
+  echo $(git diff master..HEAD)
   git add .
   git commit -a -m "Update blog"
   git push origin gh-pages
