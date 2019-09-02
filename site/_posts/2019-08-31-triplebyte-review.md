@@ -152,7 +152,7 @@ One thing I did with one of the companies I matched with but was feeling on-the-
 arrange an office visit and casual lunch with the hiring manager after the pitch call. This helped
 me to decide that the role wasn't the best fit, which saved both me and the company a lot of time.
 It would be nice if Triplebyte facilitated these kind of pre-on-site, casual meetings for
-candidates who can't spend two weeks doing on-sites.
+local candidates who can't spend two weeks doing on-sites.
 
 ## The verdict
 
