@@ -17,7 +17,6 @@ CHANGED=$(git diff-index --name-only HEAD --)
 
 if [ -n "$CHANGED" ]; then
   echo "Publishing changes"
-  echo $(git diff master..HEAD)
   git add .
   git commit -a -m "Update blog"
   git push origin gh-pages
