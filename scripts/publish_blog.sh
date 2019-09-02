@@ -15,6 +15,8 @@ git checkout gh-pages
 cp -R $PUB_DIR/* .
 CHANGED=$(git diff-index --name-only HEAD --)
 
+echo "Changes are: $CHANGED"
+
 if [ -n "$CHANGED" ]; then
   echo "Publishing changes"
   git add .
