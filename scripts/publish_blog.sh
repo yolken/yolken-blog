@@ -25,6 +25,7 @@ else
 fi
 
 git checkout master
+git clean -fdx
 popd
 
 rm -Rf $PUB_DIR
