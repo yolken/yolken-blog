@@ -1,18 +1,26 @@
 ---
 layout: post
-title:  "Leaving a software job"
+title:  "Leaving a job"
 date:   2019-10-06 12:52:00 -0700
 categories: career
 excerpt: |
-    Blah blah
+    Over the course of my career, I've had many jobs which implies that I've also left many jobs.
+    Leaving a job can be awkward and emotionally difficult, but, depending on the circumstances,
+    also liberating and life-improving. In this post, I want to provide some guidance on why, how,
+    and when to leave a job based on my experiences so far.
 ---
 
-Over the course of my career, I've had many jobs which means that I've also left many jobs.
+Over the course of my career, I've had many jobs which implies that I've also left many jobs.
+Leaving a job can be awkward and emotionally difficult, but, depending on the circumstances,
+also liberating and life-improving.
+
+In this post, I want to provide some guidance on why, how, and when to leave a job based on my
+experiences so far.
 
 ## Why consider leaving?
 
-There are many reasons for leaving a job, some of them better than others. I've found that
-the main motivations for voluntary attrition can be divided into three buckets,
+There are many reasons for leaving a software engineering job, some of them better than others. I've
+found that the main motivations for voluntary attrition can be roughly divided into three buckets,
 described in more details below.
 
 ### The company
@@ -22,9 +30,13 @@ be that the company isn't doing well financially, has weak leadership, is engage
 that you consider horribly unethical, or has had some kind of downward cultural shift since you
 joined.
 
-Company-level problems are really hard to get around because, unless you're in upper management,
+Company issues could also be more benign. The company might be too big and bureaucratic, its
+products or technology might not be as interesting as they once were, or it might not have a
+geographic presence in a region you want to move to.
+
+Company-level concerns are really hard to get around because, unless you're in upper management,
 they're outside the control of you, your peers, and your direct manager. Also, switching
-to a different part of the company doesn't really improve things.
+to a different part of the company won't really address them.
 
 ### The team
 
@@ -47,7 +59,8 @@ enjoy certain aspects of your day-to-day work.
 These issues are theoretically resolvable, but often require some uncomfortable discussions
 and negotiations within your management chain, without any guarantees of success. Switching
 teams can also help sometimes, although if your issues are around money or career advancement,
-moving laterally could "reset" your
+moving laterally could "reset" your accomplishments and put you on the same footing
+as a new hire.
 
 ## Alternatives to leaving
 
@@ -110,8 +123,8 @@ I've never done this personally, but several colleagues over the years have. Tak
 isn't a guarantee that you'll feel better about your job when you get back, but it can at least
 give you more time to think about your situation and explore alternatives without the grind
 of your day-to-day work. Note that extended leaves taken for voluntary reasons require advance
-permission from your employer. Even if the leave is completely unpaid, there's no guarantee
-of approval, particularly if there's any suspicion that you might not come back.
+permission from your employer, and, even if the leave is completely unpaid, there's no guarantee
+of approval.
 
 ## Giving notice
 
@@ -140,12 +153,11 @@ voluntarily and on their own schedules.
 
 ### How
 
-Once you've definitively made up your mind to leave, you should tell your manager in a 1:1,
+Once you've decided to leave, you should tell your manager in a 1:1,
 in-person chat. You should be honest about your reasons, but at the same time polite. They
 may try to convince you to change your mind or chat with other people at the company who
 might be able to do this. It's fine to hear people out, but keep in mind that these discussions
-can be awkward and also a waste of time if you've already made up your mind; feel free to
-refuse.
+can be awkward and also a waste of time if you've definitively made up your mind.
 
 Once the difficult part is out of the way, it's time to talk about the logistics of (1)
 your final date, (2) telling the rest of the team, and (3) transitioning your work to other
