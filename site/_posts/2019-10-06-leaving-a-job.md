@@ -5,13 +5,13 @@ date:   2019-10-06 12:52:00 -0700
 categories: career
 excerpt: |
     Over the course of my career, I've had many jobs which implies that I've also left many jobs.
-    Leaving a job can be awkward and emotionally difficult, but, depending on the circumstances,
+    Leaving a job can be awkward and emotionally draining, but, depending on the circumstances,
     also liberating and life-improving. In this post, I want to provide some guidance on why, how,
     and when to leave a job based on my experiences so far.
 ---
 
 Over the course of my career, I've had many jobs which implies that I've also left many jobs.
-Leaving a job can be awkward and emotionally difficult, but, depending on the circumstances,
+Leaving a job can be awkward and emotionally draining, but, depending on the circumstances,
 also liberating and life-improving.
 
 In this post, I want to provide some guidance on why, how, and when to leave a job based on my
@@ -177,5 +177,5 @@ end by thinking about how much better your next job will be.
 
 ## Final advice
 
-Don't do anything rash, but ultimately you should trust your gut. If you've exhausted the
-alternatives and have an offer from another company that would make you happier, then take it.
+Don't do anything rash, but ultimately trust your gut. If you've exhausted the alternatives and
+have an offer from another company that would make you happier, then take it.
