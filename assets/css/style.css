@@ -568,3 +568,9 @@ h3.post-header {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+blockquote {
+  letter-spacing: normal;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 19px; }
