@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stop hiding levels!"
+title:  "Stop hiding levels"
 date:   2020-03-29 13:27:00 -0700
 categories: career
 excerpt: |
