@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cleaner go code with golines"
-date:   2020-07-29 12:37:00 -0700
+date:   2020-07-23 12:37:00 -0700
 categories: golang
 excerpt: |
     Last year, I open-sourced golines, a tool that automatically shortens long lines in go code.
