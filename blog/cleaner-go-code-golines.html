@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Cleaner go code with golines | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Cleaner go code with golines" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works." />
+<meta property="og:description" content="Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works." />
+<link rel="canonical" href="https://yolken.net/blog/cleaner-go-code-golines" />
+<meta property="og:url" content="https://yolken.net/blog/cleaner-go-code-golines" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-29T12:37:00-07:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://yolken.net/blog/cleaner-go-code-golines","headline":"Cleaner go code with golines","dateModified":"2020-07-29T12:37:00-07:00","datePublished":"2020-07-29T12:37:00-07:00","description":"Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works.","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/cleaner-go-code-golines"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Cleaner go code with golines</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-29T12:37:00-07:00" itemprop="datePublished">Jul 29, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Last year, with the generous support of <a href="https://segment.com">my employer</a>, I open-sourced
+<a href="https://github.com/segmentio/golines">golines</a>, a tool that automatically shortens
+long lines in go code. At the time, I was busy with other work so I never got a chance to
+write about it beyond the basic documentation in the
+<a href="https://github.com/segmentio/golines/blob/master/README.md">project README</a>. In this post,
+I want to explain more about why I developed the tool and how it works.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>The standard tooling for the go programming language includes
+<a href="https://golang.org/cmd/gofmt/"><code class="highlighter-rouge">gofmt</code></a>, a very solid code formatting utility. <code class="highlighter-rouge">gofmt</code>
+automatically applies the standard go rules for indents and spacing, for example converting this
+mess:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="x">  </span><span class="k">func</span><span class="x"> </span><span class="n">myFunc</span><span class="x">  </span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">(</span><span class="x">   </span><span class="kt">string</span><span class="p">,</span><span class="x">    </span><span class="kt">error</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
+		 </span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="x">   </span><span class="s">"Combined: %s %s"</span><span class="p">,</span><span class="x"> </span><span class="n">s</span><span class="p">,</span><span class="x">   </span><span class="n">t</span><span class="x">   </span><span class="p">)</span><span class="x">
+
+
+	 </span><span class="k">return</span><span class="x">   </span><span class="n">v</span><span class="p">,</span><span class="x">   </span><span class="no">nil</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>into a logically equivalent but much prettier variant:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">(</span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="kt">error</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"Combined: %s %s"</span><span class="p">,</span><span class="x"> </span><span class="n">s</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="p">)</span><span class="x">
+
+	</span><span class="k">return</span><span class="x"> </span><span class="n">v</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>Unfortunately, this tool and the others that extend it
+(e.g., <a href="https://godoc.org/golang.org/x/tools/cmd/goimports"><code class="highlighter-rouge">goimports</code></a>) don’t do anything about
+long lines. <code class="highlighter-rouge">gofmt</code> will happily leave the following code as-is:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc2</span><span class="p">(</span><span class="n">longArg1</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg2</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg3</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg4</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg5</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg6</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="kt">string</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="k">return</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"longArg1"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg1</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg2"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg2</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg3"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg3</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg4"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg4</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg5"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg5</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg6"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg6</span><span class="p">})</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>Personally, I find it much more readable in cases like this to split out the
+function arguments and map key-value pairs onto separate lines:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc2</span><span class="p">(</span><span class="x">
+	</span><span class="n">longArg1</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+	</span><span class="n">longArg2</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+	</span><span class="n">longArg3</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+	</span><span class="n">longArg4</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+	</span><span class="n">longArg5</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+	</span><span class="n">longArg6</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
+</span><span class="p">)</span><span class="x"> </span><span class="kt">string</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">return</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="x">
+		</span><span class="s">"%v"</span><span class="p">,</span><span class="x">
+		</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+			</span><span class="s">"longArg1"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg1</span><span class="p">,</span><span class="x">
+			</span><span class="s">"longArg2"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg2</span><span class="p">,</span><span class="x">
+			</span><span class="s">"longArg3"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg3</span><span class="p">,</span><span class="x">
+			</span><span class="s">"longArg4"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg4</span><span class="p">,</span><span class="x">
+			</span><span class="s">"longArg5"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg5</span><span class="p">,</span><span class="x">
+			</span><span class="s">"longArg6"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg6</span><span class="p">,</span><span class="x">
+		</span><span class="p">},</span><span class="x">
+	</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>I like go, but for years it bothered me that there was no automatic way of applying the
+above types of cleanups. When going into a new codebase, I would manually shorten the worst
+offenders, which was fine for small projects but got tedious in large ones that had
+accumulated years of long-line commits. I decided to make this process easier by writing my own
+tool!</p>
+
+<h3 id="aside-who-cares">Aside: Who cares?</h3>
+
+<p>Although many support this crusade to shorten long lines, I’ve definitely gotten some
+skepticism over the years about both my manual fixes and attempts to write an automated tool.
+The main arguments (and my responses) have included the following:</p>
+
+<h4 id="you-can-just-wrap-lines-in-whatever-code-editor-youre-using"><em>You can just wrap lines in whatever code editor you’re using!</em></h4>
+
+<p>Yes, that’s true, but not everyone uses the same editor and not all editors handle wrapping
+gracefully. In addition, many online reviewing tools don’t wrap lines, so this doesn’t help
+when I’m trying to understand your 200 character-wide function declarations in Github.</p>
+
+<h4 id="line-length-is-a-matter-of-preference-we-shouldnt-impose-a-constraint-that-others-may-disagree-with"><em>Line length is a matter of preference. We shouldn’t impose a constraint that others may disagree with.</em></h4>
+
+<p>True, but so is spaces vs. tabs, whether to put the opening <code class="highlighter-rouge">{</code> on the same line as a function
+definition or the next one, and many other style disputes that <code class="highlighter-rouge">gofmt</code> and other tools take
+very definitive stands on. You have to impose some standards, otherwise each file in your repo
+will look completely different based on who last edited it.</p>
+
+<h4 id="i-find-having-all-function-arguments-all-map-key-value-pairs-etc-on-a-single-line-easier-to-read"><em>I find having all function arguments, all map key-value pairs, etc. on a single line easier to read.</em></h4>
+
+<p>Really? Well, maybe this could be valid in some cases. However, it’s generally easier to scan
+vertical lists than horizontal ones. This is why we use bullet points so much
+in presentation slides. Although a horizontal list might be ok in some cases, a vertical
+orientation should never make it significantly worse and in many cases be an improvement.</p>
+
+<h2 id="first-attempt-regular-expressions">First attempt: Regular expressions</h2>
+
+<p>My first attempt at automating the line shortening process was to write a script that used
+regular expressions. The basic algorithm was:</p>
+
+<ol>
+  <li>Go through each line in the file</li>
+  <li>If the line is already shorter than the threshold (e.g., 100 columns), leave it as-is and
+  continue to the next one</li>
+  <li>Otherwise, loop through a set of pre-defined, “splitter” regular expressions</li>
+  <li>If the line matches one of these, insert newlines according to some associated, pre-defined
+  logic, then continue to the next line</li>
+  <li>After reaching the end of the file, run <code class="highlighter-rouge">gofmt</code> to fix the spacing issues created by (4)</li>
+</ol>
+
+<p>I then went about creating the regular expressions to use. It started off relatively easy;
+for instance, to pick up the case of a long line with a function call, I used something like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>^\s*\w+\((\w+)(,[ ]?\w+)*\)$
+</code></pre></div></div>
+
+<p>That will match <code>&nbsp;&nbsp;hello(arg1, arg2,arg3)</code>. We can then have some logic that
+inserts newlines and a final comma in the appropriate places:
+<code>&nbsp;&nbsp;hello(\narg1,\n arg2,\narg3,\n)</code>. The end result, before running the final
+<code class="highlighter-rouge">gofmt</code>, thus renders as:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="x">  </span><span class="n">hello</span><span class="p">(</span><span class="x">
+</span><span class="n">arg1</span><span class="p">,</span><span class="x">
+ </span><span class="n">arg2</span><span class="p">,</span><span class="x">
+</span><span class="n">arg3</span><span class="p">,</span><span class="x">
+</span><span class="p">)</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">gofmt</code> then fixes the indents on each line so that it actually looks nice and matches the
+surrounding code.</p>
+
+<p>I then made similar regular expressions and fixing logic for a few other common cases, including
+long function declarations and simple key-value maps.</p>
+
+<p>The initial version worked decently well, fixing around 70% of the long lines in an old go repo
+at my then employer. Next, I went through and improved the regular expressions to fill in some
+of the gaps. In the example above, for instance, what if an argument has quotes around it? What
+if someone has already done a single split in the middle, but one or both of the segments is still
+too long? There are many, many cases to cover. After a while, the regular expressions got so big
+that I had to split them up into smaller clauses and use text templating to put them together.</p>
+
+<p>Even with multiple iterations, it was difficult to match more than 80% or so of the long lines. The
+hardest cases to cover involved nesting. In the above example, for instance, each function
+argument could itself be a function call, and those arguments could include function calls,
+and so forth. I would try something that seemed promising, only to hit a case that would
+cause the regular expression matcher to get stuck in a
+<a href="https://www.regular-expressions.info/catastrophic.html">catastrophic backtracking</a> loop.</p>
+
+<p>In the end, I just gave up. I’m not a regular expression expert, so maybe there could have been
+some way to rewrite my expressions to make them more efficient, but even if I did that, it seemed
+like fixing all of the corner cases would be a never-ending game of whack-a-mole.</p>
+
+<h2 id="second-attempt-use-asts">Second attempt: Use ASTs</h2>
+
+<h3 id="the-theory">The theory</h3>
+
+<p>Ultimately, the grammar of the go language is just too complex to be “interpreted” by simple
+regular expressions. The go compiler takes a different approach- it uses a parser to create
+an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree (AST)</a> representation
+of the code. I never took a class on compilers, so I’ll leave the theoretical details to the
+experts. The main idea, however, is to convert code from a linear sequence of bytes into a tree
+that can be used for “understanding” what the code actually represents. The latter representation
+can then be transformed into lower-level machine code.</p>
+
+<p>The go compiler, for instance, converts this code:</p>
+
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"hello"</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"key1"</span><span class="o">:</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%s-%d"</span><span class="p">,</span><span class="x"> </span><span class="n">v</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">)})</span><span class="x">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>into the following AST:</p>
+
+<p><img src="/assets/golines_graph1.png" alt="golines AST" /></p>
+
+<p>It looks scary at first glance, but if you walk through from the top and follow along in the code,
+it makes intuitive sense. The great thing about ASTs is that they automatically handle the
+nesting and splitting that was so hard when using regular expressions. Go also exposes the AST
+generation process and structs in <a href="https://golang.org/pkg/go/ast/">the standard library</a>, so it’s
+fairly easy to create representations like the one above.</p>
+
+<p>Now, in theory, we can modify the regular-expression-based shortening algorithm above to work on an
+AST instead of a sequence of lines. Instead of looping through lines, we can do a depth-first
+traversal of the nodes. If a node is on a long line, we can insert newlines between its children
+and/or recursively apply our shortening on them. The exact logic here depends on the node
+type, but in the case of a <code class="highlighter-rouge">CallExpression</code> (i.e., a function call) for instance, we would
+insert newlines between each of the children <code class="highlighter-rouge">Args</code>. Then, at the end, we can convert the AST
+back to code and run <code class="highlighter-rouge">gofmt</code> to fix the spacing on each line.</p>
+
+<h3 id="the-implementation">The implementation</h3>
+
+<p>This is all great, but there’s one significant problem- ASTs are <em>abstract</em>. In general, they’re
+intended for compilation, not code formatting, so details like spacing and newlines might
+be incomplete. In the go case specifically, it’s hard to tell what the length of a line is just
+by looking at the AST nodes that were generated from that line.</p>
+
+<p>As I dug into the AST-based approach, I realized that this was going to be a significant blocker-
+if we didn’t know line lengths, it would be impossible to figure out which AST nodes to modify.
+I needed some way to link the state of the original code (i.e., that a particular line is too
+long) to its AST representation, but without modifying the logic of the code itself.</p>
+
+<p>After some trial-and-error, I figured out that <em>comments</em> could be one way to make this link.
+In particular, the tool could first add comments to the long lines in the code, then generate the
+AST. We could then check each node to see whether it had one of these “line too long” comments
+to determine whether we should try to split it out onto multiple lines.</p>
+
+<p>The golang AST does include comments, but unfortunately they’re not directly linked to other nodes
+in the AST. Thankfully, however, there’s a third-party AST generator,
+<a href="https://github.com/dave/dst"><code class="highlighter-rouge">dave/dst</code></a>, that does maintain these links. By using this, I could
+mark the long lines, generate the AST, and then traverse the graph and insert newlines in the
+appropriate places to break up the long lines. The “control comments” could then be scrubbed
+at the end so they wouldn’t appear in the final formatted output.</p>
+
+<p>Once I got the initial skeleton in place, the rest of the work involved figuring out how
+to split each node type. In most cases, it was fairly straightforward- function declarations
+and calls, for instance, can be split between the arguments. It got tricker, however,
+when dealing with cases where the top-level node is not the one that you actually want
+to shorten. If you’re shortening an assignment, for instance <code class="highlighter-rouge">x := myFunc(...)</code>, then you
+really want to shorten the right-hand-side, which is in a lower-level node. In these cases,
+you need to “push” the shortening work down recursively.</p>
+
+<h2 id="from-testing-to-release">From testing to release</h2>
+
+<p>After lots of trial-and-error, I got the tool, which I decided to call <code class="highlighter-rouge">golines</code>, working for all
+of the fixtures that I could generate myself. The next step was to run it on real code to make
+sure that it (1) wouldn’t crash, (2) would make progress at a reasonable speed, and (3) would
+actually shorten long lines in a reasonable way.</p>
+
+<p>I started with some of the smaller go repos inside Segment, and worked my way up to large,
+open-source projects like Kubernetes. Along the way, I filled in the various AST node types
+that were omitted in my first pass and also used <a href="https://golang.org/pkg/net/http/pprof/">pprof</a> to
+discover and alleviate the performance bottlenecks.</p>
+
+<p>In the end, I got to a point where I felt fairly confident about the quality of the tool and
+kicked off our internal process for open-sourcing. A week later, <code class="highlighter-rouge">golines</code> was out in the wild and
+available for general use!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you’re annoyed by long go lines as much as I am, please give
+<a href="https://github.com/segmentio/golines"><code class="highlighter-rouge">golines</code></a> a try. And, if you notice any problems or
+have enhancement suggestions, file an issue in the repo. External contributions are welcome as well.</p>
+
+  </div><a class="u-url" href="/blog/cleaner-go-code-golines" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+      <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
