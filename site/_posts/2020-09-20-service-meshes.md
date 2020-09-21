@@ -6,7 +6,7 @@ categories: networking
 excerpt: |
     Service meshes look great on paper but can be a huge pain to roll out
     and manage. In this post, I want to share some of my war stories
-    and caution against diving into the "service mesh" hype too quickly.
+    and caution against diving into the service mesh hype too quickly.
 ---
 
 I've worked on deploying "service meshes" at multiple companies. Although
