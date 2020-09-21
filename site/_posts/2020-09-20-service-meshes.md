@@ -4,13 +4,15 @@ title:  "Service meshes are hard"
 date:   2020-09-20 13:44:00 -0700
 categories: networking
 excerpt: |
-    Blah blah blah.
+    Service meshes look great on paper but can be a huge pain to roll out
+    and manage. In this post, I want to share some of my war stories
+    and caution against diving into the "service mesh" hype too quickly.
 ---
 
 I've worked on deploying "service meshes" at multiple companies. Although
-they look great on paper, deploying them is a huge pain, with very high
-risk of serious outages. In this post, I want to share some of my war stories
-and caution against diving into the "service mesh" hype too quickly.
+they look great on paper, deploying them is a huge pain, with a high
+risk of serious production outages. In this post, I want to share some of my war
+stories and caution against diving into the service mesh hype too quickly.
 
 ## Aside: What's a service mesh?
 
@@ -19,25 +21,31 @@ via multiple, semi-independent components. This blog, for instance, is hosted
 in Github Pages. When your browser requests the HTML for this page, your
 request most likely hits some sort of frontend proxy (e.g.,
 [Nginx](https://www.nginx.com/)), which then sends the request to a backend
-server (e.g., in Ruby), which then might send out requests to even more
-services, e.g. to record stats or fetch user
-information.
+server (implemented in Ruby, perhaps), which then sends out requests to even more
+services, e.g. to record stats or fetch user information.
 
-Without a service mesh, these various component services communicate directly;
-here's a simple picture:
+#### Direct communication
+
+The simplest approach for handling requests between these components is to
+have them communicate directly. Here's an illustration of this:
 
 <div style="text-align:center"><img src="/assets/service_meshes1.png" alt="service mesh simple" width="400"/></div>
 
-The communication over the arrows is typically HTTP, but might be a more
+The requests represented by the arrows are often made using
+[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), but might use a
 specialized, binary protocol instead, e.g. when using something like
-[Apache Thrift](http://thrift.apache.org/). The communication can be encrypted
-but it's often not since this would require the clients and servers to
-handle protocols like TLS, which adds complexity and reduces performance.
+[Apache Thrift](http://thrift.apache.org/). The underlying bytes can be encrypted
+but are often not since this would require the clients and servers to
+handle protocols like [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security),
+which adds complexity and reduces performance.
 
 The picture above doesn't show how service A "discovers" the addresses of B and C.
 These might be hard-coded, looked up in [DNS](https://en.wikipedia.org/wiki/Domain_Name_System),
-or fetched from a centralized service registry like [Consul](https://www.consul.io/).The important thing to note, though, is that the details of doing this are
+or fetched from a centralized service registry like [Consul](https://www.consul.io/).
+The important thing to note, though, is that the details of doing this are
 handled by A itself.
+
+#### Using a service mesh
 
 A service mesh is a dedicated infrastructure layer for handling the details
 of this inter-service communication. Although the exact architecture varies,
@@ -47,7 +55,7 @@ with a mesh the picture above might become:
 
 Now, service A doesn't communicate directly with B and C. Instead, it sends requests
 to a local (outbound) proxy that then sends the requests to the (inbound) proxies
-for B and C. The latter then forward to the requests to the service instances on
+for B and C. The latter then forward the requests to the service instances on
 their respective hosts. The links between proxies can be, and often are, encrypted
 via [mTLS](https://developers.cloudflare.com/access/service-auth/mtls/).
 
@@ -78,6 +86,14 @@ you could add mTLS, uniform observability, etc. directly into each service, but 
 to have to re-implement the same logic multiple times in multiple languages. Even if the
 services are written in the same language, they are probably not going to be using the
 same client and server implementations uniformly.
+
+### Implementations
+
+Reviewing the various service mesh implementation options is beyond the scope of this post. Instead,
+I'll refer you to [this site](https://servicemesh.es/), which has a nice summary and seems
+fairly up-to-date. As an alternative to adopting an off-the-shelf implementation, some companies
+simply take a "roll your own" approach using [Envoy](https://www.envoyproxy.io/) plus a
+custom-built control plane service; this is what we did at Stripe.
 
 ## Why they're hard
 
@@ -112,12 +128,12 @@ proxy on B's host, or the proxy on A's host. Now, instead of looking in one plac
 you have to look in three places. This means that the debugging process is slower and
 more tedious.
 
-#### Encryption makes debugging harder
+#### Encrypted traffic looks like binary junk
 
 There are lots of great tools for inspecting unencrypted traffic. Personally,
 I like running `tcpdump -i any -A port [my service port]` and watching requests
 go back and forth when I'm trying to understand the traffic hitting a service. If
-this traffic is encrypted, you can still do this but all you'll see is binary junk:
+this traffic is encrypted, you can still do this, but all you'll see is binary junk:
 
 {% highlight bash %}
 16:51:07.773675 IP lga15s43-in-f36.1e100.net.https > 192.168.0.10.56081: Flags [P.], seq 2713:3385, ack 537, win 261, options [nop,nop,TS val 2846442026 ecr 1037268748], length 672
@@ -146,7 +162,6 @@ a distinct identity.
 I spent many, many months at Stripe working on a "Service CA" to address this problem. We got
 things working in the end, but it required a lot of very careful design
 
-
 #### Control plane is a single point of failure
 
 The control plane is a critical component of a service mesh. It keeps all of the proxies updated
@@ -160,9 +175,10 @@ In addition, the control plane can wreak havoc on your infrastructure if it's mi
 or gets confused about the state of the world.
 
 A really scary type of incident, which I've seen a few times across multiple companies, is when
-the control plane thinks that all of the service instances have disappeared (maybe because
+the control plane thinks that all of the service instances have disappeared (for instance, because
 the source that it pulls these from is broken). It blissfully pushes out empty configs to all
-of the proxies,
+of the proxies, all inter-service communication is broken, and your company is hard-down
+until the issue is fixed.
 
 #### Proxies are complex
 
@@ -182,16 +198,89 @@ that people have for them.
 
 ## Alternatives to service meshes
 
+In some cases, you may be able to get the benefits of a service mesh with much less work.
+
 #### For security
 
+To prevent an unauthorized client from hitting a server, you can use firewall rules
+(called [security groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
+in the AWS context) to lock down access. AWS and other cloud providers make it fairly
+straightforward to define these rules at the instance level and keep them updated.
 
+If you're in Kubernetes, you can also define service-level firewall rules via
+[network policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
 
-#### For load balancing / routing
+If there is a particularly sensitive origin / destination pair, you can implement mTLS for just
+that pair in the client and server code or via a proxy on each side. Doing this as a one-off
+is going to be easier than implementing it for all service combinations in your infrastructure.
 
+#### For load balancing / routing / observability
 
+If you're running in a cloud environment, consider using hosted load balancers in front
+of your services (e.g.,
+[ALBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html) in AWS).
+These typically support target discovery, health checking, complex routing, uniform metrics, and
+other things that a service mesh also provides.
+
+If you're in Kubernetes, you can use
+[services](https://kubernetes.io/docs/concepts/services-networking/service/) and other
+primitives to get the same kinds of features.
 
 ## The path forward
 
+If you've carefully evaluated the pros and cons and decided to go forward with a service
+mesh, here are some tips to make the process a bit easier.
+
+#### Plan carefully
+
+Rolling out a service mesh is a really big project. It will require changes to nearly
+every service running in your infrastructure, and it can't be released all at once.
+
+Think carefully about the phases of the rollout. At Stripe, we started on the client side
+without encryption, then implemented the server side without encryption, then,
+finally, after that was stable, activated mTLS on a service-by-service basis. We were
+also very careful about the order in which services were updated within each phase. The optimal
+plan in your environment may be different depending on your risk profile and service topology.
+
+#### Pad your estimates
+
+Take your time estimates for the amount of engineer time required and multiply by 4. Seriously.
+Making updates and debugging networking issues in services you don't fully understand is really
+time consuming. Moreover, you'll discover weird use cases and requirements that you didn't plan
+for and will need to incorporate into your design.
+
+At Stripe, we originally thought that one person could roll out our service mesh in 3 quarters.
+In the end, it took over a year with 4 people on the team contributing. Because we hadn't
+planned for that much work, we had to defer some other projects that we had promised to do
+(e.g., rolling out Kubernetes more extensively), which caused some resentment among our users.
+
+#### Make it easy to switch back and forth
+
+Whenever a change is made (e.g., switching a service pair to the service mesh), keep the
+old path around for a while and make it easy to revert back. At Stripe, we had a dynamic,
+"feature flag" system we could use for this; other companies I've been at have had similar
+configuration mechanisms.
+
+If there's an urgent problem in the middle of the night, it's a lot easier to revert by clicking a
+button in a UI than it is to revert the change in the code, wait for CI, and do a deploy.
+
 #### Don't roll your own
 
-####
+Please, please use an existing service mesh implementation if at all possible as opposed
+to rolling your own. Even if you can't use an existing implementation directly, consider
+ripping out and reusing the components that can be adapted to your environment.
+
+At Stripe, we built our control plane components completely from scratch. While it was a lot
+of fun personally, it took a long time to develop and there were a number of very tricky corner
+cases that popped up and led to serious production incidents along the way. It's much safer
+to adopt service mesh components that have been written by domain experts and been
+extensively battle-tested in external environments.
+
+## Conclusion
+
+Service meshes have a lot of benefits, but also a number of downsides that should be
+carefully considered before committing to a rollout. Thankfully, things should get better
+in the future as cloud providers build more service mesh features directly into their
+products and third-party solutions like
+[Istio](https://istio.io/latest/docs/concepts/what-is-istio/) become more robust. In the meantime,
+though, be careful!
