@@ -182,7 +182,7 @@ committed to memory.
 I usually feel ready to do real interviews after I've solved around 100 questions. Doing more
 than this has diminishing returns for me because the questions begin to look alike and my
 performance doesn't significantly improve. It takes me at least 3 weeks to get through this many
-questions, assuming that I'm spending most of my weekends studying. 
+questions, assuming that I'm spending most of my weekends studying.
 
 Ultimately, the goal isn't to hit a specific number but rather to feel comfortable with arbitrary
 questions in the interview difficulty range (mid-medium to low-hard, as discussed above). You may
