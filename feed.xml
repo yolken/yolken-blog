@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-09-20T22:13:05-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Service meshes are hard</title><link href="https://yolken.net/blog/service-meshes" rel="alternate" type="text/html" title="Service meshes are hard" /><published>2020-09-20T13:44:00-07:00</published><updated>2020-09-20T13:44:00-07:00</updated><id>https://yolken.net/blog/service-meshes</id><content type="html" xml:base="https://yolken.net/blog/service-meshes">&lt;p&gt;I’ve worked on deploying “service meshes” at multiple companies. Although
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-09-26T21:07:44-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Six years of recruiting emails</title><link href="https://yolken.net/blog/six-years-of-emails" rel="alternate" type="text/html" title="Six years of recruiting emails" /><published>2020-09-26T16:59:00-07:00</published><updated>2020-09-26T16:59:00-07:00</updated><id>https://yolken.net/blog/six-years-of-emails</id><content type="html" xml:base="https://yolken.net/blog/six-years-of-emails">&lt;p&gt;As a software engineer working in the San Francisco Bay Area, I get &lt;em&gt;a lot&lt;/em&gt; of
+unsolicited recruiting emails. I recently decided to dig through my email archives
+and do some analysis of the long-term trends. Here are the results.&lt;/p&gt;
+
+&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+
+&lt;p&gt;I get career-related messages sent to both my LinkedIn and Gmail accounts. Here’s a typical
+example (with the sender’s name blacked out for privacy):&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img width=&quot;600&quot; src=&quot;/assets/typical_email.png&quot; alt=&quot;typical email&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first step was to get all these messages out of my accounts and into a format
+that I could use for the analysis.&lt;/p&gt;
+
+&lt;p&gt;For LinkedIn, this was easy- there’s a “Get a copy of your data” section in the account
+privacy settings. I selected “Messages”, clicked the “Request Archive” button and then,
+a few minutes later, downloaded a CSV that contained one row per message, with columns
+for all of the important metadata: sender, recipient, subject, date, etc.&lt;/p&gt;
+
+&lt;p&gt;For Gmail, the process was a bit more involved. I had to go through Google’s general
+export product, &lt;a href=&quot;https://takeout.google.com/&quot;&gt;Takeout&lt;/a&gt;, scroll down the Gmail section,
+then select the labels to export. Thankfully, I’ve done a good job labelling
+all of my career related emails, so I could just export those and not everything in my account.&lt;/p&gt;
+
+&lt;p&gt;A few minutes later, I got the option to download a bundle of all my emails in an
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Mbox&quot;&gt;mbox&lt;/a&gt; file. This is a legacy
+format originally developed for text-based email clients in Unix; unfortunately, Google
+doesn’t give you the option to download your emails in an easier-to-use format like CSV.&lt;/p&gt;
+
+&lt;p&gt;The file had several million lines that looked like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;From 1669160939957813740@xxx Thu Jun 11 00:38:38 +0000 2020
+X-GM-THRID: 1669160939957813740
+X-Gmail-Labels: Archived,Important,Opened,Category Updates,jobs
+Delivered-To: XXXXX@gmail.com
+Received: by 2002:a8a:40a:0:0:0:0:0 with SMTP id n10csp877323ocb;
+        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
+X-Received: by 2002:a17:902:ab87:: with SMTP id f7mr5405841plr.166.1591835918733;
+        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I then wrote a Python script to read this file, pull out the inbound messages, and convert
+each one to a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;from,subject,date,body&amp;gt;&lt;/code&gt; tuple. Thankfully, the Python standard library contains a
+&lt;a href=&quot;https://docs.python.org/3/library/mailbox.html&quot;&gt;mailbox&lt;/a&gt; module that parses mbox files
+and makes it easy to pull out the sender, recipient, subject, and date for each message.
+Getting the bodies was a little trickier since mbox bodies can have multiple parts, each with
+a different encoding (text, html, etc.), but I managed to find some
+&lt;a href=&quot;https://stackoverflow.com/questions/26567843/reading-the-mail-content-of-an-mbox-file-using-python-mailbox&quot;&gt;examples on Stack Overflow&lt;/a&gt;
+to copy.&lt;/p&gt;
+
+&lt;p&gt;I then merged the Gmail data with the LinkedIn data, exported everything to a CSV, and opened
+this in Google Sheets. Finally, I spent an hour going through all the messages and deleting
+the ones that weren’t unsolicited. The result was a clean spreadsheet with one row per recruiting
+email that I could use for my analysis.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-results&quot;&gt;The results&lt;/h2&gt;
+
+&lt;p&gt;The following shows the number of unsolicited recruiter emails I’ve received by month since the
+beginning of 2014:&lt;/p&gt;
+
+&lt;iframe width=&quot;850&quot; height=&quot;526&quot; seamless=&quot;&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4ZHxTwbmETB3mUTcILEkU77r_R8TVF3UcgW3Ems11ULMfJWuG8wwioWwx-myDnrEUhcbk1myxaAAr/pubchart?oid=1061438793&amp;amp;format=interactive&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;A few interesting trends:&lt;/p&gt;
+
+&lt;h4 id=&quot;volume-has-increased-a-lot-over-the-years&quot;&gt;&lt;em&gt;Volume has increased a lot over the years&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Back in 2014, I was only getting a handful of messages per month. Now, I routinely get more
+than one a day. The fact that I have more experience now than I did earlier in my career is
+certainly a factor. But, I think the key driver here is simply that tech keeps getting bigger
+and bigger, and the need for skilled engineers has increased significantly over time.&lt;/p&gt;
+
+&lt;h4 id=&quot;there-are-clear-seasonal-patterns&quot;&gt;&lt;em&gt;There are clear seasonal patterns&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Email volume goes down significantly around the winter holidays. There’s also a smaller drop
+in the middle of the summer. Spring and fall are the busiest times, which also matches when
+companies do the most interviewing.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-get-more-emails-when-im-actively-engaged-in-a-job-search&quot;&gt;&lt;em&gt;I get more emails when I’m actively engaged in a job search&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;The peaks in 2015, 2017, and 2019 correspond to periods when I was actively on the job
+market. During these times, I was much more active about updating my LinkedIn profile, which
+is probably a strong signal that a candidate is looking for something new. It’s also possible
+that word spread through recruiters or friends, and that led to more job solicitations.&lt;/p&gt;
+
+&lt;h4 id=&quot;there-was-no-significant-drop-due-to-covid&quot;&gt;&lt;em&gt;There was no significant drop due to COVID&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Despite many companies laying people off or implementing hiring freezes earlier this year, I
+still got a lot of recruiter emails. Now that startup valuations are back up and companies are
+hiring again, I’m getting more emails than ever.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-trends&quot;&gt;Other trends&lt;/h2&gt;
+
+&lt;h4 id=&quot;big-companies-can-send-lots-of-emails&quot;&gt;&lt;em&gt;Big companies can send lots of emails&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Facebook has by far been the peskiest of all the companies over the years, sending me more than
+25 unsolicited recruiting emails since 2014. They’ve also sent a few text messages to my phone,
+which is super-annoying. I should note, though, that I did interview there back in 2012, so I’m
+probably in their system as a past prospect, which makes me a more likely sourcing target.&lt;/p&gt;
+
+&lt;p&gt;Amazon has also sent a lot of emails, particularly over the last two years.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, I’ve only gotten one email from Apple, and nothing from other tech giants like
+Microsoft, Netflix, IBM, SAP, and Cisco.&lt;/p&gt;
+
+&lt;h4 id=&quot;follow-ups&quot;&gt;&lt;em&gt;Follow-ups&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;A very common pattern is to send a message, then send a few follow-ups over the next
+few days with slightly different bodies and subject lines. See the Opendoor example
+at the beginning of this post for an example.&lt;/p&gt;
+
+&lt;p&gt;I guess that’s one way to make sure that an email isn’t missed, although it can get a little
+tiresome if you’re not interested in the company at all.&lt;/p&gt;
+
+&lt;h4 id=&quot;cute-and-not-so-cute-subject-lines&quot;&gt;&lt;em&gt;Cute (and not-so-cute) subject lines&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Recruiters and sourcers try to be clever with subject lines and message introductions to
+catch your attention and make the messages seem more personal.&lt;/p&gt;
+
+&lt;p&gt;Binary is one way to get attention, but I have no idea what it says since I’m not a
+computer :-):&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img width=&quot;400&quot; src=&quot;/assets/message2.png&quot; alt=&quot;typical email2&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another trick is to put your current and past employers in the subject so that
+it looks more personalized, and then reference them in the body.
+Not sure how effective it is, though:&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img width=&quot;400&quot; src=&quot;/assets/message3.png&quot; alt=&quot;typical email3&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Emoji are cute. Here’s a message that had one in the subject
+and then used them liberally in the body:&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img width=&quot;400&quot; src=&quot;/assets/message4.png&quot; alt=&quot;typical email4&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h2&gt;
+
+&lt;p&gt;I’ve gotten a lot of recruiting emails over the years, and, assuming that current trends
+continue, will get a lot more in the future. Despite these messages being unsolicited, I don’t
+consider them “spam” and actually like reading them. The vast majority are polite, informative,
+and well-written. Even if I’m not actively looking for a new job, it’s nice to learn about what’s
+out there so I know where to apply the next time I’m on the market.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results.</summary></entry><entry><title type="html">Service meshes are hard</title><link href="https://yolken.net/blog/service-meshes" rel="alternate" type="text/html" title="Service meshes are hard" /><published>2020-09-20T13:44:00-07:00</published><updated>2020-09-20T13:44:00-07:00</updated><id>https://yolken.net/blog/service-meshes</id><content type="html" xml:base="https://yolken.net/blog/service-meshes">&lt;p&gt;I’ve worked on deploying “service meshes” at multiple companies. Although
 they look great on paper, deploying them is a huge pain, with a high
 risk of serious production outages. In this post, I want to share some of my war
 stories and caution against diving into the service mesh hype too quickly.&lt;/p&gt;

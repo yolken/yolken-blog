@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Six years of recruiting emails | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Six years of recruiting emails" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results." />
+<meta property="og:description" content="As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results." />
+<link rel="canonical" href="https://yolken.net/blog/six-years-of-emails" />
+<meta property="og:url" content="https://yolken.net/blog/six-years-of-emails" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-26T16:59:00-07:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://yolken.net/blog/six-years-of-emails","headline":"Six years of recruiting emails","dateModified":"2020-09-26T16:59:00-07:00","datePublished":"2020-09-26T16:59:00-07:00","description":"As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results.","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/six-years-of-emails"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Six years of recruiting emails</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-09-26T16:59:00-07:00" itemprop="datePublished">Sep 26, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As a software engineer working in the San Francisco Bay Area, I get <em>a lot</em> of
+unsolicited recruiting emails. I recently decided to dig through my email archives
+and do some analysis of the long-term trends. Here are the results.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>I get career-related messages sent to both my LinkedIn and Gmail accounts. Here’s a typical
+example (with the sender’s name blacked out for privacy):</p>
+
+<div style="text-align:center">
+<img width="600" src="/assets/typical_email.png" alt="typical email" />
+</div>
+
+<p><br /></p>
+
+<p>The first step was to get all these messages out of my accounts and into a format
+that I could use for the analysis.</p>
+
+<p>For LinkedIn, this was easy- there’s a “Get a copy of your data” section in the account
+privacy settings. I selected “Messages”, clicked the “Request Archive” button and then,
+a few minutes later, downloaded a CSV that contained one row per message, with columns
+for all of the important metadata: sender, recipient, subject, date, etc.</p>
+
+<p>For Gmail, the process was a bit more involved. I had to go through Google’s general
+export product, <a href="https://takeout.google.com/">Takeout</a>, scroll down the Gmail section,
+then select the labels to export. Thankfully, I’ve done a good job labelling
+all of my career related emails, so I could just export those and not everything in my account.</p>
+
+<p>A few minutes later, I got the option to download a bundle of all my emails in an
+<a href="https://en.wikipedia.org/wiki/Mbox">mbox</a> file. This is a legacy
+format originally developed for text-based email clients in Unix; unfortunately, Google
+doesn’t give you the option to download your emails in an easier-to-use format like CSV.</p>
+
+<p>The file had several million lines that looked like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>From 1669160939957813740@xxx Thu Jun 11 00:38:38 +0000 2020
+X-GM-THRID: 1669160939957813740
+X-Gmail-Labels: Archived,Important,Opened,Category Updates,jobs
+Delivered-To: XXXXX@gmail.com
+Received: by 2002:a8a:40a:0:0:0:0:0 with SMTP id n10csp877323ocb;
+        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
+X-Received: by 2002:a17:902:ab87:: with SMTP id f7mr5405841plr.166.1591835918733;
+        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
+</code></pre></div></div>
+
+<p>I then wrote a Python script to read this file, pull out the inbound messages, and convert
+each one to a <code class="highlighter-rouge">&lt;from,subject,date,body&gt;</code> tuple. Thankfully, the Python standard library contains a
+<a href="https://docs.python.org/3/library/mailbox.html">mailbox</a> module that parses mbox files
+and makes it easy to pull out the sender, recipient, subject, and date for each message.
+Getting the bodies was a little trickier since mbox bodies can have multiple parts, each with
+a different encoding (text, html, etc.), but I managed to find some
+<a href="https://stackoverflow.com/questions/26567843/reading-the-mail-content-of-an-mbox-file-using-python-mailbox">examples on Stack Overflow</a>
+to copy.</p>
+
+<p>I then merged the Gmail data with the LinkedIn data, exported everything to a CSV, and opened
+this in Google Sheets. Finally, I spent an hour going through all the messages and deleting
+the ones that weren’t unsolicited. The result was a clean spreadsheet with one row per recruiting
+email that I could use for my analysis.</p>
+
+<h2 id="the-results">The results</h2>
+
+<p>The following shows the number of unsolicited recruiter emails I’ve received by month since the
+beginning of 2014:</p>
+
+<iframe width="850" height="526" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4ZHxTwbmETB3mUTcILEkU77r_R8TVF3UcgW3Ems11ULMfJWuG8wwioWwx-myDnrEUhcbk1myxaAAr/pubchart?oid=1061438793&amp;format=interactive"></iframe>
+
+<p>A few interesting trends:</p>
+
+<h4 id="volume-has-increased-a-lot-over-the-years"><em>Volume has increased a lot over the years</em></h4>
+
+<p>Back in 2014, I was only getting a handful of messages per month. Now, I routinely get more
+than one a day. The fact that I have more experience now than I did earlier in my career is
+certainly a factor. But, I think the key driver here is simply that tech keeps getting bigger
+and bigger, and the need for skilled engineers has increased significantly over time.</p>
+
+<h4 id="there-are-clear-seasonal-patterns"><em>There are clear seasonal patterns</em></h4>
+
+<p>Email volume goes down significantly around the winter holidays. There’s also a smaller drop
+in the middle of the summer. Spring and fall are the busiest times, which also matches when
+companies do the most interviewing.</p>
+
+<h4 id="i-get-more-emails-when-im-actively-engaged-in-a-job-search"><em>I get more emails when I’m actively engaged in a job search</em></h4>
+
+<p>The peaks in 2015, 2017, and 2019 correspond to periods when I was actively on the job
+market. During these times, I was much more active about updating my LinkedIn profile, which
+is probably a strong signal that a candidate is looking for something new. It’s also possible
+that word spread through recruiters or friends, and that led to more job solicitations.</p>
+
+<h4 id="there-was-no-significant-drop-due-to-covid"><em>There was no significant drop due to COVID</em></h4>
+
+<p>Despite many companies laying people off or implementing hiring freezes earlier this year, I
+still got a lot of recruiter emails. Now that startup valuations are back up and companies are
+hiring again, I’m getting more emails than ever.</p>
+
+<h2 id="other-trends">Other trends</h2>
+
+<h4 id="big-companies-can-send-lots-of-emails"><em>Big companies can send lots of emails</em></h4>
+
+<p>Facebook has by far been the peskiest of all the companies over the years, sending me more than
+25 unsolicited recruiting emails since 2014. They’ve also sent a few text messages to my phone,
+which is super-annoying. I should note, though, that I did interview there back in 2012, so I’m
+probably in their system as a past prospect, which makes me a more likely sourcing target.</p>
+
+<p>Amazon has also sent a lot of emails, particularly over the last two years.</p>
+
+<p>Interestingly, I’ve only gotten one email from Apple, and nothing from other tech giants like
+Microsoft, Netflix, IBM, SAP, and Cisco.</p>
+
+<h4 id="follow-ups"><em>Follow-ups</em></h4>
+
+<p>A very common pattern is to send a message, then send a few follow-ups over the next
+few days with slightly different bodies and subject lines. See the Opendoor example
+at the beginning of this post for an example.</p>
+
+<p>I guess that’s one way to make sure that an email isn’t missed, although it can get a little
+tiresome if you’re not interested in the company at all.</p>
+
+<h4 id="cute-and-not-so-cute-subject-lines"><em>Cute (and not-so-cute) subject lines</em></h4>
+
+<p>Recruiters and sourcers try to be clever with subject lines and message introductions to
+catch your attention and make the messages seem more personal.</p>
+
+<p>Binary is one way to get attention, but I have no idea what it says since I’m not a
+computer :-):</p>
+
+<div style="text-align:center">
+<img width="400" src="/assets/message2.png" alt="typical email2" />
+</div>
+
+<p><br /></p>
+
+<p>Another trick is to put your current and past employers in the subject so that
+it looks more personalized, and then reference them in the body.
+Not sure how effective it is, though:</p>
+
+<div style="text-align:center">
+<img width="400" src="/assets/message3.png" alt="typical email3" />
+</div>
+
+<p><br /></p>
+
+<p>Emoji are cute. Here’s a message that had one in the subject
+and then used them liberally in the body:</p>
+
+<div style="text-align:center">
+<img width="400" src="/assets/message4.png" alt="typical email4" />
+</div>
+
+<p><br /></p>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>I’ve gotten a lot of recruiting emails over the years, and, assuming that current trends
+continue, will get a lot more in the future. Despite these messages being unsolicited, I don’t
+consider them “spam” and actually like reading them. The vast majority are polite, informative,
+and well-written. Even if I’m not actively looking for a new job, it’s nice to learn about what’s
+out there so I know where to apply the next time I’m on the market.</p>
+
+  </div><a class="u-url" href="/blog/six-years-of-emails" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+      <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
