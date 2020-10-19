@@ -1,4 +1,298 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-10-19T00:49:38-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Six years of recruiting emails</title><link href="https://yolken.net/blog/six-years-of-emails" rel="alternate" type="text/html" title="Six years of recruiting emails" /><published>2020-09-26T16:59:00-07:00</published><updated>2020-09-26T16:59:00-07:00</updated><id>https://yolken.net/blog/six-years-of-emails</id><content type="html" xml:base="https://yolken.net/blog/six-years-of-emails">&lt;p&gt;As a software engineer working in the San Francisco Bay Area, I get &lt;em&gt;a lot&lt;/em&gt; of
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-10-19T00:50:01-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">RSUs FTW</title><link href="https://yolken.net/blog/rsus-ftw" rel="alternate" type="text/html" title="RSUs FTW" /><published>2020-10-18T15:00:00-07:00</published><updated>2020-10-18T15:00:00-07:00</updated><id>https://yolken.net/blog/rsus-ftw</id><content type="html" xml:base="https://yolken.net/blog/rsus-ftw">&lt;p&gt;Equity in one’s employer is a large part of the compensation for software engineers.
+Unfortunately, though, it can be really hard to understand, and, in some cases, actually cause
+financial losses to employees. In this post, I want to describe how the different kinds of equity
+work and why I strongly prefer one type, restricted stock units (RSUs), over options-based
+alternatives.&lt;/p&gt;
+
+&lt;h4 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h4&gt;
+
+&lt;p&gt;Much of the discussion in this post, particularly with regards to taxes, is US-centric. Also,
+although it should be obvious, I’m not a lawyer or accountant or any kind of expert in
+compensation and taxes, so everything I say should be taken with a grain of salt.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-equity-works&quot;&gt;How equity works&lt;/h2&gt;
+
+&lt;h3 id=&quot;types&quot;&gt;Types&lt;/h3&gt;
+
+&lt;p&gt;There are at least three kinds of equity that companies offer their employees:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kind&lt;/th&gt;
+      &lt;th&gt;What it is&lt;/th&gt;
+      &lt;th&gt;Who offers it&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Incentive_stock_option&quot;&gt;Incentive stock options (ISOs)&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Option to buy shares of the company in the future at a pre-determined (strike) price. Has most favorable tax treatment, but subject to the most restrictions (e.g., only for employees).&lt;/td&gt;
+      &lt;td&gt;Small-to-mid stage startups&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Non-qualified_stock_option&quot;&gt;Non-qualified stock options (NQSOs)&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Option to buy shares of the company in the future at a pre-determined (strike) price. Work like ISOs, but with fewer restrictions and less favorable tax treatment.&lt;/td&gt;
+      &lt;td&gt;Startups, but much less common than ISOs&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Restricted_stock&quot;&gt;Restricted stock units (RSUs)&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Shares of company stock that vest in the future.&lt;/td&gt;
+      &lt;td&gt;Late-stage startups, public companies&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The most common types are ISOs (generally for smaller startups) and RSUs (generally for larger startups and public companies), and we’ll discuss how each of these work in more detail later.&lt;/p&gt;
+
+&lt;p&gt;NQSOs are fairly rare in my experience. They used to be given by public companies, sometimes
+in combination with RSUs, but most of those companies have since switched over to 100% RSUs; I
+haven’t seen an offer that includes them since I started at Google in 2009. Where they are used
+in some cases is to extend exercise windows when employees with ISOs can no longer hold them (e.g.,
+because they’ve left the company), but I don’t have any personal experience with this.&lt;/p&gt;
+
+&lt;h3 id=&quot;initial-grant&quot;&gt;Initial grant&lt;/h3&gt;
+
+&lt;p&gt;When you join a company that has equity-based compensation, the offer letter includes the following
+details on the equity portion:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The type of equity&lt;/li&gt;
+  &lt;li&gt;The total number of units&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;vesting schedule&lt;/em&gt;, i.e. how the equity is distributed to you over time&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So, it might say something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Upon approval of our board of directors, you will be awarded an ISO grant to purchase 10,000
+shares of the company’s common stock at a price per share equal to the fair market value per
+share of the common stock on the date of grant. 25% of the options shall vest 12 months after
+the date your vesting begins subject to your continuing employment with the company. The
+remaining options shall vest monthly over the next 36 months in equal monthly amounts subject to
+your continuing employment with the Company.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note that equity grants have to be approved by the company board. They don’t refuse (usually!)
+but since they only meet occasionally, there may be a delay of a few weeks between when you join
+and when this approval happens. Depending on the terms of the company’s equity plan, this
+time gap may also delay the start of your vesting.&lt;/p&gt;
+
+&lt;p&gt;The strike price of any options is usually not set in the offer letter since it can fluctuate in
+the period before the grant is approved, but you’ll typically be told a rough number to expect
+before signing. If it’s an RSU grant, then there’s no strike price to set; however, some offers
+may include a clause that the number of shares can be adjusted up or down if the price of the stock
+changes significantly before approval.&lt;/p&gt;
+
+&lt;p&gt;The vesting schedule described in the example above is fairly typical- a one year “cliff” followed
+by three years of uniform, monthly distributions. It’s possible to get a grant with no
+cliff, but that’s very rare in my experience. It’s also possible, although not very common,
+to get a grant with unevenly spread vesting, e.g., with 40% of the equity coming in the fourth
+year.&lt;/p&gt;
+
+&lt;h4 id=&quot;aside-rsus-in-private-companies&quot;&gt;Aside: RSUs in private companies&lt;/h4&gt;
+
+&lt;p&gt;When private companies issue RSUs, there is usually a &lt;em&gt;second&lt;/em&gt; condition of vesting that also
+requires a liquidity event. So, your time-based vesting isn’t really “vesting” in the traditional
+sense- although you can see the “shares” in your equity account they’re basically imaginary
+until the company is acquired or has an IPO.&lt;/p&gt;
+
+&lt;p&gt;This is done for tax reasons- if the shares were vested for real before a liquidity event, you’d
+owe a lot of taxes without being able to sell a portion to cover the bill.&lt;/p&gt;
+
+&lt;p&gt;But it gets even more complicated- in order to get this tax treatment,
+the RSUs have to have a finite expiration, typically set to 7 years. This means that if there’s no
+liquidity event for a long time, the RSUs could become worthless. This is one of the factors
+pushing Airbnb and other late-stage companies to go public this year- otherwise, if they wait too
+long, many current and former employees (myself included) could lose a lot of money from expired
+RSUs.&lt;/p&gt;
+
+&lt;h3 id=&quot;refresher-grants&quot;&gt;Refresher grants&lt;/h3&gt;
+
+&lt;p&gt;Most companies have “refresher” programs to grant more equity to employees over time. This is
+a way to ensure that people have an incentive to stay after their initial grant expires. They’re
+also used to increase compensation as a reward for high performance or a promotion.&lt;/p&gt;
+
+&lt;p&gt;These refreshers are considered completely new grants; they require board approval and can
+have different vesting schedules and strike prices than one’s initial grant. Some companies,
+for instance, have cliffs for new grants but not for refreshers. Others might have multi-year
+cliffs to reduce the overlap with existing grants.&lt;/p&gt;
+
+&lt;p&gt;It’s very important to ask about a company’s refresher policies before signing an offer; these
+policies can vary a lot from company to company, and, depending on the details, they can have a big
+impact on total compensation over time.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-happens-when&quot;&gt;What happens when&lt;/h2&gt;
+
+&lt;p&gt;Before going into the details of ISOs vs. RSUs, it’s helpful to summarize the lifecycle
+of different kinds of equity and the impact it has on taxes and income:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Event&lt;/th&gt;
+      &lt;th&gt;ISOs&lt;/th&gt;
+      &lt;th&gt;RSUs (private company)&lt;/th&gt;
+      &lt;th&gt;RSUs (public company)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Grant&lt;/td&gt;
+      &lt;td&gt;Get a letter with details, approve via your company’s equity manager (e.g., &lt;a href=&quot;https://carta.com/&quot;&gt;Carta&lt;/a&gt; or &lt;a href=&quot;https://www.schwab.com/public/eac/home&quot;&gt;Schwab&lt;/a&gt;). No tax impact.&lt;/td&gt;
+      &lt;td&gt;Ditto.&lt;/td&gt;
+      &lt;td&gt;Ditto.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vest&lt;/td&gt;
+      &lt;td&gt;Now can exercise to convert the options to shares. No tax impact yet.&lt;/td&gt;
+      &lt;td&gt;“Shares”, which are basically imaginary as described above, show up in account somewhere, but otherwise nothing.&lt;/td&gt;
+      &lt;td&gt;Portion of vested shares are automatically sold to cover income taxes. The remainder is transferred to a brokerage account where it can be held or sold.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Exercise&lt;/td&gt;
+      &lt;td&gt;Pay strike price to convert options to shares. Taxes are not witheld, but may owe AMT later (discussed below).&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sell shares&lt;/td&gt;
+      &lt;td&gt;Get cash, owe taxes on spread between strike price and sale price. Depending on the timing, this may be long-term capital gains, which is the best outcome tax-wise. Note that selling shares is heavily restricted, if not outright banned, for private companies.&lt;/td&gt;
+      &lt;td&gt;Can’t sell yet.&lt;/td&gt;
+      &lt;td&gt;Get cash, owe capital gains taxes on difference between sale price and price at time of vest.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Leave company&lt;/td&gt;
+      &lt;td&gt;No effect on exercised options. At most companies, vested but unexercised options are forfeited if they’re not exercised within 90 days of departure (more discussion below).&lt;/td&gt;
+      &lt;td&gt;“Vested” shares stay in account somewhere until there’s a liquidity event.&lt;/td&gt;
+      &lt;td&gt;No impact on vested shares.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A few notes:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I’m not including NQSOs because, as discussed earlier, they’re not as common&lt;/li&gt;
+  &lt;li&gt;The details for private company RSUs assume that there’s a liquidity condition on vesting&lt;/li&gt;
+  &lt;li&gt;Lots of lower-level details like early exercise, qualifying vs. non-qualifying ISO
+  dispositions, etc. are omitted&lt;/li&gt;
+  &lt;li&gt;These are based on my personal experiences only. The details may vary based on the precise
+  terms of the company’s equity plan.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;why-isos-are-a-pain&quot;&gt;Why ISOs are a pain&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve discussed how equity works, let me explain why I find ISOs to be a huge pain.&lt;/p&gt;
+
+&lt;h4 id=&quot;too-much-complexity&quot;&gt;Too much complexity&lt;/h4&gt;
+
+&lt;p&gt;Because of strike prices, exercise windows, tax rules, etc. options are much more complex from
+a cognitive standpoint than plain shares. Scary,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model&quot;&gt;PhD-level math&lt;/a&gt; is required to deeply understand them. Even simple tasks like figuring out the gain from exercising and selling
+is non-trivial because you have to account for strike prices, which may be non-uniform across
+your portfolio.&lt;/p&gt;
+
+&lt;p&gt;As an employee who’s not a financial expert, I just want money or something that converts directly
+into money via a simple formula.&lt;/p&gt;
+
+&lt;h4 id=&quot;exercising-is-expensive&quot;&gt;Exercising is expensive&lt;/h4&gt;
+
+&lt;p&gt;The strike price of an employee-issued option is based on the “fair market value” of the company’s
+stock at the time of grant. For an early stage company which isn’t worth a lot of money, these
+strike prices might be pennies per share. For a later-stage company that’s worth hundreds of
+millions or billions of dollars, however, the strike prices will look more like the share prices
+of equivalent companies on public markets.&lt;/p&gt;
+
+&lt;p&gt;As a result, exercising options, particularly those issued at a later stage, can be very expensive.
+For example, you might need to write a check for $80,000 if you want to exercise the options that
+vest on your first anniversary.&lt;/p&gt;
+
+&lt;p&gt;This isn’t a big deal if the company is public because you can turn around and sell the shares
+after exercise. For private companies, however, there’s nothing to sell- you need to dig into your
+personal reserves to get the money.&lt;/p&gt;
+
+&lt;p&gt;Of course, you don’t need to exercise your options- you can just keep them in your account as-is.
+But, if you wait, you may have a higher tax bill later. And, as discussed below, you might be forced
+to exercise if you leave the company before a liquidity event happens.&lt;/p&gt;
+
+&lt;h4 id=&quot;massive-amt-bills&quot;&gt;Massive AMT bills&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Alternative_minimum_tax&quot;&gt;alternative minimum tax (AMT)&lt;/a&gt; is a
+parallel tax system in the US that was designed to prevent rich people from avoiding taxes.
+It has a lower maximum rate than the “regular” system, but has a different set of rules
+for counting income and deductions. When preparing your taxes, you calculate what you owe under
+both the regular and AMT-based systems, then you pay the higher of the two.&lt;/p&gt;
+
+&lt;p&gt;One feature of the AMT is that the spread between the strike price and fair market value of an
+ISO is considered income if the option is exercised and held. This can really hurt, particularly
+if your company goes up a lot in value between when your grant was issued and when your options
+are exercised.&lt;/p&gt;
+
+&lt;p&gt;For example, suppose your vested options have a strike price of $1 / share. Two years later,
+your options vest and the company is now worth $20 / share. If you exercise these options and
+hold the resulting shares (your only choice for a private company, typically), then the $19
+spread is considered income for AMT purposes. If you’re exercising a lot of stock, this
+could increase your tax bill by tens of thousands of dollars.&lt;/p&gt;
+
+&lt;p&gt;Like many taxation topics, there are a lot of caveats here that could reduce the burden.
+For instance, you could get some of this money back as a &lt;a href=&quot;https://www.irs.gov/forms-pubs/about-form-8801&quot;&gt;credit&lt;/a&gt; in a future year when you don’t owe AMT. However, it still requires paying extra
+upfront, and the details are pretty complicated.&lt;/p&gt;
+
+&lt;h4 id=&quot;golden-handcuffs&quot;&gt;Golden handcuffs&lt;/h4&gt;
+
+&lt;p&gt;As mentioned above, many companies have an “exercise or lose it” policy on vested options when you
+leave your job. Being forced to exercise, however, is expensive and can have a big tax impact.
+For people who are already wealthy, it’s not a huge deal. But, for those who are early in their
+careers and/or from less-privileged backgrounds, this can make them feel trapped and prevent
+job mobility.&lt;/p&gt;
+
+&lt;p&gt;A small but growing subset of companies (including my employer, &lt;a href=&quot;https://segment.com&quot;&gt;Segment&lt;/a&gt;!),
+give departing employees the option to convert their ISOs to NQSOs, which can be left
+unexercised for many years. This is great, and hopefully more companies will do this in the future,
+but it has a long path to becoming a standard practice in the tech industry.&lt;/p&gt;
+
+&lt;h4 id=&quot;large-downside-risk&quot;&gt;Large downside risk&lt;/h4&gt;
+
+&lt;p&gt;When you exercise an option, you become a stockholder in the company. Like all stocks, the value
+could go up or it could go down. Startups, though, are particularly high-risk investments- unlike
+most shares traded on public exchanges, there is a fairly reasonable chance that you’ll lose 100%
+of your money. This can happen if the company goes belly-up. Alternatively, the company might
+be acquired but 100% of the purchase price might go to higher-priority debt and equity holders
+(the stock issued to employees is usually at the end of the chain).&lt;/p&gt;
+
+&lt;p&gt;This downside risk isn’t a big deal to venture capitalists, who are already very wealthy
+and can diversify by investing in a large portfolio of startups. But, your average tech
+worker could lose a reasonable chunk of their net worth by exercising options in their employer.&lt;/p&gt;
+
+&lt;h2 id=&quot;rsus-are-better&quot;&gt;RSUs are better&lt;/h2&gt;
+
+&lt;p&gt;RSUs avoid most of the problems listed above. In particular they:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Don’t require a degree in finance to value- just multiply the number of shares by the price
+  per share&lt;/li&gt;
+  &lt;li&gt;Don’t need to be exercised- they’re just given to you&lt;/li&gt;
+  &lt;li&gt;Are unlikely to trigger AMT&lt;/li&gt;
+  &lt;li&gt;Have less downside risk- in the worst case, they’re worth nothing, but at least you didn’t pay
+  anything extra for them&lt;/li&gt;
+  &lt;li&gt;Make leaving a job low-drama, at least from a financial perspective&lt;/li&gt;
+  &lt;li&gt;Are “imaginary” from a tax standpoint until liquidity&lt;/li&gt;
+  &lt;li&gt;Are easier to deal with at tax time- most of the gain is just income that’s included with salary
+  in your W-2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Unlike ISOs, most of the gain of RSUs is taxed as income at the time of vest. This means that
+your overall tax burden might be a bit higher compared to ISOs that, when exercised and sold
+under ideal conditions, can be taxed at lower, long-term capital gains rates.&lt;/p&gt;
+
+&lt;p&gt;These tax benefits can be substantial for super wealthy people who have crack teams of accountants
+handling their finances. But, for everyone else including the vast majority of tech company
+employees, I think the hassles and extra downside risk just aren’t worth it.&lt;/p&gt;
+
+&lt;p&gt;While options might be reasonable for very early companies, companies that are worth more than a
+couple hundred million dollars can and should switch to RSUs. Or, even better, just give your
+employees more cash and let them invest it however they want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Equity in one's employer is a large part of the compensation for Software Engineers. In this post, I want to describe how the different kinds of equity work and why I strongly prefer one type, restricted stock units (RSUs), over options-based alternatives.</summary></entry><entry><title type="html">Six years of recruiting emails</title><link href="https://yolken.net/blog/six-years-of-emails" rel="alternate" type="text/html" title="Six years of recruiting emails" /><published>2020-09-26T16:59:00-07:00</published><updated>2020-09-26T16:59:00-07:00</updated><id>https://yolken.net/blog/six-years-of-emails</id><content type="html" xml:base="https://yolken.net/blog/six-years-of-emails">&lt;p&gt;As a software engineer working in the San Francisco Bay Area, I get &lt;em&gt;a lot&lt;/em&gt; of
 unsolicited recruiting emails. I recently decided to dig through my email archives
 and do some analysis of the long-term trends. Here are the results.&lt;/p&gt;
 
