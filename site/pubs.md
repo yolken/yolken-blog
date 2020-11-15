@@ -1,8 +1,20 @@
 ---
 title: Publications
 layout: page
-order: 1
+order: 2
 ---
+
+## Non-Academic
+
+### Segment Blog
+
+- [How we saved $100k a month with Kafka networking optimization](https://segment.com/blog/kafka-optimization/)
+- [How we moved to Github-based Kubernetes config management](https://segment.com/blog/kubernetes-configuration/)
+- [Topicctl - an easier way to manage Kafka topics](https://segment.com/blog/easier-management-of-Kafka-topics-with-topicctl/)
+
+&nbsp;
+
+## Academic
 
 Between 2004 and 2009, I was a Ph.D. student in the Stanford
 University
@@ -11,7 +23,6 @@ University
 I stopped doing academic research after I graduated, but
 the papers I worked on might be useful to others. I'm
 posting them here so that they can be accessed without paying.
-
 
 ### Dissertation
 - B. Yolken, "Incentive-Based Resource Allocation and Control for
@@ -67,4 +78,3 @@ posting them here so that they can be accessed without paying.
   IEEE International Conference on Communications (ICC), Glasgow,
   Scotland, Jun. 2007.
   [[PDF](https://drive.google.com/file/d/1LSH7DyP1TX6UcR3cEEXrmoSR5Y7CCObX/view?usp=sharing)]
-
