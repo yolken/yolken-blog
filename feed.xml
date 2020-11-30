@@ -1,4 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-11-14T19:54:05-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Signs you’re about to be acquired</title><link href="https://yolken.net/blog/youre-about-to-be-acquired" rel="alternate" type="text/html" title="Signs you're about to be acquired" /><published>2020-11-08T20:24:00-08:00</published><updated>2020-11-08T20:24:00-08:00</updated><id>https://yolken.net/blog/youre-about-to-be-acquired</id><content type="html" xml:base="https://yolken.net/blog/youre-about-to-be-acquired">&lt;p&gt;Over the course of my tech career thus far, I’ve been through two acquisitions. In each case,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-11-29T17:23:54-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Transformative tools</title><link href="https://yolken.net/blog/transformative-tools" rel="alternate" type="text/html" title="Transformative tools" /><published>2020-11-29T12:06:00-08:00</published><updated>2020-11-29T12:06:00-08:00</updated><id>https://yolken.net/blog/transformative-tools</id><content type="html" xml:base="https://yolken.net/blog/transformative-tools">&lt;p&gt;One of the cool things about software engineering is that the associated technologies
+are constantly changing. This applies not just to the technical things we build with (i.e., the
+programming languages, frameworks, hardware, etc.), but also the tools that we use to
+make ourselves better organized and more productive.&lt;/p&gt;
+
+&lt;p&gt;Since I switched into engineering 8 years ago, I’ve witnessed a few tools in the latter
+category that have really been “transformative” in terms of how I do my day-to-day work. In this
+post, I want to share my personal, before-and-after experiences with these.&lt;/p&gt;
+
+&lt;h4 id=&quot;ground-rules&quot;&gt;Ground rules&lt;/h4&gt;
+
+&lt;p&gt;For the basis of this post, I’m only considering things that are related to process or
+productivity, i.e. not specific languages, frameworks, technical systems, etc. Also,
+I’m skipping tools that came to prominence more than 8 years ago, which includes Github, GMail,
+Google Docs, and many other things that are still very popular and useful today.&lt;/p&gt;
+
+&lt;h2 id=&quot;transformative-tools&quot;&gt;Transformative tools&lt;/h2&gt;
+
+&lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/slack_logo.png&quot; alt=&quot;Slack logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I started my career, email was everything. I spent hours each day reading through reams
+of messages and crafting well-written, doubly-proofread replies in long, back-and-forth threads
+with colleagues and executives.&lt;/p&gt;
+
+&lt;p&gt;Now, I write maybe one email a month at work. The vast majority of the back-and-forth conversation
+that used to happen in email is now in &lt;a href=&quot;https://www.slack.com&quot;&gt;Slack&lt;/a&gt;, a cloud-based communication
+system that provides instant group and 1:1 chat. These technologies have been around for a while
+(I remember them from my dial-up AOL account in the 1990’s), but Slack packages them in a pretty,
+feature-rich way and has been very successful at getting adoption inside tech companies over the
+last few years.&lt;/p&gt;
+
+&lt;p&gt;Having a conversation in Slack is obviously faster than having one over email. However, the key
+benefit for me with Slack is that I can edit or delete messages after I’ve posted them. Now,
+I can just say what’s on my mind and if I’m wrong about something (as I often am), I can go
+back and correct myself. Gone is the fear around referring to the wrong system when debugging
+a problem, making a spelling mistake, expressing an opinion too forcefully, or other things
+that obsessive people like me used to worry about and get slowed down by when drafting emails.&lt;/p&gt;
+
+&lt;p&gt;These features, combined with all the other bells and whistles that Slack offers, have really
+transformed how I communicate at work. Of course, there are some downsides, particularly in that it
+enables more frequent, lower-quality interruptions. On the whole, though, I think Slack and its
+competitors (e.g.,
+&lt;a href=&quot;https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software&quot;&gt;Microsoft Teams&lt;/a&gt;)
+have been a net positive and can really transform communication in other industries as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;vscode&quot;&gt;VSCode&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/vscode_logo.png&quot; alt=&quot;VSCode logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Software engineers spend a lot of time writing and editing text files. These include not just
+code but also the configuration files and documentation that live alongside the former.&lt;/p&gt;
+
+&lt;p&gt;When I started my career, the choices here were either to use a very lightweight, bare-bones
+text editor on the one hand, or a heavyweight, bloated
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Integrated_development_environment&quot;&gt;integrated developer environment (IDE)&lt;/a&gt;
+on the other. Many of these tools were not free software
+(I remember &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime text&lt;/a&gt; in particular), required hours
+to set up correctly, and would often have performance issues when working in large projects.&lt;/p&gt;
+
+&lt;p&gt;Now, I use &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt; for nearly all text editing. VSCode is developed
+by Microsoft, but unlike most of their historical products, it’s
+free and open-source. I was a little skeptical when it first came out- I haven’t enjoyed any
+Microsoft products since &lt;a href=&quot;https://en.wikipedia.org/wiki/Microsoft_Flight_Simulator_2004:_A_Century_of_Flight&quot;&gt;Flight Simulator 2004&lt;/a&gt;- but since then I’ve been won over.&lt;/p&gt;
+
+&lt;p&gt;The transformational thing about VSCode for me is that it strikes the right balance between
+a lightweight text editor and an IDE. I can use it for the plain Markdown of this blog
+but then switch into a golang or Python project and get code completion, error checking,
+and other, IDE-ish features without the associated bloat.&lt;/p&gt;
+
+&lt;p&gt;VSCode is far from perfect, and there are some situations in which I still wouldn’t use it;
+in large Java or Scala projects, I would probably stick with
+&lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ&lt;/a&gt;, for instance. But, it’s continually improving,
+super extensible, and has a robust and growing third-party developer community. It’s significantly
+improved my productivity and happiness, and I imagine that it will only get more adoption over time.&lt;/p&gt;
+
+&lt;h3 id=&quot;docker-compose&quot;&gt;Docker Compose&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/docker_logo.png&quot; alt=&quot;Docker logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Containerization, i.e. the ability to easily run processes in semi-isolated environments, has
+had a big impact on how software is deployed in production. &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;
+popularized the technology, and since then it’s played a key role in
+&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; and other large-scale, orchestration frameworks.&lt;/p&gt;
+
+&lt;p&gt;Personally, though, I think the biggest benefit to containerization has been in how I run
+software on my local machine. Here’s why.&lt;/p&gt;
+
+&lt;p&gt;Many software projects that engineers work on depend on other, third-party systems to run locally-
+the most common examples here are relational databases like MySQL or Postgres; others that I often
+see are caches (Redis, Memcached), message brokers (NSQ, Kafka, etc.), and non-relational storage
+backends (S3, DynamoDB, etc.).&lt;/p&gt;
+
+&lt;p&gt;Prior to Docker, the choices for running these things locally weren’t great. You could install
+and run them as standard applications, but the directions for doing this would vary based on your
+OS, OS version, and other tools running on your system. After installing, your drive would be
+forever corrupted with whatever junk these tools needed (shared libraries, etc.), and the
+tools themselves would be silently running in the background, consuming resources and doing
+who knows what else with your network and file system.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, you could run all these things in a virtual machine (VM),
+e.g. with &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;Virtualbox&lt;/a&gt;. VMs are better at providing isolation, but
+they’re pretty heavyweight. They required monolithic, multi-hundred megabyte image files
+(which were often created by someone else by hand), took minutes to boot up, and were a pain to
+share files and network access with.&lt;/p&gt;
+
+&lt;p&gt;Now, with Docker, and in particular the &lt;a href=&quot;https://docs.docker.com/compose/&quot;&gt;Docker Compose&lt;/a&gt;
+utility, all of this setup is a breeze. With a single YAML file, I can configure
+a relational database, a multi-node Kafka cluster, a fake S3 backend, or nearly anything else
+for local development and testing. Whether you’re running Mac, Linux, Windows, or whatever else,
+this same bundle of services can be started by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt; into the terminal.&lt;/p&gt;
+
+&lt;p&gt;In addition to making running apps locally easier, which, depending on the project, may not really
+be attainable, Docker Compose allows one to write more realistic tests. Instead of mocking out
+access to S3, Kafka, or other complex dependencies, I can just let my tests hit these things using
+their “real” APIs (but pointed at compose-hosted instances). This makes me more confident that the
+software works and reduces the amount of manual testing I have to do in a remote, pre-production
+environment.&lt;/p&gt;
+
+&lt;h3 id=&quot;lucidchart&quot;&gt;Lucidchart&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/lucidchart_logo.png&quot; alt=&quot;Lucidchart logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Software systems can be complicated. Beyond text descriptions, it’s very common to create
+stylized diagrams to show what the main components are and how they interact. These can be
+created before the system is built, i.e., as part of design document, or afterwards, as part of
+the documentation for the people who have to maintain the system.&lt;/p&gt;
+
+&lt;p&gt;Up until a year ago, my go-to tool for making these diagrams was
+&lt;a href=&quot;https://www.omnigroup.com/omnigraffle&quot;&gt;Omnigraffle&lt;/a&gt;. Omnigraffle creates pretty diagrams, but
+it’s a desktop-based application that isn’t collaborative. Sharing the outputs is like
+sharing Excel spreadsheets in 2003- you have to email the files around and have
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Token_ring&quot;&gt;token-ring-like&lt;/a&gt; rules for deciding who is allowed
+to make edits at any given time.&lt;/p&gt;
+
+&lt;p&gt;When I started at my current job, I made the usual request for an Omnigraffle license. Instead
+of providing one, however, the IT team told me to just use &lt;a href=&quot;https://www.lucidchart.com&quot;&gt;Lucidchart&lt;/a&gt;,
+a cloud-based, collaborative alternative. As with the other examples in this blog post, I was
+initially resistant to change but then warmed up after getting more familiar with the tool.&lt;/p&gt;
+
+&lt;p&gt;Lucidchart is not the first cloud-based diagramming tool. However, it’s the first one
+I’ve used that actually creates Omnigraffle-quality (i.e., beautiful, professional) outputs.
+Moreover, the interface is super intuitive and the collaboration features are actually a pleasure to
+use- one feature that’s particularly nice for remote meetings is that if I’m in a diagram with one
+of my colleagues, they can see where my mouse is hovering and I can see theirs.&lt;/p&gt;
+
+&lt;p&gt;At my current employer (&lt;a href=&quot;https:/segment.com/&quot;&gt;Segment&lt;/a&gt;), we’ve used Lucidchart for creating very
+large system diagrams, with hundreds of components and dozens of collaborators, without running into
+any problems. Lucidchart has enabled these types of collaborations, which previously would have been
+much harder, and also made it much less of a hassle for me to create non-collaborative diagrams
+for my work-related design docs and documentation pages.&lt;/p&gt;
+
+&lt;p&gt;If and when I switch employers, I’m going to strongly request that they adopt Lucidchart for their
+internal diagramming.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Over the last few years, I’ve incorporated several tools into my day-to-day work that have
+really transformed how I get things done. That being said, these tools aren’t perfect and,
+moreover, there are several other areas of software engineering work that have yet to be
+transformed for the better. I’ll address the latter in a future post!&lt;/p&gt;</content><author><name></name></author><summary type="html">Since I switched into engineering 8 years ago, I've witnessed a few productivity and organization tools that have really been &quot;transformative&quot; in terms of how I do my day-to-day work. In this post, I want to share my personal, before-and-after experiences with these.</summary></entry><entry><title type="html">Signs you’re about to be acquired</title><link href="https://yolken.net/blog/youre-about-to-be-acquired" rel="alternate" type="text/html" title="Signs you're about to be acquired" /><published>2020-11-08T20:24:00-08:00</published><updated>2020-11-08T20:24:00-08:00</updated><id>https://yolken.net/blog/youre-about-to-be-acquired</id><content type="html" xml:base="https://yolken.net/blog/youre-about-to-be-acquired">&lt;p&gt;Over the course of my tech career thus far, I’ve been through two acquisitions. In each case,
 I was just a normal employee without any special inside knowledge, and found out only a few days
 before the deals were publicly announced. In retrospect, however, there were some clear signs
 in the weeks leading up to the announcements that something unusual was going on.&lt;/p&gt;
@@ -1684,153 +1845,4 @@ local candidates who can’t spend two weeks doing on-sites.&lt;/p&gt;
 &lt;p&gt;Overall, I would recommend Triplebyte to people seeking software engineering jobs
 in the Bay Area. It doesn’t require a huge amount of time and effort, and the downsides
 are pretty limited; even if you don’t pass their process, you’ll get some practice (with detailed
-feedback), and you can still apply to their client companies directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my most recent job search, I used a service called Triplebyte to connect with potential employers. I wanted to share my thoughts in case others are considering using their services to find a job.</summary></entry><entry><title type="html">The rules for better coding interviews</title><link href="https://yolken.net/blog/rules-for-better-interviews" rel="alternate" type="text/html" title="The rules for better coding interviews" /><published>2019-06-09T16:49:00-07:00</published><updated>2019-06-09T16:49:00-07:00</updated><id>https://yolken.net/blog/rules-for-better-interviews</id><content type="html" xml:base="https://yolken.net/blog/rules-for-better-interviews">&lt;p&gt;In a &lt;a href=&quot;/blog/master-coding-interviews&quot;&gt;previous post&lt;/a&gt;, I discussed preparing for coding
-interviews as a candidate. In this post, I want to flip to the other side of the table
-and talk about conducting better interviews from the interviewer perspective.&lt;/p&gt;
-
-&lt;h2 id=&quot;goals-of-an-interview&quot;&gt;Goals of an interview&lt;/h2&gt;
-
-&lt;p&gt;Before digging into the details, it’s worth reviewing what the purpose of an interview is-
-figuring out whether a random person who you probably don’t know much about (i.e., “the candidate”)
-is a good match for a specific position at your company (i.e., “the job”).&lt;/p&gt;
-
-&lt;p&gt;The most reliable way to figure out whether the candidate is a match for the job is to
-observe them doing the job or, at least, doing activities that are as close as possible to the
-work involved in the job. If you were interviewing a chef for a restaurant, you would ask
-them to cook a meal for you. Likewise, in the case of a software engineer, your interview should
-focus on things that software engineers actually do day-to-day- writing, testing, and running code
-on a computer, debugging issues in systems, and explaining technical ideas to colleagues, among
-other things.&lt;/p&gt;
-
-&lt;p&gt;Questions that are not directly related to day-to-day work on the job may have some correlation
-with eventual job performance, but it’s not going to be as strong. Given the amount of time required
-for the interview on both sides as well as the risk of bad hiring decisions, it’s best for all
-questions to be as practical and job-relevant as possible.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-rules&quot;&gt;The rules&lt;/h2&gt;
-
-&lt;p&gt;Now that we’ve covered the purpose of interviewing, I’d like to share some “rules” for coding
-interviews to ensure that they’re productive and provide good signal.&lt;/p&gt;
-
-&lt;h3 id=&quot;rule-1-coding-problems-should-be-done-on-a-computer-not-a-whiteboard&quot;&gt;Rule 1: Coding problems should be done on a computer, not a whiteboard&lt;/h3&gt;
-
-&lt;p&gt;Writing code on a whiteboard made sense 25 years ago, before laptops were ubiquitous and
-when compiling and testing small programs could be painful due to primitive tooling.
-Now, there’s really no good reason to do it. Unless you happen to be at a company where software
-is written without computers, having a candidate use a computer is much closer to the work in the
-actual job and, therefore, is a more accurate way to predict job performance.&lt;/p&gt;
-
-&lt;p&gt;Beyond the high-level, philosophical reasons for doing coding problems on computers, there are
-a number of practical benefits for both the candidate and the interviewing company:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Writing code on a computer, ideally their own computer, allows the candidate to use the tooling
-  that they feel comfortable with and that makes them productive. Since engineers at most
-  companies are allowed to pick their own tooling (within reasonable limits), this better matches
-  the conditions of the actual job.&lt;/li&gt;
-  &lt;li&gt;On a computer, you can’t hand-wave away parts of your solution (e.g., “suppose we had a helper
-  function that implemented a binary search”). The candidate has to either implement it themselves
-  or find some existing code or library to use.&lt;/li&gt;
-  &lt;li&gt;Coding problems on a computer requires the candidate to write tests and then iteratively
-  debug problems that are found. These testing and debugging skills are an important part of
-  software engineering work, but they’re much harder to evaluate on a whiteboard.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;rule-2-please-no-algorithm-trivia&quot;&gt;Rule 2: Please, no algorithm trivia&lt;/h3&gt;
-
-&lt;p&gt;Understanding algorithms and data structures is a prerequisite for writing good software. Having
-them all committed to memory, however, is not. This is particularly true for the long tail things
-that are rarely encountered in day-to-day work. Quizzing a candidate on lexicographic sorting, heap
-implementations, or reversing linked lists is usually just a waste of time- if you need to
-understand the details of these things on the job, you can just look them up.&lt;/p&gt;
-
-&lt;p&gt;The same goes for trivia about programming language syntax, operating systems, hardware,
-or other technical topics. If it’s something that people can either pick up on the job or look up
-as needed, you’re not actually measuring something that’s critical for job success; instead,
-you’re picking up correlated skills (e.g., studying and memorization) that may not be relevant.&lt;/p&gt;
-
-&lt;h3 id=&quot;rule-3-avoid-one-shot-all-or-nothing-problems&quot;&gt;Rule 3: Avoid one-shot, all or nothing problems&lt;/h3&gt;
-
-&lt;p&gt;Most problems that engineers work on are done in stages. You usually don’t deliver a new system in
-a single commit. Instead, you start with the high-level data models and interfaces, sketch out
-the key classes, fill in the blanks with basic implementations, then come back and optimize
-as needed. At each stage, you get feedback from your peers (or, in some cases, your end users), and
-make course corrections as needed before continuing to the next stage.&lt;/p&gt;
-
-&lt;p&gt;Coding problems done in interviews should ideally be structured in a similar way. Instead of
-just throwing a problem out and asking the candidate to solve it end-to-end in one burst, it’s
-better to divide it into chunks and work through it in stages- first, have the candidate write
-a skeleton class, then ask them to add in a method to do X, then a method to do Y that uses X, etc.
-Ideally, there should be a long list of these extensions so that even the best candidates never
-make it through all of them.&lt;/p&gt;
-
-&lt;p&gt;In addition to being more like real projects, this approach has a number of other,
-interview-specific benefits:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Candidates are eased into the problem gradually. If they’re prone to interview anxiety
-  (as I often am), this makes them feel more comfortable.&lt;/li&gt;
-  &lt;li&gt;Having seen the problem before is less of an advantage. The candidate may be able to get
-  an answer to the core parts very quickly, but then you can just ask harder and harder extensions
-  which they’re less likely to have prepared solutions for.&lt;/li&gt;
-  &lt;li&gt;Performance is less likely to be binary. Even weak candidates should make some progress,
-  whereas stronger candidates will get to different parts of the problem depending on their
-  skills and background. This allows for more granular feedback than simply “they got the problem
-  so they passed” or “they didn’t get it so they failed”.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;other-approaches-to-more-practical-interviews&quot;&gt;Other approaches to more practical interviews&lt;/h2&gt;
-
-&lt;p&gt;Over the course of my career, I’ve seen companies take other approaches to make their
-interviews better match real work. These are less common and a bit more controversial than
-the rules above, so I’m putting them in their own section.&lt;/p&gt;
-
-&lt;h3 id=&quot;mini-projects&quot;&gt;Mini-projects&lt;/h3&gt;
-
-&lt;p&gt;Instead of asking a bunch of smaller, 45-60 minute technical questions, some companies have their
-candidates do a single “mini-project”. The work is either done at home, before the interview,
-or for a couple of hours on site. Ideally, the candidate doesn’t just submit their code but also
-gets a chance to present their work and discuss why they took the approaches that they did with
-their interviewers.&lt;/p&gt;
-
-&lt;p&gt;I think these projects can be a good way to make interviews more realistic and give candidates
-a chance to show off their skills. On the other hand, when the project is done at home (as is
-usually the case), there’s pressure to spend a lot of time on it, way more than the suggested
-amount, to make a good impression. This can be unfair for candidates who have full-time jobs
-and/or significant personal obligations outside of work.&lt;/p&gt;
-
-&lt;h3 id=&quot;pairing&quot;&gt;Pairing&lt;/h3&gt;
-
-&lt;p&gt;The idea here is to have the candidate pair with a member of the team instead of solving interview
-problems by themselves. The pair can work together on either made-up interview questions or,
-in some cases, actual project work for the company. Ideally, the company has hardware set up
-that’s designed for pairing, i.e. two monitors, mice, and keyboards connected to a single computer.&lt;/p&gt;
-
-&lt;p&gt;The advantages over standard, non-paired interviews are that:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The interview better tests collaboration, a big part of practical software work, by forcing the
-  candidate to work directly with someone else.&lt;/li&gt;
-  &lt;li&gt;The interviewer can step in and help the candidate make progress when they get stuck.&lt;/li&gt;
-  &lt;li&gt;If the pairing is on actual project work, the interview can be a more realistic test of how
-  well the candidate will perform on the job.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I think there are good intentions here. In practice, though, there are a number of issues I’ve
-seen with pairing interviews that make me have mixed feeling about them:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;If the company provides its own hardware, then the candidate might be forced to use a setup
-  that’s not ideal for them.&lt;/li&gt;
-  &lt;li&gt;Often, there really isn’t much pairing going on- the interviewer just watches the candidate solve
-  the question like in a normal, non-paired interview.&lt;/li&gt;
-  &lt;li&gt;If the pairing is on actual project work, then the candidate is basically being forced to do
-  unpaid work. Aside from the potential legal issues involved here, this can feel
-  exploitative.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;concluding-thoughts&quot;&gt;Concluding thoughts&lt;/h2&gt;
-
-&lt;p&gt;Interviews should measure how well candidates do on realistic problems under job-like constraints.
-Despite the common sense behind this, I still see companies routinely asking abstract, one-shot,
-whiteboard coding questions. Just don’t do this- it’s not the way to hire the best people.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous post, I discussed preparing for coding interviews as a candidate. In this post, I want to flip to the other side of the table and talk about conducting better interviews from the interviewer perspective.</summary></entry></feed>
+feedback), and you can still apply to their client companies directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my most recent job search, I used a service called Triplebyte to connect with potential employers. I wanted to share my thoughts in case others are considering using their services to find a job.</summary></entry></feed>
