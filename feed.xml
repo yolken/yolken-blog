@@ -1,4 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-12-06T21:12:46-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How tech acquisitions work</title><link href="https://yolken.net/blog/how-acquisitions-work" rel="alternate" type="text/html" title="How tech acquisitions work" /><published>2020-12-06T12:50:00-08:00</published><updated>2020-12-06T12:50:00-08:00</updated><id>https://yolken.net/blog/how-acquisitions-work</id><content type="html" xml:base="https://yolken.net/blog/how-acquisitions-work">&lt;p&gt;In &lt;a href=&quot;/blog/youre-about-to-be-acquired&quot;&gt;an earlier post&lt;/a&gt;, I listed out signs that your employer is
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-12-24T18:01:17-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How to do an architecture interview</title><link href="https://yolken.net/blog/architecture-interviews" rel="alternate" type="text/html" title="How to do an architecture interview" /><published>2020-12-24T11:26:00-08:00</published><updated>2020-12-24T11:26:00-08:00</updated><id>https://yolken.net/blog/architecture-interviews</id><content type="html" xml:base="https://yolken.net/blog/architecture-interviews">&lt;p&gt;Many software engineering interview loops include an “architecture interview”, where the
+candidate is asked to develop a high-level design for a software system. Over the last few
+years, I’ve given many, many of these interviews, so I’ve seen a wide range of performances
+across the spectrum, from “absolutely terrible” to “we need to hire this person now!”.&lt;/p&gt;
+
+&lt;p&gt;Based on these experiences, I’d like to share what it takes to succeed in these interviews as
+the candidate, and some common behaviors to avoid.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;Although the exact format can vary, most architecture interviews begin with an open-ended
+prompt of the form “design &lt;em&gt;X&lt;/em&gt;”. The &lt;em&gt;X&lt;/em&gt; can be filled in with a generic software system,
+for instance:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A distributed &lt;a href=&quot;https://en.wikipedia.org/wiki/Key%E2%80%93value_database&quot;&gt;key/value store&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_crawler&quot;&gt;web crawler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A video streaming system&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;An alternative, which I think is the more interesting approach, is to fill in the blank with
+a well-known product or product feature; some examples here include:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Generating the Facebook news feed&lt;/li&gt;
+  &lt;li&gt;Executing a Robinhood user’s trade flow&lt;/li&gt;
+  &lt;li&gt;Matching Uber drivers and riders&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The target design, whether generic or product-based, might be something related to the company’s
+own systems or products, but it’s often not.&lt;/p&gt;
+
+&lt;p&gt;The question is left open-ended and high-level deliberately. The interviewer is not looking for
+a specific answer (usually), but rather wants to observe the process by which you break down
+the problem, dig into the pieces, and justify your decisions. As you discuss your solution,
+the interviewer will ask questions, steer you towards or away from specific areas, and really try
+to understand what it would be like to collaborate with you on the design of a real project.&lt;/p&gt;
+
+&lt;h2 id=&quot;structure-is-key&quot;&gt;Structure is key&lt;/h2&gt;
+
+&lt;p&gt;Because the questions are so open-ended, and because you’re being evaluated as much on your
+process as your specific solution, structuring your answer is really, really important. Here’s
+a structure that I think works well for most of these questions.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-clarification&quot;&gt;Step 1: Clarification&lt;/h3&gt;
+
+&lt;p&gt;Once you get the question, the first step is to make sure you understand what you’re being asked
+to design. For the “design a system to match Uber drivers and riders” example, for instance,
+if you’ve never used Uber before it’s probably good to say that and ask for more details.
+Even if you’re familiar with the thing being asked about, it’s helpful to draw a simple picture
+with stick figures to make sure that you and the interviewer are on the same page.&lt;/p&gt;
+
+&lt;p&gt;This is also the time to ask about rough orders of magnitude scale (e.g., how many requests
+per second are expected, etc.). However, I wouldn’t get too bogged down in these numbers- a
+good design should have lots of room for growth and not be built to a specific set of static
+dimensions.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-high-level-drawing&quot;&gt;Step 2: High-level drawing&lt;/h3&gt;
+
+&lt;p&gt;Next, you should draw out a high-level diagram that shows the major pieces and how they’re
+connected. As discussed later on, the idea here is to be high-level and not over-engineer at
+this phase. You should mention that you’re deliberately being simple and high-level,
+and that you’ll dig into improvements later so the interview knows that you’re not being sloppy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/simple_architecture_diagram.png&quot; alt=&quot;Simple architecture diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Uber case, as in many others, you’ll probably have clients, a layer of web servers,
+and some sort of storage layer that keeps track of the states of the users and other entities
+in the system.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-interface-details&quot;&gt;Step 3: Interface details&lt;/h3&gt;
+
+&lt;p&gt;Once you have a picture of the main pieces, I think it’s really useful to describe the system
+interface, i.e. what are the specific inputs and outputs, independent
+of any internal implementation details. In the case of a client/server type design (most common),
+these map to the requests that the clients make and the responses that they get.&lt;/p&gt;
+
+&lt;p&gt;Being really specific about these (the different types, what they include, etc.) ensures that
+you and the interviewer are on the same page and also guides the discussion of the implementation
+details in later steps.&lt;/p&gt;
+
+&lt;p&gt;In the Uber example, you’ll have requests from the rider client (i.e., app) for a ride, requests
+from the driver client to change status, to accept a potential ride or not, etc. In this specific
+example, the request flows can be fairly complex and are probably an important part of the design.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4-implementation-details&quot;&gt;Step 4: Implementation details&lt;/h3&gt;
+
+&lt;p&gt;Once you’ve defined the high-level pieces and the interfaces, it’s time to dig into the internal
+implementation details. There are many different things you could focus on here, so it’s really
+important to lean on your interviewer for guidance. Some potential topics to cover here include:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tradeoffs in choices around specific components (e.g., using a relational DB vs. a
+  &lt;a href=&quot;https://en.wikipedia.org/wiki/NoSQL&quot;&gt;NoSQL&lt;/a&gt; solution)&lt;/li&gt;
+  &lt;li&gt;How a specific request type is handled end-to-end (including DB changes, etc.)&lt;/li&gt;
+  &lt;li&gt;Schemas for any data stores&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;step-5-enhancements-for-scalability-performance-etc&quot;&gt;Step 5: Enhancements for scalability, performance, etc.&lt;/h3&gt;
+
+&lt;p&gt;Once your interface and basic implementation are in place, you can then discuss how to increase the
+maximum load that your system can handle. This is also a good time to talk about the reliability of
+your design and what you could do to improve it, if applicable.&lt;/p&gt;
+
+&lt;p&gt;As with the previous step, it’s really important to lean on your interviewer here and try to
+dig into the areas that they feel are the most interesting to cover.&lt;/p&gt;
+
+&lt;p&gt;Although the exact solutions will vary based on the context, some general approaches that may
+be helpful here include:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Replication:&lt;/strong&gt; Stateless components can be replicated to handle more traffic and be
+  resilient to failures in individual instances. This may also help for stateful things like DBs if
+  you send the reads and writes to different instances and can hand-wave away
+  &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_consistency&quot;&gt;consistency&lt;/a&gt; issues.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sharding:&lt;/strong&gt; Splitting up your traffic by geography, user id, etc. and allocating each bucket to
+  a semi-independent copy of your system may allow you to increase scale without redesigning
+  everything from scratch.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Caching:&lt;/strong&gt; Adding caches in front of read-only data can significantly improve performance in
+  many cases and reduce DB load.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Queueing:&lt;/strong&gt; Adding queues in your system may improve reliability and shield downstream
+  components from load spikes. However, it can increase latency and also is hard to implement in
+  synchronous request flows, so it’s most appropriate for asynchronous data pipelines.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;common-mistakes&quot;&gt;Common mistakes&lt;/h2&gt;
+
+&lt;p&gt;Even with good structure, there are some very common traps that candidates fall into that
+reduce the quality of their answers in my view.&lt;/p&gt;
+
+&lt;h3 id=&quot;being-too-service-oriented&quot;&gt;Being too service-oriented&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Service-oriented_architecture&quot;&gt;Service-oriented-architecture (SOA)&lt;/a&gt;
+is a design pattern which eschews monolithic components for more specialized, distributed ones.
+Over time, it’s evolved into the idea of breaking up monolithic systems into lots of tiny
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Microservices&quot;&gt;microservices&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, for instance, instead of having a single server that both accepts requests from clients
+and updates the DB, you might introduce a “database service” between the app server and the
+database. Now, you have two services instead of one. Over time, the original app server is split
+out further and further until it’s just a router without any business logic in it.&lt;/p&gt;
+
+&lt;p&gt;While SOA and its microservices variant have benefits in some cases, they’re super easy to abuse,
+make designs significantly more complex, and, without more understanding of the motivations, might
+not be necessary in a real-world, large-scale system at all.&lt;/p&gt;
+
+&lt;p&gt;Here’s an extreme example of what I don’t want to see:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/excessive_soa.png&quot; alt=&quot;Excessive SOA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Err on the side of being monolithic, then split things out later in the interview if and only if
+there’s a good reason to do so.&lt;/p&gt;
+
+&lt;h3 id=&quot;over-engineering-too-early&quot;&gt;Over-engineering too early&lt;/h3&gt;
+
+&lt;p&gt;Related to SOA abuse is over-engineering your solution too early in the process. Yes,
+having 3 layers of caching, or a queue between your app servers and your DB, or a fancy sharded
+data store might make your system more scalable. However, it’s unlikely that you’ll need those
+in the first iteration, they make your design significantly more complex, and, without more testing
+and iteration, it’s impossible to know how much these things will actually help.&lt;/p&gt;
+
+&lt;p&gt;As mentioned earlier, start simple and then add complexity later in your answer if needed.
+Adding complexity is easier than removing it, and this also matches how many real-world systems
+are implemented.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-components-you-dont-fully-understand&quot;&gt;Using components you don’t fully understand&lt;/h3&gt;
+
+&lt;p&gt;Don’t include overly-hyped technologies in your solution (“Kafka!”, “Cassandra!”,
+“machine learning!”) unless you really understand them and have day-to-day experience using them.
+Otherwise, you’re likely to use them in the wrong way or look like an idiot when the interviewer
+asks you follow-ups about how they work.&lt;/p&gt;
+
+&lt;p&gt;It’s much better to stick to less-sexy things that you actually know, e.g. MySQL, which can still be
+(and actually are) the basis for many real-world, large scale systems. In the course of your
+answer, it’s fine to mention other technologies that might be relevant, but you should explain that
+you don’t have a lot of experience with them so you’d need to do more investigation before including
+them in your design.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-specific-in-the-wrong-areas&quot;&gt;Getting specific in the wrong areas&lt;/h3&gt;
+
+&lt;p&gt;It’s impossible to cover all of the details of a complex system like Uber’s ride matching
+in a 45-60 minute interview. When you focus too much on one specific thing (e.g., the database
+schema), you’re necessarily omitting the chance to cover other aspects of the problem in high-level
+detail.&lt;/p&gt;
+
+&lt;p&gt;As mentioned earlier, start at a high-level and then dig into the lower-level components that your
+interviewer steers you towards. Don’t waste time on details that your interviewer doesn’t care
+about.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Doing well in an architecture interview is prerequisite for many software positions, particularly
+the higher-level ones. Having a solid structure, starting from a high-level, avoiding
+over-engineering, and sticking to what you know are the keys to success.&lt;/p&gt;</content><author><name></name></author><summary type="html">Many software engineering interview loops include an &quot;architecture interview&quot;, where the candidate is asked to develop a high-level design for a software system. Over the last few years, I've given many, many of these interviews. Based on these experiences, I'd like to share what it takes to succeed in them, and some common behaviors to avoid.</summary></entry><entry><title type="html">How tech acquisitions work</title><link href="https://yolken.net/blog/how-acquisitions-work" rel="alternate" type="text/html" title="How tech acquisitions work" /><published>2020-12-06T12:50:00-08:00</published><updated>2020-12-06T12:50:00-08:00</updated><id>https://yolken.net/blog/how-acquisitions-work</id><content type="html" xml:base="https://yolken.net/blog/how-acquisitions-work">&lt;p&gt;In &lt;a href=&quot;/blog/youre-about-to-be-acquired&quot;&gt;an earlier post&lt;/a&gt;, I listed out signs that your employer is
 about to be acquired. In this one, I want to talk about how the tech acquisition process works
 from end-to-end, based on my personal experiences.&lt;/p&gt;
 
@@ -436,7 +629,7 @@ about them for a later post.&lt;/p&gt;
 &lt;p&gt;Getting a multi-hundred million or multi-billion dollar acquisition deal across the line requires
 a massive amount of effort. It starts with initial discussions then evolves into full-fledged
 negotiations, sometimes with multiple suitors at once. Once the outline of a deal is reached, the
-potential acquirer spends several weeks doing do diligence and peppering company insiders
+potential acquirer spends several weeks doing due diligence and peppering company insiders
 with detailed questions about the business.&lt;/p&gt;
 
 &lt;p&gt;Dealing with all this plus the prospect of a massive payday down the line is super
@@ -1829,117 +2022,4 @@ end by thinking about how much better your next job will be.&lt;/p&gt;
 &lt;h2 id=&quot;final-advice&quot;&gt;Final advice&lt;/h2&gt;
 
 &lt;p&gt;Don’t do anything rash, but ultimately trust your gut. If you’ve exhausted the alternatives and
-have an offer from another company that would make you happier, then take it.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the course of my career, I've had many jobs which implies that I've also left many jobs. Leaving a job can be awkward and emotionally draining, but, depending on the circumstances, also liberating and life-improving. In this post, I want to provide some guidance on why, how, and when to leave a job based on my experiences so far.</summary></entry><entry><title type="html">Switching from product management to engineering</title><link href="https://yolken.net/blog/switching-from-product-to-eng" rel="alternate" type="text/html" title="Switching from product management to engineering" /><published>2019-09-07T16:23:00-07:00</published><updated>2019-09-07T16:23:00-07:00</updated><id>https://yolken.net/blog/switching-from-product-to-eng</id><content type="html" xml:base="https://yolken.net/blog/switching-from-product-to-eng">&lt;p&gt;I began my career as a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Product_manager#Product_management_in_software_development&quot;&gt;product manager (PM)&lt;/a&gt;,
-but then switched tracks and became a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Software_engineer&quot;&gt;software engineer (SWE)&lt;/a&gt;
-three and a half years later. While many people start in engineering and then later go into product
-management, the direction that I took is pretty rare and something that people often ask me about
-when looking at my background.&lt;/p&gt;
-
-&lt;p&gt;In this post, I want to describe how I started as a PM, why I made the decision to switch, and
-how it worked out.&lt;/p&gt;
-
-&lt;h2 id=&quot;at-the-start&quot;&gt;At the start&lt;/h2&gt;
-
-&lt;p&gt;I come from a fairly non-traditional, academic background- I did Electrical Engineering
-(with some CS) in undergrad, and then spent four and a half years getting a PhD in
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Operations_research&quot;&gt;Operations Research&lt;/a&gt;. The details of
-why I chose to get a PhD and why I chose this field in particular are too long to cover here,
-so I’ll leave them for a future post.&lt;/p&gt;
-
-&lt;p&gt;Towards the end of my PhD program, I got a summer internship at Google through a friend
-from school who had graduated and now worked there. Although the internship was technically in
-software engineering, the project and day-to-day work were very research oriented- I was trying to
-figure out ways to more efficiently allocate compute resources at Google, which was closely related
-to my PhD research.&lt;/p&gt;
-
-&lt;p&gt;I enjoyed the summer a lot, and towards the end of my internship I had the opportunity to apply for
-full-time positions at Google. In addition to going through the SWE conversion process, my mentor
-suggested that I also consider product management. The reasoning he gave is that PMs have
-higher-level control of projects and also have a lot more flexibility in their day-to-day work.&lt;/p&gt;
-
-&lt;p&gt;As an entry-level SWE, I’d be expected to implement small bits of functionality in Google’s resource
-allocation systems. As a PM, on the other hand, I’d be able to help architect those systems (which
-is obviously a much higher-leverage activity), and, moreover, be able to write code, publish papers,
-and do other fun activities on the side.&lt;/p&gt;
-
-&lt;p&gt;His advice made a lot of sense to me, and, after many rounds of interviews, I got and signed
-a full-time PM offer. Six months later, and one week after defending my dissertation, I joined
-the product team at Google.&lt;/p&gt;
-
-&lt;h2 id=&quot;being-a-pm&quot;&gt;Being a PM&lt;/h2&gt;
-
-&lt;p&gt;I started as a PM on the team that I had interned with (Cluster Management), continuing my
-summer project on resource allocation and resource efficiency. The summer work had involved
-implementing a proof-of-concept and showing that it would have the desired impact from a
-theoretical perspective. Now, six months later, the task was to actually implement this
-new resource allocation framework and roll it out across the company.&lt;/p&gt;
-
-&lt;p&gt;The implementation phase, as it turned out, was really, really hard. Changing how resources were
-allocated involved modifying dozens of different systems across the stack and working with
-stakeholders who ranged from being skeptical about the project in the best case, to outright hostile
-in the worst. After a little over a year, the project team got reorganized, and I decided that
-the writing was on the wall and that it was time to move on.&lt;/p&gt;
-
-&lt;p&gt;I had been doing some part-time PM work on the
-&lt;a href=&quot;https://www.google.com/publicdata/directory&quot;&gt;Google Public Data&lt;/a&gt; project, and liked the team a
-lot, so I managed to transition this into a full-time role.&lt;/p&gt;
-
-&lt;p&gt;When I started on the Public Data Team, I focused on typical PM work like writing requirements
-docs and talking to customers. The team was pretty small, though, so product specs
-could be generated a lot faster than the described product features could be implemented; to fill
-up the extra time, I decided to take up small, engineering-related side projects that would be
-useful to the team and our customers.&lt;/p&gt;
-
-&lt;p&gt;Our data providers, for instance, were having trouble getting their data into the XML-based format
-that we required. So, I wrote some command-line tools in Python to help with the conversion process,
-got this code reviewed by engineers on the team, and made it available to our users. Other projects
-included prototyping a web-based dataset editor and writing Chrome extensions to speed up our
-release QA process.&lt;/p&gt;
-
-&lt;p&gt;After a while, I realized that I liked working on these kinds of projects a lot more than my
-regular product work. Although I was doing an acceptable job as a PM, I started dreading the endless
-meetings and the hours spent working on product specs that had little chance of ever being
-implemented. The highlight of each day was the hour or so when I could put my headphones in
-and write code.&lt;/p&gt;
-
-&lt;p&gt;About a year into my stint on the Public Data Team, the project got merged into another,
-larger effort, and the pieces that I had worked on were deemphasized. After three years as a PM, I
-decided that it wasn’t the ideal role for me and that now was the time to switch to engineering.&lt;/p&gt;
-
-&lt;h2 id=&quot;switching&quot;&gt;Switching&lt;/h2&gt;
-
-&lt;p&gt;Once I decided to switch, I had two choices- I could either make the transition at Google or
-just apply to engineering jobs at other companies. I had been at Google for a while and was
-itching to leave and do something new, so I went with the latter.&lt;/p&gt;
-
-&lt;p&gt;I was initially worried about getting interviews, but this turned out to not be a problem at all-
-despite having no formal engineering experience on my resume, most companies I applied to were willing
-to give me a chance because I was coming from a well-known place and had a bachelor’s degree in a
-relevant field. The interviews were tough, but I managed to get some solid offers and ultimately
-decided to sign on as a SWE at &lt;a href=&quot;https://mopub.com&quot;&gt;MoPub&lt;/a&gt;. I left Google, took a two week vacation,
-started the new job, and have been an engineer ever since.&lt;/p&gt;
-
-&lt;h2 id=&quot;looking-back&quot;&gt;Looking back&lt;/h2&gt;
-
-&lt;p&gt;Switching to engineering was a great decision for me, and one that I’ve had zero regrets about.
-I’m much, much happier as an engineer, and I think my career has turned out better because
-of it. Although I spent a few years in a less-than-ideal role, I learned a lot from that experience,
-and I think it’s made me a better engineer because I’m able to incorporate product-related
-thinking into my day-to-day work.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-decide&quot;&gt;How to decide?&lt;/h2&gt;
-
-&lt;p&gt;Ultimately, which path to take really depends on what makes you happiest. I’m very introverted
-and love sitting in front of my computer all day with my headphones in, so SWE is the best fit for
-me. If you’re more extroverted and would prefer to spend your time in meetings talking about
-product features with engineers and other stakeholders, then PM might be a better path.&lt;/p&gt;
-
-&lt;p&gt;If you’re thinking of switching between product and engineering, the lowest-risk approach is to try
-out the other role for a few months at your current company. Large companies like Google
-usually have formal rotation programs for doing this; even at companies without these kinds of
-programs, it’s often possible to negotiate a one-off rotation. If you’re not able to do this,
-you can at least try out some tasks on your team that are typically done by the “other” side-
-as a PM, for instance, spend a few days fixing bugs in your team’s code, or, as an engineer, talk to
-some of your customers and write a requirements doc for a new product feature.&lt;/p&gt;</content><author><name></name></author><summary type="html">I began my career as a product manager (PM) but then switched tracks and became a software engineer (SWE) three and a half years later. In this post, I want to describe how I started as a PM, why I made the decision to switch, and how it worked out.</summary></entry></feed>
+have an offer from another company that would make you happier, then take it.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the course of my career, I've had many jobs which implies that I've also left many jobs. Leaving a job can be awkward and emotionally draining, but, depending on the circumstances, also liberating and life-improving. In this post, I want to provide some guidance on why, how, and when to leave a job based on my experiences so far.</summary></entry></feed>
