@@ -40,7 +40,7 @@ about them for a later post.
 Getting a multi-hundred million or multi-billion dollar acquisition deal across the line requires
 a massive amount of effort. It starts with initial discussions then evolves into full-fledged
 negotiations, sometimes with multiple suitors at once. Once the outline of a deal is reached, the
-potential acquirer spends several weeks doing do diligence and peppering company insiders
+potential acquirer spends several weeks doing due diligence and peppering company insiders
 with detailed questions about the business.
 
 Dealing with all this plus the prospect of a massive payday down the line is super
