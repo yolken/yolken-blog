@@ -16,7 +16,7 @@ order: 2
 
 ## Academic
 
-Between 2004 and 2009, I was a Ph.D. student in the Stanford
+Between 2004 and 2009, I was a PhD student in the Stanford
 University
 [Department of Management Science and Engineering](https://msande.stanford.edu/).
 
