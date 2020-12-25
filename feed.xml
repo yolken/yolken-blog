@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-12-24T18:01:17-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How to do an architecture interview</title><link href="https://yolken.net/blog/architecture-interviews" rel="alternate" type="text/html" title="How to do an architecture interview" /><published>2020-12-24T11:26:00-08:00</published><updated>2020-12-24T11:26:00-08:00</updated><id>https://yolken.net/blog/architecture-interviews</id><content type="html" xml:base="https://yolken.net/blog/architecture-interviews">&lt;p&gt;Many software engineering interview loops include an “architecture interview”, where the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2020-12-24T18:11:30-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How to do an architecture interview</title><link href="https://yolken.net/blog/architecture-interviews" rel="alternate" type="text/html" title="How to do an architecture interview" /><published>2020-12-24T11:26:00-08:00</published><updated>2020-12-24T11:26:00-08:00</updated><id>https://yolken.net/blog/architecture-interviews</id><content type="html" xml:base="https://yolken.net/blog/architecture-interviews">&lt;p&gt;Many software engineering interview loops include an “architecture interview”, where the
 candidate is asked to develop a high-level design for a software system. Over the last few
 years, I’ve given many, many of these interviews, so I’ve seen a wide range of performances
 across the spectrum, from “absolutely terrible” to “we need to hire this person now!”.&lt;/p&gt;
@@ -180,8 +180,8 @@ them in your design.&lt;/p&gt;
 
 &lt;p&gt;It’s impossible to cover all of the details of a complex system like Uber’s ride matching
 in a 45-60 minute interview. When you focus too much on one specific thing (e.g., the database
-schema), you’re necessarily omitting the chance to cover other aspects of the problem in high-level
-detail.&lt;/p&gt;
+schema), you’re necessarily omitting the chance to cover other aspects of the problem in a very
+detailed way.&lt;/p&gt;
 
 &lt;p&gt;As mentioned earlier, start at a high-level and then dig into the lower-level components that your
 interviewer steers you towards. Don’t waste time on details that your interviewer doesn’t care
