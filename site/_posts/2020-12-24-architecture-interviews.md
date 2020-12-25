@@ -15,8 +15,8 @@ candidate is asked to develop a high-level design for a software system. Over th
 years, I've given many, many of these interviews, so I've seen a wide range of performances
 across the spectrum, from "absolutely terrible" to "we need to hire this person now!".
 
-Based on these experiences, I'd like to share what it takes to succeed in these interviews,
-and some common behaviors to avoid.
+Based on these experiences, I'd like to share what it takes to succeed in these interviews as
+the candidate, and some common behaviors to avoid.
 
 ## How it works
 
