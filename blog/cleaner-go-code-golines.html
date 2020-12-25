@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Cleaner go code with golines | Benjamin Yolken</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Cleaner go code with golines" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works." />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-23T12:37:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://yolken.net/blog/cleaner-go-code-golines","headline":"Cleaner go code with golines","dateModified":"2020-07-23T12:37:00-07:00","datePublished":"2020-07-23T12:37:00-07:00","description":"Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works.","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/cleaner-go-code-golines"},"@context":"https://schema.org"}</script>
+{"url":"https://yolken.net/blog/cleaner-go-code-golines","headline":"Cleaner go code with golines","dateModified":"2020-07-23T12:37:00-07:00","datePublished":"2020-07-23T12:37:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/cleaner-go-code-golines"},"description":"Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
@@ -64,56 +64,56 @@ I want to explain more about why I developed the tool and how it works.</p>
 <h2 id="the-problem">The problem</h2>
 
 <p>The standard tooling for the go programming language includes
-<a href="https://golang.org/cmd/gofmt/"><code class="highlighter-rouge">gofmt</code></a>, a very solid code formatting utility. <code class="highlighter-rouge">gofmt</code>
+<a href="https://golang.org/cmd/gofmt/"><code class="language-plaintext highlighter-rouge">gofmt</code></a>, a very solid code formatting utility. <code class="language-plaintext highlighter-rouge">gofmt</code>
 automatically applies the standard go rules for indents and spacing, for example converting this
 mess:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="x">  </span><span class="k">func</span><span class="x"> </span><span class="n">myFunc</span><span class="x">  </span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">(</span><span class="x">   </span><span class="kt">string</span><span class="p">,</span><span class="x">    </span><span class="kt">error</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
-		 </span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="x">   </span><span class="s">"Combined: %s %s"</span><span class="p">,</span><span class="x"> </span><span class="n">s</span><span class="p">,</span><span class="x">   </span><span class="n">t</span><span class="x">   </span><span class="p">)</span><span class="x">
+<figure class="highlight"><pre><code class="language-go" data-lang="go">  <span class="k">func</span> <span class="n">myFunc</span>  <span class="p">(</span><span class="n">s</span> <span class="kt">string</span><span class="p">,</span> <span class="n">t</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span>   <span class="kt">string</span><span class="p">,</span>    <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+		 <span class="n">v</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span>   <span class="s">"Combined: %s %s"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span>   <span class="n">t</span>   <span class="p">)</span>
 
 
-	 </span><span class="k">return</span><span class="x">   </span><span class="n">v</span><span class="p">,</span><span class="x">   </span><span class="no">nil</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+	 <span class="k">return</span>   <span class="n">v</span><span class="p">,</span>   <span class="no">nil</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>into a logically equivalent but much prettier variant:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">(</span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="kt">error</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
-	</span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"Combined: %s %s"</span><span class="p">,</span><span class="x"> </span><span class="n">s</span><span class="p">,</span><span class="x"> </span><span class="n">t</span><span class="p">)</span><span class="x">
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span> <span class="n">myFunc</span><span class="p">(</span><span class="n">s</span> <span class="kt">string</span><span class="p">,</span> <span class="n">t</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">v</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"Combined: %s %s"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
 
-	</span><span class="k">return</span><span class="x"> </span><span class="n">v</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+	<span class="k">return</span> <span class="n">v</span><span class="p">,</span> <span class="no">nil</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Unfortunately, this tool and the others that extend it
-(e.g., <a href="https://godoc.org/golang.org/x/tools/cmd/goimports"><code class="highlighter-rouge">goimports</code></a>) don’t do anything about
-long lines. <code class="highlighter-rouge">gofmt</code> will happily leave the following code as-is:</p>
+(e.g., <a href="https://godoc.org/golang.org/x/tools/cmd/goimports"><code class="language-plaintext highlighter-rouge">goimports</code></a>) don’t do anything about
+long lines. <code class="language-plaintext highlighter-rouge">gofmt</code> will happily leave the following code as-is:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc2</span><span class="p">(</span><span class="n">longArg1</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg2</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg3</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg4</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg5</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">longArg6</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="kt">string</span><span class="x"> </span><span class="p">{</span><span class="x">
-    </span><span class="k">return</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"longArg1"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg1</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg2"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg2</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg3"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg3</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg4"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg4</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg5"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg5</span><span class="p">,</span><span class="x"> </span><span class="s">"longArg6"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg6</span><span class="p">})</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span> <span class="n">myFunc2</span><span class="p">(</span><span class="n">longArg1</span> <span class="kt">string</span><span class="p">,</span> <span class="n">longArg2</span> <span class="kt">string</span><span class="p">,</span> <span class="n">longArg3</span> <span class="kt">string</span><span class="p">,</span> <span class="n">longArg4</span> <span class="kt">string</span><span class="p">,</span> <span class="n">longArg5</span> <span class="kt">string</span><span class="p">,</span> <span class="n">longArg6</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"longArg1"</span><span class="o">:</span> <span class="n">longArg1</span><span class="p">,</span> <span class="s">"longArg2"</span><span class="o">:</span> <span class="n">longArg2</span><span class="p">,</span> <span class="s">"longArg3"</span><span class="o">:</span> <span class="n">longArg3</span><span class="p">,</span> <span class="s">"longArg4"</span><span class="o">:</span> <span class="n">longArg4</span><span class="p">,</span> <span class="s">"longArg5"</span><span class="o">:</span> <span class="n">longArg5</span><span class="p">,</span> <span class="s">"longArg6"</span><span class="o">:</span> <span class="n">longArg6</span><span class="p">})</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Personally, I find it much more readable in cases like this to split out the
 function arguments and map key-value pairs onto separate lines:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span><span class="x"> </span><span class="n">myFunc2</span><span class="p">(</span><span class="x">
-	</span><span class="n">longArg1</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-	</span><span class="n">longArg2</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-	</span><span class="n">longArg3</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-	</span><span class="n">longArg4</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-	</span><span class="n">longArg5</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-	</span><span class="n">longArg6</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x">
-</span><span class="p">)</span><span class="x"> </span><span class="kt">string</span><span class="x"> </span><span class="p">{</span><span class="x">
-	</span><span class="k">return</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="x">
-		</span><span class="s">"%v"</span><span class="p">,</span><span class="x">
-		</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
-			</span><span class="s">"longArg1"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg1</span><span class="p">,</span><span class="x">
-			</span><span class="s">"longArg2"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg2</span><span class="p">,</span><span class="x">
-			</span><span class="s">"longArg3"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg3</span><span class="p">,</span><span class="x">
-			</span><span class="s">"longArg4"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg4</span><span class="p">,</span><span class="x">
-			</span><span class="s">"longArg5"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg5</span><span class="p">,</span><span class="x">
-			</span><span class="s">"longArg6"</span><span class="o">:</span><span class="x"> </span><span class="n">longArg6</span><span class="p">,</span><span class="x">
-		</span><span class="p">},</span><span class="x">
-	</span><span class="p">)</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">func</span> <span class="n">myFunc2</span><span class="p">(</span>
+	<span class="n">longArg1</span> <span class="kt">string</span><span class="p">,</span>
+	<span class="n">longArg2</span> <span class="kt">string</span><span class="p">,</span>
+	<span class="n">longArg3</span> <span class="kt">string</span><span class="p">,</span>
+	<span class="n">longArg4</span> <span class="kt">string</span><span class="p">,</span>
+	<span class="n">longArg5</span> <span class="kt">string</span><span class="p">,</span>
+	<span class="n">longArg6</span> <span class="kt">string</span><span class="p">,</span>
+<span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span>
+		<span class="s">"%v"</span><span class="p">,</span>
+		<span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span>
+			<span class="s">"longArg1"</span><span class="o">:</span> <span class="n">longArg1</span><span class="p">,</span>
+			<span class="s">"longArg2"</span><span class="o">:</span> <span class="n">longArg2</span><span class="p">,</span>
+			<span class="s">"longArg3"</span><span class="o">:</span> <span class="n">longArg3</span><span class="p">,</span>
+			<span class="s">"longArg4"</span><span class="o">:</span> <span class="n">longArg4</span><span class="p">,</span>
+			<span class="s">"longArg5"</span><span class="o">:</span> <span class="n">longArg5</span><span class="p">,</span>
+			<span class="s">"longArg6"</span><span class="o">:</span> <span class="n">longArg6</span><span class="p">,</span>
+		<span class="p">},</span>
+	<span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>I like go, but for years it bothered me that there was no automatic way of applying the
 above types of cleanups. When going into a new codebase, I would manually shorten the worst
@@ -135,8 +135,8 @@ when I’m trying to understand your 200 character-wide function declarations in
 
 <h4 id="line-length-is-a-matter-of-preference-we-shouldnt-impose-a-constraint-that-others-may-disagree-with"><em>Line length is a matter of preference. We shouldn’t impose a constraint that others may disagree with.</em></h4>
 
-<p>True, but so is spaces vs. tabs, whether to put the opening <code class="highlighter-rouge">{</code> on the same line as a function
-definition or the next one, and many other style disputes that <code class="highlighter-rouge">gofmt</code> and other tools take
+<p>True, but so is spaces vs. tabs, whether to put the opening <code class="language-plaintext highlighter-rouge">{</code> on the same line as a function
+definition or the next one, and many other style disputes that <code class="language-plaintext highlighter-rouge">gofmt</code> and other tools take
 very definitive stands on. You have to impose some standards, otherwise each file in your repo
 will look completely different based on who last edited it.</p>
 
@@ -159,27 +159,27 @@ regular expressions. The basic algorithm was:</p>
   <li>Otherwise, loop through a set of pre-defined, “splitter” regular expressions</li>
   <li>If the line matches one of these, insert newlines according to some associated, pre-defined
   logic, then continue to the next line</li>
-  <li>After reaching the end of the file, run <code class="highlighter-rouge">gofmt</code> to fix the spacing issues created by (4)</li>
+  <li>After reaching the end of the file, run <code class="language-plaintext highlighter-rouge">gofmt</code> to fix the spacing issues created by (4)</li>
 </ol>
 
 <p>I then went about creating the regular expressions to use. It started off relatively easy;
 for instance, to pick up the case of a long line with a function call, I used something like:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>^\s*\w+\((\w+)(,[ ]?\w+)*\)$
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>^\s*\w+\((\w+)(,[ ]?\w+)*\)$
 </code></pre></div></div>
 
 <p>That will match <code>&nbsp;&nbsp;hello(arg1, arg2,arg3)</code>. We can then have some logic that
 inserts newlines and a final comma in the appropriate places:
 <code>&nbsp;&nbsp;hello(\narg1,\n arg2,\narg3,\n)</code>. The end result, before running the final
-<code class="highlighter-rouge">gofmt</code>, thus renders as:</p>
+<code class="language-plaintext highlighter-rouge">gofmt</code>, thus renders as:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="x">  </span><span class="n">hello</span><span class="p">(</span><span class="x">
-</span><span class="n">arg1</span><span class="p">,</span><span class="x">
- </span><span class="n">arg2</span><span class="p">,</span><span class="x">
-</span><span class="n">arg3</span><span class="p">,</span><span class="x">
-</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-go" data-lang="go">  <span class="n">hello</span><span class="p">(</span>
+<span class="n">arg1</span><span class="p">,</span>
+ <span class="n">arg2</span><span class="p">,</span>
+<span class="n">arg3</span><span class="p">,</span>
+<span class="p">)</span></code></pre></figure>
 
-<p><code class="highlighter-rouge">gofmt</code> then fixes the indents on each line so that it actually looks nice and matches the
+<p><code class="language-plaintext highlighter-rouge">gofmt</code> then fixes the indents on each line so that it actually looks nice and matches the
 surrounding code.</p>
 
 <p>I then made similar regular expressions and fixing logic for a few other common cases, including
@@ -217,14 +217,14 @@ can then be transformed into lower-level machine code.</p>
 
 <p>The go compiler, for instance, converts this code:</p>
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><span class="k">package</span> <span class="n">main</span>
 
-</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+<span class="k">import</span> <span class="s">"fmt"</span>
 
-</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
-    </span><span class="n">v</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"hello"</span><span class="x">
-    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"key1"</span><span class="o">:</span><span class="x"> </span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%s-%d"</span><span class="p">,</span><span class="x"> </span><span class="n">v</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">)})</span><span class="x">
-</span><span class="p">}</span></code></pre></figure>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">v</span> <span class="o">:=</span> <span class="s">"hello"</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"key1"</span><span class="o">:</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%s-%d"</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="m">4</span><span class="p">)})</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>into the following AST:</p>
 
@@ -240,9 +240,9 @@ fairly easy to create representations like the one above.</p>
 AST instead of a sequence of lines. Instead of looping through lines, we can do a depth-first
 traversal of the nodes. If a node is on a long line, we can insert newlines between its children
 and/or recursively apply our shortening on them. The exact logic here depends on the node
-type, but in the case of a <code class="highlighter-rouge">CallExpression</code> (i.e., a function call) for instance, we would
-insert newlines between each of the children <code class="highlighter-rouge">Args</code>. Then, at the end, we can convert the AST
-back to code and run <code class="highlighter-rouge">gofmt</code> to fix the spacing on each line.</p>
+type, but in the case of a <code class="language-plaintext highlighter-rouge">CallExpression</code> (i.e., a function call) for instance, we would
+insert newlines between each of the children <code class="language-plaintext highlighter-rouge">Args</code>. Then, at the end, we can convert the AST
+back to code and run <code class="language-plaintext highlighter-rouge">gofmt</code> to fix the spacing on each line.</p>
 
 <h3 id="the-implementation">The implementation</h3>
 
@@ -263,7 +263,7 @@ to determine whether we should try to split it out onto multiple lines.</p>
 
 <p>The golang AST does include comments, but unfortunately they’re not directly linked to other nodes
 in the AST. Thankfully, however, there’s a third-party AST generator,
-<a href="https://github.com/dave/dst"><code class="highlighter-rouge">dave/dst</code></a>, that does maintain these links. By using this, I could
+<a href="https://github.com/dave/dst"><code class="language-plaintext highlighter-rouge">dave/dst</code></a>, that does maintain these links. By using this, I could
 mark the long lines, generate the AST, and then traverse the graph and insert newlines in the
 appropriate places to break up the long lines. The “control comments” could then be scrubbed
 at the end so they wouldn’t appear in the final formatted output.</p>
@@ -272,13 +272,13 @@ at the end so they wouldn’t appear in the final formatted output.</p>
 to split each node type. In most cases, it was fairly straightforward- function declarations
 and calls, for instance, can be split between the arguments. It got tricker, however,
 when dealing with cases where the top-level node is not the one that you actually want
-to shorten. If you’re shortening an assignment, for instance <code class="highlighter-rouge">x := myFunc(...)</code>, then you
+to shorten. If you’re shortening an assignment, for instance <code class="language-plaintext highlighter-rouge">x := myFunc(...)</code>, then you
 really want to shorten the right-hand-side, which is in a lower-level node. In these cases,
 you need to “push” the shortening work down recursively.</p>
 
 <h2 id="from-testing-to-release">From testing to release</h2>
 
-<p>After lots of trial-and-error, I got the tool, which I decided to call <code class="highlighter-rouge">golines</code>, working for all
+<p>After lots of trial-and-error, I got the tool, which I decided to call <code class="language-plaintext highlighter-rouge">golines</code>, working for all
 of the fixtures that I could generate myself. The next step was to run it on real code to make
 sure that it (1) wouldn’t crash, (2) would make progress at a reasonable speed, and (3) would
 actually shorten long lines in a reasonable way.</p>
@@ -289,13 +289,13 @@ that were omitted in my first pass and also used <a href="https://golang.org/pkg
 discover and alleviate the performance bottlenecks.</p>
 
 <p>In the end, I got to a point where I felt fairly confident about the quality of the tool and
-kicked off our internal process for open-sourcing. A week later, <code class="highlighter-rouge">golines</code> was out in the wild and
+kicked off our internal process for open-sourcing. A week later, <code class="language-plaintext highlighter-rouge">golines</code> was out in the wild and
 available for general use!</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
 <p>If you’re annoyed by long go lines as much as I am, please give
-<a href="https://github.com/segmentio/golines"><code class="highlighter-rouge">golines</code></a> a try. And, if you notice any problems or
+<a href="https://github.com/segmentio/golines"><code class="language-plaintext highlighter-rouge">golines</code></a> a try. And, if you notice any problems or
 have enhancement suggestions, file an issue in the repo. External contributions are welcome as well.</p>
 
   </div><a class="u-url" href="/blog/cleaner-go-code-golines" hidden></a>

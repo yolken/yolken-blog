@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Service meshes are hard | Benjamin Yolken</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Service meshes are hard" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly." />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-20T13:44:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://yolken.net/blog/service-meshes","headline":"Service meshes are hard","dateModified":"2020-09-20T13:44:00-07:00","datePublished":"2020-09-20T13:44:00-07:00","description":"Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly.","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/service-meshes"},"@context":"https://schema.org"}</script>
+{"url":"https://yolken.net/blog/service-meshes","headline":"Service meshes are hard","dateModified":"2020-09-20T13:44:00-07:00","datePublished":"2020-09-20T13:44:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/service-meshes"},"description":"Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
@@ -179,14 +179,14 @@ more tedious.</p>
 <h4 id="encrypted-traffic-looks-like-binary-junk">Encrypted traffic looks like binary junk</h4>
 
 <p>There are lots of great tools for inspecting unencrypted traffic. Personally,
-I like running <code class="highlighter-rouge">tcpdump -i any -A port [my service port]</code> and watching requests
+I like running <code class="language-plaintext highlighter-rouge">tcpdump -i any -A port [my service port]</code> and watching requests
 go back and forth when I’m trying to understand the traffic hitting a service. If
 this traffic is encrypted, you can still do this, but all you’ll see is binary junk:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">16:51:07.773675 IP lga15s43-in-f36.1e100.net.https <span class="o">&gt;</span> 192.168.0.10.56081: Flags <span class="o">[</span>P.], <span class="nb">seq </span>2713:3385, ack 537, win 261, options <span class="o">[</span>nop,nop,TS val 2846442026 ecr 1037268748], length 672
 ..J..C..k.H...E....<span class="nv">$.</span>.y..O...<span class="nv">$.</span>..
 ......F...<span class="nv">$o</span>...........
-..B<span class="k">*</span><span class="o">=</span>.w.......7V.o.<span class="k">$(</span>...wc.qk....2.ePyi<span class="se">\u</span>XsTP..R..z.<span class="p">;</span>S..
+..B<span class="k">*</span><span class="o">=</span>.w.......7V.o.<span class="si">$(</span>...wc.qk....2.ePyi<span class="se">\u</span>XsTP..R..z.<span class="p">;</span>S..
 <span class="s2">"iT....S...Ju.%..........%.....kZV0...EA9.W.NB.^.....f</span><span class="sb">`</span>
 hV...i<span class="o">=</span>8?...&gt;8.<span class="s2">".-..m.H.........y...	.......?.G.</span><span class="nv">$U</span><span class="s2">&lt;j...s.</span><span class="se">\&gt;</span><span class="s2">....;.....a......6@
 [w.&gt;SHQ.%...F....S..e	..f,..T(CA..U....x...../...8..(.j.....k..h.{.^...5n.4f.[....].x.....}
