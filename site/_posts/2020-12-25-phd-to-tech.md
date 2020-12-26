@@ -15,8 +15,8 @@ I decided to leave academia after graduation. At the time, I explored several ca
 but ultimately decided to take a Product Manager job at Google.
 
 Since then, I've [switched ladders once](/blog/switching-from-product-to-eng) and
-[companies a few times](https://www.linkedin.com/in/yolken/), but overall have absolutely no regrets
-about going into tech versus the other paths that I could have taken.
+[switched companies a few times](https://www.linkedin.com/in/yolken/), but overall have absolutely
+no regrets about going into tech versus the other paths that I could have taken.
 
 In this post, I want to discuss why I think it's a great destination for people with technical PhDs
 and also dig into the "career ladders" that most tech companies have.
@@ -38,7 +38,7 @@ to succeed:
 
 1. Ability to break down large technical problems into smaller chunks, work on them over many
   years despite roadblocks
-2. Comfort with quantitative analysis, particularly when the underlying data are messy or
+2. Comfort with complex quantitative analysis, particularly when the underlying data are messy or
   incomplete
 3. Strong communication skills
 
@@ -49,12 +49,10 @@ company.
 That's great if you're able to find such a fit, and it will definitely help your career
 at the beginning, but it's not a requirement, and seems to be more the exception than the rule.
 My research, for instance, was on [using game theory for resource allocation](/pubs), but
-aside from a little bit in my first job, my work has been completely unrelated. The
-benefits have mostly been from the "soft" skills listed previously as opposed to any specific
-technical knowledge that I picked up in graduate school.
+aside from a little bit in my first job, my work has been completely unrelated.
 
-In addition to the skills fit, there are a number of other great things about tech, which apply
-whether you're a PhD or not:
+In addition to the natural skills fit, there are a number of other great things about tech, which
+apply whether you're a PhD or not:
 
 1. Great salaries, benefits, and work environment (casual, friendly, flexible hours, etc.)
 2. Fast-moving, constantly changing, hard to get bored for too long
@@ -71,11 +69,11 @@ A few companies such as [IBM](https://www.research.ibm.com/),
 [Microsoft](https://www.microsoft.com/en-us/research/), and
 [HP](https://www8.hp.com/us/en/hp-labs/), run "labs" or "research" divisions that are sort of a
 cross between a research university and a large corporation. Staff in these places
-do research, write papers, present at academic conferences, etc. like professors but are expected
+do research, write papers, and present at academic conferences like professors but are expected
 to work on problems that are relevant to the businesses of their parent companies.
 
 I briefly worked at [IBM's Almaden Lab](https://www.research.ibm.com/labs/almaden/) (and hated it-
-details to be covered in a future post) and have met a few people at some of the other labs
+details to be covered in a future post!) and have met a few people at some of the other labs
 in the SF Bay Area. I think it can be a good fit if you absolutely love research but don't want
 to deal with writing grants, teaching students, or doing the other, non-research-related work of a
 professor. On the other hand, you have less freedom than an academic researcher, and the work can
@@ -88,12 +86,12 @@ love hiring PhDs, particularly those from prestigious schools. I halfheartedly a
 these jobs as I was finishing up my degree, but didn't get any offers and then never considered
 them again.
 
-From what I've heard, these jobs can involve a rough lifestyle (lots of travel, long hours, etc.),
+From what I've heard, these jobs can involve a rough lifestyle (lots of travel and long hours)
 and the work is often boring and repetitive. Every person I've known who's gone into consulting
 has left the profession after 2-3 years, which I think says a lot about it as a career path.
 
 On the other hand, the jobs are considered prestigious, and they can serve as stepping stones
-into high-level leadership jobs in lots of different industries, including tech.
+into high-level leadership roles in lots of different industries, including tech.
 
 ### Finance
 
@@ -120,9 +118,10 @@ the hands-on technical work. This work, to put it colloquially, is a mixture of 
 things, updating existing things, fixing problems in existing things, and/or managing people
 doing any of the previous.
 
-In addition to being the most hands-on of the ladder choices, engineering is typically also
-the intellectual core of a tech company and as a result is where important decisions are made,
-where upper management is drawn from, etc.
+In addition to being the most hands-on of the ladder choices, engineering is also the intellectual
+core of a tech company. As a result, it's often the "power center" where decisions
+are made and upper management is drawn from. This is not always the case, though- at a few
+tech companies, it's product or design that runs the show.
 
 The downside of engineering, particularly at larger companies, is that you're typically focused
 on a very narrow slice of the company's technology. This gets better as you become more senior,
@@ -136,9 +135,9 @@ enough to do them every day.
 
 Product managers are responsible for ensuring the high-level success of the products they work on.
 They do this by talking to customers, writing up requirements documents, setting priorities
-for engineering work, developing relationships with other teams inside the company, etc. The
-work can be all over the place, and really varies a lot based on the needs of the product and
-the structure of the teams you're working with.
+for engineering work, and developing relationships with other teams inside the company, among
+other activities. The work can be all over the place, and really varies a lot based on the needs of
+the product and the structure of the teams you're working with.
 
 The nice thing about product management, and the reason that I went into it originally, is that
 it's super flexible and broad, even early on in your career. As an entry-level PM at Google,
@@ -146,17 +145,17 @@ I not only interacted with lots of senior engineers, but also got exposure to le
 design, internationalization, research, and other specializations within the company.
 
 The downside of product management, and the reason that I eventually switched into engineering,
-is that less technical and more relationship-oriented than the other ladders. Some people love
+is that it's less technical and more relationship-oriented than the other ladders. Some people love
 this kind of work, though, so don't let me dissuade you if you have the right personality for it.
 
 ### Data science
 
 Data science, at least when called as such, is the newest of the ladder choices. Data scientists
 do quantitative analysis to support product development. The exact day-to-day projects vary a lot,
-but some examples include designing and evaluating product experiments, building models
-to detect malicious behavior, forecasting the company's future product demand, etc.
+but some examples here include designing and evaluating product experiments, building models
+to detect malicious user behavior, and forecasting the company's future product demand.
 
-When I started by career 12 years ago, most of the jobs in this space were more specialized,
+When I started my career 12 years ago, most of the jobs in this space were much more specialized,
 e.g. "financial analyst" or "experimental statistician", so I didn't apply for them. Since
 then, the more general field of "data science" has developed and become broad enough that it's a
 good fit for many technical PhDs.
@@ -171,8 +170,28 @@ Another downside of data science is that many tech companies don't have a data s
 Or, if they do, it might be limited to just a very small part of the overall business. This will
 probably improve in the future, though.
 
+## Applying and leveling as a PhD
+
+Unlike academic jobs, most of the positions in the tech ladders above don't require a PhD. Instead,
+it might be listed as "desired" or "a plus" in the associated job descriptions. The impact
+of having a PhD versus not having one in the interview process will vary a lot based on the
+company and specific position you're applying for. You might be asked to give a seminar on your
+research, or, as is the case for many software engineering jobs, it might make zero difference
+in how you're interviewed.
+
+Once you pass the interviews, having a PhD should improve the initial level you're assigned
+and the associated compensation you're offered (see
+[this previous post on levels](/blog/stop-hiding-levels)). When I started at Google, for instance,
+my PhD allowed me to skip the first two rungs on the PM ladder even though I had little prior
+job experience. This put me several years ahead of new grads entering with only bachelor's
+degrees.
+
+Wherever you end up, you're likely to be working with and working for many people who don't have
+PhDs. It's nice being special, and people will definitely notice your PhD when you're applying for
+new positions, but once you're settled in a job, having the degree isn't a big deal.
+
 ## Conclusion
 
-Tech can be a great place for PhDs, and I think it's better than the alternative career choices
-for many people. I'm a bit biased, but if you're finishing up a PhD or stuck in an unfulfilling
-academic job, it's totally worth exploring your options in the space.
+Tech can be a great place for PhDs, and, although I'm a bit biased, I think it's better than the
+alternative career choices for many people. If you're finishing up a PhD or stuck in an
+unfulfilling academic job, it's totally worth exploring your options in the space.
