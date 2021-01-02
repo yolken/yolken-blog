@@ -4,12 +4,12 @@ title:  "Quitting a new job"
 date:   2021-01-01 18:40:00 -0700
 categories: career
 excerpt: |
-    Last year, I did something that I'd never done in my career before- I left a job
+    Two years ago, I did something that I'd never done in my career before- I left a job
     (at Nuro) only a few months after starting it. In this post, I want to explain
     what happened and what I learned from the experience.
 ---
 
-Last year, I did something that I'd never done in my career before- I left a job
+Two years ago, I did something that I'd never done in my career before- I left a job
 (at [Nuro](https://nuro.ai)) only a few months after starting it. In this post, I want to explain
 what happened and what I learned from the experience.
 
@@ -48,14 +48,14 @@ and, after years of feeling stuck in my career, maybe different was good.
 
 The company was super secretive about its technology; I wasn't allowed to tour the office, for
 instance, because they had hardware prototypes lying around that only employees were allowed to
-see. I also wasn't invited to ride along in their test cars, which would have been fun and
+see. I also wasn't invited to ride along in their test cars, which would have been both fun and
 informative. The external signs were good, though- they had raised a billion dollars from Softbank
 and others, and the employee reviews on [Glassdoor](https://www.glassdoor.com) were gushing.
 
 Aside from being in a somewhat different space than my previous employers, another potential
 downside was the commute. Stripe and my three jobs before that were all within a 15 minute walk
 of my apartment in San Francisco. Nuro's office was 40 miles away in Mountain View, which was
-more than an hour away by train. But, I had done longer commutes earlier in my career and figured
+more than an hour each way by train. But, I had done longer commutes earlier in my career and figured
 that I could handle it.
 
 In the end, I went with my impulses and signed the offer. I had my last day at Stripe, took a short
@@ -81,7 +81,7 @@ term.
 
 #### Getting back on track
 
-At this point, I had at least three choices:
+At this point, I had three choices:
 
 1. Quit immediately
 2. Start exploring new opportunities but don't quit until something better is lined up
@@ -96,7 +96,7 @@ to my old job wouldn't fix those or make me feel better about them.
 
 Another variant of option 1 would be to quit and take one of the other offers I had gotten
 during my search. But, I had already rejected those for what I thought were good reasons,
-so this wasn't necessarily the best way out.
+so this didn't feel like the best way out.
 
 Option 3 was the one that would look the least bad from a resume perspective, and this seems to be
 what a lot of people in tech do when they don't like a job. But, life is short, I was really feeling
