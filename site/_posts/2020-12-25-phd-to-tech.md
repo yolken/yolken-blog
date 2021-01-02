@@ -100,6 +100,11 @@ I don't have any personal experience with these jobs, but from what I've heard t
 extremely lucrative. I'm personally not very interested in finance or the idea of crunching
 numbers all day, but if you are it might be a career path to explore.
 
+If you're interested in finance, I'd highly recommend reading
+[this memoir](https://www.amazon.com/My-Life-Quant-Reflections-Physics/dp/0470192739) to
+get a somewhat dated (but still relevant) perspective on transitioning from academic research to
+Wall Street.
+
 ## Ladders
 
 Once you've decided to go into tech, the next step is to figure out which "career ladder"
