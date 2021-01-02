@@ -72,8 +72,8 @@ lifestyle downgrade to me.
 At Stripe and each of my jobs before that, I had had a short commute to a beautiful office, and
 got to experience the instant gratification associated with developing purely software-based
 products. Now, I was stuck taking a crowded train to a dark office littered with hardware parts,
-working on a product that would take years to reach its full potential due to pesky little things
-like manufacturing, regulatory approval, and road safety.
+working on a product that would take many years to reach mass-market adoption due to pesky little
+things like manufacturing and road safety.
 
 I had left Stripe seeking an upgrade, but instead I got a downgrade. And, while minor improvements
 were possible, it seemed unlikely that things would completely change for the better in the near
@@ -112,7 +112,7 @@ reached out to some former colleagues about the companies they were now at.
 I then went through the whole recruitment process with a new set of companies. This time,
 though, I was a lot pickier about where I interviewed (nothing in hardware or with long commutes!);
 after a few weeks, I had four new choices including an updated offer from Stripe. After
-a good amount of due diligence (significantly more than I had done in my previous search), I
+a good amount of due diligence, significantly more than I had done in my previous search, I
 decided to go to [Segment](https://segment.com).
 
 When I put in my notice at Nuro, people were surprised that I was leaving so soon, but ultimately
