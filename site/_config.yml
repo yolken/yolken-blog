@@ -10,6 +10,11 @@ github_username: yolken
 show_excerpts: true
 permalink: /blog/:title
 
+minima:
+  social_links:
+    linkedin: yolken
+    twitter: bhyolken
+
 # Build settings
 markdown: kramdown
 theme: minima
