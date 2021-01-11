@@ -1,4 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-03T16:24:14-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Quitting a new job</title><link href="https://yolken.net/blog/quitting-a-new-job" rel="alternate" type="text/html" title="Quitting a new job" /><published>2021-01-01T17:40:00-08:00</published><updated>2021-01-01T17:40:00-08:00</updated><id>https://yolken.net/blog/quitting-a-new-job</id><content type="html" xml:base="https://yolken.net/blog/quitting-a-new-job">&lt;p&gt;Two years ago, I did something that I’d never done in my career before- I left a job
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-10T20:12:11-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How I made this blog</title><link href="https://yolken.net/blog/how-i-made-this-blog" rel="alternate" type="text/html" title="How I made this blog" /><published>2021-01-10T13:10:00-08:00</published><updated>2021-01-10T13:10:00-08:00</updated><id>https://yolken.net/blog/how-i-made-this-blog</id><content type="html" xml:base="https://yolken.net/blog/how-i-made-this-blog">&lt;p&gt;Every now and then, I get asked how I made this blog from a technical standpoint. In this
+post, I want to share how my content is generated and hosted, and then describe some commonly-used,
+alternative approaches that I decided not to take.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;I write each post in a separate &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; file.
+Markdown is nice because it’s super lightweight, supports most of the formatting I need
+(headers, bolding, bullets, etc.), and I’ve used it a lot for writing documentation at work, so
+I feel very comfortable with the syntax.&lt;/p&gt;
+
+&lt;p&gt;For example, here’s a sample of the Markdown for my recent post on
+&lt;a href=&quot;/blog/quitting-a-new-job&quot;&gt;quitting a new job&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Quitting&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;job&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;2021-01-01 18:40:00 -0700&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;career&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;Two years ago, I did something ...&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;---&lt;/span&gt;
+
+Two years ago, I did something that I'd never done in my career before-
+I left a job (at &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Nuro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://nuro.ai&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;) only a few months after starting
+it. In this post, I want to explain what happened and what I learned from
+the experience.
+
+&lt;span class=&quot;gu&quot;&gt;## What happened&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### The job switch&lt;/span&gt;
+
+Back in the spring of 2019, I decided to leave &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Stripe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://www.stripe.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;,
+where I'd been a software engineer for about a year and a half. The full
+details are best left to a separate post, but at a high level I just wasn’t very
+happy...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I then use &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; to convert these Markdown files into a collection
+of static HTML pages that can be rendered by web browsers. Jekyll is what’s known as a
+“static site generator”; in addition to supporting higher-level formats like Markdown that are
+easier to work with than HTML, these frameworks also automate setting the look-and-feel of each
+page and inserting common content like headers and footers that would be tedious to add manually.&lt;/p&gt;
+
+&lt;p&gt;Here’s what the &lt;a href=&quot;/blog/quitting-a-new-job&quot;&gt;quitting a new job&lt;/a&gt; Markdown looks like after
+conversion to HTML:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Quitting a new job | Benjamin Yolken&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    ...
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;header&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;site-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;trigger&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/blog&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Blog&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/pubs&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Publications&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/about&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;About&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+    ...
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-content e-content&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;articleBody&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Two years ago, I did something that I’d never done in my career before-
+      I left a job (at &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://nuro.ai&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Nuro&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;) only a few months
+      after starting it. In this post, I want to explain what happened and
+      what I learned from the experience.
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;what-happened&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;What happened&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h4&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the-job-switch&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;The job switch&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Back in the spring of 2019, I decided to leave
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.stripe.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Stripe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;, where I’d been a software
+      engineer for about a year and a half. The full details are best left to
+      a separate post, but at a high level I just wasn’t very happy...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, I push the generated HTML files, along with a stylesheet for the site, into the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch of my &lt;a href=&quot;https://github.com/yolken/yolken-blog&quot;&gt;GitHub repo&lt;/a&gt;. GitHub has a nice
+feature called &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; that will take the contents of an arbitrary
+branch (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; by default) and serve them as static content behind a web server. It also
+supports custom domains, which allows for my pages to be available though &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yolken.net&lt;/code&gt; as opposed to
+a shared domain like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;GitHub has solid documentation on the entire process, including the content generation
+steps, that you can read
+&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll&quot;&gt;here&lt;/a&gt;. Everything is free if your repo is open-source
+and you abide by the &lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages#guidelines-for-using-github-pages&quot;&gt;GitHub Pages guidelines&lt;/a&gt;, all of which
+are pretty reasonable for most personal blogs.&lt;/p&gt;
+
+&lt;h2 id=&quot;rejected-alternatives&quot;&gt;Rejected alternatives&lt;/h2&gt;
+
+&lt;p&gt;There are several other approaches to publishing a blog online that I decided not to go with.
+These weren’t ideal for me, but, depending on your specific requirements, may be reasonable
+choices for your content.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-a-third-party-blogging-service&quot;&gt;Use a third-party blogging service&lt;/h3&gt;
+
+&lt;p&gt;The easiest way to get a blog online is to use a third-party, hosted blogging service.
+Back in the day, &lt;a href=&quot;https://www.blogger.com/&quot;&gt;Blogger&lt;/a&gt; was all the rage.
+Now, it seems like &lt;a href=&quot;https://medium.com&quot;&gt;Medium&lt;/a&gt; is the hot platform to use. There are tons of other
+choices here, including social networks like Facebook and LinkedIn, which have started supporting
+blog-like user content.&lt;/p&gt;
+
+&lt;p&gt;The main advantage of these services is that they’re super easy-to-use. You just type up your
+content in a pretty, web-based editor and click a button to publish. They also provide features like
+comments, searching, and subscriptions on top of your content without much effort.&lt;/p&gt;
+
+&lt;p&gt;The downside of these services is that you’re handing over your content to a third-party,
+who’s packaging it up with other people’s content, applying their own look-and-feel, and, in many
+cases, trying to monetize it. Even though you’re the author, and even though you maintain
+legal rights to your content in most cases, there’s a tendency for your work to become associated
+more with the hosting service than with you.&lt;/p&gt;
+
+&lt;p&gt;Personally, I’m fine with this when I’m sharing low-quality, short-form content like
+my vacation photos. However, for something as important and personal as my blog, I wanted
+to be in complete control and not share any ownership with a third-party.&lt;/p&gt;
+
+&lt;p&gt;If you’re just writing occasionally, though, or really, really don’t want to deal with any
+technical details, putting your content in a third-party service might be an acceptable
+choice.&lt;/p&gt;
+
+&lt;h3 id=&quot;host-in-a-cloud-provider&quot;&gt;Host in a cloud provider&lt;/h3&gt;
+
+&lt;p&gt;GitHub Pages is very reliable and low-hassle but only handles static content and imposes
+&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages#guidelines-for-using-github-pages&quot;&gt;some limitations&lt;/a&gt; on this content including its size and
+update frequency. It also abstracts away the lower-level serving details, which are
+sometimes useful to observe and adjust.&lt;/p&gt;
+
+&lt;p&gt;An alternative is to host your blog using a cloud provider like AWS. The details
+here vary a lot based on which provider you’re using and what you’re trying to do, but if
+you have static content only, you can use a storage service like
+&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;S3&lt;/a&gt; plus a content delivery network (CDN) like
+&lt;a href=&quot;https://aws.amazon.com/cloudfront/&quot;&gt;CloudFront&lt;/a&gt; to handle caching and HTTPS termination closer
+to end users.&lt;/p&gt;
+
+&lt;p&gt;I decided to not take this approach because my blog comfortably fits within the limits of
+GitHub Pages, and I also like that it’s totally free. This may change in the future, though, if I
+outgrow GitHub Pages or get bored and want to handle more of the lower-level serving details
+myself.&lt;/p&gt;
+
+&lt;h3 id=&quot;run-your-own-content-management-system-cms&quot;&gt;Run your own content management system (CMS)&lt;/h3&gt;
+
+&lt;p&gt;Static sites like the one for this blog are fairly limited; among other examples, you can’t
+customize pages on a per-user basis, it’s hard to provide dynamic features like search,
+and, since all posts are static files, it can become tedious to manage a large amount of content.&lt;/p&gt;
+
+&lt;p&gt;An alternative is to run a service called a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Content_management_system&quot;&gt;content management system (CMS)&lt;/a&gt;, which
+stores the content in a database and dynamically generates pages in response to user requests.
+Because the content is stored in a structured format and because the server can customize the
+contents of each page, it’s much easier to incorporate Blogger or Medium-like features such as user
+logins, search, and online post editing.&lt;/p&gt;
+
+&lt;p&gt;There are a large number of fully-featured, open-source CMSes to choose from, including
+&lt;a href=&quot;https://en.wikipedia.org/wiki/WordPress&quot;&gt;WordPress&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Drupal&quot;&gt;Drupal&lt;/a&gt;. You can also write your own on top of a web
+application framework like &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Running these systems is a lot more complicated than throwing static HTML into
+GitHub Pages or S3. In addition to choosing a hosting provider and configuring all of the
+associated software, you also need to worry about things like monitoring (what if the site goes
+down?) and capacity planning (what if a post goes viral and gets tens of thousands of views?).&lt;/p&gt;
+
+&lt;p&gt;For me, the extra features of a CMS just weren’t worth the hassle. However, this may be a good
+choice if you want to create a site with more than just a static list of posts. The more popular
+CMSes like WordPress also have rich ecosystems of themes and plugins that you can use
+to create prettier, more complex online destinations.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This blog consists of static HTML served by GitHub Pages. Although it’s not the fanciest
+approach, I’ve found that it provides a high degree of personal control while having
+minimal maintenance overhead.&lt;/p&gt;</content><author><name></name></author><summary type="html">Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share the various options for hosting a blog online and describe why I made the particular technical choices I did.</summary></entry><entry><title type="html">Quitting a new job</title><link href="https://yolken.net/blog/quitting-a-new-job" rel="alternate" type="text/html" title="Quitting a new job" /><published>2021-01-01T17:40:00-08:00</published><updated>2021-01-01T17:40:00-08:00</updated><id>https://yolken.net/blog/quitting-a-new-job</id><content type="html" xml:base="https://yolken.net/blog/quitting-a-new-job">&lt;p&gt;Two years ago, I did something that I’d never done in my career before- I left a job
 (at &lt;a href=&quot;https://nuro.ai&quot;&gt;Nuro&lt;/a&gt;) only a few months after starting it. In this post, I want to explain
 what happened and what I learned from the experience.&lt;/p&gt;
 
@@ -1779,246 +1949,4 @@ carefully considered before committing to a rollout. Thankfully, things should g
 in the future as cloud providers include more service mesh features directly into their
 products and third-party solutions like
 &lt;a href=&quot;https://istio.io/latest/docs/concepts/what-is-istio/&quot;&gt;Istio&lt;/a&gt; become more robust. In the meantime,
-though, be careful!&lt;/p&gt;</content><author><name></name></author><summary type="html">Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly.</summary></entry><entry><title type="html">Cleaner go code with golines</title><link href="https://yolken.net/blog/cleaner-go-code-golines" rel="alternate" type="text/html" title="Cleaner go code with golines" /><published>2020-07-23T12:37:00-07:00</published><updated>2020-07-23T12:37:00-07:00</updated><id>https://yolken.net/blog/cleaner-go-code-golines</id><content type="html" xml:base="https://yolken.net/blog/cleaner-go-code-golines">&lt;p&gt;Last year, with the generous support of &lt;a href=&quot;https://segment.com&quot;&gt;my employer&lt;/a&gt;, I open-sourced
-&lt;a href=&quot;https://github.com/segmentio/golines&quot;&gt;golines&lt;/a&gt;, a tool that automatically shortens
-long lines in go code. At the time, I was busy with other work so I never got a chance to
-write about it beyond the basic documentation in the
-&lt;a href=&quot;https://github.com/segmentio/golines/blob/master/README.md&quot;&gt;project README&lt;/a&gt;. In this post,
-I want to explain more about why I developed the tool and how it works.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt;
-
-&lt;p&gt;The standard tooling for the go programming language includes
-&lt;a href=&quot;https://golang.org/cmd/gofmt/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt;&lt;/a&gt;, a very solid code formatting utility. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt;
-automatically applies the standard go rules for indents and spacing, for example converting this
-mess:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;  &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;   &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		 &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;&quot;Combined: %s %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-	 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;into a logically equivalent but much prettier variant:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Combined: %s %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Unfortunately, this tool and the others that extend it
-(e.g., &lt;a href=&quot;https://godoc.org/golang.org/x/tools/cmd/goimports&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;goimports&lt;/code&gt;&lt;/a&gt;) don’t do anything about
-long lines. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt; will happily leave the following code as-is:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;longArg1&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg2&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg3&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg4&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg5&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg6&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%v&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;longArg1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;longArg2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;longArg3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;longArg4&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;longArg5&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;longArg6&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Personally, I find it much more readable in cases like this to split out the
-function arguments and map key-value pairs onto separate lines:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg1&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg2&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg3&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg4&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg5&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;longArg6&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-		&lt;span class=&quot;s&quot;&gt;&quot;%v&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg4&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg5&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;longArg6&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longArg6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I like go, but for years it bothered me that there was no automatic way of applying the
-above types of cleanups. When going into a new codebase, I would manually shorten the worst
-offenders, which was fine for small projects but got tedious in large ones that had
-accumulated years of long-line commits. I decided to make this process easier by writing my own
-tool!&lt;/p&gt;
-
-&lt;h3 id=&quot;aside-who-cares&quot;&gt;Aside: Who cares?&lt;/h3&gt;
-
-&lt;p&gt;Although many support this crusade to shorten long lines, I’ve definitely gotten some
-skepticism over the years about both my manual fixes and attempts to write an automated tool.
-The main arguments (and my responses) have included the following:&lt;/p&gt;
-
-&lt;h4 id=&quot;you-can-just-wrap-lines-in-whatever-code-editor-youre-using&quot;&gt;&lt;em&gt;You can just wrap lines in whatever code editor you’re using!&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Yes, that’s true, but not everyone uses the same editor and not all editors handle wrapping
-gracefully. In addition, many online reviewing tools don’t wrap lines, so this doesn’t help
-when I’m trying to understand your 200 character-wide function declarations in Github.&lt;/p&gt;
-
-&lt;h4 id=&quot;line-length-is-a-matter-of-preference-we-shouldnt-impose-a-constraint-that-others-may-disagree-with&quot;&gt;&lt;em&gt;Line length is a matter of preference. We shouldn’t impose a constraint that others may disagree with.&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;True, but so is spaces vs. tabs, whether to put the opening &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{&lt;/code&gt; on the same line as a function
-definition or the next one, and many other style disputes that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt; and other tools take
-very definitive stands on. You have to impose some standards, otherwise each file in your repo
-will look completely different based on who last edited it.&lt;/p&gt;
-
-&lt;h4 id=&quot;i-find-having-all-function-arguments-all-map-key-value-pairs-etc-on-a-single-line-easier-to-read&quot;&gt;&lt;em&gt;I find having all function arguments, all map key-value pairs, etc. on a single line easier to read.&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Really? Well, maybe this could be valid in some cases. However, it’s generally easier to scan
-vertical lists than horizontal ones. This is why we use bullet points so much
-in presentation slides. Although a horizontal list might be ok in some cases, a vertical
-orientation should never make it significantly worse and in many cases be an improvement.&lt;/p&gt;
-
-&lt;h2 id=&quot;first-attempt-regular-expressions&quot;&gt;First attempt: Regular expressions&lt;/h2&gt;
-
-&lt;p&gt;My first attempt at automating the line shortening process was to write a script that used
-regular expressions. The basic algorithm was:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Go through each line in the file&lt;/li&gt;
-  &lt;li&gt;If the line is already shorter than the threshold (e.g., 100 columns), leave it as-is and
-  continue to the next one&lt;/li&gt;
-  &lt;li&gt;Otherwise, loop through a set of pre-defined, “splitter” regular expressions&lt;/li&gt;
-  &lt;li&gt;If the line matches one of these, insert newlines according to some associated, pre-defined
-  logic, then continue to the next line&lt;/li&gt;
-  &lt;li&gt;After reaching the end of the file, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt; to fix the spacing issues created by (4)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I then went about creating the regular expressions to use. It started off relatively easy;
-for instance, to pick up the case of a long line with a function call, I used something like:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^\s*\w+\((\w+)(,[ ]?\w+)*\)$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That will match &lt;code&gt;&amp;nbsp;&amp;nbsp;hello(arg1, arg2,arg3)&lt;/code&gt;. We can then have some logic that
-inserts newlines and a final comma in the appropriate places:
-&lt;code&gt;&amp;nbsp;&amp;nbsp;hello(\narg1,\n arg2,\narg3,\n)&lt;/code&gt;. The end result, before running the final
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt;, thus renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;  &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;arg2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arg3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt; then fixes the indents on each line so that it actually looks nice and matches the
-surrounding code.&lt;/p&gt;
-
-&lt;p&gt;I then made similar regular expressions and fixing logic for a few other common cases, including
-long function declarations and simple key-value maps.&lt;/p&gt;
-
-&lt;p&gt;The initial version worked decently well, fixing around 70% of the long lines in an old go repo
-at my then employer. Next, I went through and improved the regular expressions to fill in some
-of the gaps. In the example above, for instance, what if an argument has quotes around it? What
-if someone has already done a single split in the middle, but one or both of the segments is still
-too long? There are many, many cases to cover. After a while, the regular expressions got so big
-that I had to split them up into smaller clauses and use text templating to put them together.&lt;/p&gt;
-
-&lt;p&gt;Even with multiple iterations, it was difficult to match more than 80% or so of the long lines. The
-hardest cases to cover involved nesting. In the above example, for instance, each function
-argument could itself be a function call, and those arguments could include function calls,
-and so forth. I would try something that seemed promising, only to hit a case that would
-cause the regular expression matcher to get stuck in a
-&lt;a href=&quot;https://www.regular-expressions.info/catastrophic.html&quot;&gt;catastrophic backtracking&lt;/a&gt; loop.&lt;/p&gt;
-
-&lt;p&gt;In the end, I just gave up. I’m not a regular expression expert, so maybe there could have been
-some way to rewrite my expressions to make them more efficient, but even if I did that, it seemed
-like fixing all of the corner cases would be a never-ending game of whack-a-mole.&lt;/p&gt;
-
-&lt;h2 id=&quot;second-attempt-use-asts&quot;&gt;Second attempt: Use ASTs&lt;/h2&gt;
-
-&lt;h3 id=&quot;the-theory&quot;&gt;The theory&lt;/h3&gt;
-
-&lt;p&gt;Ultimately, the grammar of the go language is just too complex to be “interpreted” by simple
-regular expressions. The go compiler takes a different approach- it uses a parser to create
-an &lt;a href=&quot;https://en.wikipedia.org/wiki/Abstract_syntax_tree&quot;&gt;abstract syntax tree (AST)&lt;/a&gt; representation
-of the code. I never took a class on compilers, so I’ll leave the theoretical details to the
-experts. The main idea, however, is to convert code from a linear sequence of bytes into a tree
-that can be used for “understanding” what the code actually represents. The latter representation
-can then be transformed into lower-level machine code.&lt;/p&gt;
-
-&lt;p&gt;The go compiler, for instance, converts this code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%v&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;key1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s-%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;into the following AST:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/golines_graph1.png&quot; alt=&quot;golines AST&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It looks scary at first glance, but if you walk through from the top and follow along in the code,
-it makes intuitive sense. The great thing about ASTs is that they automatically handle the
-nesting and splitting that was so hard when using regular expressions. Go also exposes the AST
-generation process and structs in &lt;a href=&quot;https://golang.org/pkg/go/ast/&quot;&gt;the standard library&lt;/a&gt;, so it’s
-fairly easy to create representations like the one above.&lt;/p&gt;
-
-&lt;p&gt;Now, in theory, we can modify the regular-expression-based shortening algorithm above to work on an
-AST instead of a sequence of lines. Instead of looping through lines, we can do a depth-first
-traversal of the nodes. If a node is on a long line, we can insert newlines between its children
-and/or recursively apply our shortening on them. The exact logic here depends on the node
-type, but in the case of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CallExpression&lt;/code&gt; (i.e., a function call) for instance, we would
-insert newlines between each of the children &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Args&lt;/code&gt;. Then, at the end, we can convert the AST
-back to code and run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gofmt&lt;/code&gt; to fix the spacing on each line.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-implementation&quot;&gt;The implementation&lt;/h3&gt;
-
-&lt;p&gt;This is all great, but there’s one significant problem- ASTs are &lt;em&gt;abstract&lt;/em&gt;. In general, they’re
-intended for compilation, not code formatting, so details like spacing and newlines might
-be incomplete. In the go case specifically, it’s hard to tell what the length of a line is just
-by looking at the AST nodes that were generated from that line.&lt;/p&gt;
-
-&lt;p&gt;As I dug into the AST-based approach, I realized that this was going to be a significant blocker-
-if we didn’t know line lengths, it would be impossible to figure out which AST nodes to modify.
-I needed some way to link the state of the original code (i.e., that a particular line is too
-long) to its AST representation, but without modifying the logic of the code itself.&lt;/p&gt;
-
-&lt;p&gt;After some trial-and-error, I figured out that &lt;em&gt;comments&lt;/em&gt; could be one way to make this link.
-In particular, the tool could first add comments to the long lines in the code, then generate the
-AST. We could then check each node to see whether it had one of these “line too long” comments
-to determine whether we should try to split it out onto multiple lines.&lt;/p&gt;
-
-&lt;p&gt;The golang AST does include comments, but unfortunately they’re not directly linked to other nodes
-in the AST. Thankfully, however, there’s a third-party AST generator,
-&lt;a href=&quot;https://github.com/dave/dst&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dave/dst&lt;/code&gt;&lt;/a&gt;, that does maintain these links. By using this, I could
-mark the long lines, generate the AST, and then traverse the graph and insert newlines in the
-appropriate places to break up the long lines. The “control comments” could then be scrubbed
-at the end so they wouldn’t appear in the final formatted output.&lt;/p&gt;
-
-&lt;p&gt;Once I got the initial skeleton in place, the rest of the work involved figuring out how
-to split each node type. In most cases, it was fairly straightforward- function declarations
-and calls, for instance, can be split between the arguments. It got tricker, however,
-when dealing with cases where the top-level node is not the one that you actually want
-to shorten. If you’re shortening an assignment, for instance &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x := myFunc(...)&lt;/code&gt;, then you
-really want to shorten the right-hand-side, which is in a lower-level node. In these cases,
-you need to “push” the shortening work down recursively.&lt;/p&gt;
-
-&lt;h2 id=&quot;from-testing-to-release&quot;&gt;From testing to release&lt;/h2&gt;
-
-&lt;p&gt;After lots of trial-and-error, I got the tool, which I decided to call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;golines&lt;/code&gt;, working for all
-of the fixtures that I could generate myself. The next step was to run it on real code to make
-sure that it (1) wouldn’t crash, (2) would make progress at a reasonable speed, and (3) would
-actually shorten long lines in a reasonable way.&lt;/p&gt;
-
-&lt;p&gt;I started with some of the smaller go repos inside Segment, and worked my way up to large,
-open-source projects like Kubernetes. Along the way, I filled in the various AST node types
-that were omitted in my first pass and also used &lt;a href=&quot;https://golang.org/pkg/net/http/pprof/&quot;&gt;pprof&lt;/a&gt; to
-discover and alleviate the performance bottlenecks.&lt;/p&gt;
-
-&lt;p&gt;In the end, I got to a point where I felt fairly confident about the quality of the tool and
-kicked off our internal process for open-sourcing. A week later, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;golines&lt;/code&gt; was out in the wild and
-available for general use!&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;If you’re annoyed by long go lines as much as I am, please give
-&lt;a href=&quot;https://github.com/segmentio/golines&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;golines&lt;/code&gt;&lt;/a&gt; a try. And, if you notice any problems or
-have enhancement suggestions, file an issue in the repo. External contributions are welcome as well.&lt;/p&gt;</content><author><name></name></author><summary type="html">Last year, I open-sourced golines, a tool that automatically shortens long lines in go code. This post explains why I developed the tool and how it works.</summary></entry></feed>
+though, be careful!&lt;/p&gt;</content><author><name></name></author><summary type="html">Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly.</summary></entry></feed>

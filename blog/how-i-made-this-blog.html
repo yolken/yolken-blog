@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How I made this blog | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="How I made this blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share the various options for hosting a blog online and describe why I made the particular technical choices I did." />
+<meta property="og:description" content="Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share the various options for hosting a blog online and describe why I made the particular technical choices I did." />
+<link rel="canonical" href="https://yolken.net/blog/how-i-made-this-blog" />
+<meta property="og:url" content="https://yolken.net/blog/how-i-made-this-blog" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-10T13:10:00-08:00" />
+<script type="application/ld+json">
+{"url":"https://yolken.net/blog/how-i-made-this-blog","headline":"How I made this blog","dateModified":"2021-01-10T13:10:00-08:00","datePublished":"2021-01-10T13:10:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/how-i-made-this-blog"},"description":"Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share the various options for hosting a blog online and describe why I made the particular technical choices I did.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How I made this blog</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-10T13:10:00-08:00" itemprop="datePublished">Jan 10, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Every now and then, I get asked how I made this blog from a technical standpoint. In this
+post, I want to share how my content is generated and hosted, and then describe some commonly-used,
+alternative approaches that I decided not to take.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>I write each post in a separate <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> file.
+Markdown is nice because it’s super lightweight, supports most of the formatting I need
+(headers, bolding, bullets, etc.), and I’ve used it a lot for writing documentation at work, so
+I feel very comfortable with the syntax.</p>
+
+<p>For example, here’s a sample of the Markdown for my recent post on
+<a href="/blog/quitting-a-new-job">quitting a new job</a>:</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Quitting</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">job"</span>
+<span class="na">date</span><span class="pi">:</span>   <span class="s">2021-01-01 18:40:00 -0700</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="s">career</span>
+<span class="na">excerpt</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">Two years ago, I did something ...</span>
+<span class="s">---</span>
+
+Two years ago, I did something that I'd never done in my career before-
+I left a job (at <span class="p">[</span><span class="nv">Nuro</span><span class="p">](</span><span class="sx">https://nuro.ai</span><span class="p">)</span>) only a few months after starting
+it. In this post, I want to explain what happened and what I learned from
+the experience.
+
+<span class="gu">## What happened</span>
+
+<span class="gu">#### The job switch</span>
+
+Back in the spring of 2019, I decided to leave <span class="p">[</span><span class="nv">Stripe</span><span class="p">](</span><span class="sx">https://www.stripe.com</span><span class="p">)</span>,
+where I'd been a software engineer for about a year and a half. The full
+details are best left to a separate post, but at a high level I just wasn’t very
+happy...</code></pre></figure>
+
+<p>I then use <a href="https://jekyllrb.com/">Jekyll</a> to convert these Markdown files into a collection
+of static HTML pages that can be rendered by web browsers. Jekyll is what’s known as a
+“static site generator”; in addition to supporting higher-level formats like Markdown that are
+easier to work with than HTML, these frameworks also automate setting the look-and-feel of each
+page and inserting common content like headers and footers that would be tedious to add manually.</p>
+
+<p>Here’s what the <a href="/blog/quitting-a-new-job">quitting a new job</a> Markdown looks like after
+conversion to HTML:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Quitting a new job | Benjamin Yolken<span class="nt">&lt;/title&gt;</span>
+    ...
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"site-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"trigger"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"/blog"</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"/pubs"</span><span class="nt">&gt;</span>Publications<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    ...
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-content e-content"</span> <span class="na">itemprop=</span><span class="s">"articleBody"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Two years ago, I did something that I’d never done in my career before-
+      I left a job (at <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://nuro.ai"</span><span class="nt">&gt;</span>Nuro<span class="nt">&lt;/a&gt;</span>) only a few months
+      after starting it. In this post, I want to explain what happened and
+      what I learned from the experience.
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"what-happened"</span><span class="nt">&gt;</span>What happened<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">id=</span><span class="s">"the-job-switch"</span><span class="nt">&gt;</span>The job switch<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Back in the spring of 2019, I decided to leave
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.stripe.com"</span><span class="nt">&gt;</span>Stripe<span class="nt">&lt;/a&gt;</span>, where I’d been a software
+      engineer for about a year and a half. The full details are best left to
+      a separate post, but at a high level I just wasn’t very happy...</code></pre></figure>
+
+<p>Finally, I push the generated HTML files, along with a stylesheet for the site, into the
+<code class="language-plaintext highlighter-rouge">gh-pages</code> branch of my <a href="https://github.com/yolken/yolken-blog">GitHub repo</a>. GitHub has a nice
+feature called <a href="https://pages.github.com/">GitHub Pages</a> that will take the contents of an arbitrary
+branch (<code class="language-plaintext highlighter-rouge">gh-pages</code> by default) and serve them as static content behind a web server. It also
+supports custom domains, which allows for my pages to be available though <code class="language-plaintext highlighter-rouge">yolken.net</code> as opposed to
+a shared domain like <code class="language-plaintext highlighter-rouge">github.com</code>.</p>
+
+<p>GitHub has solid documentation on the entire process, including the content generation
+steps, that you can read
+<a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll">here</a>. Everything is free if your repo is open-source
+and you abide by the <a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages#guidelines-for-using-github-pages">GitHub Pages guidelines</a>, all of which
+are pretty reasonable for most personal blogs.</p>
+
+<h2 id="rejected-alternatives">Rejected alternatives</h2>
+
+<p>There are several other approaches to publishing a blog online that I decided not to go with.
+These weren’t ideal for me, but, depending on your specific requirements, may be reasonable
+choices for your content.</p>
+
+<h3 id="use-a-third-party-blogging-service">Use a third-party blogging service</h3>
+
+<p>The easiest way to get a blog online is to use a third-party, hosted blogging service.
+Back in the day, <a href="https://www.blogger.com/">Blogger</a> was all the rage.
+Now, it seems like <a href="https://medium.com">Medium</a> is the hot platform to use. There are tons of other
+choices here, including social networks like Facebook and LinkedIn, which have started supporting
+blog-like user content.</p>
+
+<p>The main advantage of these services is that they’re super easy-to-use. You just type up your
+content in a pretty, web-based editor and click a button to publish. They also provide features like
+comments, searching, and subscriptions on top of your content without much effort.</p>
+
+<p>The downside of these services is that you’re handing over your content to a third-party,
+who’s packaging it up with other people’s content, applying their own look-and-feel, and, in many
+cases, trying to monetize it. Even though you’re the author, and even though you maintain
+legal rights to your content in most cases, there’s a tendency for your work to become associated
+more with the hosting service than with you.</p>
+
+<p>Personally, I’m fine with this when I’m sharing low-quality, short-form content like
+my vacation photos. However, for something as important and personal as my blog, I wanted
+to be in complete control and not share any ownership with a third-party.</p>
+
+<p>If you’re just writing occasionally, though, or really, really don’t want to deal with any
+technical details, putting your content in a third-party service might be an acceptable
+choice.</p>
+
+<h3 id="host-in-a-cloud-provider">Host in a cloud provider</h3>
+
+<p>GitHub Pages is very reliable and low-hassle but only handles static content and imposes
+<a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages#guidelines-for-using-github-pages">some limitations</a> on this content including its size and
+update frequency. It also abstracts away the lower-level serving details, which are
+sometimes useful to observe and adjust.</p>
+
+<p>An alternative is to host your blog using a cloud provider like AWS. The details
+here vary a lot based on which provider you’re using and what you’re trying to do, but if
+you have static content only, you can use a storage service like
+<a href="https://aws.amazon.com/s3/">S3</a> plus a content delivery network (CDN) like
+<a href="https://aws.amazon.com/cloudfront/">CloudFront</a> to handle caching and HTTPS termination closer
+to end users.</p>
+
+<p>I decided to not take this approach because my blog comfortably fits within the limits of
+GitHub Pages, and I also like that it’s totally free. This may change in the future, though, if I
+outgrow GitHub Pages or get bored and want to handle more of the lower-level serving details
+myself.</p>
+
+<h3 id="run-your-own-content-management-system-cms">Run your own content management system (CMS)</h3>
+
+<p>Static sites like the one for this blog are fairly limited; among other examples, you can’t
+customize pages on a per-user basis, it’s hard to provide dynamic features like search,
+and, since all posts are static files, it can become tedious to manage a large amount of content.</p>
+
+<p>An alternative is to run a service called a
+<a href="https://en.wikipedia.org/wiki/Content_management_system">content management system (CMS)</a>, which
+stores the content in a database and dynamically generates pages in response to user requests.
+Because the content is stored in a structured format and because the server can customize the
+contents of each page, it’s much easier to incorporate Blogger or Medium-like features such as user
+logins, search, and online post editing.</p>
+
+<p>There are a large number of fully-featured, open-source CMSes to choose from, including
+<a href="https://en.wikipedia.org/wiki/WordPress">WordPress</a> and
+<a href="https://en.wikipedia.org/wiki/Drupal">Drupal</a>. You can also write your own on top of a web
+application framework like <a href="https://www.djangoproject.com/">Django</a>.</p>
+
+<p>Running these systems is a lot more complicated than throwing static HTML into
+GitHub Pages or S3. In addition to choosing a hosting provider and configuring all of the
+associated software, you also need to worry about things like monitoring (what if the site goes
+down?) and capacity planning (what if a post goes viral and gets tens of thousands of views?).</p>
+
+<p>For me, the extra features of a CMS just weren’t worth the hassle. However, this may be a good
+choice if you want to create a site with more than just a static list of posts. The more popular
+CMSes like WordPress also have rich ecosystems of themes and plugins that you can use
+to create prettier, more complex online destinations.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This blog consists of static HTML served by GitHub Pages. Although it’s not the fanciest
+approach, I’ve found that it provides a high degree of personal control while having
+minimal maintenance overhead.</p>
+
+  </div>
+
+  <a class="u-url" href="/blog/how-i-made-this-blog" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
