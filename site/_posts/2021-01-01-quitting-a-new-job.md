@@ -168,5 +168,5 @@ and Airbnb, and in both cases the "second team" was what really opened up new op
 
 ### Addendum
 
-This post was submitted to Hacker News after publication and got a
-[lot of comments](https://news.ycombinator.com/item?id=25637922)! Feel free to add more there.
+This post was submitted to Hacker News after publication and got
+[a lot of comments](https://news.ycombinator.com/item?id=25637922)! Feel free to add more there.
