@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-10T20:12:11-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How I made this blog</title><link href="https://yolken.net/blog/how-i-made-this-blog" rel="alternate" type="text/html" title="How I made this blog" /><published>2021-01-10T13:10:00-08:00</published><updated>2021-01-10T13:10:00-08:00</updated><id>https://yolken.net/blog/how-i-made-this-blog</id><content type="html" xml:base="https://yolken.net/blog/how-i-made-this-blog">&lt;p&gt;Every now and then, I get asked how I made this blog from a technical standpoint. In this
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-10T20:20:26-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How I made this blog</title><link href="https://yolken.net/blog/how-i-made-this-blog" rel="alternate" type="text/html" title="How I made this blog" /><published>2021-01-10T13:10:00-08:00</published><updated>2021-01-10T13:10:00-08:00</updated><id>https://yolken.net/blog/how-i-made-this-blog</id><content type="html" xml:base="https://yolken.net/blog/how-i-made-this-blog">&lt;p&gt;Every now and then, I get asked how I made this blog from a technical standpoint. In this
 post, I want to share how my content is generated and hosted, and then describe some commonly-used,
 alternative approaches that I decided not to take.&lt;/p&gt;
 
@@ -321,7 +321,18 @@ try before quitting.&lt;/p&gt;
 
 &lt;p&gt;Even if the new team hadn’t been a perfect fit, it would have at least bought some time and given
 me some additional experience that could help in future work. This is what I did at Google
-and Airbnb, and in both cases the “second team” was what really opened up new opportunities for me.&lt;/p&gt;</content><author><name></name></author><summary type="html">Two years ago, I did something that I'd never done in my career before- I left a job (at Nuro) only a few months after starting it. In this post, I want to explain what happened and what I learned from the experience.</summary></entry><entry><title type="html">Going into tech with a PhD</title><link href="https://yolken.net/blog/phd-to-tech" rel="alternate" type="text/html" title="Going into tech with a PhD" /><published>2020-12-25T12:04:00-08:00</published><updated>2020-12-25T12:04:00-08:00</updated><id>https://yolken.net/blog/phd-to-tech</id><content type="html" xml:base="https://yolken.net/blog/phd-to-tech">&lt;p&gt;I spent 5 years of my life getting a PhD, but like many others who’ve gotten this degree,
+and Airbnb, and in both cases the “second team” was what really opened up new opportunities for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;addendum&quot;&gt;Addendum&lt;/h3&gt;
+
+&lt;p&gt;This post was submitted to Hacker News after publication and got
+&lt;a href=&quot;https://news.ycombinator.com/item?id=25637922&quot;&gt;a lot of comments&lt;/a&gt;! Feel free to add more there.&lt;/p&gt;</content><author><name></name></author><summary type="html">Two years ago, I did something that I'd never done in my career before- I left a job (at Nuro) only a few months after starting it. In this post, I want to explain what happened and what I learned from the experience.</summary></entry><entry><title type="html">Going into tech with a PhD</title><link href="https://yolken.net/blog/phd-to-tech" rel="alternate" type="text/html" title="Going into tech with a PhD" /><published>2020-12-25T12:04:00-08:00</published><updated>2020-12-25T12:04:00-08:00</updated><id>https://yolken.net/blog/phd-to-tech</id><content type="html" xml:base="https://yolken.net/blog/phd-to-tech">&lt;p&gt;I spent 5 years of my life getting a PhD, but like many others who’ve gotten this degree,
 I decided to leave academia after graduation. At the time, I explored several career choices
 but ultimately decided to take a Product Manager job at Google.&lt;/p&gt;
 
