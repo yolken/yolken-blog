@@ -5,8 +5,8 @@ date:   2021-01-10 14:10:00 -0700
 categories: general tech
 excerpt: |
     Every now and then, I get asked how I made this blog from a technical standpoint. In this
-    post, I want to share the various options for hosting a blog online and describe
-    why I made the particular technical choices I did.
+    post, I want to share how my content is generated and hosted, and then describe some
+    commonly-used, alternative approaches that I decided not to take.
 ---
 
 Every now and then, I get asked how I made this blog from a technical standpoint. In this
