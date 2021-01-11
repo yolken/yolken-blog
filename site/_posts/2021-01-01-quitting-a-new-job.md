@@ -159,3 +159,14 @@ try before quitting.
 Even if the new team hadn't been a perfect fit, it would have at least bought some time and given
 me some additional experience that could help in future work. This is what I did at Google
 and Airbnb, and in both cases the "second team" was what really opened up new opportunities for me.
+
+<br/>
+
+---
+
+<br/>
+
+### Addendum
+
+This post was submitted to Hacker News after publication and got a
+[lot of comments](https://news.ycombinator.com/item?id=25637922)! Feel free to add more there.
