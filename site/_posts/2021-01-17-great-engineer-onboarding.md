@@ -11,8 +11,8 @@ excerpt: |
 ---
 
 I've written a few posts previously about quitting a job
-(see [1](/blog/leaving-a-job) and [2](/blog/quitting-a-new-job)).
-Now, I want to turn my attention to a happier and more exciting topic-
+(see [here](/blog/leaving-a-job) and [here](/blog/quitting-a-new-job)).
+Now, I want to turn my attention to a much happier and more exciting topic-
 what happens when you show up for the first day at your next company.
 
 Starting a new software engineering job is hard, and making this process
@@ -23,27 +23,28 @@ will offer advice on getting up-to-speed from the employee perspective.
 
 ## Onboarding approaches
 
-I've gone through seven onboardings in my tech career so far. Although the details
-have varied a lot from company to company, I've broadly seen four different
-styles of onboarding programs, each described below. Note that these aren't
-mutually exclusive- some companies have adopted hybrid approaches that combine
-multiple styles.
+I've been through almost a dozen new hire ramp-ups in my career so far.
+Although the details have varied a lot from company to company, I've broadly
+seen four different styles of onboarding programs, each described below. Note
+that these aren't mutually exclusive- some companies have adopted hybrid
+approaches that combine multiple styles.
 
 ### Full bootcamp
 
-The most intense onboarding process is what's referred to as an engineer
-"bootcamp".
+The most intense onboarding process is what's referred to as a new hire
+bootcamp.
 
-The analogy here is to bootcamp (also called "basic training") programs in the
+The analogy here is to bootcamp or basic training programs in the
 military. These work by taking a bunch of people from different backgrounds,
-grinding them down, and then building them back up in a uniform, structured way
+grinding them down, and then building them back up in a consistent, structured way
 that lays the foundation for being a good soldier. Those who graduate then go on
-to more specialized training for their specific roles.
+to more specialized training for their specific roles (e.g., officer candidate
+school).
 
 Tech onboarding bootcamps aren't quite as intense (no head shaving or being
 yelled at by a drill sergeant, fortunately!), but the general idea is the same-
-to take a diverse set of new "recruits" and give them all the same, basic skills
-required to be a productive software engineer at the company.
+to take a diverse set of new "recruits" and give them all the same, baseline
+skills required to be a productive software engineer at the company.
 
 Typically the way it works is that each cohort of new hires is seated together
 in the office. For several weeks, they attend classes together and do various,
@@ -51,7 +52,7 @@ small exercises (e.g., bug fixes) either alone or in smaller groups.
 
 Most new hires are not pre-assigned to teams. Instead, towards the latter half
 of the bootcamp, a matching process takes place in which each person tries to find a
-team that they're interested in, that has available headcount, and where the hiring
+team that they're interested in, that has available headcount, and whose hiring
 manager is willing to bring them on. Hiring managers might assign small technical
 tasks to test out potential team members and ensure that they'll find the work
 interesting.
@@ -72,8 +73,8 @@ A less intense variant of the full bootcamp is one in which the new engineers
 are all pre-assigned to teams, so there's no weed-out or team selection process.
 Instead, the starting class is divided into smaller teams, each of which works
 on a mini-project for a few weeks to get more familiar with the company's tools,
-systems, and products. After the project is done, the teams are disbanded and people
-begin onboarding with their real, assigned teams.
+systems, and products. After the project is done, the project teams are disbanded
+and people begin onboarding with their assigned, long-term teams.
 
 I went through a process like this when I started at Stripe- they called it
 "dev/start", and it took around 5 weeks. I've heard of other companies having
@@ -83,7 +84,7 @@ more junior engineers.
 ### Lightweight, team-driven
 
 An alternative to having structured, multi-week training programs is to push
-most of the learning process onto individual teams. After a few days of
+most of the learning onto individual teams. After a few days of
 general orientation, new engineers go and sit with their assigned teams and
 start an onboarding process that's customized by their manager for their specific
 role.
@@ -114,7 +115,7 @@ around 45 employees.
 ## Lightweight is best
 
 Based on my various job starting experiences, I personally feel that
-the "lightweight, team-based" approach described above is far and away the best
+the lightweight, team-based approach described above is far and away the best
 choice for most companies.
 
 Here are some reasons why.
@@ -128,12 +129,13 @@ technical stacks.
 
 In this environment, it's impossible to have a multi-week, general training program
 that's optimal for everybody. Even if you break it up into subspecialties (e.g.,
-"frontend bootcamp" vs. "mobile bootcamp"), there's still a tendency for it to be
+"frontend bootcamp" vs. "backend bootcamp"), there's still a tendency for it to be
 too fast, too slow, too general, or too specialized for some subset of the
 participants.
 
-The most efficient way to get engineers up-to-speed is to have them dive in on
-project work. And, the best way to do this is to have engineers join their teams
+A more efficient way to get engineers up-to-speed is to have them do
+real project work that's like the work they'll be doing after orientation is over.
+And, the best way to do this is to have engineers join their teams
 early on in the process and lean on their managers and peers for guidance.
 
 The other nice thing about the guided, "dive in" approach is that it can be heavily
@@ -147,36 +149,58 @@ program.
 
 Orientation classes can be fun at the beginning, but, after hours and hours
 of sitting in a stuffy room and listening to presentations, attentions
-wane and the sessions all start to blend together. In addition, these classes
-by their very structure, are very much "one-size-fits-all" activities that can't
+wane and the sessions all start to blend together. In addition, by their very
+structure these classes are very much "one-size-fits-all" activities that can't
 be easily customized for the requirements of each person's job.
 
 Personally, I think a day or two of classes at the beginning is fine, provided
 that these are devoted to things that are necessary and relevant for
-all new hires (e.g., how to get paid, a summary of the company's products,
-what the core values / operating principles are, etc.). But, beyond that,
-classes should be optional and also non-continuous so that attendees can
-fit them in with their team-specific onboarding tasks.
+all new hires (e.g., how to get paid, what the core values / operating principles
+of the company are, etc.). But, beyond that, classes should be optional and also
+non-continuous so that attendees can fit them in with their team-specific
+onboarding tasks.
 
-As an alternative to classes, a much better use of resources is to create
-great onboarding documentation. Unlike a presentation, which tends to go in
-one ear and out the other, documentation sticks around forever and can easily
-be consulted after the onboarding is done. People can also work through
-documentation at their own pace and skip over topics that they already know
-about or aren't relevant for their work.
+An alternative to classes, and what I think is a much better use of resources,
+is to create great onboarding *documentation*. Unlike a presentation, which
+tends to go in one ear and out the other, documentation sticks around forever and
+can easily be consulted after the onboarding is done. People can also work
+through documentation at their own pace and skip over topics that they already
+know about or aren't relevant for their work.
 
 Google had a particularly nice balance here. There were a few technical
 onboarding classes, but they were extremely high-level and designed to be more
-about the social and cultural aspects of engineering than the technical ones
-(as I recall, they also had cute names like "life an engineer"). Technical
-training, where needed, was instead done via written "code labs" that engineers
+about the social and cultural aspects of engineering rather than the technical
+ones (as I recall, they also had cute names like "life an engineer"). Technical
+training, when needed, was instead done via written "code labs" that engineers
 worked on individually.
 
 ### Doing team assignments during onboarding is crazy
 
+I went through a team matching process during my Airbnb onboarding, and it was
+extremely stressful for everyone involved. Hiring managers, particularly those
+on the less-desired teams, spent days marketing their teams and convincing (
+and sometimes begging) people to join them. On the other side, the members of my
+starting class and I were bombarded with choices and forced to spend a lot of
+time talking to hiring managers, doing mini-tasks for the teams we were
+interested in, and, in general, stressing out over a decision that had to be made
+quickly and would play a big role in our careers at the company.
 
+Everyone in my starting class was able to find a team that they liked and
+"graduate" on-time. But, I've heard anecdotally about people arriving at
+these bootcamp-style orientations only to learn that the team(s) that attracted
+them to the company aren't accepting any new hires. Or, on the flip side, I've
+heard about hiring managers recruiting people with specialized skills that they
+need (e.g., database performance optimization) only to have
+these specialists choose completely different teams at the end of bootcamp.
+
+All of this craziness can be avoided by simply matching people to teams before
+they arrive. Doing this reduces stress on both sides and ensures that candidates know
+what they're getting themselves into. People should be allowed to switch teams within
+the first few weeks if they really need to, but this should be relatively rare.
 
 ## Conclusion
 
 The best approach to onboarding engineers is to quickly integrate them with
-their pre-assigned teams. Doing days or weeks of
+their preassigned teams. Organizing weeks of classes and/or letting new hires
+pick teams during orientation may seem like a better onboarding experience, but
+usually just wastes time and causes unnecessary stress.
