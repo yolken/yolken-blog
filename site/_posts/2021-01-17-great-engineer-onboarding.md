@@ -58,7 +58,7 @@ tasks to test out potential team members and ensure that they'll find the work
 interesting.
 
 At the end of the bootcamp, those who have met the minimum requirements "graduate"
-and move onto their chosen teams. The small subset of people who don't graduate
+and move on to their chosen teams. The small subset of people who don't graduate
 with their cohort are typically given a bit more time to figure things out, but will
 eventually be forced to leave the company if they don't complete the program.
 
@@ -178,8 +178,7 @@ worked on individually.
 
 I went through a team matching process during my Airbnb onboarding, and it was
 extremely stressful for everyone involved. Hiring managers, particularly those
-on the less-desired teams, spent days marketing their teams and convincing (
-and sometimes begging) people to join them. On the other side, the members of my
+on the less-desired teams, spent days marketing their teams and convincing (and sometimes begging) people to join them. On the other side, the members of my
 starting class and I were bombarded with choices and forced to spend a lot of
 time talking to hiring managers, doing mini-tasks for the teams we were
 interested in, and, in general, stressing out over a decision that had to be made
