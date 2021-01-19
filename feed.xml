@@ -1,4 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-10T20:21:32-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">How I made this blog</title><link href="https://yolken.net/blog/how-i-made-this-blog" rel="alternate" type="text/html" title="How I made this blog" /><published>2021-01-10T13:10:00-08:00</published><updated>2021-01-10T13:10:00-08:00</updated><id>https://yolken.net/blog/how-i-made-this-blog</id><content type="html" xml:base="https://yolken.net/blog/how-i-made-this-blog">&lt;p&gt;Every now and then, I get asked how I made this blog from a technical standpoint. In this
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-18T20:49:16-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Great engineer onboarding</title><link href="https://yolken.net/blog/great-engineer-onboarding" rel="alternate" type="text/html" title="Great engineer onboarding" /><published>2021-01-17T09:58:00-08:00</published><updated>2021-01-17T09:58:00-08:00</updated><id>https://yolken.net/blog/great-engineer-onboarding</id><content type="html" xml:base="https://yolken.net/blog/great-engineer-onboarding">&lt;p&gt;I’ve written a few posts previously about quitting a job
+(see &lt;a href=&quot;/blog/leaving-a-job&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;/blog/quitting-a-new-job&quot;&gt;here&lt;/a&gt;).
+Now, I want to turn my attention to a much happier and more exciting topic-
+what happens when you show up for the first day at your next company.&lt;/p&gt;
+
+&lt;p&gt;Starting a new software engineering job is hard, and making this process
+successful requires a lot of effort from both the employer and the
+employee. In this post, I want to focus on the former, and in particular
+how companies can make their onboarding processes better. A follow-up post
+will offer advice on getting up-to-speed from the employee perspective.&lt;/p&gt;
+
+&lt;h2 id=&quot;onboarding-approaches&quot;&gt;Onboarding approaches&lt;/h2&gt;
+
+&lt;p&gt;I’ve been through almost a dozen new hire ramp-ups in my career so far.
+Although the details have varied a lot from company to company, I’ve broadly
+seen four different styles of onboarding programs, each described below. Note
+that these aren’t mutually exclusive- some companies have adopted hybrid
+approaches that combine multiple styles.&lt;/p&gt;
+
+&lt;h3 id=&quot;full-bootcamp&quot;&gt;Full bootcamp&lt;/h3&gt;
+
+&lt;p&gt;The most intense onboarding process is what’s referred to as a new hire
+bootcamp.&lt;/p&gt;
+
+&lt;p&gt;The analogy here is to bootcamp or basic training programs in the
+military. These work by taking a bunch of people from different backgrounds,
+grinding them down, and then building them back up in a consistent, structured way
+that lays the foundation for being a good soldier. Those who graduate then go on
+to more specialized training for their specific roles (e.g., officer candidate
+school).&lt;/p&gt;
+
+&lt;p&gt;Tech onboarding bootcamps aren’t quite as intense (no head shaving or being
+yelled at by a drill sergeant, fortunately!), but the general idea is the same-
+to take a diverse set of new “recruits” and give them all the same, baseline
+skills required to be a productive software engineer at the company.&lt;/p&gt;
+
+&lt;p&gt;Typically the way it works is that each cohort of new hires is seated together
+in the office. For several weeks, they attend classes together and do various,
+small exercises (e.g., bug fixes) either alone or in smaller groups.&lt;/p&gt;
+
+&lt;p&gt;Most new hires are not pre-assigned to teams. Instead, towards the latter half
+of the bootcamp, a matching process takes place in which each person tries to find a
+team that they’re interested in, that has available headcount, and whose hiring
+manager is willing to bring them on. Hiring managers might assign small technical
+tasks to test out potential team members and ensure that they’ll find the work
+interesting.&lt;/p&gt;
+
+&lt;p&gt;At the end of the bootcamp, those who have met the minimum requirements “graduate”
+and move on to their chosen teams. The small subset of people who don’t graduate
+with their cohort are typically given a bit more time to figure things out, but will
+eventually be forced to leave the company if they don’t complete the program.&lt;/p&gt;
+
+&lt;p&gt;Facebook is the best-known adopter of this approach. I haven’t worked
+at Facebook, so I’m not familiar with all the details of their program,
+but I went through a new hire bootcamp when I started at Airbnb, who modeled
+theirs after the Facebook one.&lt;/p&gt;
+
+&lt;h3 id=&quot;mini-project-bootcamp&quot;&gt;Mini-project bootcamp&lt;/h3&gt;
+
+&lt;p&gt;A less intense variant of the full bootcamp is one in which the new engineers
+are all pre-assigned to teams, so there’s no weed-out or team selection process.
+Instead, the starting class is divided into smaller teams, each of which works
+on a mini-project for a few weeks to get more familiar with the company’s tools,
+systems, and products. After the project is done, the project teams are disbanded
+and people begin onboarding with their assigned, long-term teams.&lt;/p&gt;
+
+&lt;p&gt;I went through a process like this when I started at Stripe- they called it
+“dev/start”, and it took around 5 weeks. I’ve heard of other companies having
+programs like this, but they’re typically optional and intended primarily for
+more junior engineers.&lt;/p&gt;
+
+&lt;h3 id=&quot;lightweight-team-driven&quot;&gt;Lightweight, team-driven&lt;/h3&gt;
+
+&lt;p&gt;An alternative to having structured, multi-week training programs is to push
+most of the learning onto individual teams. After a few days of
+general orientation, new engineers go and sit with their assigned teams and
+start an onboarding process that’s customized by their manager for their specific
+role.&lt;/p&gt;
+
+&lt;p&gt;The details vary, but typically the manager will write up a personalized “new hire”
+doc with a specific list of tasks that the person is expected to do (e.g., meet with person X, read this design doc, etc.). The new hire is typically also assigned a
+“starter project” to get their feet wet and matched with a “new hire buddy” on the
+team who can help answer low-level technical questions.&lt;/p&gt;
+
+&lt;p&gt;The first few weeks may be interspersed with classes, social events, and other
+activities that the new hires can participate in together. But, they’re generally
+optional to attend and fairly low key.&lt;/p&gt;
+
+&lt;p&gt;Many companies of lots of different sizes have adopted this approach. I went
+through it at Google, and then more recently when I started at Segment.&lt;/p&gt;
+
+&lt;h3 id=&quot;bare-bones&quot;&gt;Bare bones&lt;/h3&gt;
+
+&lt;p&gt;The least intense onboarding is one that’s completely minimal. New hires
+sign some forms, are shown to their desks, and then immediately dive in to their
+work (with some manager guidance).&lt;/p&gt;
+
+&lt;p&gt;This is typically the approach taken by smaller startups that don’t yet
+have the critical mass to justify creating a formal onboarding program.
+I experienced this when I joined MoPub, which at the time had only
+around 45 employees.&lt;/p&gt;
+
+&lt;h2 id=&quot;lightweight-is-best&quot;&gt;Lightweight is best&lt;/h2&gt;
+
+&lt;p&gt;Based on my various job starting experiences, I personally feel that
+the lightweight, team-based approach described above is far and away the best
+choice for most companies.&lt;/p&gt;
+
+&lt;p&gt;Here are some reasons why.&lt;/p&gt;
+
+&lt;h3 id=&quot;onboarding-isnt-a-one-size-fits-all-activity&quot;&gt;Onboarding isn’t a one-size-fits-all activity&lt;/h3&gt;
+
+&lt;p&gt;The members of a new hire cohort might range from new grads to industry veterans with
+30+ years of experience. Even in small companies, people will most likely be assigned
+to different teams working on different parts of the product and using different
+technical stacks.&lt;/p&gt;
+
+&lt;p&gt;In this environment, it’s impossible to have a multi-week, general training program
+that’s optimal for everybody. Even if you break it up into subspecialties (e.g.,
+“frontend bootcamp” vs. “backend bootcamp”), there’s still a tendency for it to be
+too fast, too slow, too general, or too specialized for some subset of the
+participants.&lt;/p&gt;
+
+&lt;p&gt;A more efficient way to get engineers up-to-speed is to have them do
+real project work that’s like the work they’ll be doing after orientation is over.
+And, the best way to do this is to have engineers join their teams
+early on in the process and lean on their managers and peers for guidance.&lt;/p&gt;
+
+&lt;p&gt;The other nice thing about the guided, “dive in” approach is that it can be heavily
+customized on a person-by-person basis. A new grad or someone who’s never worked
+in the team’s tech stack might be given smaller, easier starter tasks than someone
+who’s already an expert in the technology. New hires are able to get up-to-speed
+at their own pace, without the wasted time or excess stress of a group training
+program.&lt;/p&gt;
+
+&lt;h3 id=&quot;group-classes-have-limited-utility&quot;&gt;Group classes have limited utility&lt;/h3&gt;
+
+&lt;p&gt;Orientation classes can be fun at the beginning, but, after hours and hours
+of sitting in a stuffy room and listening to presentations, attentions
+wane and the sessions all start to blend together. In addition, by their very
+structure these classes are very much “one-size-fits-all” activities that can’t
+be easily customized for the requirements of each person’s job.&lt;/p&gt;
+
+&lt;p&gt;Personally, I think a day or two of classes at the beginning is fine, provided
+that these are devoted to things that are necessary and relevant for
+all new hires (e.g., how to get paid, what the core values / operating principles
+of the company are, etc.). But, beyond that, classes should be optional and also
+non-continuous so that attendees can fit them in with their team-specific
+onboarding tasks.&lt;/p&gt;
+
+&lt;p&gt;An alternative to classes, and what I think is a much better use of resources,
+is to create great onboarding &lt;em&gt;documentation&lt;/em&gt;. Unlike a presentation, which
+tends to go in one ear and out the other, documentation sticks around forever and
+can easily be consulted after the onboarding is done. People can also work
+through documentation at their own pace and skip over topics that they already
+know about or aren’t relevant for their work.&lt;/p&gt;
+
+&lt;p&gt;Google had a particularly nice balance here. There were a few technical
+onboarding classes, but they were extremely high-level and designed to be more
+about the social and cultural aspects of engineering rather than the technical
+ones (as I recall, they also had cute names like “life an engineer”). Technical
+training, when needed, was instead done via written “code labs” that engineers
+worked on individually.&lt;/p&gt;
+
+&lt;h3 id=&quot;doing-team-assignments-during-onboarding-is-crazy&quot;&gt;Doing team assignments during onboarding is crazy&lt;/h3&gt;
+
+&lt;p&gt;I went through a team matching process during my Airbnb onboarding, and it was
+extremely stressful for everyone involved. Hiring managers, particularly those
+on the less-desired teams, spent days marketing their teams and convincing (and sometimes begging) people to join them. On the other side, the members of my
+starting class and I were bombarded with choices and forced to spend a lot of
+time talking to hiring managers, doing mini-tasks for the teams we were
+interested in, and, in general, stressing out over a decision that had to be made
+quickly and would play a big role in our careers at the company.&lt;/p&gt;
+
+&lt;p&gt;Everyone in my starting class was able to find a team that they liked and
+“graduate” on-time. But, I’ve heard anecdotally about people arriving at
+these bootcamp-style orientations only to learn that the team(s) that attracted
+them to the company aren’t accepting any new hires. Or, on the flip side, I’ve
+heard about hiring managers recruiting people with specialized skills that they
+need (e.g., database performance optimization) only to have
+these specialists choose completely different teams at the end of bootcamp.&lt;/p&gt;
+
+&lt;p&gt;All of this craziness can be avoided by simply matching people to teams before
+they arrive. Doing this reduces stress on both sides and ensures that candidates know
+what they’re getting themselves into. People should be allowed to switch teams within
+the first few weeks if they really need to, but this should be relatively rare.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The best approach to onboarding engineers is to quickly integrate them with
+their preassigned teams. Organizing weeks of classes and/or letting new hires
+pick teams during orientation may seem like a better onboarding experience, but
+usually just wastes time and causes unnecessary stress.&lt;/p&gt;</content><author><name></name></author><summary type="html">Starting a new software engineering job is hard, and making this process successful requires a lot of effort from both the employer and the employee. In this post, I want to focus on the former, and in particular how companies can make their onboarding processes better.</summary></entry><entry><title type="html">How I made this blog</title><link href="https://yolken.net/blog/how-i-made-this-blog" rel="alternate" type="text/html" title="How I made this blog" /><published>2021-01-10T13:10:00-08:00</published><updated>2021-01-10T13:10:00-08:00</updated><id>https://yolken.net/blog/how-i-made-this-blog</id><content type="html" xml:base="https://yolken.net/blog/how-i-made-this-blog">&lt;p&gt;Every now and then, I get asked how I made this blog from a technical standpoint. In this
 post, I want to share how my content is generated and hosted, and then describe some commonly-used,
 alternative approaches that I decided not to take.&lt;/p&gt;
 
@@ -1685,279 +1877,4 @@ and then used them liberally in the body:&lt;/p&gt;
 continue, will get a lot more in the future. Despite these messages being unsolicited, I don’t
 consider them “spam” and actually like reading them. The vast majority are polite, informative,
 and well-written. Even if I’m not actively looking for a new job, it’s nice to learn about what’s
-out there so I know where to apply the next time I’m on the market.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results.</summary></entry><entry><title type="html">Service meshes are hard</title><link href="https://yolken.net/blog/service-meshes" rel="alternate" type="text/html" title="Service meshes are hard" /><published>2020-09-20T13:44:00-07:00</published><updated>2020-09-20T13:44:00-07:00</updated><id>https://yolken.net/blog/service-meshes</id><content type="html" xml:base="https://yolken.net/blog/service-meshes">&lt;p&gt;I’ve worked on deploying “service meshes” at multiple companies. Although
-they look great on paper, deploying them is a huge pain, with a high
-risk of serious production outages. In this post, I want to share some of my war
-stories and caution against diving into the service mesh hype too quickly.&lt;/p&gt;
-
-&lt;h2 id=&quot;aside-whats-a-service-mesh&quot;&gt;Aside: What’s a service mesh?&lt;/h2&gt;
-
-&lt;p&gt;A common pattern in software engineering is to support a product or feature
-via multiple, semi-independent components. This blog, for instance, is hosted
-in Github Pages. When your browser requests the HTML for this page, your
-request most likely hits some sort of frontend proxy (e.g.,
-&lt;a href=&quot;https://www.nginx.com/&quot;&gt;Nginx&lt;/a&gt;), which then sends the request to a backend
-server (implemented in Ruby, perhaps), which then sends out requests to even more
-services, e.g. to record stats or fetch user information.&lt;/p&gt;
-
-&lt;h4 id=&quot;direct-communication&quot;&gt;Direct communication&lt;/h4&gt;
-
-&lt;p&gt;The simplest approach for handling requests between these components is to
-have them communicate directly. Here’s an illustration:&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/assets/service_meshes1.png&quot; alt=&quot;service mesh simple&quot; width=&quot;400&quot; /&gt;&lt;/div&gt;
-
-&lt;p&gt;Each arrow represents a request from a client to a server. These requests are typically implemented
-with &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol&quot;&gt;HTTP&lt;/a&gt;, but might use a
-specialized, binary protocol instead, e.g. when using something like
-&lt;a href=&quot;http://thrift.apache.org/&quot;&gt;Apache Thrift&lt;/a&gt;. The underlying bytes can be encrypted
-but are often not since this would require the clients and servers to
-handle protocols like &lt;a href=&quot;https://en.wikipedia.org/wiki/Transport_Layer_Security&quot;&gt;TLS&lt;/a&gt;,
-which adds complexity and reduces performance.&lt;/p&gt;
-
-&lt;p&gt;The picture above doesn’t show how service A “discovers” the addresses of B and C.
-These might be hard-coded, looked up in &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;DNS&lt;/a&gt;,
-or fetched from a centralized service registry like &lt;a href=&quot;https://www.consul.io/&quot;&gt;Consul&lt;/a&gt;.
-The important thing to note, though, is that the details of doing this are
-handled by A itself.&lt;/p&gt;
-
-&lt;h4 id=&quot;using-a-service-mesh&quot;&gt;Using a service mesh&lt;/h4&gt;
-
-&lt;p&gt;A service mesh is a dedicated infrastructure layer for handling the details
-of this inter-service communication. Although the exact architecture varies,
-with a mesh the picture above might become:&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/assets/service_meshes2.png&quot; alt=&quot;service mesh simple&quot; width=&quot;500&quot; /&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, service A doesn’t communicate directly with B and C. Instead, it sends requests
-to a local (outbound) proxy that then sends the requests to the (inbound) proxies
-for B and C. The latter then forward the requests to the service instances on
-their respective hosts. The links between proxies can be, and often are, encrypted
-via &lt;a href=&quot;https://developers.cloudflare.com/access/service-auth/mtls/&quot;&gt;mTLS&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The control plane is needed so that the proxy configurations can stay up-to-date.
-If host 2 disappears, for instance, and is replaced with host 2a, then all
-of the proxies on the hosts talking to B need to be updated with the new
-address.&lt;/p&gt;
-
-&lt;h3 id=&quot;benefits&quot;&gt;Benefits&lt;/h3&gt;
-
-&lt;p&gt;The nice thing about the mesh architecture is that your services no longer need to
-handle the low-level details of communicating with others. This makes a lot of things
-substantially easier, at least in theory:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Service discovery:&lt;/strong&gt; Service A doesn’t need to discover the addresses of B and C,
-  it can just let the control plane and proxy do that.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Encryption:&lt;/strong&gt; Encryption is now easier because all hosts are running proxies
-  that are designed to handle this, and we don’t need to mess with the details of TLS in the
-  services themselves.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Complex routing:&lt;/strong&gt; If we want to test a new variation of service B, for instance, we can
-  configure the mesh to send 1% of traffic to the new instance and the rest to the older ones.
-  If we discover a problem, we can reroute the traffic without redeploying the client code.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cross-fleet networking observability:&lt;/strong&gt; Since all communication goes through the same
-  layer, the mesh can expose a standardized set of metrics and logs for all inter-service links.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These benefits are particularly big when you’re in an environment with a diverse set
-of client and server implementations. Service A might be Ruby, B golang, and C Java. Sure,
-you could add mTLS, standardized metrics, etc. directly into each service, but you’re going
-to have to re-implement the same logic multiple times in multiple languages. Even if the services
-are written in the same language, they are probably not going to be using the
-same client and server implementations uniformly.&lt;/p&gt;
-
-&lt;h3 id=&quot;implementations&quot;&gt;Implementations&lt;/h3&gt;
-
-&lt;p&gt;Reviewing existing service mesh implementations is beyond the scope of this post. Instead,
-I’ll refer you to &lt;a href=&quot;https://servicemesh.es/&quot;&gt;this site&lt;/a&gt;, which has a nice summary and seems
-up-to-date. As an alternative to adopting an off-the-shelf implementation, some companies
-simply take a “roll your own” approach using &lt;a href=&quot;https://www.envoyproxy.io/&quot;&gt;Envoy&lt;/a&gt; plus a
-custom-built control plane service; this is what we did at Stripe.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-theyre-hard&quot;&gt;Why they’re hard&lt;/h2&gt;
-
-&lt;p&gt;From the discussion above, it seems like service meshes are great. They make your
-infrastructure more secure, uniform, controllable, and observable. Everyone should be
-using them!!&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, though, service meshes make life harder in a number of different ways.&lt;/p&gt;
-
-&lt;h4 id=&quot;scope-is-n2&quot;&gt;Scope is N&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
-
-&lt;p&gt;Let’s say you have N services and you want to update all of them in some way, for
-instance to replace a library with a newer version. Typically, this will involve
-O(N) updates and O(N) things that can go wrong. When rolling out a service mesh,
-however, you’re making O(N&lt;sup&gt;2&lt;/sup&gt;) updates because you’re changing (and potentially breaking)
-how each pair of services communicates.&lt;/p&gt;
-
-&lt;p&gt;This means that, even with a small number of services, there are a lot of things
-that can go wrong (and will). Service A might be fine talking to B, and B might be fine
-talking to C, but the A to C link might occasionally time out for some weird reason
-that takes days to debug. If you’re in a company with dozens of services, the N&lt;sup&gt;2&lt;/sup&gt; effects
-can be huge- be prepared for a lot of work rolling things out and debugging.&lt;/p&gt;
-
-&lt;h4 id=&quot;more-hops-more-problems&quot;&gt;More hops, more problems&lt;/h4&gt;
-
-&lt;p&gt;In the non-service-mesh world, communication issues are typically the fault of either
-the client or server. If service A is getting HTTP 5XX responses from service B, you can
-look at the code and logs for B to understand why that might be happening.&lt;/p&gt;
-
-&lt;p&gt;In the service mesh world, on the other hand, these responses might be coming from B, the
-proxy on B’s host, or the proxy on A’s host. Now, instead of looking in one place,
-you have to look in three places. This means that the debugging process is slower and
-more tedious.&lt;/p&gt;
-
-&lt;h4 id=&quot;encrypted-traffic-looks-like-binary-junk&quot;&gt;Encrypted traffic looks like binary junk&lt;/h4&gt;
-
-&lt;p&gt;There are lots of great tools for inspecting unencrypted traffic. Personally,
-I like running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tcpdump -i any -A port [my service port]&lt;/code&gt; and watching requests
-go back and forth when I’m trying to understand the traffic hitting a service. If
-this traffic is encrypted, you can still do this, but all you’ll see is binary junk:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;16:51:07.773675 IP lga15s43-in-f36.1e100.net.https &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 192.168.0.10.56081: Flags &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;P.], &lt;span class=&quot;nb&quot;&gt;seq &lt;/span&gt;2713:3385, ack 537, win 261, options &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;nop,nop,TS val 2846442026 ecr 1037268748], length 672
-..J..C..k.H...E....&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;.y..O...&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;..
-......F...&lt;span class=&quot;nv&quot;&gt;$o&lt;/span&gt;...........
-..B&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;.w.......7V.o.&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;...wc.qk....2.ePyi&lt;span class=&quot;se&quot;&gt;\u&lt;/span&gt;XsTP..R..z.&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;S..
-&lt;span class=&quot;s2&quot;&gt;&quot;iT....S...Ju.%..........%.....kZV0...EA9.W.NB.^.....f&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-hV...i&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8?...&amp;gt;8.&lt;span class=&quot;s2&quot;&gt;&quot;.-..m.H.........y...	.......?.G.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$U&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;j...s.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;....;.....a......6@
-[w.&amp;gt;SHQ.%...F....S..e	..f,..T(CA..U....x...../...8..(.j.....k..h.{.^...5n.4f.[....].x.....}
-2.....Q..*.^..?.l...e&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;~.]...j......P.....]....R..ZB....7..B9}e&quot;&lt;/span&gt;.....f.&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-AAV&lt;span class=&quot;nv&quot;&gt;$m&lt;/span&gt;....z..m..........x..B.P.&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0....k..E..S........&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;......{.W..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Most service meshes only use encryption on the proxy to proxy links and not
-on the proxy to service ones. But, these proxy to proxy links are often where a lot of
-problems happen, and not being able to easily inspect the details of each request on the
-wire makes debugging harder.&lt;/p&gt;
-
-&lt;h4 id=&quot;certificate-management-is-hard&quot;&gt;Certificate management is hard&lt;/h4&gt;
-
-&lt;p&gt;In order to implement mTLS rigorously, you need to generate fine-grained certificates for
-all of the nodes in your mesh. Certificate management for individual hosts is hard enough,
-but it gets even messier when hosts are shared by multiple services and each one needs
-a distinct identity.&lt;/p&gt;
-
-&lt;p&gt;I spent many, many months at Stripe working on a “Service CA” to address this problem. We got
-things working in the end, but it required a lot of very careful design and relatively high-risk
-changes to components in the existing certificate provisioning flow.&lt;/p&gt;
-
-&lt;h4 id=&quot;control-plane-is-a-single-point-of-failure&quot;&gt;Control plane is a single point of failure&lt;/h4&gt;
-
-&lt;p&gt;The control plane is a critical component of a service mesh. It keeps all of the proxies updated
-with the latest service endpoints, routing rules, listener configs, etc. These updates
-may be happening frequently due to instances coming up and down, new services being added, and
-other changes happening in the environment. Depending on the sources of this information and the
-protocol used between the control plane and proxies, keeping all of the data fresh and accurate can
-be challenging.&lt;/p&gt;
-
-&lt;p&gt;In addition, the control plane can wreak havoc on your infrastructure if it’s misconfigured
-or gets confused about the state of the world.&lt;/p&gt;
-
-&lt;p&gt;A really scary type of incident, which I’ve seen a few times across multiple companies, is when
-the control plane thinks that all of the service instances have disappeared (for instance, because
-the source that it pulls these from is broken). It blissfully pushes out empty configs to all
-of the proxies, all inter-service communication stops, and your company is hard-down
-until the issue is fixed.&lt;/p&gt;
-
-&lt;h4 id=&quot;proxies-are-complex&quot;&gt;Proxies are complex&lt;/h4&gt;
-
-&lt;p&gt;Many service meshes use &lt;a href=&quot;https://www.envoyproxy.io/&quot;&gt;Envoy&lt;/a&gt; as the underlying proxy.
-While powerful, Envoy is a beast; it has
-&lt;a href=&quot;https://www.envoyproxy.io/docs/envoy/latest/configuration/configuration&quot;&gt;hundreds of knobs&lt;/a&gt; that
-can be tuned to affect its behavior.&lt;/p&gt;
-
-&lt;p&gt;The code is written in C++, which is not the easiest language to make changes in, and is
-prone to segfaults, leaks, and other types of memory issues if you’re not super careful. At
-Stripe, we occasionally observed crashes, which required a lot of work to understand and fix.&lt;/p&gt;
-
-&lt;p&gt;These issues aren’t unique to Envoy. Proxies in general are just prone to being complex,
-particularly when you’re trying to optimize performance and satisfy the many different use cases
-that people have for them.&lt;/p&gt;
-
-&lt;h2 id=&quot;alternatives-to-service-meshes&quot;&gt;Alternatives to service meshes&lt;/h2&gt;
-
-&lt;p&gt;In some cases, you may be able to get the benefits of a service mesh with much less work.&lt;/p&gt;
-
-&lt;h4 id=&quot;for-security&quot;&gt;For security&lt;/h4&gt;
-
-&lt;p&gt;To prevent an unauthorized client from hitting a server, you can use firewall rules
-(called &lt;a href=&quot;https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html&quot;&gt;security groups&lt;/a&gt;
-in the AWS context) to lock down access. AWS and other cloud providers make it fairly
-straightforward to define these rules at the instance level and keep them updated.&lt;/p&gt;
-
-&lt;p&gt;If you’re in Kubernetes, you can also define service-level firewall rules via
-&lt;a href=&quot;https://kubernetes.io/docs/concepts/services-networking/network-policies/&quot;&gt;network policies&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If there is a particularly sensitive origin / destination pair, you can implement mTLS for just
-that pair in the client and server code or via a proxy on each side. Doing this as a one-off
-is going to be easier than implementing it for all service combinations in your infrastructure.&lt;/p&gt;
-
-&lt;h4 id=&quot;for-load-balancing-and-routing&quot;&gt;For load balancing and routing&lt;/h4&gt;
-
-&lt;p&gt;If you’re running in a cloud environment, consider using hosted load balancers in front
-of your services (e.g.,
-&lt;a href=&quot;https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html&quot;&gt;ALBs&lt;/a&gt; in AWS).
-These typically support target discovery, health checking, complex routing, standardized metrics,
-and other things that a service mesh also provides.&lt;/p&gt;
-
-&lt;p&gt;If you’re in Kubernetes, you can use
-&lt;a href=&quot;https://kubernetes.io/docs/concepts/services-networking/service/&quot;&gt;services&lt;/a&gt; and other
-primitives to get the same kinds of features.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-path-forward&quot;&gt;The path forward&lt;/h2&gt;
-
-&lt;p&gt;If you’ve carefully evaluated the pros and cons and still decided to go forward with a service
-mesh, here are some tips to make the process a bit easier.&lt;/p&gt;
-
-&lt;h4 id=&quot;plan-carefully&quot;&gt;Plan carefully&lt;/h4&gt;
-
-&lt;p&gt;Rolling out a service mesh is a really big project. It will require changes to nearly
-every service running in your infrastructure, and it can’t be released all at once.&lt;/p&gt;
-
-&lt;p&gt;Think carefully about the phases of the rollout. At Stripe, we started on the client side
-without encryption, then implemented the server side without encryption, then,
-finally, after that was stable, activated mTLS on a service-by-service basis. We were
-also very careful about the order in which services were updated within each phase. The optimal
-plan in your environment may be different depending on your risk profile and service topology.&lt;/p&gt;
-
-&lt;h4 id=&quot;pad-your-estimates&quot;&gt;Pad your estimates&lt;/h4&gt;
-
-&lt;p&gt;Take your time estimates for the amount of engineer time required and multiply by 4. Seriously.
-Making updates and debugging networking issues in services you don’t fully understand is really
-time consuming. Moreover, you’ll discover weird use cases and requirements that you didn’t plan
-for and will need to incorporate into your design.&lt;/p&gt;
-
-&lt;p&gt;At Stripe, we originally thought that one person could roll out our service mesh in 3 quarters.
-In the end, it took over a year with 4 people on the team contributing. Because we hadn’t
-planned for that much work, we had to defer other projects that we had promised to do
-(e.g., rolling out Kubernetes more extensively), which caused some resentment among our users.&lt;/p&gt;
-
-&lt;h4 id=&quot;make-it-easy-to-switch-back-and-forth&quot;&gt;Make it easy to switch back and forth&lt;/h4&gt;
-
-&lt;p&gt;Whenever a change is made (e.g., switching a service pair to the service mesh), keep the
-old path around for a while and make it easy to revert back. At Stripe, we had a dynamic,
-“feature flag” system we could use for this; other companies I’ve been at have had similar
-configuration mechanisms.&lt;/p&gt;
-
-&lt;p&gt;If there’s an urgent problem in the middle of the night, it’s a lot easier to revert by clicking a
-button in a UI than it is to revert the change in the code, wait for CI, and do a deploy.&lt;/p&gt;
-
-&lt;h4 id=&quot;dont-roll-your-own&quot;&gt;Don’t roll your own&lt;/h4&gt;
-
-&lt;p&gt;Please, please use an existing service mesh implementation if at all possible as opposed
-to rolling your own. Even if you can’t use an existing implementation directly, consider
-ripping out and reusing the pieces that can be adapted to your environment.&lt;/p&gt;
-
-&lt;p&gt;At Stripe, we built our control plane components completely from scratch. While it was a lot
-of fun personally, it took a long time to develop and there were a number of very tricky corner
-cases that popped up and led to serious production incidents along the way. It’s much safer
-to adopt service mesh components that have been written by domain experts and been
-extensively battle-tested outside your company.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Service meshes have a lot of benefits, but also a number of downsides that should be
-carefully considered before committing to a rollout. Thankfully, things should get better
-in the future as cloud providers include more service mesh features directly into their
-products and third-party solutions like
-&lt;a href=&quot;https://istio.io/latest/docs/concepts/what-is-istio/&quot;&gt;Istio&lt;/a&gt; become more robust. In the meantime,
-though, be careful!&lt;/p&gt;</content><author><name></name></author><summary type="html">Service meshes look great on paper but can be a huge pain to roll out and manage. In this post, I want to share some of my war stories and caution against diving into the service mesh hype too quickly.</summary></entry></feed>
+out there so I know where to apply the next time I’m on the market.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results.</summary></entry></feed>
