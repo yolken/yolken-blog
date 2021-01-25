@@ -159,5 +159,5 @@ my abilities to make changes out in the open directly.
 ## Conclusion
 
 Starting a new job is hard, but I've adopted a few strategies that have consistently helped.
-The most important thing I tell myself is to not get too stressed and to give it time-
-the anxiety and stress at the beginning will eventually pass!
+The most important thing I tell myself is to not get too anxious and to give it time-
+the stress at the beginning will eventually pass (and it always does!).
