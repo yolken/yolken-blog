@@ -16,9 +16,11 @@ I'm starting at a new job.
 
 ## Starting is hard
 
-First, it's important to state at the outset that I find starting a new job as a
-software engineer really, really hard. Even after many years of experience and even
-if the new company is using a tech stack that I'm already familiar with, there is
+First off, it's important for me to state that I find starting a new
+job as a software engineer really, really hard.
+
+Even after many years of experience and even if the new company is using a tech
+stack that I'm already familiar with, there is
 just so much to learn about before one can become productive, including:
 
 1. Where the code lives and how it's organized
@@ -31,9 +33,9 @@ just so much to learn about before one can become productive, including:
 
 On top of this giant pile of things to learn about, the start of a new job
 is often when I'm feeling the most "buyer's remorse" around my decision to
-switch employers- maybe I should have stayed at my old job. Or,
-maybe it was right to leave my old job, but maybe I should have picked
-one of the other offers I had.
+switch employers, i.e. thoughts like "maybe I should have stayed at my old job".
+Or, I'll be thinking that it was right to leave my old job, but maybe I should
+have picked one of the other offers I had.
 
 The end result is that the onboarding process is really stressful for me- I
 often feel kind of crappy, and then I may have trouble sleeping, which makes
@@ -44,33 +46,58 @@ the time in your career when you're going to be at your peak happiness.
 
 ### Give it time
 
-The most important coping strategy is to realize that it takes time to get
-up-to-speed, and, at the same time, to realize that your colleagues know this
-and will cut you some slack in the interim.
+The most important coping strategy for me is to realize that it takes time to get
+up-to-speed, and, at the same time, to realize that my colleagues know this
+and will cut me some slack in the interim.
 
 The exact amount of time required varies from company to company, and it's
-something that you should ask your manager about in your first 1:1 meeting. However,
+something that I ask my manager about in our first 1:1 meeting. However,
 at most of my previous jobs, the general guidance has been that it takes around
 3 months to start making non-trivial contributions, and around 6-9 months before
 new hires are expected to be fully productive.
 
-During those first couple of months, you can relax- it's ok to make mistakes, and it's
-also perfectly fine to spend time doing background reading, getting to know colleagues,
-attending internal tech talks, etc. as opposed to focusing completely on your
-team's regular work.
+During those first couple of months, I tell myself that I can relax- it's ok to make
+mistakes, and it's also perfectly fine to spend time doing background reading,
+getting to know colleagues, attending internal tech talks, etc. as opposed to focusing
+completely on my team's regular tasks.
 
 ### Get work environment right
 
 I find that my work environment plays a big role in my productivity and happiness.
-I'm particularly sensitive to my mouse, keyboard, and monitor. If any of these
-is not ideal, I press very hard to get replacements ordered ASAP.
+This is particularly true when I'm starting at a new job and dealing with the
+firehose of technical things that I need to get up-to-speed pn.
 
-Fixing a desk
+The first thing I try to optimize is the company-provided hardware that I'm touching
+or looking at for my day-to-day work, i.e. my laptop, mouse, keyboard, and monitor.
+If any of these is not ideal, I press very hard to get replacements ordered during
+my first few days on the job (within reasonable bounds, of course).
 
+Beyond that, I then work to improve the other aspects of my environment, including
+my desk and chair, and the light, noise, and temperature of my immediate work area.
+Now that I'm working from home these are all under my direct personal control, but
+back when I was in an office I sometimes asked for help for noisy office mates,
+weird vibrations in my desk, or a less-than-comfortable chair.
+
+Many of these things will take a while to resolve, so it's important to raise
+concerns early on to get the process started.
 
 ### Do coffee chats
 
+Getting to know your manager and the peers on your team is an important part
+of the onboarding process that everyone does. Beyond this, though, I've found that
+it's really informative to meet with people beyond my direct team, even if I'm
+not going to be working with them at all. I usually just message these people
+in the company's chatting system and ask for permission to put 30 minutes into their
+calendar (they almost always say yes!)
 
+Staff in the extended organization can provide "big picture" perspective
+that's useful to know about as I'm getting up-to-speed. Also, because they won't
+be working with me day-to-day, I've found that they tend to more honest and less
+inhibited when it comes to providing advice about how to be successful in the job.
+
+When possible, I like to structure these as "coffee chats" as opposed to formal
+1:1's. This makes them more fun and fosters and environment in which we can
+talk honestly.
 
 ### Create personal reference document
 
@@ -97,10 +124,16 @@ Running tests for system Y
 ...
 ```
 
-I treat this document as append-only- as I interact with more systems, I just
-add more and more. After a few months, this document becomes a personal reference
-for me- I can copy and paste
+I treat this document as append-only- as I interact with more tools and systems, I
+just keep adding more sections. Later, if I need to refer to anything, I can do a
+quick search in the doc and then use the links or commands that I previously
+jotted down to complete the task I'm doing.
 
+Over time, the document can get so big that it becomes painful to load and
+search in whatever tool I'm using to host it. Then, I'll just freeze the first
+document and start adding notes into a new one. In my current job, I'm at the
+beginning of my second reference doc. In previous jobs, I've gone through
+three or four of these over the course of a few years.
 
 ### Personal GitHub repo
 
@@ -111,6 +144,12 @@ things relevant to my team's work without being judged by colleagues.
 
 At companies that use GitHub (including all of my recent employers), I just
 put this stuff into a repo that's under my work account but separate from the
-company's main GitHub organization. If your employer is using some other system for
-storing code, you can just throw your changes into an "experimental" branch that
-isn't submitted for review.
+company's main GitHub organization. If I were at a company that didn't have this
+functionality in its code systems, I would just throw my changes into an
+"experimental" branch that is never submitted for review.
+
+## Conclusion
+
+Starting a new job is hard, but I've adopted a few strategies that have helped.
+The most important thing I tell myself is to not get too stressed and to give it time-
+the anxiety and stress at the beginning will eventually pass (and it always does!).
