@@ -28,14 +28,14 @@ just so much to learn about before one can become productive, including:
 3. Standards and tools for testing, logging, metrics, code reviews, deploys, etc.
 4. What infrastructure the code is running on and how to interact with it
 5. Who knows what and how to get questions answered
-6. How planning is done, what are the team's current priorities, what should I
+6. How planning is done, what are the team's current priorities, what I should
   be working on to make the biggest impact, etc.
 
 On top of this giant pile of things to learn about, the start of a new job
 is often when I'm feeling the most "buyer's remorse" around my decision to
-switch employers, i.e. thoughts like "maybe I should have stayed at my old job".
-Or, I'll be thinking that it was right to leave my old job, but maybe I should
-have picked one of the other offers I had.
+switch employers. This can include thoughts like "maybe I should have stayed at my
+old job". Or, I'll be thinking that it was right to leave my old job, but that
+maybe I should have picked one of the other offers I had.
 
 The end result is that the onboarding process is really stressful for me- I
 often feel kind of crappy, and then I may have trouble sleeping, which makes
@@ -65,7 +65,7 @@ completely on my team's regular tasks.
 
 I find that my work environment plays a big role in my productivity and happiness.
 This is particularly true when I'm starting at a new job and dealing with the
-firehose of technical things that I need to get up-to-speed pn.
+firehose of technical things that I need to get up-to-speed on.
 
 The first thing I try to optimize is the company-provided hardware that I'm touching
 or looking at for my day-to-day work, i.e. my laptop, mouse, keyboard, and monitor.
@@ -75,7 +75,7 @@ my first few days on the job (within reasonable bounds, of course).
 Beyond that, I then work to improve the other aspects of my environment, including
 my desk and chair, and the light, noise, and temperature of my immediate work area.
 Now that I'm working from home these are all under my direct personal control, but
-back when I was in an office I sometimes asked for help for noisy office mates,
+back when I was in an office I sometimes asked for help in dealing with noisy officemates,
 weird vibrations in my desk, or a less-than-comfortable chair.
 
 Many of these things will take a while to resolve, so it's important to raise
@@ -83,7 +83,7 @@ concerns early on to get the process started.
 
 ### Do coffee chats
 
-Getting to know your manager and the peers on your team is an important part
+Getting to know your manager and the peers on your team is a critical part
 of the onboarding process that everyone does. Beyond this, though, I've found that
 it's really informative to meet with people beyond my direct team, even if I'm
 not going to be working with them at all. I usually just message these people
@@ -96,7 +96,7 @@ be working with me day-to-day, I've found that they tend to more honest and less
 inhibited when it comes to providing advice about how to be successful in the job.
 
 When possible, I like to structure these as "coffee chats" as opposed to formal
-1:1's. This makes them more fun and fosters and environment in which we can
+1:1's. This makes them more fun and fosters an environment in which we can
 talk honestly.
 
 ### Create personal reference document
@@ -104,7 +104,7 @@ talk honestly.
 Starting on my first day, I create a document in whatever system the company
 prefers for technical docs (e.g., Dropbox Paper, Quip, Google Docs, etc.) and
 start jotting down anything that I think will be helpful to refer to later;
-here are some examples:
+here are some made-up examples:
 
 ```markdown
 Key documents:
@@ -129,18 +129,18 @@ just keep adding more sections. Later, if I need to refer to anything, I can do 
 quick search in the doc and then use the links or commands that I previously
 jotted down to complete the task I'm doing.
 
-Over time, the document can get so big that it becomes painful to load and
-search in whatever tool I'm using to host it. Then, I'll just freeze the first
-document and start adding notes into a new one. In my current job, I'm at the
-beginning of my second reference doc. In previous jobs, I've gone through
-three or four of these over the course of a few years.
+I keep adding to the document and referring back to it even after I'm fully onboarded. Over
+time, it can get so big that it becomes painful to load and search in whatever tool I'm using to
+host it. When this happens, I'll just freeze the first document and start adding notes into
+a new one. In my current job, I'm at the beginning of my second reference doc. In previous
+jobs, I've gone through three or four of these over the course of a few years.
 
 ### Personal GitHub repo
 
 In conjunction with my notes doc, I find it's also helpful to have a "sandbox"
 where I can put longer scripts, play around with whatever libraries or frameworks
-the company uses, and, have a private place where I can test out
-things relevant to my team's work without being judged by colleagues.
+the company uses, and test out new approaches to my team's work without being
+judged by colleagues.
 
 At companies that use GitHub (including all of my recent employers), I just
 put this stuff into a repo that's under my work account but separate from the
@@ -150,6 +150,6 @@ functionality in its code systems, I would just throw my changes into an
 
 ## Conclusion
 
-Starting a new job is hard, but I've adopted a few strategies that have helped.
+Starting a new job is hard, but I've adopted a few strategies that have consistently helped.
 The most important thing I tell myself is to not get too stressed and to give it time-
 the anxiety and stress at the beginning will eventually pass (and it always does!).
