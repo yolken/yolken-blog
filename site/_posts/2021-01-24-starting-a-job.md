@@ -28,7 +28,7 @@ just so much to learn about before one can become productive, including:
 3. Standards and tools for testing, logging, metrics, code reviews, deploys, etc.
 4. What infrastructure the code is running on and how to interact with it
 5. Who knows what and how to get questions answered
-6. How planning is done, what are the team's current priorities, what I should
+6. How planning is done, what the team's current priorities are, what I should
   be working on to make the biggest impact, etc.
 
 On top of this giant pile of things to learn about, the start of a new job
@@ -75,8 +75,8 @@ my first few days on the job (within reasonable bounds, of course).
 Beyond that, I then work to improve the other aspects of my environment, including
 my desk and chair, and the light, noise, and temperature of my immediate work area.
 Now that I'm working from home these are all under my direct personal control, but
-back when I was in an office I sometimes asked for help in dealing with noisy officemates,
-weird vibrations in my desk, or a less-than-comfortable chair.
+back when I was in an office I sometimes asked for help in dealing with noisy
+officemates, weird vibrations in my desk, or a less-than-comfortable chair.
 
 Many of these things will take a while to resolve, so it's important to raise
 concerns early on to get the process started.
@@ -85,7 +85,7 @@ concerns early on to get the process started.
 
 Getting to know your manager and the peers on your team is a critical part
 of the onboarding process that everyone does. Beyond this, though, I've found that
-it's really informative to meet with people beyond my direct team, even if I'm
+it's really informative to meet with colleagues beyond my direct team, even if I'm
 not going to be working with them at all. I usually just message these people
 in the company's chatting system and ask for permission to put 30 minutes into their
 calendar (they almost always say yes!)
@@ -135,18 +135,26 @@ host it. When this happens, I'll just freeze the first document and start adding
 a new one. In my current job, I'm at the beginning of my second reference doc. In previous
 jobs, I've gone through three or four of these over the course of a few years.
 
-### Personal GitHub repo
+### Personal code sandbox
 
-In conjunction with my notes doc, I find it's also helpful to have a "sandbox"
-where I can put longer scripts, play around with whatever libraries or frameworks
-the company uses, and test out new approaches to my team's work without being
-judged by colleagues.
+In conjunction with my reference doc, I find it's also helpful to have a personal
+"sandbox" for code-related notes and experiments.
 
 At companies that use GitHub (including all of my recent employers), I just
-put this stuff into a repo that's under my work account but separate from the
+set up a repo that's under my work account but separate from the
 company's main GitHub organization. If I were at a company that didn't have this
 functionality in its code systems, I would just throw my changes into an
 "experimental" branch that is never submitted for review.
+
+Wherever it lives, I use this sandbox as a place to put longer scripts, to become more
+comfortable with the frameworks and technologies that the company uses, and to try out
+new approaches to my team's work. Doing these things in a personal space allows for me
+to experiment and explore without judgement from colleagues.
+
+As with the reference doc, I keep adding to my personal code sandbox even after the
+onboarding process is complete. However, I generally find that it becomes less useful over
+time as I become more comfortable with the company's tech stack and more confident in
+my abilities to make changes out in the open directly.
 
 ## Conclusion
 
