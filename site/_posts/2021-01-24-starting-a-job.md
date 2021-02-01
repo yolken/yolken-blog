@@ -44,6 +44,10 @@ the time in your career when you're going to be at your peak happiness.
 
 ## Coping strategies
 
+Over the course of starting many new jobs, I've developed a collection of strategies
+for making the onboarding process less stressful and more productive. Here are the most
+helpful ones.
+
 ### Give it time
 
 The most important coping strategy for me is to realize that it takes time to get
@@ -58,7 +62,7 @@ new hires are expected to be fully productive.
 
 During those first couple of months, I tell myself that I can relax- it's ok to make
 mistakes, and it's also perfectly fine to spend time doing background reading,
-getting to know colleagues, attending internal tech talks, etc. as opposed to focusing
+getting to know colleagues, and attending internal tech talks as opposed to focusing
 completely on my team's regular tasks.
 
 ### Get work environment right
@@ -92,7 +96,7 @@ calendar (they almost always say yes!)
 
 Staff in the extended organization can provide "big picture" perspective
 that's useful to know about as I'm getting up-to-speed. Also, because they won't
-be working with me day-to-day, I've found that they tend to more honest and less
+be working with me day-to-day, I've found that they tend to be more honest and less
 inhibited when it comes to providing advice about how to be successful in the job.
 
 When possible, I like to structure these as "coffee chats" as opposed to formal
@@ -159,5 +163,8 @@ my abilities to make changes out in the open directly.
 ## Conclusion
 
 Starting a new job is hard, but I've adopted a few strategies that have consistently helped.
-The most important thing I tell myself is to not get too anxious and to give it time-
-the stress at the beginning will eventually pass (and it always does!).
+The optimal onboarding path can vary a lot from person-to-person and from job-to-job, so these
+may or may not be ideal for you. However, you may find some subset of them helpful the next time
+you're struggling to get up-to-speed at a new job.
+
+Good luck and, most importantly, don't get too stressed!
