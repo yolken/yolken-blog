@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-18T20:49:16-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Great engineer onboarding</title><link href="https://yolken.net/blog/great-engineer-onboarding" rel="alternate" type="text/html" title="Great engineer onboarding" /><published>2021-01-17T09:58:00-08:00</published><updated>2021-01-17T09:58:00-08:00</updated><id>https://yolken.net/blog/great-engineer-onboarding</id><content type="html" xml:base="https://yolken.net/blog/great-engineer-onboarding">&lt;p&gt;I’ve written a few posts previously about quitting a job
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-01-31T17:12:53-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Starting a job</title><link href="https://yolken.net/blog/starting-a-job" rel="alternate" type="text/html" title="Starting a job" /><published>2021-01-24T14:20:00-08:00</published><updated>2021-01-24T14:20:00-08:00</updated><id>https://yolken.net/blog/starting-a-job</id><content type="html" xml:base="https://yolken.net/blog/starting-a-job">&lt;p&gt;In my &lt;a href=&quot;/blog/great-engineer-onboarding&quot;&gt;last post&lt;/a&gt;, I discussed how companies can
+make their onboarding processes better for employees. In this post, I want to turn
+the tables and talk about the strategies I use personally to get up-to-speed when
+I’m starting at a new job.&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-is-hard&quot;&gt;Starting is hard&lt;/h2&gt;
+
+&lt;p&gt;First off, it’s important for me to state that I find starting a new
+job as a software engineer really, really hard.&lt;/p&gt;
+
+&lt;p&gt;Even after many years of experience and even if the new company is using a tech
+stack that I’m already familiar with, there is
+just so much to learn about before one can become productive, including:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Where the code lives and how it’s organized&lt;/li&gt;
+  &lt;li&gt;The key software systems, their interfaces, and how they all fit together&lt;/li&gt;
+  &lt;li&gt;Standards and tools for testing, logging, metrics, code reviews, deploys, etc.&lt;/li&gt;
+  &lt;li&gt;What infrastructure the code is running on and how to interact with it&lt;/li&gt;
+  &lt;li&gt;Who knows what and how to get questions answered&lt;/li&gt;
+  &lt;li&gt;How planning is done, what the team’s current priorities are, what I should
+  be working on to make the biggest impact, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;On top of this giant pile of things to learn about, the start of a new job
+is often when I’m feeling the most “buyer’s remorse” around my decision to
+switch employers. This can include thoughts like “maybe I should have stayed at my
+old job”. Or, I’ll be thinking that it was right to leave my old job, but that
+maybe I should have picked one of the other offers I had.&lt;/p&gt;
+
+&lt;p&gt;The end result is that the onboarding process is really stressful for me- I
+often feel kind of crappy, and then I may have trouble sleeping, which makes
+me feel even worse. Even if you’re not as uptight as I am, it’s generally not
+the time in your career when you’re going to be at your peak happiness.&lt;/p&gt;
+
+&lt;h2 id=&quot;coping-strategies&quot;&gt;Coping strategies&lt;/h2&gt;
+
+&lt;p&gt;Over the course of starting many new jobs, I’ve developed a collection of strategies
+for making the onboarding process less stressful and more productive. Here are the most
+helpful ones.&lt;/p&gt;
+
+&lt;h3 id=&quot;give-it-time&quot;&gt;Give it time&lt;/h3&gt;
+
+&lt;p&gt;The most important coping strategy for me is to realize that it takes time to get
+up-to-speed, and, at the same time, to realize that my colleagues know this
+and will cut me some slack in the interim.&lt;/p&gt;
+
+&lt;p&gt;The exact amount of time required varies from company to company, and it’s
+something that I ask my manager about in our first 1:1 meeting. However,
+at most of my previous jobs, the general guidance has been that it takes around
+3 months to start making non-trivial contributions, and around 6-9 months before
+new hires are expected to be fully productive.&lt;/p&gt;
+
+&lt;p&gt;During those first couple of months, I tell myself that I can relax- it’s ok to make
+mistakes, and it’s also perfectly fine to spend time doing background reading,
+getting to know colleagues, and attending internal tech talks as opposed to focusing
+completely on my team’s regular tasks.&lt;/p&gt;
+
+&lt;h3 id=&quot;get-work-environment-right&quot;&gt;Get work environment right&lt;/h3&gt;
+
+&lt;p&gt;I find that my work environment plays a big role in my productivity and happiness.
+This is particularly true when I’m starting at a new job and dealing with the
+firehose of technical things that I need to get up-to-speed on.&lt;/p&gt;
+
+&lt;p&gt;The first thing I try to optimize is the company-provided hardware that I’m touching
+or looking at for my day-to-day work, i.e. my laptop, mouse, keyboard, and monitor.
+If any of these is not ideal, I press very hard to get replacements ordered during
+my first few days on the job (within reasonable bounds, of course).&lt;/p&gt;
+
+&lt;p&gt;Beyond that, I then work to improve the other aspects of my environment, including
+my desk and chair, and the light, noise, and temperature of my immediate work area.
+Now that I’m working from home these are all under my direct personal control, but
+back when I was in an office I sometimes asked for help in dealing with noisy
+officemates, weird vibrations in my desk, or a less-than-comfortable chair.&lt;/p&gt;
+
+&lt;p&gt;Many of these things will take a while to resolve, so it’s important to raise
+concerns early on to get the process started.&lt;/p&gt;
+
+&lt;h3 id=&quot;do-coffee-chats&quot;&gt;Do coffee chats&lt;/h3&gt;
+
+&lt;p&gt;Getting to know your manager and the peers on your team is a critical part
+of the onboarding process that everyone does. Beyond this, though, I’ve found that
+it’s really informative to meet with colleagues beyond my direct team, even if I’m
+not going to be working with them at all. I usually just message these people
+in the company’s chatting system and ask for permission to put 30 minutes into their
+calendar (they almost always say yes!)&lt;/p&gt;
+
+&lt;p&gt;Staff in the extended organization can provide “big picture” perspective
+that’s useful to know about as I’m getting up-to-speed. Also, because they won’t
+be working with me day-to-day, I’ve found that they tend to be more honest and less
+inhibited when it comes to providing advice about how to be successful in the job.&lt;/p&gt;
+
+&lt;p&gt;When possible, I like to structure these as “coffee chats” as opposed to formal
+1:1’s. This makes them more fun and fosters an environment in which we can
+talk honestly.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-personal-reference-document&quot;&gt;Create personal reference document&lt;/h3&gt;
+
+&lt;p&gt;Starting on my first day, I create a document in whatever system the company
+prefers for technical docs (e.g., Dropbox Paper, Quip, Google Docs, etc.) and
+start jotting down anything that I think will be helpful to refer to later;
+here are some made-up examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Key documents:
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; Design doc for system X
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; Intro to technology Y
+&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; External tutorial on doing Z
+...
+
+How to deploy system X
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`cd ~/workspace/x`&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`deploy -x -b 123abc --production`&lt;/span&gt;
+
+Running tests for system Y
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`cd ~/workspace/y`&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`docker-compose up -d`&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`make tests`&lt;/span&gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I treat this document as append-only- as I interact with more tools and systems, I
+just keep adding more sections. Later, if I need to refer to anything, I can do a
+quick search in the doc and then use the links or commands that I previously
+jotted down to complete the task I’m doing.&lt;/p&gt;
+
+&lt;p&gt;I keep adding to the document and referring back to it even after I’m fully onboarded. Over
+time, it can get so big that it becomes painful to load and search in whatever tool I’m using to
+host it. When this happens, I’ll just freeze the first document and start adding notes into
+a new one. In my current job, I’m at the beginning of my second reference doc. In previous
+jobs, I’ve gone through three or four of these over the course of a few years.&lt;/p&gt;
+
+&lt;h3 id=&quot;personal-code-sandbox&quot;&gt;Personal code sandbox&lt;/h3&gt;
+
+&lt;p&gt;In conjunction with my reference doc, I find it’s also helpful to have a personal
+“sandbox” for code-related notes and experiments.&lt;/p&gt;
+
+&lt;p&gt;At companies that use GitHub (including all of my recent employers), I just
+set up a repo that’s under my work account but separate from the
+company’s main GitHub organization. If I were at a company that didn’t have this
+functionality in its code systems, I would just throw my changes into an
+“experimental” branch that is never submitted for review.&lt;/p&gt;
+
+&lt;p&gt;Wherever it lives, I use this sandbox as a place to put longer scripts, to become more
+comfortable with the frameworks and technologies that the company uses, and to try out
+new approaches to my team’s work. Doing these things in a personal space allows for me
+to experiment and explore without judgement from colleagues.&lt;/p&gt;
+
+&lt;p&gt;As with the reference doc, I keep adding to my personal code sandbox even after the
+onboarding process is complete. However, I generally find that it becomes less useful over
+time as I become more comfortable with the company’s tech stack and more confident in
+my abilities to make changes out in the open directly.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Starting a new job is hard, but I’ve adopted a few strategies that have consistently helped.
+The optimal onboarding path can vary a lot from person-to-person and from job-to-job, so these
+may or may not be ideal for you. However, you may find some subset of them helpful the next time
+you’re struggling to get up-to-speed at a new job.&lt;/p&gt;
+
+&lt;p&gt;Good luck and, most importantly, don’t get too stressed!&lt;/p&gt;</content><author><name></name></author><summary type="html">In my last post, I discussed how companies can make their onboarding processes better for employees. In this post, I want to turn the tables and talk about the strategies I use personally to get up-to-speed when I'm starting at a new job.</summary></entry><entry><title type="html">Great engineer onboarding</title><link href="https://yolken.net/blog/great-engineer-onboarding" rel="alternate" type="text/html" title="Great engineer onboarding" /><published>2021-01-17T09:58:00-08:00</published><updated>2021-01-17T09:58:00-08:00</updated><id>https://yolken.net/blog/great-engineer-onboarding</id><content type="html" xml:base="https://yolken.net/blog/great-engineer-onboarding">&lt;p&gt;I’ve written a few posts previously about quitting a job
 (see &lt;a href=&quot;/blog/leaving-a-job&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;/blog/quitting-a-new-job&quot;&gt;here&lt;/a&gt;).
 Now, I want to turn my attention to a much happier and more exciting topic-
 what happens when you show up for the first day at your next company.&lt;/p&gt;
@@ -1721,160 +1880,4 @@ employees, I think the hassles and extra downside risk just aren’t worth it.&l
 
 &lt;p&gt;While options might be reasonable for very early companies, companies that are worth more than a
 couple hundred million dollars can and should switch to RSUs. Or, even better, just give your
-employees more cash and let them invest it however they want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Equity in one's employer is a large part of the compensation for Software Engineers. In this post, I want to describe how the different kinds of equity work and why I strongly prefer one type, restricted stock units (RSUs), over options-based alternatives.</summary></entry><entry><title type="html">Six years of recruiting emails</title><link href="https://yolken.net/blog/six-years-of-emails" rel="alternate" type="text/html" title="Six years of recruiting emails" /><published>2020-09-26T16:59:00-07:00</published><updated>2020-09-26T16:59:00-07:00</updated><id>https://yolken.net/blog/six-years-of-emails</id><content type="html" xml:base="https://yolken.net/blog/six-years-of-emails">&lt;p&gt;As a software engineer working in the San Francisco Bay Area, I get &lt;em&gt;a lot&lt;/em&gt; of
-unsolicited recruiting emails. I recently decided to dig through my email archives
-and do some analysis of the long-term trends. Here are the results.&lt;/p&gt;
-
-&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
-
-&lt;p&gt;I get career-related messages sent to both my LinkedIn and Gmail accounts. Here’s a typical
-example (with the sender’s name blacked out for privacy):&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img width=&quot;600&quot; src=&quot;/assets/typical_email.png&quot; alt=&quot;typical email&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;The first step was to get all these messages out of my accounts and into a format
-that I could use for the analysis.&lt;/p&gt;
-
-&lt;p&gt;For LinkedIn, this was easy- there’s a “Get a copy of your data” section in the account
-privacy settings. I selected “Messages”, clicked the “Request Archive” button and then,
-a few minutes later, downloaded a CSV that contained one row per message, with columns
-for all of the important metadata: sender, recipient, subject, date, etc.&lt;/p&gt;
-
-&lt;p&gt;For Gmail, the process was a bit more involved. I had to go through Google’s general
-export product, &lt;a href=&quot;https://takeout.google.com/&quot;&gt;Takeout&lt;/a&gt;, scroll down the Gmail section,
-then select the labels to export. Thankfully, I’ve done a good job labelling
-all of my career related emails, so I could just export those and not everything in my account.&lt;/p&gt;
-
-&lt;p&gt;A few minutes later, I got the option to download a bundle of all my emails in an
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Mbox&quot;&gt;mbox&lt;/a&gt; file. This is a legacy
-format originally developed for text-based email clients in Unix; unfortunately, Google
-doesn’t give you the option to download your emails in an easier-to-use format like CSV.&lt;/p&gt;
-
-&lt;p&gt;The file had several million lines that looked like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;From 1669160939957813740@xxx Thu Jun 11 00:38:38 +0000 2020
-X-GM-THRID: 1669160939957813740
-X-Gmail-Labels: Archived,Important,Opened,Category Updates,jobs
-Delivered-To: XXXXX@gmail.com
-Received: by 2002:a8a:40a:0:0:0:0:0 with SMTP id n10csp877323ocb;
-        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
-X-Received: by 2002:a17:902:ab87:: with SMTP id f7mr5405841plr.166.1591835918733;
-        Wed, 10 Jun 2020 17:38:38 -0700 (PDT)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I then wrote a Python script to read this file, pull out the inbound messages, and convert
-each one to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;from,subject,date,body&amp;gt;&lt;/code&gt; tuple. Thankfully, the Python standard library contains a
-&lt;a href=&quot;https://docs.python.org/3/library/mailbox.html&quot;&gt;mailbox&lt;/a&gt; module that parses mbox files
-and makes it easy to pull out the sender, recipient, subject, and date for each message.
-Getting the bodies was a little trickier since mbox bodies can have multiple parts, each with
-a different encoding (text, html, etc.), but I managed to find some
-&lt;a href=&quot;https://stackoverflow.com/questions/26567843/reading-the-mail-content-of-an-mbox-file-using-python-mailbox&quot;&gt;examples on Stack Overflow&lt;/a&gt;
-to copy.&lt;/p&gt;
-
-&lt;p&gt;I then merged the Gmail data with the LinkedIn data, exported everything to a CSV, and opened
-this in Google Sheets. Finally, I spent an hour going through all the messages and deleting
-the ones that weren’t unsolicited. The result was a clean spreadsheet with one row per recruiting
-email that I could use for my analysis.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-results&quot;&gt;The results&lt;/h2&gt;
-
-&lt;p&gt;The following shows the number of unsolicited recruiter emails I’ve received by month since the
-beginning of 2014:&lt;/p&gt;
-
-&lt;iframe width=&quot;850&quot; height=&quot;526&quot; seamless=&quot;&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4ZHxTwbmETB3mUTcILEkU77r_R8TVF3UcgW3Ems11ULMfJWuG8wwioWwx-myDnrEUhcbk1myxaAAr/pubchart?oid=1061438793&amp;amp;format=interactive&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;A few interesting trends:&lt;/p&gt;
-
-&lt;h4 id=&quot;volume-has-increased-a-lot-over-the-years&quot;&gt;&lt;em&gt;Volume has increased a lot over the years&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Back in 2014, I was only getting a handful of messages per month. Now, I routinely get more
-than one a day. The fact that I have more experience now than I did earlier in my career is
-certainly a factor. But, I think the key driver here is simply that tech keeps getting bigger
-and bigger, and the need for skilled engineers has increased significantly over time.&lt;/p&gt;
-
-&lt;h4 id=&quot;there-are-clear-seasonal-patterns&quot;&gt;&lt;em&gt;There are clear seasonal patterns&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Email volume goes down significantly around the winter holidays. There’s also a smaller drop
-in the middle of the summer. Spring and fall are the busiest times, which also matches when
-companies do the most interviewing.&lt;/p&gt;
-
-&lt;h4 id=&quot;i-get-more-emails-when-im-actively-engaged-in-a-job-search&quot;&gt;&lt;em&gt;I get more emails when I’m actively engaged in a job search&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;The peaks in 2015, 2017, and 2019 correspond to periods when I was actively on the job
-market. During these times, I was much more active about updating my LinkedIn profile, which
-is probably a strong signal that a candidate is looking for something new. It’s also possible
-that word spread through recruiters or friends, and that led to more job solicitations.&lt;/p&gt;
-
-&lt;h4 id=&quot;there-was-no-significant-drop-due-to-covid&quot;&gt;&lt;em&gt;There was no significant drop due to COVID&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Despite many companies laying people off or implementing hiring freezes earlier this year, I
-still got a lot of recruiter emails. Now that startup valuations are back up and companies are
-hiring again, I’m getting more emails than ever.&lt;/p&gt;
-
-&lt;h2 id=&quot;other-trends&quot;&gt;Other trends&lt;/h2&gt;
-
-&lt;h4 id=&quot;big-companies-can-send-lots-of-emails&quot;&gt;&lt;em&gt;Big companies can send lots of emails&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Facebook has by far been the peskiest of all the companies over the years, sending me more than
-25 unsolicited recruiting emails since 2014. They’ve also sent a few text messages to my phone,
-which is super-annoying. I should note, though, that I did interview there back in 2012, so I’m
-probably in their system as a past prospect, which makes me a more likely sourcing target.&lt;/p&gt;
-
-&lt;p&gt;Amazon has also sent a lot of emails, particularly over the last two years.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, I’ve only gotten one email from Apple, and nothing from other tech giants like
-Microsoft, Netflix, IBM, SAP, and Cisco.&lt;/p&gt;
-
-&lt;h4 id=&quot;follow-ups&quot;&gt;&lt;em&gt;Follow-ups&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;A very common pattern is to send a message, then send a few follow-ups over the next
-few days with slightly different bodies and subject lines. See the Opendoor example
-at the beginning of this post for an example.&lt;/p&gt;
-
-&lt;p&gt;I guess that’s one way to make sure that an email isn’t missed, although it can get a little
-tiresome if you’re not interested in the company at all.&lt;/p&gt;
-
-&lt;h4 id=&quot;cute-and-not-so-cute-subject-lines&quot;&gt;&lt;em&gt;Cute (and not-so-cute) subject lines&lt;/em&gt;&lt;/h4&gt;
-
-&lt;p&gt;Recruiters and sourcers try to be clever with subject lines and message introductions to
-catch your attention and make the messages seem more personal.&lt;/p&gt;
-
-&lt;p&gt;Binary is one way to get attention, but I have no idea what it says since I’m not a
-computer :-):&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img width=&quot;400&quot; src=&quot;/assets/message2.png&quot; alt=&quot;typical email2&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another trick is to put your current and past employers in the subject so that
-it looks more personalized, and then reference them in the body.
-Not sure how effective it is, though:&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img width=&quot;400&quot; src=&quot;/assets/message3.png&quot; alt=&quot;typical email3&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Emoji are cute. Here’s a message that had one in the subject
-and then used them liberally in the body:&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img width=&quot;400&quot; src=&quot;/assets/message4.png&quot; alt=&quot;typical email4&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h2&gt;
-
-&lt;p&gt;I’ve gotten a lot of recruiting emails over the years, and, assuming that current trends
-continue, will get a lot more in the future. Despite these messages being unsolicited, I don’t
-consider them “spam” and actually like reading them. The vast majority are polite, informative,
-and well-written. Even if I’m not actively looking for a new job, it’s nice to learn about what’s
-out there so I know where to apply the next time I’m on the market.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a software engineer working in the San Francisco Bay Area, I get a lot of unsolicited recruiting emails. I recently decided to dig through my email archives and do some analysis of the long-term trends. Here are the results.</summary></entry></feed>
+employees more cash and let them invest it however they want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Equity in one's employer is a large part of the compensation for Software Engineers. In this post, I want to describe how the different kinds of equity work and why I strongly prefer one type, restricted stock units (RSUs), over options-based alternatives.</summary></entry></feed>
