@@ -4,7 +4,7 @@ title:  "Golang: Some batteries not included"
 date:   2021-01-31 17:55:00 -0700
 categories: general tech
 excerpt: |
-    The golang standard library is fairly rich. However, there are certain pieces of functionality
+    The go standard library is fairly rich. However, there are certain pieces of functionality
     that are either missing or insufficient and that, as a result, require the use of
     third-party libraries in nearly all of my projects. In this post, I want to go through the
     main "batteries not included" in the standard library, and the alternatives that I typically
