@@ -11,13 +11,13 @@ excerpt: |
     use for each one.
 ---
 
-I use [golang](https://golang.org/) a lot for my day-to-day work. Like many other programming
-languages, it consists of a [*core language spec*](https://golang.org/ref/spec) (describing,
-for instance, how to declare variables, construct loops, etc.) plus a
-[*standard library*](https://golang.org/pkg/) that implements higher-level functionality that's
-needed when writing software that actually does useful things.
+I use [golang](https://golang.org/) (aka "go") a lot for my day-to-day work. Like other programming
+languages, it consists of a [*core language spec*](https://golang.org/ref/spec), describing,
+for instance, how to declare variables, construct loops, etc., plus a
+[*standard library*](https://golang.org/pkg/) that implements higher-level functionality
+needed for software that actually does useful things.
 
-The golang standard library is fairly rich- in addition to basic input/output, it covers
+The go standard library is fairly rich- in addition to basic input/output, it covers
 HTTP client and server implementations, time and date processing, all of the standard cryptographic
 algorithms (e.g., SHA256), data compression and decompression, and lots of other goodies.
 However, there are certain pieces of functionality that are either missing or insufficient and
@@ -30,9 +30,9 @@ library, and the alternatives that I typically use for each one.
 
 The term "batteries not included" was historically stamped on the boxes of electronic toys and other
 consumer goods to indicate that the batteries needed for the item to work were not provided in the
-box. When I was growing up, I remember getting gifts where the giver forgot to buy the batteries,
-and then I would feverishly run around the house looking for instances of the right kind (either AA,
-AAA, C, D, or 9-volt), and raiding my other toys or our TV remote controls if needed.
+box. When I was growing up, I remember getting gifts where the giver forgot to buy the batteries.
+I would then feverishly run around the house looking for instances of the right kind (either AA,
+AAA, C, D, or 9-volt), and raiding my other toys or our TV remote controls as needed.
 
 The phrase is less common today because items often include batteries in the box or they use
 built-in, rechargeable ones.
@@ -48,7 +48,7 @@ was considered quite revolutionary- the main languages at the time (e.g., C) did
 big standard libraries; if you wanted to do anything beyond the basics, you had to write it
 yourself or import a third-party implementation.
 
-The "batteries included" philosophy for standard libraries has become common because it offers
+The "batteries included" philosophy for standard libraries has become common because it has
 a lot of benefits:
 
 1. It's easier to get started in the language- no need to find, evaluate, and import third-party
@@ -76,14 +76,14 @@ Many of the applications that I write in go are command-line tools that use flag
 specifying options, e.g. `mytool --option1=value1 --option2=value2`.
 
 Golang includes a [`flag` package](https://golang.org/pkg/flag/) in its standard library for
-specifying and parsing these flags. However, it's pretty basic as it has no built-in support
-for accepting "complex" types like lists or time durations. Also, for whatever reason, it doesn't
-support double dashes for long flags- like most people (I think?), I find `--help` more canonical
-than `-help` when interacting with a command-line tool.
+defining and parsing these flags. However, it's pretty basic as it has no built-in support
+for accepting "complex" types like lists or time durations. Also, for whatever reason, it uses
+single dashes instead of double dashes for long flags- like most people (I think?), I find `--help`
+more canonical than `-help` when interacting with a command-line tool.
 
 As a result, the first thing I import when I'm creating a new command-line tool in go is a better
 flag library. Unfortunately, there isn't a consistent standard on what to use here instead.
-I originally always used [kingpin](https://github.com/alecthomas/kingpin), but then switched
+I originally used [kingpin](https://github.com/alecthomas/kingpin), but then switched
 to [cobra](https://github.com/spf13/cobra) a few years ago because that seemed to be more common in
 the code bases I was working on.
 
@@ -102,8 +102,8 @@ func main() {
         cli.Command(
             func(config config) {
                 fmt.Printf("Hello %s!\n", config.Name)
-            }
-        )
+            },
+        ),
     )
 }
 ```
@@ -146,7 +146,7 @@ a lot of controls over the output format.
 There are many other choices here, and some of these may be better than `logrus` depending on
 your requirements. At Segment (my current employer), we use
 [segmentio/events](https://github.com/segmentio/events) in
-a lot of our backend systems. This library makes it easier to include structured key/value
+most of our backend systems. This library makes it easier to include structured key/value
 pairs alongside the primary message for each log. The former aren't super useful for command-line
 tools but can be very helpful when trying to filter gigabytes of logs produced by replicated, remote
 systems.
@@ -155,7 +155,7 @@ systems.
 
 Go contains decent, built-in tooling for executing tests. However, it doesn't include any of the
 "assert" functions that are common in the unit testing libraries of other languages.
-This means that a simple check that two slices are equal looks like:
+This means that a simple test that two slices are equal looks like:
 
 ```golang
 if !reflect.DeepEqual(expected, actual) {
@@ -167,7 +167,7 @@ if !reflect.DeepEqual(expected, actual) {
 }
 ```
 
-Thankfully, you can avoid that messiness by using
+Thankfully, you can avoid this messiness by using
 [stretchr/testify](https://github.com/stretchr/testify). With testify's `assert` package, the
 above becomes much more concise:
 
@@ -175,7 +175,7 @@ above becomes much more concise:
 assert.Equal(t, expected, actual, "My special slice")
 ```
 
-There's also a `require` package which has the same interface as `assert`, but will stop the test
+There's also a `require` package that has the same interface as `assert`, but will stop the test
 execution if the condition isn't met.
 
 I use `testify` without exception in any project that is doing unit tests. It seems weird to me
@@ -184,10 +184,10 @@ but to each their own!
 
 ### YAML parsing
 
-Go includes a fully functional package for handling JSON-formatted data but, like Python, doesn't
-have any equivalent for YAML in its standard library. Many of the tools that I've worked on
-have some sort of human-created config file, and it's much easier on users if these are in YAML
-as opposed to JSON.
+Go includes a fully functional package for handling [JSON](https://en.wikipedia.org/wiki/JSON)-formatted
+data but, like Python, doesn't have any equivalent for [YAML](https://en.wikipedia.org/wiki/YAML)
+in its standard library. Many of the tools that I've worked on have some sort of human-created
+config file, and it's much easier on users if these are YAML instead of JSON.
 
 The standard here is [go-yaml](https://github.com/go-yaml/yaml), which has the same interface
 as the standard `json` library but uses special `yaml` struct tags instead of `json`
@@ -219,7 +219,7 @@ actively maintained going forward.
 ## Conclusion
 
 Golang is great for many use cases, but you'll probably want to bring in third-party libraries
-for some basic things like flags, logging, and testing. It would be great if these things
+for some things like flags, logging, and testing. It would be great if these
 were improved in the standard library, but I'm not holding my breath- from what I've heard,
 the go maintainers are pretty adamant about what's in the standard library and what's not.
-Thankfully, the third-party solutions are pretty good at addressing the gaps.
+Thankfully, the third-party solutions are pretty good at filling in the gaps.
