@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Golang: Some batteries not included | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Golang: Some batteries not included" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The golang standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main “batteries not included” in the standard library, and the alternatives that I typically use for each one." />
+<meta property="og:description" content="The golang standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main “batteries not included” in the standard library, and the alternatives that I typically use for each one." />
+<link rel="canonical" href="https://yolken.net/blog/golang-batteries-not-included" />
+<meta property="og:url" content="https://yolken.net/blog/golang-batteries-not-included" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-31T16:55:00-08:00" />
+<script type="application/ld+json">
+{"url":"https://yolken.net/blog/golang-batteries-not-included","headline":"Golang: Some batteries not included","dateModified":"2021-01-31T16:55:00-08:00","datePublished":"2021-01-31T16:55:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/golang-batteries-not-included"},"description":"The golang standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main “batteries not included” in the standard library, and the alternatives that I typically use for each one.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Golang: Some batteries not included</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-31T16:55:00-08:00" itemprop="datePublished">Jan 31, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I use <a href="https://golang.org/">golang</a> (aka “go”) a lot for my day-to-day work. Like other programming
+languages, it consists of a <a href="https://golang.org/ref/spec"><em>core language spec</em></a>, describing,
+for instance, how to declare variables, construct loops, etc., plus a
+<a href="https://golang.org/pkg/"><em>standard library</em></a> that implements higher-level functionality
+needed for software that actually does useful things.</p>
+
+<p>The go standard library is fairly rich- in addition to basic input/output, it covers
+HTTP client and server implementations, time and date processing, all of the standard cryptographic
+algorithms (e.g., SHA256), data compression and decompression, and lots of other goodies.
+However, there are certain pieces of functionality that are either missing or insufficient and
+that, as a result, require the use of third-party libraries in nearly all of my projects.</p>
+
+<p>In this post, I want to go through the main “batteries not included” in the standard
+library, and the alternatives that I typically use for each one.</p>
+
+<h3 id="aside-what-do-batteries-have-to-do-with-programming-languages">Aside: What do batteries have to do with programming languages?</h3>
+
+<p>The term “batteries not included” was historically stamped on the boxes of electronic toys and other
+consumer goods to indicate that the batteries needed for the item to work were not provided in the
+box. When I was growing up, I remember getting gifts where the giver forgot to buy the batteries.
+I would then feverishly run around the house looking for instances of the right kind (either AA,
+AAA, C, D, or 9-volt), and raiding my other toys or our TV remote controls as needed.</p>
+
+<p>The phrase is less common today because items often include batteries in the box or they use
+built-in, rechargeable ones.</p>
+
+<p>In any case, at some point the <a href="https://www.python.org/">Python programming language</a> adopted the
+term “batteries included” to describe its standard library. This was a cheeky way of saying that
+unlike those cheap toys from childhood, you didn’t need to build or bring extra items (i.e.,
+libraries or tools) to make the language useful- it just worked “out of the box”.</p>
+
+<p>Nowadays, the idea of including a rich, fully functional standard library with a programming
+language is pretty common. When Python was initially released in the early 1990’s, however, this
+was considered quite revolutionary- the main languages at the time (e.g., C) did not have very
+big standard libraries; if you wanted to do anything beyond the basics, you had to write it
+yourself or import a third-party implementation.</p>
+
+<p>The “batteries included” philosophy for standard libraries has become common because it has
+a lot of benefits:</p>
+
+<ol>
+  <li>It’s easier to get started in the language- no need to find, evaluate, and import third-party
+  libraries for common use cases</li>
+  <li>It’s easier to distribute your code- people can just compile and/or run it with standard tooling</li>
+  <li>Code is more standardized- if everyone uses the standard library for something (e.g., making
+  HTTP requests), then you’re unlikely to see lots of different implementations for it</li>
+  <li>Maintenance is less of a burden- standard libraries tend to be well-maintained and regularly
+  patched for security issues. You don’t have to worry about the maintainer(s) disappearing and the
+  library accumulating a large bug backlog.</li>
+</ol>
+
+<p>Unfortunately, there isn’t always agreement on which batteries to include and exactly how they
+should work. Also, including too many things can lead to bloat, making the core language harder to
+maintain and distribute. There are complex design and performance tradeoffs here, and as result
+no language is 100% “batteries included” for 100% of use cases.</p>
+
+<h2 id="the-missing-batteries">The missing batteries</h2>
+
+<p>Now that we’ve reviewed what “batteries (not) included” means, let’s go into what I consider
+the main missing batteries in the go standard library.</p>
+
+<h3 id="flags">Flags</h3>
+
+<p>Many of the applications that I write in go are command-line tools that use flags for
+specifying options, e.g. <code class="language-plaintext highlighter-rouge">mytool --option1=value1 --option2=value2</code>.</p>
+
+<p>Golang includes a <a href="https://golang.org/pkg/flag/"><code class="language-plaintext highlighter-rouge">flag</code> package</a> in its standard library for
+defining and parsing these flags. However, it’s pretty basic as it has no built-in support
+for accepting “complex” types like lists or time durations. Also, for whatever reason, it uses
+single dashes instead of double dashes for long flags- like most people (I think?), I find <code class="language-plaintext highlighter-rouge">--help</code>
+more canonical than <code class="language-plaintext highlighter-rouge">-help</code> when interacting with a command-line tool.</p>
+
+<p>As a result, the first thing I import when I’m creating a new command-line tool in go is a better
+flag library. Unfortunately, there isn’t a consistent standard on what to use here instead.
+I originally used <a href="https://github.com/alecthomas/kingpin">kingpin</a>, but then switched
+to <a href="https://github.com/spf13/cobra">cobra</a> a few years ago because that seemed to be more common in
+the code bases I was working on.</p>
+
+<p>Recently, I discovered <a href="https://github.com/segmentio/cli">segmentio/cli</a>, which I like a lot
+because it’s so simple- you just tag a <code class="language-plaintext highlighter-rouge">struct</code>, and then you get the flag functionality for free:</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">type</span> <span class="n">config</span> <span class="k">struct</span> <span class="p">{</span>
+        <span class="n">Age</span> <span class="kt">int</span>          <span class="s">`flag:"--age"     help:"your age"     default:"55"`</span>
+        <span class="n">Hobbies</span> <span class="p">[]</span><span class="kt">string</span> <span class="s">`flag:"--hobby"   help:"your hobbies" default:"-"`</span>
+        <span class="n">Name</span> <span class="kt">string</span>      <span class="s">`flag:"-n,--name" help:"your name"    default:"Joe"`</span>
+    <span class="p">}</span>
+
+    <span class="n">cli</span><span class="o">.</span><span class="n">Exec</span><span class="p">(</span>
+        <span class="n">cli</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span>
+            <span class="k">func</span><span class="p">(</span><span class="n">config</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"Hello %s!</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">Name</span><span class="p">)</span>
+            <span class="p">},</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This works well for simple CLIs, but becomes a little messy for more complicated ones, e.g. when
+the help text blurbs are really long or when you want to have multiple layers of subcommands.
+Therefore, I still find myself reverting back to cobra sometimes.</p>
+
+<h3 id="logging">Logging</h3>
+
+<p>Log output, whether to the console or to an external log collection service, is really important
+for understanding what’s going on in an application. As with flags,
+golang includes a <a href="https://golang.org/pkg/log/"><code class="language-plaintext highlighter-rouge">log</code> package</a>, but it’s quite
+basic and insufficient for many use cases. Among other problems, it doesn’t support log levels
+(e.g., <code class="language-plaintext highlighter-rouge">INFO</code> vs. <code class="language-plaintext highlighter-rouge">DEBUG</code>) or structured output formats like JSON.</p>
+
+<p>As with flags, there isn’t really a standard alternative here. I personally like
+<a href="https://github.com/sirupsen/logrus">logrus</a> a lot and include it in all of the tools I build.
+Using it is as simple as importing the library and then calling <code class="language-plaintext highlighter-rouge">log.Infof</code>, <code class="language-plaintext highlighter-rouge">log.Debugf</code>, etc.
+in place of the standard library’s <code class="language-plaintext highlighter-rouge">log.Printf</code>:</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">(</span>
+    <span class="n">log</span> <span class="s">"github.com/sirupsen/logrus"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">myFunc</span><span class="p">(</span><span class="n">myArg</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">Debugf</span><span class="p">(</span><span class="s">"Starting myFunc with myArg %s"</span><span class="p">,</span> <span class="n">myArg</span><span class="p">)</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">Warnf</span><span class="p">(</span><span class="s">"Got an unexpected error: %+v"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In addition to supporting levels better than the standard <code class="language-plaintext highlighter-rouge">log</code> library, it also exposes
+a lot of controls over the output format.</p>
+
+<p>There are many other choices here, and some of these may be better than <code class="language-plaintext highlighter-rouge">logrus</code> depending on
+your requirements. At Segment (my current employer), we use
+<a href="https://github.com/segmentio/events">segmentio/events</a> in
+most of our backend systems. This library makes it easier to include structured key/value
+pairs alongside the primary message for each log. The former aren’t super useful for command-line
+tools but can be very helpful when trying to filter gigabytes of logs produced by replicated, remote
+systems.</p>
+
+<h3 id="test-assertions">Test assertions</h3>
+
+<p>Go contains decent, built-in tooling for executing tests. However, it doesn’t include any of the
+“assert” functions that are common in the unit testing libraries of other languages.
+This means that a simple test that two slices are equal looks like:</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">!</span><span class="n">reflect</span><span class="o">.</span><span class="n">DeepEqual</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">actual</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">Error</span><span class="p">(</span>
+        <span class="s">"Wrong value for my special slice"</span><span class="p">,</span>
+        <span class="s">"expected"</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span>
+        <span class="s">"got"</span><span class="p">,</span> <span class="n">actual</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Thankfully, you can avoid this messiness by using
+<a href="https://github.com/stretchr/testify">stretchr/testify</a>. With testify’s <code class="language-plaintext highlighter-rouge">assert</code> package, the
+above becomes much more concise:</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">assert</span><span class="o">.</span><span class="n">Equal</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="n">actual</span><span class="p">,</span> <span class="s">"My special slice"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>There’s also a <code class="language-plaintext highlighter-rouge">require</code> package that has the same interface as <code class="language-plaintext highlighter-rouge">assert</code>, but will stop the test
+execution if the condition isn’t met.</p>
+
+<p>I use <code class="language-plaintext highlighter-rouge">testify</code> without exception in any project that is doing unit tests. It seems weird to me
+that some people still prefer the canonical manual check followed by a <code class="language-plaintext highlighter-rouge">t.Error</code> message,
+but to each their own!</p>
+
+<h3 id="yaml-parsing">YAML parsing</h3>
+
+<p>Go includes a fully functional package for handling <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>-formatted
+data but, like Python, doesn’t have any equivalent for <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>
+in its standard library. Many of the tools that I’ve worked on have some sort of human-created
+config file, and it’s much easier on users if these are YAML instead of JSON.</p>
+
+<p>The standard here is <a href="https://github.com/go-yaml/yaml">go-yaml</a>, which has the same interface
+as the standard <code class="language-plaintext highlighter-rouge">json</code> library but uses special <code class="language-plaintext highlighter-rouge">yaml</code> struct tags instead of <code class="language-plaintext highlighter-rouge">json</code>
+ones. Personally, though, I prefer <a href="https://github.com/ghodss/yaml">ghodss/yaml</a>, which wraps the
+former, because it supports <code class="language-plaintext highlighter-rouge">json</code>-compatible tags and thus makes everything more consistent.</p>
+
+<h3 id="static-content-embedding">Static content embedding</h3>
+
+<p>One of the nice things about golang is that your entire program can be compiled into a single,
+self-contained binary. Among other benefits, this makes it easier to distribute your application
+or run it in bare-bones environments (e.g., scratch docker containers).</p>
+
+<p>Unfortunately, though, the standard go tooling only handles go code. It won’t include separate
+static assets like text templates and images in your binary. I commonly use the former,
+in conjunction with go’s excellent <a href="https://golang.org/pkg/text/template/">text/template</a> package,
+to generate HTML documents or YAML configs in my tools.</p>
+
+<p>To get around this, there’s a great tool called
+<a href="https://github.com/go-bindata/go-bindata"><code class="language-plaintext highlighter-rouge">go-bindata</code></a> that will automatically read
+these external assets and embed them into a <code class="language-plaintext highlighter-rouge">.go</code> file that can be included in your binary. It
+then exposes an API for fetching the contents of each asset from your code.</p>
+
+<p>The original creator of the tool, <code class="language-plaintext highlighter-rouge">jteeuwen</code>, stopped maintaining it and then completely
+disappeared off Github a few years ago, which caused the proliferation of multiple,
+not-fully-compatible forks. Thankfully, it seems like the community has
+standardized on <a href="https://github.com/go-bindata/go-bindata">this one</a>, which hopefully will be
+actively maintained going forward.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Golang is great for many use cases, but you’ll probably want to bring in third-party libraries
+for some things like flags, logging, and testing. It would be great if these
+were improved in the standard library, but I’m not holding my breath- from what I’ve heard,
+the go maintainers are pretty adamant about what’s in the standard library and what’s not.
+Thankfully, the third-party solutions are pretty good at filling in the gaps.</p>
+
+  </div>
+
+  <a class="u-url" href="/blog/golang-batteries-not-included" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
