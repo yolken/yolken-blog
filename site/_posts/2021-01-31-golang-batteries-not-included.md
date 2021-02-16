@@ -32,7 +32,7 @@ The term "batteries not included" was historically stamped on the boxes of elect
 consumer goods to indicate that the batteries needed for the item to work were not provided in the
 box. When I was growing up, I remember getting gifts where the giver forgot to buy the batteries.
 I would then feverishly run around the house looking for instances of the right kind (either AA,
-AAA, C, D, or 9-volt), and raiding my other toys or our TV remote controls as needed.
+AAA, C, D, or 9-volt) and raid my other toys or our TV remote controls as needed.
 
 The phrase is less common today because items often include batteries in the box or they use
 built-in, rechargeable ones.
