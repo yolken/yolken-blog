@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Non-optimal engineer personas | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Non-optimal engineer personas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits I’ve encountered that are genuinely counterproductive to my team’s work. In this post, I want to explain what these are and how I try to deal with people who exhibit them." />
+<meta property="og:description" content="Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits I’ve encountered that are genuinely counterproductive to my team’s work. In this post, I want to explain what these are and how I try to deal with people who exhibit them." />
+<link rel="canonical" href="https://yolken.net/blog/non-optimal-engineer-personas" />
+<meta property="og:url" content="https://yolken.net/blog/non-optimal-engineer-personas" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-15T13:15:00-08:00" />
+<script type="application/ld+json">
+{"url":"https://yolken.net/blog/non-optimal-engineer-personas","headline":"Non-optimal engineer personas","dateModified":"2021-02-15T13:15:00-08:00","datePublished":"2021-02-15T13:15:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/non-optimal-engineer-personas"},"description":"Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits I’ve encountered that are genuinely counterproductive to my team’s work. In this post, I want to explain what these are and how I try to deal with people who exhibit them.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Non-optimal engineer personas</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-02-15T13:15:00-08:00" itemprop="datePublished">Feb 15, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Software engineers are an interesting bunch. Over the course of my career thus far,
+I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
+refuse to wear shoes, people who can’t make eye contact when talking, people who voluntarily start
+their day at 6PM, and many other behaviors that would be considered “weird” in normal workplaces.</p>
+
+<p>Most of these quirks don’t bother me, and I have a few of my own. However, there are certain
+traits I’ve encountered, particularly on the personality side, that are genuinely
+counterproductive to my team’s work. In this post, I want to explain what these are and how I try
+to deal with people who exhibit them.</p>
+
+<h2 id="non-optimal-personas">Non-optimal personas</h2>
+
+<p>The sections below go into more detail on each trait. I’m framing them as “personas” to make the
+discussion a little more fluid.</p>
+
+<h3 id="the-overanalyzer">The overanalyzer</h3>
+
+<p>The overanalyzer gets hung up on analyzing every technical decision they encounter in their
+day-to-day work.</p>
+
+<p>The problem with overanalysis in the context of software engineering is that there are so
+many choices to make on a daily basis. At the low-level, you have mundane things like variable names
+and function interfaces- should it be <code class="language-plaintext highlighter-rouge">myFunc(config struct)</code> or
+<code class="language-plaintext highlighter-rouge">myFunc(parameter1, parameter2, etc.)</code>? At the higher-level, there are bigger choices about
+architectures and technologies- for our new container orchestration system, should we use
+<a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://aws.amazon.com/ecs/">ECS</a>,
+<a href="https://www.nomadproject.io/">Nomad</a>, <a href="https://netflix.github.io/titus/">Titus</a>, or something else?</p>
+
+<p>The problem isn’t just the number of choices, it’s that for many of them there isn’t a single,
+“right” answer. In many cases, e.g. the container orchestration example above, there are
+perfectly valid reasons for picking any one of them over the others. A big part of software
+engineering, and one of the things that distinguishes it from just “coding”, is evaluating these
+tradeoffs and making decisions, even when the choices can’t be perfect on all dimensions.</p>
+
+<p>Overanalyzers get paralyzed by these choices and thus can’t make decisions quickly. As a result,
+their productivity is low and, if their work is in the critical path, they can block the team
+from making forward progress and meeting deadlines.</p>
+
+<h3 id="the-perfectionist">The perfectionist</h3>
+
+<p>The perfectionist, unlike the overanalyzer, has a clear vision for what they want. However,
+they refuse to accept anything short of their final vision- it has to be perfect, or it shouldn’t
+be done at all.</p>
+
+<p>Perfectionism is really hard to achieve in software for a few reasons. First off, <em>all</em> software
+has rough edges. No matter how much work you put into something, you’re going to have some bugs
+or errant pixels or missing features somewhere in your product. Secondly, most software progress
+is delivered incrementally- you don’t achieve perfection in your first release. Instead, you
+address the highest priority features and/or bugs, deliver your product, get feedback, and then
+repeat the cycle. Many large, successful software products like Microsoft Office or the Python
+programming language have been doing this for decades.</p>
+
+<p>Perfectionist software engineers get in the way by blocking your work unless you immediately address
+their long list of idealized requirements.</p>
+
+<p>Sometimes, the interactions are relatively mundane, e.g. in the context of a small code review:</p>
+
+<blockquote>
+  <p>Them: I need you to refactor class X and backfill tests as part of your change.</p>
+
+  <p>Me: My change only touched one line of X. I’m already rewriting Y as part of this change, I’m not
+making X worse, and I don’t have any context on the original X code so it will take me days to
+untangle this mess.</p>
+
+  <p>Them: Sorry, I can’t approve until you fix this.</p>
+</blockquote>
+
+<p>The blockers can be bigger when doing design or architecture reviews:</p>
+
+<blockquote>
+  <p>Them: I can’t allow you to roll out your new container orchestration system because it doesn’t
+have signed images and an interactive UI.</p>
+
+  <p>Me: Our current system doesn’t have those things. No one other than you is requesting them,
+and it will take months to add them. We can work on those features in v2 if needed.</p>
+
+  <p>Them: No. Either you have signed images and an interactive UI in v1 or there’s no point.</p>
+</blockquote>
+
+<p>Blocking regressions or things that explicitly prevent improvement in the future is definitely
+worthwhile, but perfectionists take this to the extreme of blocking non-regressive, incremental
+progress too.</p>
+
+<h3 id="the-luddite">The Luddite</h3>
+
+<p>The Luddite is unreasonably resistant to any sort of big, technological change. They believe
+that the current ways of doing things, despite their faults, are superior to any new approaches that
+come along.</p>
+
+<p>Luddism doesn’t mesh well with software engineering because software technologies, tools, and
+best practices are constantly evolving. Just because things like PHP and Java were state-of-the-art
+20 years ago doesn’t mean that they’re still the best choices for every project today. Of course,
+there are tradeoffs here- older technologies can still be very good, and there are definite
+downsides to switching things around just for the sake of using the latest and greatest tech.</p>
+
+<p>The Luddite, however, is uniformly and stubbornly insistent that new projects, even ones that
+are completely “greenfield”, make only minor adjustments on top of the company’s existing
+standards and technologies.</p>
+
+<p>Over the last few years, I’ve sometimes hit this persona when trying
+to roll out Kubernetes and other, big infrastructure improvements at a company:</p>
+
+<blockquote>
+  <p>Them: Our current orchestration system is great, we don’t need Kubernetes.</p>
+
+  <p>Me: Well, it has a lot of issues. For instance, it takes 7 days and approvals from 3 people to
+create a new service. And, the configs are spread across 6 repositories.</p>
+
+  <p>Them: We’re working on a big project to cut that down to 6 days, 2 people, and 5 repositories. It
+will be ready at the end of next year.</p>
+
+  <p>Me: Umm, maybe there’s a better way? Please hear me out.</p>
+</blockquote>
+
+<p>Often times, the resistance is rooted in personal feelings. The Luddite has invested a lot of time
+and energy in the current ways of doing things, and they feel that adopting something new will
+diminish their previous contributions. Or, they’re worried that new technology will take away
+their control and thus reduce their future influence inside the organization.</p>
+
+<h3 id="the-complainer">The complainer</h3>
+
+<p>The complainer spends an inordinate amount of time complaining about the faults in other
+people’s work in a way that blocks progress.</p>
+
+<p>Don’t get me wrong here- there’s something very cathartic about complaining, and I think we all
+enjoy doing it every now and then. However, it becomes a problem when the person complaining
+is giving feedback that’s not actionable or, if actionable, without any willingness to help make
+things better.</p>
+
+<p>A quick story- at the beginning of my career, I was a product manager on Google’s system
+for allocating compute and storage resources inside the company. Teams would get these resources
+and then build the company’s externally-facing products (e.g., search, Gmail, YouTube, etc.) on top
+of them.</p>
+
+<p>Our system, to put it mildly, was not the most popular among engineers at Google. I routinely heard
+complaints that it “sucked” or “should be deleted”. One very senior person even told me that he
+hated our system more than his recent experience of being stuck in the Atlanta
+airport with a screaming toddler for 12 hours.</p>
+
+<p>None of these people really had any ideas for how to make our system better. Instead, they just
+demoralized the team and blocked us from making progress since they would be fighting
+against us as we tried to get more resources or push through incremental improvements.</p>
+
+<p>Since moving on from my stint in Google’s resource management organization, this level of
+negativity has been pretty rare. However, I’m still sometimes blocked by complaints without much
+willingness to help.</p>
+
+<p>One example is in the context of security reviews, which many companies
+require for new product launches. At a previous job, my interactions with the security engineer
+went like this:</p>
+
+<blockquote>
+  <p>Them: Your service isn’t secure. You need to do more to ensure that only authorized users can
+make requests to your API endpoints.</p>
+
+  <p>Me: Hmm, I’m not really an expert on security. Can you help me with this or at least point me
+to an internal example that does things the “right” way?</p>
+
+  <p>Them: Oh no no, I’m way too busy to do that. You really need to figure it out yourself.</p>
+
+  <p>Me: <em>Sigh.</em></p>
+</blockquote>
+
+<p>I’ve also seen this behavior in interactions with lawyers (technically, they’re not engineers, but
+they interact with us a lot, so I’m including the example):</p>
+
+<blockquote>
+  <p>Them: Your product feature is not compliant with EU regulation 124-XZ. I can’t let you launch it
+in its current form since this would put the company at great legal risk.</p>
+
+  <p>Me: Ok, what specific things do I need to change to make the software compliant?</p>
+
+  <p>Them: Well, 124-XZ is really complicated, it’s hard to say. I’ll have to get back to you.
+<em>Silence for weeks.</em></p>
+</blockquote>
+
+<p>Complaints are fine, but if they don’t come with any offer of help (or at least specific details
+of what to fix), then they can really block progress on a project.</p>
+
+<h3 id="the-nexus">The nexus</h3>
+
+<p>The nexus wants to be at the center of all decisions, and gets upset when they’re not consulted
+about each one.</p>
+
+<p>As described in the “overanalyzer” section above, software development involves making a lot of
+decisions. Once you get beyond a small number of people, however, it’s really, really hard for any
+one person to be involved in each one. At a certain point, you just have to relax, trust
+other people to do the right thing, and realize that if someone does make a terrible decision
+without your knowledge, you can usually fix it after-the-fact.</p>
+
+<p>The nexus, on the contrary, will insist that they be included in every meeting and code review
+related to your project. By doing this, they necessarily slow down progress- nothing can be
+done until they approve, and since they’re only one person, the progress of the team is slowed
+down to the rate at which they’re able to process and critique each step of the project.</p>
+
+<p>If you go around them, the nexus may discover and get upset. Worse than that, though, they may
+overcompensate by jumping in and second-guessing all of the decisions you made without them- e.g.,
+“Why did you call this setting <code class="language-plaintext highlighter-rouge">x</code> as opposed to <code class="language-plaintext highlighter-rouge">y</code>?”- which slows you down even more than if
+you had consulted them at the beginning.</p>
+
+<p>Unfortunately, nexus behavior is often mixed with the other traits described above. In combination,
+these can be an especially big drain on engineering productivity.</p>
+
+<h2 id="coping">Coping</h2>
+
+<p>Here are some strategies for dealing with the above personas when they get in the way of your
+work.</p>
+
+<h3 id="be-direct">Be direct</h3>
+
+<p>The most direct strategy is to call out these non-optimal traits when you see them.
+If you’re in a code review, for instance, you can explicitly push back against the reviewer’s
+feedback because it’s not constructive or is requesting an unrealistic amount of perfectionism in a
+single change.</p>
+
+<p>The key here is to communicate sympathetically. You want to acknowledge the feedback and also
+explain nicely why it’s not 100% reasonable. In many cases, the person will understand
+what you’re saying and agree to back off.</p>
+
+<h3 id="evade">Evade</h3>
+
+<p>The more passive-aggressive approach is to evade the person with the unproductive trait(s) by
+avoiding contact with them. If these traits come through in code or design reviews, for instance,
+you can just request reviewers are who more likely to be helpful.</p>
+
+<p>This isn’t always doable (there may be only one person who can review your changes), but it
+avoids conflict and helps move things forward. If the person you evaded discovers a serious
+problem that their involvement would have detected, you can still apologize, beg for forgiveness,
+and ask for their help.</p>
+
+<h3 id="escalate">Escalate</h3>
+
+<p>A third option, and sometimes the only one that works, is to escalate your concerns to
+management. If someone is blocking progress and being completely unreasonable, managers have the
+power to push them aside and/or elevate someone more reasonable to unblock you.</p>
+
+<p>It may take a while to get results and it may burn some bridges, but at a well-run company
+management should be effective at removing blockers and ensuring that employees can be productive.
+If they can’t do this, then it might be time to switch teams or switch companies.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Certain traits can really get in the way of being happy and productive as a software engineer.</p>
+
+<p>Many of these are actually beneficial in small doses (e.g., perfectionism), they’re just problematic
+when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
+exhibit them sometimes in our interactions with colleagues.</p>
+
+<p>The important thing is to recognize when they’re reducing productivity and then make
+the necessary structural or personnel changes to unblock progress.</p>
+
+  </div>
+
+  <a class="u-url" href="/blog/non-optimal-engineer-personas" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

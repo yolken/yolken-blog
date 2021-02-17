@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-02-15T20:00:25-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Pathological engineer personas</title><link href="https://yolken.net/blog/pathological-engineer-personas" rel="alternate" type="text/html" title="Pathological engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/pathological-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/pathological-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-02-16T21:49:05-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
 I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
 refuse to wear shoes, people who can’t make eye contact when talking, people who voluntarily start
 their day at 6PM, and many other behaviors that would be considered “weird” in normal workplaces.&lt;/p&gt;
 
 &lt;p&gt;Most of these quirks don’t bother me, and I have a few of my own. However, there are certain
-traits I’ve encountered, particularly on the personality side, that are genuinely annoying and
+traits I’ve encountered, particularly on the personality side, that are genuinely
 counterproductive to my team’s work. In this post, I want to explain what these are and how I try
 to deal with people who exhibit them.&lt;/p&gt;
 
-&lt;h2 id=&quot;pathological-personas&quot;&gt;Pathological personas&lt;/h2&gt;
+&lt;h2 id=&quot;non-optimal-personas&quot;&gt;Non-optimal personas&lt;/h2&gt;
 
 &lt;p&gt;The sections below go into more detail on each trait. I’m framing them as “personas” to make the
 discussion a little more fluid.&lt;/p&gt;
@@ -208,7 +208,7 @@ work.&lt;/p&gt;
 
 &lt;h3 id=&quot;be-direct&quot;&gt;Be direct&lt;/h3&gt;
 
-&lt;p&gt;The most direct strategy is to call out these pathological traits when you see them.
+&lt;p&gt;The most direct strategy is to call out these non-optimal traits when you see them.
 If you’re in a code review, for instance, you can explicitly push back against the reviewer’s
 feedback because it’s not constructive or is requesting an unrealistic amount of perfectionism in a
 single change.&lt;/p&gt;
@@ -240,14 +240,14 @@ If they can’t do this, then it might be time to switch teams or switch compani
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Certain personas can really get in the way of being happy and productive as a software engineer.&lt;/p&gt;
+&lt;p&gt;Certain traits can really get in the way of being happy and productive as a software engineer.&lt;/p&gt;
 
 &lt;p&gt;Many of these are actually beneficial in small doses (e.g., perfectionism), they’re just problematic
 when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
 exhibit them sometimes in our interactions with colleagues.&lt;/p&gt;
 
 &lt;p&gt;The important thing is to recognize when they’re reducing productivity and then make
-the necessary structural or personnel changes to unblock progress.&lt;/p&gt;</content><author><name></name></author><summary type="html">Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits I've encountered that are genuinely annoying and counterproductive to my team's work. In this post, I want to explain what these are and how I try to deal with people who exhibit them.</summary></entry><entry><title type="html">Golang: Some batteries not included</title><link href="https://yolken.net/blog/golang-batteries-not-included" rel="alternate" type="text/html" title="Golang: Some batteries not included" /><published>2021-01-31T16:55:00-08:00</published><updated>2021-01-31T16:55:00-08:00</updated><id>https://yolken.net/blog/golang-batteries-not-included</id><content type="html" xml:base="https://yolken.net/blog/golang-batteries-not-included">&lt;p&gt;I use &lt;a href=&quot;https://golang.org/&quot;&gt;golang&lt;/a&gt; (aka “go”) a lot for my day-to-day work. Like other programming
+the necessary structural or personnel changes to unblock progress.&lt;/p&gt;</content><author><name></name></author><summary type="html">Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits I've encountered that are genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I try to deal with people who exhibit them.</summary></entry><entry><title type="html">Golang: Some batteries not included</title><link href="https://yolken.net/blog/golang-batteries-not-included" rel="alternate" type="text/html" title="Golang: Some batteries not included" /><published>2021-01-31T16:55:00-08:00</published><updated>2021-01-31T16:55:00-08:00</updated><id>https://yolken.net/blog/golang-batteries-not-included</id><content type="html" xml:base="https://yolken.net/blog/golang-batteries-not-included">&lt;p&gt;I use &lt;a href=&quot;https://golang.org/&quot;&gt;golang&lt;/a&gt; (aka “go”) a lot for my day-to-day work. Like other programming
 languages, it consists of a &lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;&lt;em&gt;core language spec&lt;/em&gt;&lt;/a&gt;, describing,
 for instance, how to declare variables, construct loops, etc., plus a
 &lt;a href=&quot;https://golang.org/pkg/&quot;&gt;&lt;em&gt;standard library&lt;/em&gt;&lt;/a&gt; that implements higher-level functionality
