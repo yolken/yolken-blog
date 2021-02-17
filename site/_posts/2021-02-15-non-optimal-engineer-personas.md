@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Pathological engineer personas"
+title:  "Non-optimal engineer personas"
 date:   2021-02-15 14:15:00 -0700
 categories: general tech
 excerpt: |
     Software engineers are an interesting bunch. While quirks are fine, and I have a few myself,
-    there are certain traits I've encountered that are genuinely annoying and
-    counterproductive to my team's work. In this post, I want to explain what these are and how I
-    try to deal with people who exhibit them.
+    there are certain traits I've encountered that are genuinely counterproductive to my team's
+    work. In this post, I want to explain what these are and how I try to deal with people who
+    exhibit them.
 ---
 
 Software engineers are an interesting bunch. Over the course of my career thus far,
@@ -16,11 +16,11 @@ refuse to wear shoes, people who can't make eye contact when talking, people who
 their day at 6PM, and many other behaviors that would be considered "weird" in normal workplaces.
 
 Most of these quirks don't bother me, and I have a few of my own. However, there are certain
-traits I've encountered, particularly on the personality side, that are genuinely annoying and
+traits I've encountered, particularly on the personality side, that are genuinely
 counterproductive to my team's work. In this post, I want to explain what these are and how I try
 to deal with people who exhibit them.
 
-## Pathological personas
+## Non-optimal personas
 
 The sections below go into more detail on each trait. I'm framing them as "personas" to make the
 discussion a little more fluid.
@@ -210,7 +210,7 @@ work.
 
 ### Be direct
 
-The most direct strategy is to call out these pathological traits when you see them.
+The most direct strategy is to call out these non-optimal traits when you see them.
 If you're in a code review, for instance, you can explicitly push back against the reviewer's
 feedback because it's not constructive or is requesting an unrealistic amount of perfectionism in a
 single change.
@@ -242,7 +242,7 @@ If they can't do this, then it might be time to switch teams or switch companies
 
 ## Conclusion
 
-Certain personas can really get in the way of being happy and productive as a software engineer.
+Certain traits can really get in the way of being happy and productive as a software engineer.
 
 Many of these are actually beneficial in small doses (e.g., perfectionism), they're just problematic
 when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
