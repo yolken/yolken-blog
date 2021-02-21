@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-02-16T21:49:05-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-02-21T14:37:55-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
 I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
 refuse to wear shoes, people who can’t make eye contact when talking, people who voluntarily start
 their day at 6PM, and many other behaviors that would be considered “weird” in normal workplaces.&lt;/p&gt;
@@ -240,7 +240,8 @@ If they can’t do this, then it might be time to switch teams or switch compani
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Certain traits can really get in the way of being happy and productive as a software engineer.&lt;/p&gt;
+&lt;p&gt;Certain traits in coworkers can really get in the way of being happy and productive as a
+software engineer.&lt;/p&gt;
 
 &lt;p&gt;Many of these are actually beneficial in small doses (e.g., perfectionism), they’re just problematic
 when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
