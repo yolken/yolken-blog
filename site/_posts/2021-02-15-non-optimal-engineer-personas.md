@@ -242,7 +242,8 @@ If they can't do this, then it might be time to switch teams or switch companies
 
 ## Conclusion
 
-Certain traits can really get in the way of being happy and productive as a software engineer.
+Certain traits in coworkers can really get in the way of being happy and productive as a
+software engineer.
 
 Many of these are actually beneficial in small doses (e.g., perfectionism), they're just problematic
 when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
