@@ -15,18 +15,14 @@ Over the last few years, I've worked on
 Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why
 these migrations are done, what they involve, and why they can be hard.
 
-Unlike my previous post on [why service meshes are hard](/posts/service-meshes), my goal
+Unlike my previous post on [why service meshes are hard](/blog/service-meshes), my goal
 here is not to dissuade you from doing the migration in the first place, but rather to
 make it clear that there are a lot of decisions to be made and lots of work to be done.
 Migrating to Kubernetes can be very valuable, but you need to be prepared!
 
 ## Why migrate?
 
-Kubernetes is an open-source, compute orchestration framework that was originally developed
-by Google but has recently gotten lots of contributions from and adoption by other
-organizations.
-
-There's tons of existing documentation about what Kubernetes is and how it works (e.g.,
+There's lots of existing documentation about what Kubernetes is and how it works (e.g.,
 [this one](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)), so
 I won't cover those here. It is worth noting, however, the primary reasons that many companies
 decide to migrate to Kubernetes from their legacy platforms (discussed more in the next section):
@@ -34,7 +30,7 @@ decide to migrate to Kubernetes from their legacy platforms (discussed more in t
 1. *The ecosystem:* A vast ecosystem of tools and apps has developed around
   Kubernetes over the last few years. By using Kubernetes internally, it's easier to take
   advantage of the work that others have done, both in the infrastructure layer (e.g.,
-  in terms of networking, service discovery, etc.) and in the applications that are
+  for networking, service discovery, etc.) and in the applications that are
   being run on top.
 2. *Vendor agnosticism:* Kubernetes provides a layer of abstraction on top of whatever
   you're using to provision individual machines and the associated infrastructure (networking,
@@ -46,7 +42,7 @@ decide to migrate to Kubernetes from their legacy platforms (discussed more in t
   developers to debug them when things go wrong. In theory, developers can take advantage
   of these features "out of the box", without worrying about low-level machine details,
   writing lots of custom tooling, or depending on a separate "infra" team in the organization
-  to set things things up.
+  to set things up.
 
 ## Legacy service platforms
 
@@ -77,7 +73,7 @@ center somewhere.
 Machines are provisioned from a *base image* that includes the operating system and other,
 low-level software. There is then a *configuration management* process, typically orchestrated
 by a framework like [Chef](https://www.chef.io) or [Puppet](https://puppet.com/), that
-installs the higher-level tools and systems needed to run applications on the machine- these might
+installs the higher-level tools and systems needed to run applications on the box- these might
 include language runtimes for things like Python and Ruby, log and metrics collectors, performance
 monitoring tools, and company-specific automation scripts, among other things.
 
@@ -158,13 +154,15 @@ adds yet another level of abstraction on top of containers that *orchestrates* c
 containers in a *cluster* of machines. With Kubernetes, applications are updated by changing
 the associated resources in the Kubernetes API. The Kubernetes control plane then figures
 out which containers on which instances need to be changed, and a special agent on each machine,
-the *kubelet*, actually carries out the updates.
+the [*kubelet*](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/),
+actually carries out the updates.
 
 Although it's still possible to have a custom deploy system for managing workflows and such,
-this system ends up delegating most of the low-level details of the update to the Kubernetes API.
+this system ends up delegating most of the low-level details of each update to the Kubernetes API.
 
 Kubernetes doesn't just handle image updates for individual containers. It provides a ton of
-other functionality as well including bundling containers together as a unit (i.e. a *pod*),
+other functionality as well including bundling containers together as a unit (i.e. a
+[*pod*](https://kubernetes.io/docs/concepts/workloads/pods/)),
 configuring container networking, mounting container disk volumes, storing and exposing application
 secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
 APIs for viewing logs, allowing developers to "exec" into containers for debugging purposes, etc.
@@ -186,15 +184,15 @@ As described previously, the biggest shift in going from an LSP to a KSP is in t
 containers. Containers require images, which means that you need new workflows for defining,
 building, testing, and storing these. Containers usually have a different networking setup than
 that of "regular" LSP application processes, which means that your networking infrastructure
-(how you allocate IPs, how service discovery works, how certs are provisioned etc.) may have to
+(how you allocate IPs, how service discovery works, how certs are provisioned, etc.) may have to
 change.
 
 Having containers and orchestrating them via Kubernetes will typically also require changes to
-whatever frameworks you're using for logging, metrics, secrets, performance monitoring, and deploys.
-Although it's possible to keep using the LSP equivalents for these, the interfaces will be slightly
-different; logs, for instance, will be written into a different place in the file system, and in a
-different format, which means that whatever log collector/forwarder you're using will need to be
-reconfigured.
+whatever frameworks you're using for logging, metrics, secrets, performance monitoring, deploys,
+and other app lifecycle tooling. Although it's possible to keep using the LSP
+equivalents for these, at a minimum the interfaces will be slightly different; logs, for
+instance, will be written into a different place in the file system, and in a different format,
+which means that whatever log collector/forwarder you're using will need to be reconfigured.
 
 Many of these updates aren't scary when considered independently. However, there are a lot of
 them to do and there are a lot of problems that can be encountered along the way, so the whole
@@ -213,26 +211,28 @@ addresses and security group designations) are typically tied to EC2 instances. 
 container-level roles, externally addressable IPs, security groups, etc. is possible and has been
 getting slightly better over time, but is not yet super easy.
 
-Third-party tools like [kube2iam](https://github.com/jtblin/kube2iam) can help here, but it's still
-a lot of work to evaluate the various options and then deploy and maintain them in production.
+If you're running a service mesh, then you'll need to worry about pod-level certificates
+and proxies. Third party frameworks like [Istio](https://istio.io/) can help here, but
+they're non-trivial to deploy and operate.
 
 ### Configuration is complex
 
 The Kubernetes configuration for a simple, single-container application is
 [not too terrible](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment).
 However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
-health probes, and other features that production systems might need, these configs can become
-pretty complex.
+health probes, and other features that production systems might need, these configs can get
+pretty hairy.
 
 This complexity leads to at least two problems when adopting Kubernetes. First, you need
-to figure out how to set all of the knobs that the configs expose, which can require a lot
-of trial-and-error. Second, when multiplied out across dozens (or hundreds) of apps running
-across different environments, manually creating and updating the corpus of Kubernetes
-configs for an organization can become really tedious- you need some tooling to help.
+to figure out how to set all of the knobs that the configs expose, which can require reading a
+lot of documentation and going through a lot of trial and error. Second, when multiplied out across
+dozens (or hundreds) of apps running across different environments, manually creating and updating
+the corpus of Kubernetes configs for an organization can become really tedious- you need some
+tooling to help.
 
 Most companies address the second issue with a combination of YAML templating (via systems like
 [Helm](https://helm.sh/)) and higher-level, organization-specific config generation tools. These
-help, but none of the options here is really perfect. See
+help, but none of the existing options here is really perfect. See
 [this post](https://segment.com/blog/kubernetes-configuration/) that
 I wrote for the Segment engineering blog last year for more detail.
 
