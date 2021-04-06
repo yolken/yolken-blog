@@ -55,7 +55,7 @@ This includes not just whatever is being used to build and deploy applications, 
 also the associated infrastructure and tooling used for running and managing these
 applications in production.
 
-I'll call this pre-Kubernetes "bundle of stuff" a *legacy service platform* or *LSP* for
+I call this pre-Kubernetes "bundle of stuff" a *legacy service platform* or *LSP* for
 short. Normally I hate the term "platform" since it's so overused (seems like it's super trendy
 at the moment for companies to be building "platforms" instead of "products"), but in this case I
 think it's actually appropriate- the LSP literally a base on which applications in an
@@ -108,7 +108,6 @@ various rules, workflows, and infrastructure quirks specific to each organizatio
 open-sourced, like Netflix's [Spinnaker](https://spinnaker.io/), but many companies still end
 up building their own because of the amount of customization required.
 
-
 ## Kubernetes service platforms
 
 When you migrate to Kubernetes, you're replacing the LSP with a new, Kubernetes-based service
@@ -120,9 +119,9 @@ KSPs have a few big differences from LSPs, which are described in the sections b
 #### It's all about containers
 
 In the KSP, as opposed to the LSP, the main unit of compute is a *container*, not a machine.
-A container is, at a high level, just a semi-isolated process. A container runs from an *image*,
+At a high level, a container is just a semi-isolated process. Each container runs from an *image*,
 which is effectively a layered, read-only bundle that contains the binaries, tools, configs, etc.
-needed to set up the environment in which the container runs.
+needed create the environment in which the container runs.
 
 Containers run in machines, so you still need to provision them, but configuration for these
 machines can be simpler and more generic. The main requirement is to install
@@ -133,82 +132,114 @@ much of the heavy lifting is now done in the higher-level container and orchestr
 
 #### Applications and identities
 
-In a container-based service platform,
+In a container-based service platform, applications are less coupled to specific
+machine variants. The "zeebra" service can still have its own, "zeebra machine" pool, but this
+is less necessary than before because many of the service-specific components can be baked into the
+service image as opposed to being installed on the instances on which the container runs.
 
-The "zeebra" service can still have its own, service-specific instances, but this is less necessary
-than before because many of the service-specific components can be baked into the service image
-as opposed to being installed on the instances on which the container runs.
-
-
+Identity also moves from the machine to the container layer. Each container can now have its own
+IP address, x509 certificate, cloud service role, etc. independent of the identity of the host
+that it's running on. This isn't a drop-dead requirement (containers can use the host network,
+for instance), but it's considered best practice from a security and isolation standpoint to
+enforce this separation.
 
 #### Orchestration via Kubernetes
 
-Containers by themselves are fairly low-level and specific to an individual machine. Kubernetes
+Containers by themselves are fairly low-level and specific to individual machines. Kubernetes
 adds yet another level of abstraction on top of containers that *orchestrates* changes across
-containers in a *cluster* of machines. With Kubernetes
+containers in a *cluster* of machines. With Kubernetes, applications are updated by changing
+the associated resources in the Kubernetes API. The Kubernetes control plane then figures
+out which containers on which instances need to be changed, and a special agent on each machine,
+the *kubelet*, actually carries out the updates.
 
+Although it's still possible to have a custom deploy system for managing workflows and such,
+this system ends up delegating most of the low-level details of the update to the Kubernetes API.
+
+Kubernetes doesn't just handle image updates for individual containers. It does a ton of other
+things including bundling containers together as a shared unit (i.e. a *pod*), configuring container
+networking, configuring container disk, storing and exposing application secrets (e.g., DB
+passwords), monitoring container health and responding to failures, exposing APIs for viewing logs,
+allowing developers to "exec" into containers for debugging purposes, etc.
+
+Not all of these things are required. You may, for instance, be able to keep using your LSP
+secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
+be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
+extra work.
 
 ## Why migrating is hard
 
 ### You're migrating a platform, not a system
 
-The main reason that migrating to Kubernetes is hard is that it's not
+The main reason that migrating to Kubernetes is hard is that you're not just updating a single
+component- you're migrating to an entirely new *platform*, the KSP, that
+has its own set of assumptions, requirements, and interfaces.
 
-### Identity is at a different granularity
+As described previously, the biggest shift in going from an LSP to a KSP is in the use of
+containers. Containers require images, which means that you need new processes for defining,
+building, testing, and storing these. Containers usually have a different networking setup than
+that of "regular" LSP application processes, which means that your networking infrastructure
+(how you allocate IPs, how service discovery works, how certs are provisioned etc.) may have to
+change.
 
+Having containers and orchestrating them via Kubernetes will typically also require changes to the
+frameworks you use for logging, metrics, secrets, performance monitoring, and deploys. Although it's
+possible to keep using the LSP equivalents for these, the interfaces will be slightly different;
+logs, for instance, will be written into a different place in the file system, and in a different
+format, which means that whatever log collector/forwarder you're using will need to be reconfigured.
 
+Many of these updates aren't difficult when considered independently. However, there are a lot of
+them to do and there are a lot of problems that can be encountered along the way, so the whole
+process can take a long time from end-to-end. And, it's hard to any run mission-critical services in
+the KSP in production before you have some basic implementations in place for each of the
+core platform components.
+
+### Identity at a different granularity
+
+As mentioned previously, a KSP typically separates machine identity from application identity.
+While this is nice from a security and isolation standpoint, it can be a huge pain, particularly
+if legacy systems have ingrained the idea that machines map 1:1 to identities.
+
+In the AWS world, for instance, IAM roles and network interfaces (with their associated IP
+addresses and security group designations) are typically tied to EC2 instances. Supporting
+container-level roles, externally addressable IPs, security groups, etc. is possible and has been
+getting slightly better over time, but is still not completely trivial. Many companies
+depend on third-party tools like [kube2iam](https://github.com/jtblin/kube2iam), which work but
+aren't perfect and are often a hassle to set up.
 
 ### Configuration is complex
 
+The Kubernetes configuration for a simple, single-container application is not too terrible.
+However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
+health probes, and other features that production systems might need, these configs can become
+fairly complex.
 
+This complexity leads to at least two problems when adopting Kubernetes. First, you need
+to figure out how to set all of the knobs that the configs expose, which can require a lot
+of trial-and-error. Second, when multiplied out across dozens (or hundreds) of apps running
+in different environments, manually creating and updating the corpus of Kubernetes configs
+for an organization can become really tedious- you need some tooling to help.
+
+Most companies address the second issue with a combination of YAML templating (via systems like
+[Helm](https://helm.sh/)) and higher-level, company-specific config generation tools. These help,
+but there really aren't any perfect solutions here. See
+[this post](https://segment.com/blog/kubernetes-configuration/) that
+I wrote for the Segment engineering blog last year for more detail.
+
+As part of the migration process, you need to evaluate the various approaches here and either
+adopt a third-party tool or write you own, which can be a non-trivial amount of work.
+
+### Some batteries not included
+
+Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
+includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks, in
+particular
+[service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/), are
+specified in high-level terms but not actually implemented.
+
+Thankfully, there are solid third-party solutions available for these missing pieces. As with the
+identity mapping issues described above, however, there may be a lot of work involved to
+evaluate the various options, make a decision about which ones to use, and deploy them in your
+clusters.
 
 ## Conclusion
 
-
-
-<!---
-
-#### Observability and debugging
-
-The exact details of how services are observed and debugged in an LSP varies a lot from
-company to company. Typically, however, the configuration management system (e.g., Chef or
-Puppet) is used to provision machine-wide daemons that handle things like logs, metrics,
-and performance monitoring. Application and system logs, for instance, might be scraped by
-a system like [Beats](https://www.elastic.co/beats/), and metrics might be collected
-and forwarded from something like the [Datadog agent](https://docs.datadoghq.com/agent/).
-
-## Migrating to Kubernetes
-
-### Building images
-
-Kubernetes workloads run in *containers*, i.e. semi-isolated processes managed by a runtime
-like [Docker](https://www.docker.com/products/container-runtime). Each container runs
-from an *image* which is an immutable, layered bundle of
-
-Many LSPs don't
-
-### Creating configs
-
-Kubernetes workloads are declared as *resources* that are configured through the Kubernetes
-API. There are a variety of formats in use here, but usually the configuration is defined
-in YAML which
-
-Simple
-
-### Deploys
-
-
-
-### Logging
-
-
-
-### Metrics
-
-### Secrets
-
-### Networking and service discovery
-
-### Developer debugging
-
---->
