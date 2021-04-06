@@ -64,6 +64,10 @@ organization are created and run.
 The exact details of the LSP will vary a lot from company to company. Typically, though,
 they have some common characteristics.
 
+<div style="text-align:center">
+<img src="/assets/kubernetes1.png" alt="legacy service platform" width="700"/>
+</div>
+
 #### It's all about machines
 
 In an LSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
@@ -114,6 +118,10 @@ platform. Following the same naming style, let's call this thing a *Kubernetes s
 or *KSP* for short.
 
 KSPs have a few big differences from LSPs, which are described in the sections below.
+
+<div style="text-align:center">
+<img src="/assets/kubernetes2.png" alt="kubernetes service platform" width="700"/>
+</div>
 
 #### It's all about containers
 
@@ -234,9 +242,9 @@ adopt a third-party tool or write you own, which can be a non-trivial amount of 
 ### Some batteries not included
 
 Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
-includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks, in
-particular [service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/),
-are specified in high-level terms but not actually implemented.
+includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks, most significantly [service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/) but also other things like
+[log forwarding](https://kubernetes.io/docs/concepts/cluster-administration/logging/), are specified
+in high-level terms but not actually implemented.
 
 Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
 identity mapping issues described above, however, there may be a lot of work involved to
