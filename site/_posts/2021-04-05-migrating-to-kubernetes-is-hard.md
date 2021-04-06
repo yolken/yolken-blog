@@ -68,7 +68,7 @@ they have some common characteristics.
 <img src="/assets/kubernetes1.png" alt="legacy service platform" width="700"/>
 </div>
 
-#### It's all about machines
+#### It's about machines
 
 In an LSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
 one provided by [AWS EC2](https://aws.amazon.com/ec2) or a physical box sitting in a data
@@ -123,7 +123,7 @@ KSPs have a few big differences from LSPs, which are described in the sections b
 <img src="/assets/kubernetes2.png" alt="kubernetes service platform" width="700"/>
 </div>
 
-#### It's all about containers
+#### It's about containers
 
 In the KSP, as opposed to the LSP, the main unit of compute is a *container*, not a machine.
 At a high level, a container is just a semi-isolated process. Each container runs from an *image*,
