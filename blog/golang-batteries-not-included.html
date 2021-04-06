@@ -67,7 +67,9 @@ However, there are certain pieces of functionality that are either missing or in
 that, as a result, require the use of third-party libraries in nearly all of my projects.</p>
 
 <p>In this post, I want to go through the main “batteries not included” in the standard
-library, and the alternatives that I typically use for each one.</p>
+library, and the alternatives that I typically use for each one. Note that I’m <em>not</em> covering
+missing language features like generics since those have been discussed extensively in
+<a href="https://hn.algolia.com/?dateRange=all&amp;page=0&amp;prefix=false&amp;query=golang%20generics&amp;sort=byPopularity&amp;type=story">other forums</a>.</p>
 
 <h3 id="aside-what-do-batteries-have-to-do-with-programming-languages">Aside: What do batteries have to do with programming languages?</h3>
 
@@ -236,6 +238,11 @@ ones. Personally, though, I prefer <a href="https://github.com/ghodss/yaml">ghod
 former, because it supports <code class="language-plaintext highlighter-rouge">json</code>-compatible tags and thus makes everything more consistent.</p>
 
 <h3 id="static-content-embedding">Static content embedding</h3>
+
+<blockquote>
+  <p><strong>Addendum:</strong> Golang 1.16 finally added built-in <a href="https://golang.org/pkg/embed/">embedding support</a>.
+Yay!!! However, I’ll keep this section here for historical reasons.</p>
+</blockquote>
 
 <p>One of the nice things about golang is that your entire program can be compiled into a single,
 self-contained binary. Among other benefits, this makes it easier to distribute your application

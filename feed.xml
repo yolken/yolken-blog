@@ -1,4 +1,258 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-02-21T14:37:55-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-06T12:06:58-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Migrating to Kubernetes is hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes is hard" /><published>2021-04-05T13:06:00-07:00</published><updated>2021-04-05T13:06:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;Over the last few years, I’ve worked on
+&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; migrations at several companies-
+Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why
+these migrations are done, what they involve, and why they can be hard.&lt;/p&gt;
+
+&lt;p&gt;Unlike my previous post on &lt;a href=&quot;/blog/service-meshes&quot;&gt;why service meshes are hard&lt;/a&gt;, my goal
+here is not to dissuade you from doing the migration in the first place, but rather to
+make it clear that there are a lot of decisions to be made and lots of work to be done.
+Migrating to Kubernetes can be very valuable, but you need to be prepared!&lt;/p&gt;
+
+&lt;h2 id=&quot;why-migrate&quot;&gt;Why migrate?&lt;/h2&gt;
+
+&lt;p&gt;There’s lots of existing documentation about what Kubernetes is and how it works (e.g.,
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/&quot;&gt;this one&lt;/a&gt;), so
+I won’t cover those here. It is worth noting, however, the primary reasons that many companies
+decide to migrate to Kubernetes from their legacy platforms (discussed more in the next section):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;The ecosystem:&lt;/em&gt; A vast ecosystem of tools and apps has developed around
+  Kubernetes over the last few years. By using Kubernetes internally, it’s easier to take
+  advantage of the work that others have done, both in the infrastructure layer (e.g.,
+  for networking, service discovery, etc.) and in the applications that are
+  being run on top.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Vendor agnosticism:&lt;/em&gt; Kubernetes provides a layer of abstraction on top of whatever
+  you’re using to provision individual machines and the associated infrastructure (networking,
+  persistent disks, etc.). In theory, switching to Kubernetes makes it easier to do things
+  like switch between cloud providers, although in practice this is still hard because
+  of all the non-Kubernetes-related infrastructure you need to migrate as well.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Easier, more self-service workload management:&lt;/em&gt; Kubernetes exposes a rich set of APIs
+  and controllers for deploying applications, ensuring that they run reliably, and enabling
+  developers to debug them when things go wrong. In theory, developers can take advantage
+  of these features “out of the box”, without worrying about low-level machine details,
+  writing lots of custom tooling, or depending on a separate “infra” team in the organization
+  to set things up.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;legacy-service-platforms&quot;&gt;Legacy service platforms&lt;/h2&gt;
+
+&lt;p&gt;The process for migrating to Kubernetes depends a lot on what you’re migrating from.
+This includes not just whatever is being used to build and deploy applications, but
+also the wider set of infrastructure and tooling used for managing application environments
+in production.&lt;/p&gt;
+
+&lt;p&gt;I’ll call this pre-Kubernetes “bundle of stuff” a &lt;em&gt;legacy service platform&lt;/em&gt; or &lt;em&gt;LSP&lt;/em&gt; for
+short. Normally I hate the term “platform” since it’s so overused (seems like it’s super trendy
+at the moment for companies to be building “platforms” instead of “products”), but in this case I
+think it’s actually appropriate- the LSP is literally a base on which applications in an
+organization are created and run.&lt;/p&gt;
+
+&lt;p&gt;The exact details of the LSP will vary a lot from company to company. Typically, though,
+they have some common characteristics.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img src=&quot;/assets/kubernetes1.png&quot; alt=&quot;legacy service platform&quot; width=&quot;700&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;its-about-machines&quot;&gt;It’s about machines&lt;/h4&gt;
+
+&lt;p&gt;In an LSP, the main unit of compute is a &lt;em&gt;machine&lt;/em&gt;, either a virtual machine (VM) like
+one provided by &lt;a href=&quot;https://aws.amazon.com/ec2&quot;&gt;AWS EC2&lt;/a&gt; or a physical box sitting in a data
+center somewhere.&lt;/p&gt;
+
+&lt;p&gt;Machines are provisioned from a &lt;em&gt;base image&lt;/em&gt; that includes the operating system and other,
+low-level software. There is then a &lt;em&gt;configuration management&lt;/em&gt; process, typically orchestrated
+by a framework like &lt;a href=&quot;https://www.chef.io&quot;&gt;Chef&lt;/a&gt; or &lt;a href=&quot;https://puppet.com/&quot;&gt;Puppet&lt;/a&gt;, that
+installs the higher-level tools and systems needed to run applications on the box- these might
+include language runtimes for things like Python and Ruby, log and metrics collectors, performance
+monitoring tools, and company-specific automation scripts, among other things.&lt;/p&gt;
+
+&lt;h4 id=&quot;applications-and-identities&quot;&gt;Applications and identities&lt;/h4&gt;
+
+&lt;p&gt;Each machine is configured and provisioned for a specific application. So, if you have ten different
+services running in production, you’ll typically have ten different machine variants, each
+running in a separate pool. The “zebra” service will have “zebra machines” that contain
+the specific things it needs to run (maybe a
+&lt;a href=&quot;https://www.infoworld.com/article/3304858/what-is-the-jre-introduction-to-the-java-runtime-environment.html&quot;&gt;JRE&lt;/a&gt;),
+the “cheetah” service will have “cheetah machines” that contain what it needs (maybe a Ruby
+interpreter and an Nginx process), and so forth.&lt;/p&gt;
+
+&lt;p&gt;Identity, as it pertains to networking and authentication, is at the granularity of a
+machine. All processes running on the same host use the same IP address(es), the same cloud role,
+the same x509 certificates, etc. So, the “zebra machines” will run with the “zebra” role,
+use a “zebra” certificate, live in a “zebra” network security group, etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;deploys&quot;&gt;Deploys&lt;/h4&gt;
+
+&lt;p&gt;The primary application processes on each instance are typically created and updated by a
+higher-level &lt;em&gt;deploy system&lt;/em&gt;. So, for instance, if a developer wants to update the
+“zebra” service in production from version 1234 to version 1235, they would give the deploy system
+the new version (or this would be automatically detected), and then the latter system would
+handle getting onto each of the “zebra machines”, pulling down an updated artifact, extracting out
+whatever binaries, scripts, and configs the application needs to run the new version, and
+restarting the app.&lt;/p&gt;
+
+&lt;p&gt;These deploy systems are typically pretty complicated because they need to support all of the
+various rules, workflows, and infrastructure quirks specific to each organization. A few, like
+Netflix’s &lt;a href=&quot;https://spinnaker.io/&quot;&gt;Spinnaker&lt;/a&gt;, have been open-sourced, but many companies still end
+up building their own because of the amount of customization required.&lt;/p&gt;
+
+&lt;h2 id=&quot;kubernetes-service-platforms&quot;&gt;Kubernetes service platforms&lt;/h2&gt;
+
+&lt;p&gt;When you migrate to Kubernetes, you’re replacing the LSP with a new, Kubernetes-based service
+platform. Following the same naming style, let’s call this thing a &lt;em&gt;Kubernetes service platform&lt;/em&gt;
+or &lt;em&gt;KSP&lt;/em&gt; for short.&lt;/p&gt;
+
+&lt;p&gt;KSPs have a few big differences from LSPs, which are described in the sections below.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img src=&quot;/assets/kubernetes2.png&quot; alt=&quot;kubernetes service platform&quot; width=&quot;700&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;its-about-containers&quot;&gt;It’s about containers&lt;/h4&gt;
+
+&lt;p&gt;In the KSP, as opposed to the LSP, the main unit of compute is a &lt;em&gt;container&lt;/em&gt;, not a machine.
+At a high level, a container is just a semi-isolated process. Each container runs from an &lt;em&gt;image&lt;/em&gt;,
+which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
+needed to create the environment in which the container runs.&lt;/p&gt;
+
+&lt;p&gt;Containers run in machines, so you still need to provision them, but configuration for these
+machines can be simpler and more generic. The main requirement is to install
+a container runtime such as &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Once the latter is in place, you can
+use it to run containers for your applications and various helper services (for logs, metrics,
+networking, etc.). You can still use Chef or Puppet if you want to, but these are less important
+because much of the heavy lifting is now done in the higher-level container and orchestration
+layers.&lt;/p&gt;
+
+&lt;h4 id=&quot;applications-and-identities-1&quot;&gt;Applications and identities&lt;/h4&gt;
+
+&lt;p&gt;In a container-based service platform, applications are less coupled to specific
+machine variants. The “zebra” service can still have its own, “zebra machine” pool, but this
+is less necessary than before because most of the service-specific components can be baked into the
+service image as opposed to being installed on the instances on which the container runs.&lt;/p&gt;
+
+&lt;p&gt;Identity also moves from the machine to the container layer. Each container can now have its own
+IP address, x509 certificate, cloud service role, etc. independent of the identity of the host
+that it’s running on. This isn’t a drop-dead requirement (containers can use the host network,
+for instance), but it’s considered best practice from a security and isolation standpoint to
+enforce this separation.&lt;/p&gt;
+
+&lt;h4 id=&quot;orchestration-via-kubernetes&quot;&gt;Orchestration via Kubernetes&lt;/h4&gt;
+
+&lt;p&gt;Containers by themselves are fairly low-level and specific to individual machines. Kubernetes
+adds yet another level of abstraction on top of containers that &lt;em&gt;orchestrates&lt;/em&gt; changes across
+containers in a &lt;em&gt;cluster&lt;/em&gt; of machines. With Kubernetes, applications are updated by changing
+the associated resources in the Kubernetes API. The Kubernetes control plane then figures
+out which containers on which instances need to be changed, and a special agent on each machine,
+the &lt;a href=&quot;https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/&quot;&gt;&lt;em&gt;kubelet&lt;/em&gt;&lt;/a&gt;,
+actually carries out the updates.&lt;/p&gt;
+
+&lt;p&gt;Although it’s still possible to have a custom deploy system for managing workflows and such,
+this system ends up delegating most of the low-level details of each update to the Kubernetes API.&lt;/p&gt;
+
+&lt;p&gt;Kubernetes doesn’t just handle image updates for individual containers. It provides a ton of
+other functionality as well including bundling containers together as a unit (i.e. a
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/pods/&quot;&gt;&lt;em&gt;pod&lt;/em&gt;&lt;/a&gt;),
+configuring container networking, mounting container disk volumes, storing and exposing application
+secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
+APIs for viewing logs, allowing developers to “exec” into containers for debugging purposes, etc.&lt;/p&gt;
+
+&lt;p&gt;Not all of these things are required. You may, for instance, be able to keep using your LSP
+secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
+be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
+extra work.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-migrating-is-hard&quot;&gt;Why migrating is hard&lt;/h2&gt;
+
+&lt;h3 id=&quot;youre-migrating-a-platform-not-a-system&quot;&gt;You’re migrating a platform, not a system&lt;/h3&gt;
+
+&lt;p&gt;The main reason that migrating to Kubernetes is hard is that you’re not just updating a single
+component- you’re migrating to an entirely new &lt;em&gt;platform&lt;/em&gt;, the KSP, that
+has its own set of assumptions, requirements, and interfaces.&lt;/p&gt;
+
+&lt;p&gt;As described previously, the biggest shift in going from an LSP to a KSP is in the use of
+containers. Containers require images, which means that you need new workflows for defining,
+building, testing, and storing these. Containers usually have a different networking setup than
+that of “regular” LSP application processes, which means that your networking infrastructure
+(how you allocate IPs, how service discovery works, how certs are provisioned, etc.) may have to
+change.&lt;/p&gt;
+
+&lt;p&gt;Having containers and orchestrating them via Kubernetes will typically also require changes to
+whatever frameworks you’re using for logging, metrics, secrets, performance monitoring, deploys,
+and other app lifecycle tooling. Although it’s possible to keep using the LSP
+equivalents for these, at a minimum the interfaces will be slightly different; logs, for
+instance, will be written into a different place in the file system, and in a different format,
+which means that whatever log collector/forwarder you’re using will need to be reconfigured.&lt;/p&gt;
+
+&lt;p&gt;Many of these updates aren’t scary when considered independently. However, there are a lot of
+them to do and there are a lot of problems that can be encountered along the way, so the whole
+process can take a long time from end-to-end. And, it’s hard to any run mission-critical services in
+the KSP in production before you have at least some basic implementations in place for each of the
+core platform components.&lt;/p&gt;
+
+&lt;h3 id=&quot;identity-is-at-a-different-granularity&quot;&gt;Identity is at a different granularity&lt;/h3&gt;
+
+&lt;p&gt;As mentioned previously, a KSP typically separates machine identity from application identity.
+While this is nice from a security and isolation standpoint, it can be a huge pain, particularly
+if legacy systems have ingrained the idea that machines map 1:1 to identities.&lt;/p&gt;
+
+&lt;p&gt;In the AWS world, for instance, IAM roles and network interfaces (with their associated IP
+addresses and security group designations) are typically tied to EC2 instances. Supporting
+container-level roles, externally addressable IPs, security groups, etc. is possible and has been
+getting slightly better over time, but is not yet super easy.&lt;/p&gt;
+
+&lt;p&gt;If you’re running a service mesh, then you’ll need to worry about pod-level certificates
+and proxies. Third party frameworks like &lt;a href=&quot;https://istio.io/&quot;&gt;Istio&lt;/a&gt; can help here, but
+they’re non-trivial to deploy and operate.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration-is-complex&quot;&gt;Configuration is complex&lt;/h3&gt;
+
+&lt;p&gt;The Kubernetes configuration for a simple, single-container application is
+&lt;a href=&quot;https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment&quot;&gt;not too terrible&lt;/a&gt;.
+However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
+health probes, and other features that production systems might need, these configs can get
+pretty hairy.&lt;/p&gt;
+
+&lt;p&gt;This complexity leads to at least two problems when adopting Kubernetes. First, you need
+to figure out how to set all of the knobs that the configs expose, which can require reading a
+lot of documentation and going through a lot of trial and error. Second, when multiplied out across
+dozens (or hundreds) of apps running across different environments, manually creating and updating
+the corpus of Kubernetes configs for an organization can become really tedious- you need some
+tooling to help.&lt;/p&gt;
+
+&lt;p&gt;Most companies address the second issue with a combination of YAML templating (via systems like
+&lt;a href=&quot;https://helm.sh/&quot;&gt;Helm&lt;/a&gt;) and higher-level, organization-specific config generation tools. These
+help, but none of the existing options here is really perfect. See
+&lt;a href=&quot;https://segment.com/blog/kubernetes-configuration/&quot;&gt;this post&lt;/a&gt; that
+I wrote for the Segment engineering blog last year for more detail.&lt;/p&gt;
+
+&lt;p&gt;As part of the migration process, you need to evaluate the various approaches here and either
+adopt a third-party tool or write you own, which can be a non-trivial amount of work.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-batteries-not-included&quot;&gt;Some batteries not included&lt;/h3&gt;
+
+&lt;p&gt;Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
+includes don’t cover 100% of what you need to run Kubernetes in production. Several big chunks,
+most significantly
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/cluster-administration/networking/&quot;&gt;service networking&lt;/a&gt;, are
+specified in high-level terms but not actually implemented.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
+identity mapping issues described above, however, there may be a lot of work involved to
+evaluate the various options, make a decision about which ones to use, and deploy them in your
+clusters.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Migrating to Kubernetes is a big deal because it’s a complicated system, and it touches on so many
+different aspects of the “platform” that apps run on in an organization. As with
+&lt;a href=&quot;http://localhost:4000/blog/service-meshes&quot;&gt;migrating to a service mesh&lt;/a&gt;, my advice here is to
+allocate lots of time, plan out the work carefully, and use third-party solutions (e.g., clusters
+managed by cloud providers) whenever possible as opposed to building things from scratch.&lt;/p&gt;
+
+&lt;p&gt;The migration process is hard, and there are definitely still some rough edges in the
+Kubernetes ecosystem, but I think the end result can really improve developer happiness and
+productivity if implemented in a sensible way. Good luck!&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why these migrations are done, what they involve, and why they can be hard.</summary></entry><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
 I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
 refuse to wear shoes, people who can’t make eye contact when talking, people who voluntarily start
 their day at 6PM, and many other behaviors that would be considered “weird” in normal workplaces.&lt;/p&gt;
@@ -261,7 +515,9 @@ However, there are certain pieces of functionality that are either missing or in
 that, as a result, require the use of third-party libraries in nearly all of my projects.&lt;/p&gt;
 
 &lt;p&gt;In this post, I want to go through the main “batteries not included” in the standard
-library, and the alternatives that I typically use for each one.&lt;/p&gt;
+library, and the alternatives that I typically use for each one. Note that I’m &lt;em&gt;not&lt;/em&gt; covering
+missing language features like generics since those have been discussed extensively in
+&lt;a href=&quot;https://hn.algolia.com/?dateRange=all&amp;amp;page=0&amp;amp;prefix=false&amp;amp;query=golang%20generics&amp;amp;sort=byPopularity&amp;amp;type=story&quot;&gt;other forums&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;aside-what-do-batteries-have-to-do-with-programming-languages&quot;&gt;Aside: What do batteries have to do with programming languages?&lt;/h3&gt;
 
@@ -430,6 +686,11 @@ ones. Personally, though, I prefer &lt;a href=&quot;https://github.com/ghodss/ya
 former, because it supports &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt;-compatible tags and thus makes everything more consistent.&lt;/p&gt;
 
 &lt;h3 id=&quot;static-content-embedding&quot;&gt;Static content embedding&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Addendum:&lt;/strong&gt; Golang 1.16 finally added built-in &lt;a href=&quot;https://golang.org/pkg/embed/&quot;&gt;embedding support&lt;/a&gt;.
+Yay!!! However, I’ll keep this section here for historical reasons.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;One of the nice things about golang is that your entire program can be compiled into a single,
 self-contained binary. Among other benefits, this makes it easier to distribute your application
@@ -1775,165 +2036,4 @@ equity, very little feels different so far.&lt;/p&gt;
 
 &lt;p&gt;Being acquired is a common ending for private tech companies. Although the process is complex and
 secretive, the outcomes can be very good for employees. It’s important to keep an open mind
-and your options open when you learn that your employer is going to be acquired.&lt;/p&gt;</content><author><name></name></author><summary type="html">In an earlier post, I listed out signs that your employer is about to be acquired. In this one, I want to talk about how the tech acquisition process works from end-to-end, based on my personal experiences.</summary></entry><entry><title type="html">Transformative tools</title><link href="https://yolken.net/blog/transformative-tools" rel="alternate" type="text/html" title="Transformative tools" /><published>2020-11-29T12:06:00-08:00</published><updated>2020-11-29T12:06:00-08:00</updated><id>https://yolken.net/blog/transformative-tools</id><content type="html" xml:base="https://yolken.net/blog/transformative-tools">&lt;p&gt;One of the cool things about software engineering is that the associated technologies
-are constantly changing. This applies not just to the technical things we build with (i.e., the
-programming languages, frameworks, hardware, etc.), but also the tools that we use to
-make ourselves better organized and more productive.&lt;/p&gt;
-
-&lt;p&gt;Since I switched into engineering 8 years ago, I’ve witnessed a few tools in the latter
-category that have really been “transformative” in terms of how I do my day-to-day work. In this
-post, I want to share my personal, before-and-after experiences with these.&lt;/p&gt;
-
-&lt;h4 id=&quot;ground-rules&quot;&gt;Ground rules&lt;/h4&gt;
-
-&lt;p&gt;For the basis of this post, I’m only considering things that are related to process or
-productivity, i.e. not specific languages, frameworks, technical systems, etc. Also,
-I’m skipping tools that came to prominence more than 8 years ago, which includes Github, GMail,
-Google Docs, and many other things that are still very popular and useful today.&lt;/p&gt;
-
-&lt;h2 id=&quot;transformative-tools&quot;&gt;Transformative tools&lt;/h2&gt;
-
-&lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/slack_logo.png&quot; alt=&quot;Slack logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When I started my career, email was everything. I spent hours each day reading through reams
-of messages and crafting well-written, doubly-proofread replies in long, back-and-forth threads
-with colleagues and executives.&lt;/p&gt;
-
-&lt;p&gt;Now, I write maybe one email a month at work. The vast majority of the back-and-forth conversation
-that used to happen in email is now in &lt;a href=&quot;https://www.slack.com&quot;&gt;Slack&lt;/a&gt;, a cloud-based communication
-system that provides instant group and 1:1 chat. These technologies have been around for a while
-(I remember them from my dial-up AOL account in the 1990’s), but Slack packages them in a pretty,
-feature-rich way and has been very successful at getting adoption inside tech companies over the
-last few years.&lt;/p&gt;
-
-&lt;p&gt;Having a conversation in Slack is obviously faster than having one over email. However, the key
-benefit for me with Slack is that I can edit or delete messages after I’ve posted them. Now,
-I can just say what’s on my mind and if I’m wrong about something (as I often am), I can go
-back and correct myself. Gone is the fear around referring to the wrong system when debugging
-a problem, making a spelling mistake, expressing an opinion too forcefully, or other things
-that obsessive people like me used to worry about and get slowed down by when drafting emails.&lt;/p&gt;
-
-&lt;p&gt;These features, combined with all the other bells and whistles that Slack offers, have really
-transformed how I communicate at work. Of course, there are some downsides, particularly in that it
-enables more frequent, lower-quality interruptions. On the whole, though, I think Slack and its
-competitors (e.g.,
-&lt;a href=&quot;https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software&quot;&gt;Microsoft Teams&lt;/a&gt;)
-have been a net positive and can really transform communication in other industries as well.&lt;/p&gt;
-
-&lt;h3 id=&quot;vscode&quot;&gt;VSCode&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/vscode_logo.png&quot; alt=&quot;VSCode logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Software engineers spend a lot of time writing and editing text files. These include not just
-code but also the configuration files and documentation that live alongside the former.&lt;/p&gt;
-
-&lt;p&gt;When I started my career, the choices here were either to use a very lightweight, bare-bones
-text editor on the one hand, or a heavyweight, bloated
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Integrated_development_environment&quot;&gt;integrated developer environment (IDE)&lt;/a&gt;
-on the other. Many of these tools were not free software
-(I remember &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime text&lt;/a&gt; in particular), required hours
-to set up correctly, and would often have performance issues when working in large projects.&lt;/p&gt;
-
-&lt;p&gt;Now, I use &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt; for nearly all text editing. VSCode is developed
-by Microsoft, but unlike most of their historical products, it’s
-free and open-source. I was a little skeptical when it first came out- I haven’t enjoyed any
-Microsoft products since &lt;a href=&quot;https://en.wikipedia.org/wiki/Microsoft_Flight_Simulator_2004:_A_Century_of_Flight&quot;&gt;Flight Simulator 2004&lt;/a&gt;- but since then I’ve been won over.&lt;/p&gt;
-
-&lt;p&gt;The transformational thing about VSCode for me is that it strikes the right balance between
-a lightweight text editor and an IDE. I can use it for the plain Markdown of this blog
-but then switch into a golang or Python project and get code completion, error checking,
-and other, IDE-ish features without the associated bloat.&lt;/p&gt;
-
-&lt;p&gt;VSCode is far from perfect, and there are some situations in which I still wouldn’t use it;
-in large Java or Scala projects, I would probably stick with
-&lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ&lt;/a&gt;, for instance. But, it’s continually improving,
-super extensible, and has a robust and growing third-party developer community. It’s significantly
-improved my productivity and happiness, and I imagine that it will only get more adoption over time.&lt;/p&gt;
-
-&lt;h3 id=&quot;docker-compose&quot;&gt;Docker Compose&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/docker_logo.png&quot; alt=&quot;Docker logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Containerization, i.e. the ability to easily run processes in semi-isolated environments, has
-had a big impact on how software is deployed in production. &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;
-popularized the technology, and since then it’s played a key role in
-&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; and other large-scale, orchestration frameworks.&lt;/p&gt;
-
-&lt;p&gt;Personally, though, I think the biggest benefit to containerization has been in how I run
-software on my local machine. Here’s why.&lt;/p&gt;
-
-&lt;p&gt;Many software projects that engineers work on depend on other, third-party systems to run locally-
-the most common examples here are relational databases like MySQL or Postgres; others that I often
-see are caches (Redis, Memcached), message brokers (NSQ, Kafka, etc.), and non-relational storage
-backends (S3, DynamoDB, etc.).&lt;/p&gt;
-
-&lt;p&gt;Prior to Docker, the choices for running these things locally weren’t great. You could install
-and run them as standard applications, but the directions for doing this would vary based on your
-OS, OS version, and other tools running on your system. After installing, your drive would be
-forever corrupted with whatever junk these tools needed (shared libraries, etc.), and the
-tools themselves would be silently running in the background, consuming resources and doing
-who knows what else with your network and file system.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, you could run all these things in a virtual machine (VM),
-e.g. with &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;Virtualbox&lt;/a&gt;. VMs are better at providing isolation, but
-they’re pretty heavyweight. They required monolithic, multi-hundred megabyte image files
-(which were often created by someone else by hand), took minutes to boot up, and were a pain to
-share files and network access with.&lt;/p&gt;
-
-&lt;p&gt;Now, with Docker, and in particular the &lt;a href=&quot;https://docs.docker.com/compose/&quot;&gt;Docker Compose&lt;/a&gt;
-utility, all of this setup is a breeze. With a single YAML file, I can configure
-a relational database, a multi-node Kafka cluster, a fake S3 backend, or nearly anything else
-for local development and testing. Whether you’re running Mac, Linux, Windows, or whatever else,
-this same bundle of services can be started by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt; into the terminal.&lt;/p&gt;
-
-&lt;p&gt;In addition to making running apps locally easier, which, depending on the project, may not really
-be attainable, Docker Compose allows one to write more realistic tests. Instead of mocking out
-access to S3, Kafka, or other complex dependencies, I can just let my tests hit these things using
-their “real” APIs (but pointed at compose-hosted instances). This makes me more confident that the
-software works and reduces the amount of manual testing I have to do in a remote, pre-production
-environment.&lt;/p&gt;
-
-&lt;h3 id=&quot;lucidchart&quot;&gt;Lucidchart&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/lucidchart_logo.png&quot; alt=&quot;Lucidchart logo&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Software systems can be complicated. Beyond text descriptions, it’s very common to create
-stylized diagrams to show what the main components are and how they interact. These can be
-created before the system is built, i.e., as part of design document, or afterwards, as part of
-the documentation for the people who have to maintain the system.&lt;/p&gt;
-
-&lt;p&gt;Up until a year ago, my go-to tool for making these diagrams was
-&lt;a href=&quot;https://www.omnigroup.com/omnigraffle&quot;&gt;Omnigraffle&lt;/a&gt;. Omnigraffle creates pretty diagrams, but
-it’s a desktop-based application that isn’t collaborative. Sharing the outputs is like
-sharing Excel spreadsheets in 2003- you have to email the files around and have
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Token_ring&quot;&gt;token-ring-like&lt;/a&gt; rules for deciding who is allowed
-to make edits at any given time.&lt;/p&gt;
-
-&lt;p&gt;When I started at my current job, I made the usual request for an Omnigraffle license. Instead
-of providing one, however, the IT team told me to just use &lt;a href=&quot;https://www.lucidchart.com&quot;&gt;Lucidchart&lt;/a&gt;,
-a cloud-based, collaborative alternative. As with the other examples in this blog post, I was
-initially resistant to change but then warmed up after getting more familiar with the tool.&lt;/p&gt;
-
-&lt;p&gt;Lucidchart is not the first cloud-based diagramming tool. However, it’s the first one
-I’ve used that actually creates Omnigraffle-quality (i.e., beautiful, professional) outputs.
-Moreover, the interface is super intuitive and the collaboration features are actually a pleasure to
-use- one feature that’s particularly nice for remote meetings is that if I’m in a diagram with one
-of my colleagues, they can see where my mouse is hovering and I can see theirs.&lt;/p&gt;
-
-&lt;p&gt;At my current employer (&lt;a href=&quot;https:/segment.com/&quot;&gt;Segment&lt;/a&gt;), we’ve used Lucidchart for creating very
-large system diagrams, with hundreds of components and dozens of collaborators, without running into
-any problems. Lucidchart has enabled these types of collaborations, which previously would have been
-much harder, and also made it much less of a hassle for me to create non-collaborative diagrams
-for my work-related design docs and documentation pages.&lt;/p&gt;
-
-&lt;p&gt;If and when I switch employers, I’m going to strongly request that they adopt Lucidchart for their
-internal diagramming.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Over the last few years, I’ve incorporated several tools into my day-to-day work that have
-really transformed how I get things done. That being said, these tools aren’t perfect and,
-moreover, there are several other areas of software engineering work that have yet to be
-transformed for the better. I’ll address the latter in a future post!&lt;/p&gt;</content><author><name></name></author><summary type="html">Since I switched into engineering 8 years ago, I've witnessed a few productivity and organization tools that have really been &quot;transformative&quot; in terms of how I do my day-to-day work. In this post, I want to share my personal, before-and-after experiences with these.</summary></entry></feed>
+and your options open when you learn that your employer is going to be acquired.&lt;/p&gt;</content><author><name></name></author><summary type="html">In an earlier post, I listed out signs that your employer is about to be acquired. In this one, I want to talk about how the tech acquisition process works from end-to-end, based on my personal experiences.</summary></entry></feed>
