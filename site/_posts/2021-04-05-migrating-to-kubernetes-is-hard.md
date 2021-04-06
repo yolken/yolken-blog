@@ -242,9 +242,10 @@ adopt a third-party tool or write you own, which can be a non-trivial amount of 
 ### Some batteries not included
 
 Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
-includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks, most significantly [service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/) but also other things like
-[log forwarding](https://kubernetes.io/docs/concepts/cluster-administration/logging/), are specified
-in high-level terms but not actually implemented.
+includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks,
+most significantly
+[service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/), are
+specified in high-level terms but not actually implemented.
 
 Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
 identity mapping issues described above, however, there may be a lot of work involved to
