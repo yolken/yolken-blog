@@ -64,7 +64,9 @@ organization are created and run.
 The exact details of the LSP will vary a lot from company to company. Typically, though,
 they have some common characteristics.
 
-First, the main unit of compute is a *machine*, either a virtual machine (VM) like
+#### It's all about machines
+
+In an LSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
 one provided by [AWS EC2](https://aws.amazon.com/ec2) or a physical box sitting in a data
 center somewhere.
 
@@ -72,19 +74,108 @@ Machines are provisioned from a *base image* that includes the operating system 
 low-level software. There is then a *configuration management* process that installs the
 higher-level tools and configs needed to run applications on the machine- these might include
 language runtimes for things like Python and Ruby, log and metrics collectors, performance
-monitoring tools, and company-specific automation scripts, among many other possibilities. The
+monitoring tools, and company-specific automation scripts, among other possibilities. The
 latter process is typically orchestrated by third-party frameworks like
 [Chef](https://www.chef.io) or [Puppet](https://puppet.com/).
 
-Each machine is configured and provisioned for a specific application. So, if we have ten different
-services running in production, we'll typically have ten different machine variants, each
-running in a separate pool. The "zeebra" service will have "zeebra instances" that contain
+#### Applications and identities
+
+Each machine is configured and provisioned for a specific application. So, if you have ten different
+services running in production, you'll typically have ten different machine variants, each
+running in a separate pool. The "zeebra" service will have "zeebra machines" that contain
 the specific things it needs to run (maybe a
 [JRE](https://www.infoworld.com/article/3304858/what-is-the-jre-introduction-to-the-java-runtime-environment.html)),
-the "cheetah" service will have "cheetah instances" that contain what it needs (maybe a Ruby
+the "cheetah" service will have "cheetah machines" that contain what it needs (maybe a Ruby
 interpreter and an Nginx process), and so forth.
 
+Identity, as it pertains to networking and authentication, is at the granularity of a
+machine. All processes running on the same host use the same IP address(es), the same cloud role,
+the same x509 certificates, etc. So, the "zeebra machines" will run with the "zeebra" role,
+use a "zeebra" certificate, live in a "zeebra" network security group, etc.
 
+#### Deploys
+
+The primary application processes on each instance are typically managed and updated by a
+higher-level, centralized *deploy system*. So, for instance, if a developer wants to update the
+"zeebra" service in production from version 1234 to version 1235, they would give the deploy system
+the new version (or this would be automatically detected), and then the latter system would then
+handle getting onto each of the "zeebra machines", pulling down an updated artifact, extracting out
+whatever binaries, scripts, and/or configs the application needs to run the new version, and then
+restarting the app process.
+
+These deploy systems are typically pretty complicated because they need to support all of the
+various rules, workflows, and infrastructure quirks specific to each organization. A few have been
+open-sourced, like Netflix's [Spinnaker](https://spinnaker.io/), but many companies still end
+up building their own because of the amount of customization required.
+
+
+## Kubernetes service platforms
+
+When you migrate to Kubernetes, you're replacing the LSP with a new, Kubernetes-based service
+platform. Following the same naming style, let's call this thing a *Kubernetes service platform*
+or *KSP* for short.
+
+KSPs have a few big differences from LSPs, which are described in the sections below.
+
+#### It's all about containers
+
+In the KSP, as opposed to the LSP, the main unit of compute is a *container*, not a machine.
+A container is, at a high level, just a semi-isolated process. A container runs from an *image*,
+which is effectively a layered, read-only bundle that contains the binaries, tools, configs, etc.
+needed to set up the environment in which the container runs.
+
+Containers run in machines, so you still need to provision them, but configuration for these
+machines can be simpler and more generic. The main requirement is to install
+a container runtime such as [Docker](https://www.docker.com/). Once you have this runtime, you can
+then use it to run containers for your applications and helper services (logs, metrics, networking,
+etc.). You can still use Chef or Puppet if you want to, but these are less important because
+much of the heavy lifting is now done in the higher-level container and orchestration layers.
+
+#### Applications and identities
+
+In a container-based service platform,
+
+The "zeebra" service can still have its own, service-specific instances, but this is less necessary
+than before because many of the service-specific components can be baked into the service image
+as opposed to being installed on the instances on which the container runs.
+
+
+
+#### Orchestration via Kubernetes
+
+Containers by themselves are fairly low-level and specific to an individual machine. Kubernetes
+adds yet another level of abstraction on top of containers that *orchestrates* changes across
+containers in a *cluster* of machines. With Kubernetes
+
+
+## Why migrating is hard
+
+### You're migrating a platform, not a system
+
+The main reason that migrating to Kubernetes is hard is that it's not
+
+### Identity is at a different granularity
+
+
+
+### Configuration is complex
+
+
+
+## Conclusion
+
+
+
+<!---
+
+#### Observability and debugging
+
+The exact details of how services are observed and debugged in an LSP varies a lot from
+company to company. Typically, however, the configuration management system (e.g., Chef or
+Puppet) is used to provision machine-wide daemons that handle things like logs, metrics,
+and performance monitoring. Application and system logs, for instance, might be scraped by
+a system like [Beats](https://www.elastic.co/beats/), and metrics might be collected
+and forwarded from something like the [Datadog agent](https://docs.datadoghq.com/agent/).
 
 ## Migrating to Kubernetes
 
@@ -120,6 +211,4 @@ Simple
 
 ### Developer debugging
 
-
-## Conclusion
-
+--->
