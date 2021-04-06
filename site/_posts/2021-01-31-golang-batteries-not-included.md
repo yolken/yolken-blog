@@ -25,8 +25,8 @@ that, as a result, require the use of third-party libraries in nearly all of my 
 
 In this post, I want to go through the main "batteries not included" in the standard
 library, and the alternatives that I typically use for each one. Note that I'm *not* covering
-missing language features like generics since those have been discussed extensively in other
-forums.
+missing language features like generics since those have been discussed extensively in
+[other forums](https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=golang%20generics&sort=byPopularity&type=story).
 
 ### Aside: What do batteries have to do with programming languages?
 
