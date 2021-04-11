@@ -30,7 +30,7 @@ your lack of ambition or try to push you out for not advancing further.
 Second, as the "career level", it means that people's careers naturally flow into it. Assuming
 the correct mentorship, management, project work, etc., most company promotion processes don't
 put up lots of barriers for people getting to "senior" and, moreover, might even require them to do
-this after a certain number of years.
+this after a certain number of years at the company.
 
 Once you get to senior, however, the path beyond it can be much harder. Because staff and higher
 roles can come with significantly more compensation (discussed below) and because not everyone
@@ -39,11 +39,11 @@ promote people into them.
 
 ## My level history
 
-I started my career at MoPub, which, as a small startup, didn't have formal levels for
-individual contributors (ICs). When we were acquired by Twitter, I was slotted at the staff
-level, which was great and happened for various reasons that I describe more below.
+I started my engineering career at MoPub, which, as a small startup, didn't have formal
+levels for individual contributors (ICs). When we were acquired by Twitter, I was slotted at
+the staff level, which was great and happened for various reasons that I describe more below.
 
-For my next two jobs, at Airbnb and Stripe, I was back the senior level. At both places, but
+For my next two jobs, at Airbnb and Stripe, I was back at the senior level. At both places, but
 particularly at Stripe (since that happened later in my career after I had accumulated more
 experience), I felt a bit stuck and frustrated at the difficulty in advancing.
 
@@ -79,22 +79,22 @@ significantly larger bonuses. Google also had level-specific targets when I was 
 
 #### Productivity alone is not sufficient
 
-I consider my productivity to be my greatest strength as an engineer. I just like getting stuff
-done, writing code, fixing bugs, etc. and care less about all of the overhead around planning,
-meeting with users, navigating around bureaucracy, and so forth.
+I consider my productivity to be one of my greatest strengths as an engineer. I just like getting
+stuff done, writing code, fixing bugs, etc. and care less about all of the overhead around
+promoting my projects, meeting with users, navigating around bureaucracy, and so forth.
 
 At both Airbnb and Stripe, I felt that I was super productive from a code generation standpoint,
 but when it came time to do calibration and make promotion decisions, it didn't really matter
 that much. The evaluators were looking for more general impact, and productivity was just one
 among many other data points.
 
-Personally, I found that frustrating not only because it didn't reward my strengths but also
-because it seems like code *should be* the primary criterion for evaluating software engineers.
-Software engineers are hired to write software just as doctors are hired to treat patients and
-artists are hired to make art. If I'm comparing two engineers or two doctors or two artists and one
-produces twice as much output as the other at equivalent quality, I feel like the more productive
-one should be at a level that pays twice as much. But, alas, that's not how the world works,
-whether in software or in other professions.
+Personally, I found that frustrating not only because it didn't align optimally with my strengths
+but also because it seems like code *should be* the primary criterion for evaluating software
+engineers. Software engineers are hired to write software just as doctors are hired to treat
+patients and artists are hired to make art. If I'm comparing two engineers or two doctors or two
+artists and one produces twice as much output as the other at equivalent quality, I feel like the
+more productive one should be at a level that pays twice as much. But, alas, that's not how the
+world works, whether in software or in other professions.
 
 #### Breadth over depth
 
@@ -116,12 +116,12 @@ For promotion to senior and lower levels, the direct manager's word is usually e
 manager says that one of their reports is ready for the next level, and there's some basic peer
 validation, then the person will most likely get promoted.
 
-For staff an higher levels, the manager's word is typically not enough. The person up for promotion
-could be the greatest engineer in the world, but if no one outside of their immediate team can
-affirm this, then they're unlikely to get to the next level.
+For staff and higher levels, though, the manager's word is typically not enough. The person up for
+promotion could be the greatest engineer in the world, but if no one outside of their immediate
+team can affirm this, then they're unlikely to get to the next level.
 
 The easiest way to get this affirmation is to be *visible* to those outside of your team and
-particularly those who are making the promotion decision. Unfortunately, though, this can be
+particularly to those who are making the promotion decision. Unfortunately, though, this can be
 hard if you're super introverted (as I am), or you're working head's down on a deep technical
 problem that isn't flashy and doesn't naturally lend itself to cross-company visibility.
 
@@ -132,9 +132,9 @@ problem that isn't flashy and doesn't naturally lend itself to cross-company vis
 This might come across as a bit extreme, but if you really care about career advancement then
 the most important thing is to find a company and a role where the work and evaluation criteria
 match your strengths. As mentioned above, I feel that I'm strongest on the productivity side
-and less good at the "cross team coordination", "high-level architecture", and other dimensions
-that high-level ICs are promoted for. Other people, however, might excel at the latter and not want
-to spend all day pumping out pull requests.
+and less good at the "cross team coordination", "high-level architecture leadership", and other
+dimensions that high-level ICs are promoted for. Other people, however, might excel at the latter
+and not want to spend all day pumping out pull requests.
 
 I don't have a ton of data to validate this, and this is probably an overly broad generalization,
 but in my experience it seems like smaller companies value productivity / "getting things done" more
@@ -168,8 +168,8 @@ In some cases, for instance if you're at a really small company or working on a 
 high-visibility product in a larger company, the visibility comes for free. In other cases,
 though, you need to do extra work to get this. Some tips here include:
 
-1. Do regular "skip level" 1:1s with your manager's manager. If they don't understand your work
-  and support
+1. Do regular "skip level" 1:1s with your manager's manager; if they don't understand your work
+  and aren't promoting you to others, then it's going to be hard to get ahead.
 2. Send out progress reports, launch announcements, etc. so others beyond your immediate team
   know what you and your colleagues are working on.
 3. Write blog posts, present at conferences, do internal "tech talks", and participate in other

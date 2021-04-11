@@ -260,6 +260,7 @@ different aspects of the "platform" that apps run on in an organization. As with
 allocate lots of time, plan out the work carefully, and use third-party solutions (e.g., clusters
 managed by cloud providers) whenever possible as opposed to building things from scratch.
 
-The migration process is hard, and there are definitely still some rough edges in the
-Kubernetes ecosystem, but I think the end result can really improve developer happiness and
-productivity if implemented in a sensible way. Good luck!
+Even with strong execution, the migration can take years and require contributions from
+engineering teams across the company. It's hard work, and there are definitely still some rough
+edges in the Kubernetes ecosystem, but I think the end result can really improve developer
+happiness and productivity if implemented in a sensible way. Good luck!
