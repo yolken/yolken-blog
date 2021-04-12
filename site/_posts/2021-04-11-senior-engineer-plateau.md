@@ -3,6 +3,7 @@ layout: post
 title:  "The senior engineer plateau"
 date:   2021-04-11 14:01:00 -0700
 categories: career
+published: false
 excerpt: |
     For several years of my career, I was stuck at the "senior engineer" level, and this made me
     feel frustrated and stuck at the associated jobs. In this post, I want to explain how this
