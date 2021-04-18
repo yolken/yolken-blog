@@ -5,20 +5,23 @@ date:   2021-02-15 14:15:00 -0700
 categories: general tech
 excerpt: |
     Software engineers are an interesting bunch. While quirks are fine, and I have a few myself,
-    there are certain traits I've encountered that are genuinely counterproductive to my team's
-    work. In this post, I want to explain what these are and how I try to deal with people who
-    exhibit them.
+    there are certain traits that show up on the personality side that can be genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I
+    try to deal with them.
 ---
 
 Software engineers are an interesting bunch. Over the course of my career thus far,
 I've interacted with hundreds of colleagues, and it feels like I've seen everything- people who
-refuse to wear shoes, people who can't make eye contact when talking, people who voluntarily start
-their day at 6PM, and many other behaviors that would be considered "weird" in normal workplaces.
+won't wear shoes, people who refuse to have their ID picture taken, people who voluntarily start
+their day at 9PM, and many other behaviors that would be considered "weird" in normal workplaces.
 
 Most of these quirks don't bother me, and I have a few of my own. However, there are certain
-traits I've encountered, particularly on the personality side, that are genuinely
-counterproductive to my team's work. In this post, I want to explain what these are and how I try
-to deal with people who exhibit them.
+traits that show up on the personality side that can be genuinely counterproductive to my team's
+work. In this post, I want to explain what these are and how I try to deal with them.
+
+Note that I'm *not* trying to demonize or stigmatize anyone here as I think everyone, myself
+included, exhibits these traits sometimes to a certain extent. Rather, the point is to understand
+what they are, recognize when they're getting in the way, and mitigate their effects so that we can
+all be happier and more productive as we're trying to get our work done.
 
 ## Non-optimal personas
 
