@@ -3,18 +3,21 @@ layout: post
 title:  "The senior engineer plateau"
 date:   2021-04-11 14:01:00 -0700
 categories: career
-published: false
+published: true
 excerpt: |
-    For several years of my career, I was stuck at the "senior engineer" level, and this made me
-    feel frustrated and stuck at the associated jobs. In this post, I want to explain how this
-    plateau happened, why it frustrated me, and some general tips for navigating out of it.
+  At many companies the "senior engineer" level is fairly straightforward to get into, but hard to
+  get promoted beyond. The difficulty in advancing past "senior" can cause a lot of frustration and
+  make people feel stuck in their careers. In this post, I want to share some observations about this "senior engineer plateau", why it causes frustration, and how to navigate out of it.
 ---
 
-For several years of my career, I was stuck at the "senior engineer" level, and this made me
-feel frustrated and stuck at the associated jobs.
+A large percentage of software engineers spend years at the "senior engineer" level. At
+many companies, including most of my former employers (i.e., Google, Twitter, Airbnb, and Stripe),
+this level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in
+advancing past "senior" can cause a lot of frustration and make people feel stuck in their
+careers.
 
-In this post, I want to explain how this "plateau" happened, why it frustrated me, and
-some general tips for navigating out of it.
+In this post, I want to share some observations about this "senior engineer plateau", why
+it causes frustration, and how to navigate out of it.
 
 ## Aside: The senior engineer level
 
@@ -38,33 +41,20 @@ roles can come with significantly more compensation (discussed below) and becaus
 is expected to get up to these levels, companies are much, much pickier about how and why they
 promote people into them.
 
-## My level history
+## Aside: Why level matters
 
-I started my engineering career at MoPub, which, as a small startup, didn't have formal
-levels for individual contributors (ICs). When we were acquired by Twitter, I was slotted at
-the staff level, which was great and happened for various reasons that I describe more below.
+A common statement I hear is that "levels don't matter" and thus that people shouldn't care whether
+they're stuck at senior or somewhere else on the ladder for a long time.
 
-For my next two jobs, at Airbnb and Stripe, I was back at the senior level. At both places, but
-particularly at Stripe (since that happened later in my career after I had accumulated more
-experience), I felt a bit stuck and frustrated at the difficulty in advancing.
+While this is true from a strictly title-based standpoint (personally, and like many others, I
+really don't care whether my LinkedIn profile says "software engineer" as opposed to "staff software
+engineer" or something else), the reality is that levels are more than just words.
 
-In my most recent job at Segment, I'm back up at the staff level and on a path for further
-advancement (I hope!), which has made me happier.
+First, they're an acknowledgement of the work that you've done. Many engineers, myself included,
+are motivated by working on things that matter, and levels are one way (but certainly not the only
+way) to express that one's work is valued and has had a positive impact at the company.
 
-## Why level matters
-
-A common statement I hear is that "levels don't matter" and thus that you shouldn't care whether
-you're stuck at senior or somewhere else on the ladder for a long time.
-
-While this is true from a strictly title-based standpoint (personally, I really don't care whether
-my LinkedIn profile says "software engineer" as opposed to "staff software engineer" or something
-else), the reality is that levels are more than just words.
-
-First, they're an acknowledgement of the work that you've done. Like most engineers,
-I'm motivated by working on things that matter, and levels are one way (but certainly not the only
-way) to express that your work is valued and has had a positive impact at the company.
-
-Second, and probably more importantly for many, levels play a big role in compensation. As
+Second, and probably more importantly for many, levels can play a big role in compensation. As
 described in [my earlier blog post](/blog/stop-hiding-levels), each level has associated salary and
 equity bands. Once you hit the upper end of the band, which may happen relatively quickly if you
 negotiated well for your initial offer, it's hard to get significant increases from year-to-year.
@@ -72,36 +62,46 @@ negotiated well for your initial offer, it's hard to get significant increases f
 There are a few other ways, beyond pay bands, that levels affect compensation. At some companies
 significant equity increases are tied to promotion. If you don't get promoted, you might not get
 stock refreshers frequently. Also, at companies with bonus programs, the target is often tied
-to level. At Stripe, for instance, senior engineers had a target of 10% of base salary
+to level. When I was at Stripe, for instance, senior engineers had a target of 10% of base salary
 whereas staff had a 20% one. This meant that, all else being equal, staff engineers would get
 significantly larger bonuses. Google also had level-specific targets when I was there.
 
-## Frustrations
+These links between levels and pay are not always 100% fair, but they're the reality of the
+compensation systems at most tech companies. Thus, you sometimes need to "work the system"
+around levels to ensure that you're paid competitively.
+
+## Common frustrations
+
+The following sections describe some of the common frustrations that I've felt myself and/or
+observed in other senior engineers over my last few jobs.
 
 #### Productivity alone is not sufficient
 
-I consider my productivity to be one of my greatest strengths as an engineer. I just like getting
-stuff done, writing code, fixing bugs, etc. and care less about all of the overhead around
-promoting my projects, meeting with users, navigating around bureaucracy, and so forth.
+Many senior engineers are super productive from a coding standpoint- because they're experienced
+enough to know what they're doing (usually) and because they don't have the extra responsibilities
+of managers and more senior level ICs, they're often at the sweet spot where they can "get stuff
+done" with minimal distractions.
 
-At both Airbnb and Stripe, I felt that I was super productive from a code generation standpoint,
-but when it came time to do calibration and make promotion decisions, it didn't really matter
-that much. The evaluators were looking for more general impact, and productivity was just one
-among many other data points.
+Unfortunately, though, this productivity alone is often not sufficient for getting promoted.
+It's a data point for sure, but at many companies it's just one of many things that's considered.
 
-Personally, I found that frustrating not only because it didn't align optimally with my strengths
-but also because it seems like code *should be* the primary criterion for evaluating software
-engineers. Software engineers are hired to write software just as doctors are hired to treat
-patients and artists are hired to make art. If I'm comparing two engineers or two doctors or two
-artists and one produces twice as much output as the other at equivalent quality, I feel like the
-more productive one should be at a level that pays twice as much. But, alas, that's not how the
-world works, whether in software or in other professions.
+This causes frustration for many, and was personally something that puzzled me earlier in my
+career, because intuitively it feels like productivity *should* be the main criterion for promotion.
+Engineers are hired to create software just as doctors are hired to treat patients and artists are
+hired to make art. So, if you are more hard-working and efficient at creating software and related
+outputs (e.g., documentation, bug fixes, etc.) than others, you should be rewarded with a promotion.
+
+But, alas, this isn't how most career ladders are set up- these systems reward "impact" as opposed
+to "output". Productivity is a necessary condition for having a positive impact in an
+organization, but, particularly as you get into higher levels, other things like working on
+projects that are sufficiently complex, demonstrating cross-team leadership, being visible, etc. are
+required as well.
 
 #### Breadth over depth
 
-A related frustration I've had with getting to staff level at large companies is that the
-promotion criteria place a bigger emphasis on breadth as opposed to depth. You can be an expert
-in a technical field and do great work there, but if you don't also check off other boxes
+A related frustration I've seen with getting to staff level at large companies is that the
+promotion criteria often place a bigger emphasis on breadth as opposed to depth. You can be an
+expert in a technical field and do great work there, but if you don't also check off other boxes
 (e.g., cross-team coordination, mentorship, etc.), then you'll likely hit roadblocks in getting
 to the next level.
 
@@ -132,20 +132,19 @@ problem that isn't flashy and doesn't naturally lend itself to cross-company vis
 
 This might come across as a bit extreme, but if you really care about career advancement then
 the most important thing is to find a company and a role where the work and evaluation criteria
-match your strengths. As mentioned above, I feel that I'm strongest on the productivity side
-and less good at the "cross team coordination", "high-level architecture leadership", and other
-dimensions that high-level ICs are promoted for. Other people, however, might excel at the latter
-and not want to spend all day pumping out pull requests.
+match your strengths. Personally, I feel that I'm strongest on the productivity side
+and less good at the "cross-team coordination", "evangelizing new technologies across the company",
+and other dimensions that high-level ICs are promoted for. Other people, however, might excel at
+the latter and not want to spend all day pumping out pull requests.
 
-I don't have a ton of data to validate this, and this is probably an overly broad generalization,
-but in my experience it seems like smaller companies value productivity / "getting things done" more
-whereas larger companies place less emphasis on this and more on the other, "broad impact"
-traits. I think that's why I've had more career success at MoPub and Segment as opposed to
-the larger employers I was at in between.
+It's important to note here that there can be a ton of variation not only between companies at a
+high-level but also between the roles within a company. Backend infrastructure engineers in
+division X, for instance, might be evaluated differently than frontend product engineers in the same
+division, and these two groups might be evaluated differently than engineers doing similar work in
+division Y at the same company.
 
-Independent of company size, the details will vary a lot from place to place, so it's important
-to assess your strengths, understand what level you're coming in at, and evaluate how easy or
-hard it will be to advance *before* you sign a job offer.
+Before you sign a new job offer or switch teams inside a company, it's really important to assess
+your strengths and compare them to the work outputs and behaviors that are rewarded for the role.
 
 #### Make sure you check the boxes
 
@@ -179,9 +178,9 @@ though, you need to do extra work to get this. Some tips here include:
 ## Conclusion
 
 At many companies, the senior engineer level is easy to get into but hard to advance beyond.
-I personally felt "stuck" at senior earlier in my career, and it seems that this is not
-an uncommon experience among software engineers.
+I personally felt stuck at senior earlier in my career and many of my colleagues over the years
+have experienced similar feelings.
 
 The key thing is to realize how the system works and ensure that where you're working and what
-you're working on is aligned with your long-term career goals. Once you achieve this alignment,
+you're working on are aligned with your long-term career goals. Once you achieve this alignment,
 advancing can still be slow but at least there's a clear, achievable path to follow.
