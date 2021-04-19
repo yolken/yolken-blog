@@ -1,24 +1,22 @@
 ---
 layout: post
-title:  "Migrating to Kubernetes is hard"
-date:   2021-04-05 13:06:00 -0700
+title:  "Migrating to Kubernetes, part 1: Moving on from the legacy service platform"
+date:   2021-04-17 13:06:00 -0700
 categories: general tech
 excerpt: |
-    Over the last few years, I've worked on
-    migrations at several companies- Airbnb, Stripe, and Segment (my current employer). In this
-    post, I want to talk about why these migrations are done, what they involve, and why they can
-    be hard.
+    Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and
+    Segment. In this post, I want to talk about why these migrations are done and what they involve
+    from the platform standpoint.
 ---
 
 Over the last few years, I've worked on
 [Kubernetes](https://kubernetes.io/) migrations at several companies-
-Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why
-these migrations are done, what they involve, and why they can be hard.
+Airbnb, Stripe, and, most recently, Segment (my current employer). In this post, I want to talk
+about why these migrations are done and what they involve from the platform standpoint.
 
-Unlike my previous post on [why service meshes are hard](/blog/service-meshes), my goal
-here is not to dissuade you from doing the migration in the first place, but rather to
-make it clear that there are a lot of decisions to be made and lots of work to be done.
-Migrating to Kubernetes can be very valuable, but you need to be prepared!
+Note that this post is the first of two in my "migrating to Kubernetes" series. Once you're
+read this one, check out [part 2](/blog/migrating-to-kubernetes-is-hard) on why these
+migrations are hard and some tips for a smoother transition to Kubernetes.
 
 ## Why migrate?
 
@@ -51,13 +49,14 @@ This includes not just whatever is being used to build and deploy applications, 
 also the wider set of infrastructure and tooling used for managing application environments
 in production.
 
-I'll call this pre-Kubernetes "bundle of stuff" a *legacy service platform* or *LSP* for
-short. Normally I hate the term "platform" since it's so overused (seems like it's super trendy
-at the moment for companies to be building "platforms" instead of "products"), but in this case I
-think it's actually appropriate- the LSP is literally a base on which applications in an
-organization are created and run.
+By analogy to the [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) products that are
+offered by some cloud providers, I'll call this pre-Kubernetes "bundle of stuff" a
+*legacy service platform* or *LeSP* for short. Normally I hate the term "platform" since it's so
+overused (seems like it's super trendy at the moment for companies to be building "platforms"
+instead of "products"), but in this case I think it's actually appropriate- the LeSP is literally a
+base on which applications in an organization are created and run.
 
-The exact details of the LSP will vary a lot from company to company. Typically, though,
+The exact details of the LeSP will vary a lot from company to company. Typically, though,
 they have some common characteristics.
 
 <div style="text-align:center">
@@ -66,7 +65,7 @@ they have some common characteristics.
 
 #### It's about machines
 
-In an LSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
+In an LeSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
 one provided by [AWS EC2](https://aws.amazon.com/ec2) or a physical box sitting in a data
 center somewhere.
 
@@ -109,11 +108,11 @@ up building their own because of the amount of customization required.
 
 ## Kubernetes service platforms
 
-When you migrate to Kubernetes, you're replacing the LSP with a new, Kubernetes-based service
+When you migrate to Kubernetes, you're replacing the LeSP with a new, Kubernetes-based service
 platform. Following the same naming style, let's call this thing a *Kubernetes service platform*
-or *KSP* for short.
+or *KuSP* for short.
 
-KSPs have a few big differences from LSPs, which are described in the sections below.
+KuSPs have a few big differences from LeSPs, which are described in the sections below.
 
 <div style="text-align:center">
 <img src="/assets/kubernetes2.png" alt="kubernetes service platform" width="700"/>
@@ -121,7 +120,7 @@ KSPs have a few big differences from LSPs, which are described in the sections b
 
 #### It's about containers
 
-In the KSP, as opposed to the LSP, the main unit of compute is a *container*, not a machine.
+In the KuSP, as opposed to the LeSP, the main unit of compute is a *container*, not a machine.
 At a high level, a container is just a semi-isolated process. Each container runs from an *image*,
 which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
 needed to create the environment in which the container runs.
@@ -167,100 +166,17 @@ configuring container networking, mounting container disk volumes, storing and e
 secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
 APIs for viewing logs, allowing developers to "exec" into containers for debugging purposes, etc.
 
-Not all of these things are required. You may, for instance, be able to keep using your LSP
+Not all of these things are required. You may, for instance, be able to keep using your LeSP
 secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
 be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
 extra work.
 
-## Why migrating is hard
-
-### You're migrating a platform, not a system
-
-The main reason that migrating to Kubernetes is hard is that you're not just updating a single
-component- you're migrating to an entirely new *platform*, the KSP, that
-has its own set of assumptions, requirements, and interfaces.
-
-As described previously, the biggest shift in going from an LSP to a KSP is in the use of
-containers. Containers require images, which means that you need new workflows for defining,
-building, testing, and storing these. Containers usually have a different networking setup than
-that of "regular" LSP application processes, which means that your networking infrastructure
-(how you allocate IPs, how service discovery works, how certs are provisioned, etc.) may have to
-change.
-
-Having containers and orchestrating them via Kubernetes will typically also require changes to
-whatever frameworks you're using for logging, metrics, secrets, performance monitoring, deploys,
-and other app lifecycle tooling. Although it's possible to keep using the LSP
-equivalents for these, at a minimum the interfaces will be slightly different; logs, for
-instance, will be written into a different place in the file system, and in a different format,
-which means that whatever log collector/forwarder you're using will need to be reconfigured.
-
-Many of these updates aren't scary when considered independently. However, there are a lot of
-them to do and there are a lot of problems that can be encountered along the way, so the whole
-process can take a long time from end-to-end. And, it's hard to any run mission-critical services in
-the KSP in production before you have at least some basic implementations in place for each of the
-core platform components.
-
-### Identity is at a different granularity
-
-As mentioned previously, a KSP typically separates machine identity from application identity.
-While this is nice from a security and isolation standpoint, it can be a huge pain, particularly
-if legacy systems have ingrained the idea that machines map 1:1 to identities.
-
-In the AWS world, for instance, IAM roles and network interfaces (with their associated IP
-addresses and security group designations) are typically tied to EC2 instances. Supporting
-container-level roles, externally addressable IPs, security groups, etc. is possible and has been
-getting slightly better over time, but is not yet super easy.
-
-If you're running a service mesh, then you'll need to worry about pod-level certificates
-and proxies. Third party frameworks like [Istio](https://istio.io/) can help here, but
-they're non-trivial to deploy and operate.
-
-### Configuration is complex
-
-The Kubernetes configuration for a simple, single-container application is
-[not too terrible](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment).
-However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
-health probes, and other features that production systems might need, these configs can get
-pretty hairy.
-
-This complexity leads to at least two problems when adopting Kubernetes. First, you need
-to figure out how to set all of the knobs that the configs expose, which can require reading a
-lot of documentation and going through a lot of trial and error. Second, when multiplied out across
-dozens (or hundreds) of apps running across different environments, manually creating and updating
-the corpus of Kubernetes configs for an organization can become really tedious- you need some
-tooling to help.
-
-Most companies address the second issue with a combination of YAML templating (via systems like
-[Helm](https://helm.sh/)) and higher-level, organization-specific config generation tools. These
-help, but none of the existing options here is really perfect. See
-[this post](https://segment.com/blog/kubernetes-configuration/) that
-I wrote for the Segment engineering blog last year for more detail.
-
-As part of the migration process, you need to evaluate the various approaches here and either
-adopt a third-party tool or write you own, which can be a non-trivial amount of work.
-
-### Some batteries not included
-
-Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
-includes don't cover 100% of what you need to run Kubernetes in production. Several big chunks,
-most significantly
-[service networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/), are
-specified in high-level terms but not actually implemented.
-
-Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
-identity mapping issues described above, however, there may be a lot of work involved to
-evaluate the various options, make a decision about which ones to use, and deploy them in your
-clusters.
-
 ## Conclusion
 
-Migrating to Kubernetes is a big deal because it's a complicated system, and it touches on so many
-different aspects of the "platform" that apps run on in an organization. As with
-[migrating to a service mesh](http://localhost:4000/blog/service-meshes), my advice here is to
-allocate lots of time, plan out the work carefully, and use third-party solutions (e.g., clusters
-managed by cloud providers) whenever possible as opposed to building things from scratch.
+Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LeSP)
+to a shiny, new, container-based one (the KuSP). This transition doesn't just change how
+processes are executed at a low-level, but also affects higher-level things like application
+identity.
 
-Even with strong execution, the migration can take years and require contributions from
-engineering teams across the company. It's hard work, and there are definitely still some rough
-edges in the Kubernetes ecosystem, but I think the end result can really improve developer
-happiness and productivity if implemented in a sensible way. Good luck!
+The [next post](/blog/migrating-to-kubernetes-is-hard) in this series describes why
+the migration is hard and what can be done to make it a bit less painful.
