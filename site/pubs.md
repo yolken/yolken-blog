@@ -1,7 +1,8 @@
 ---
 title: Publications
+short_title: Pubs
 layout: page
-order: 2
+order: 3
 ---
 
 ## Non-Academic
