@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Migrating to Kubernetes, part 1: Moving from the legacy service platform"
+title:  "Migrating to Kubernetes, part 1: Moving on from the legacy service platform"
 date:   2021-04-17 13:06:00 -0700
 categories: general tech
 excerpt: |
     Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and
-    Segment (my current employer). In this post, I want to talk about why these migrations are done
-    and what they involve from the platform standpoint.
+    Segment. In this post, I want to talk about why these migrations are done and what they involve
+    from the platform standpoint.
 ---
 
 Over the last few years, I've worked on
 [Kubernetes](https://kubernetes.io/) migrations at several companies-
-Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why
-these migrations are done and what they involve from the platform standpoint.
+Airbnb, Stripe, and, most recently, Segment (my current employer). In this post, I want to talk
+about why these migrations are done and what they involve from the platform standpoint.
 
 Note that this post is the first of two in my "migrating to Kubernetes" series. Once you're
 read this one, check out [part 2](/blog/migrating-to-kubernetes-is-hard) on why these
-migrations are hard and tips for a smoother transition to Kubernetes.
+migrations are hard and some tips for a smoother transition to Kubernetes.
 
 ## Why migrate?
 
@@ -49,13 +49,14 @@ This includes not just whatever is being used to build and deploy applications, 
 also the wider set of infrastructure and tooling used for managing application environments
 in production.
 
-I'll call this pre-Kubernetes "bundle of stuff" a *legacy service platform* or *LESP* for
-short. Normally I hate the term "platform" since it's so overused (seems like it's super trendy
-at the moment for companies to be building "platforms" instead of "products"), but in this case I
-think it's actually appropriate- the LESP is literally a base on which applications in an
-organization are created and run.
+By analogy to the [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) products that are
+offered by some cloud providers, I'll call this pre-Kubernetes "bundle of stuff" a
+*legacy service platform* or *LeSP* for short. Normally I hate the term "platform" since it's so
+overused (seems like it's super trendy at the moment for companies to be building "platforms"
+instead of "products"), but in this case I think it's actually appropriate- the LeSP is literally a
+base on which applications in an organization are created and run.
 
-The exact details of the LESP will vary a lot from company to company. Typically, though,
+The exact details of the LeSP will vary a lot from company to company. Typically, though,
 they have some common characteristics.
 
 <div style="text-align:center">
@@ -64,7 +65,7 @@ they have some common characteristics.
 
 #### It's about machines
 
-In an LESP, the main unit of compute is a *machine*, either a virtual machine (VM) like
+In an LeSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
 one provided by [AWS EC2](https://aws.amazon.com/ec2) or a physical box sitting in a data
 center somewhere.
 
@@ -107,11 +108,11 @@ up building their own because of the amount of customization required.
 
 ## Kubernetes service platforms
 
-When you migrate to Kubernetes, you're replacing the LESP with a new, Kubernetes-based service
+When you migrate to Kubernetes, you're replacing the LeSP with a new, Kubernetes-based service
 platform. Following the same naming style, let's call this thing a *Kubernetes service platform*
-or *KUSP* for short.
+or *KuSP* for short.
 
-KUSPs have a few big differences from LESPs, which are described in the sections below.
+KuSPs have a few big differences from LeSPs, which are described in the sections below.
 
 <div style="text-align:center">
 <img src="/assets/kubernetes2.png" alt="kubernetes service platform" width="700"/>
@@ -119,7 +120,7 @@ KUSPs have a few big differences from LESPs, which are described in the sections
 
 #### It's about containers
 
-In the KUSP, as opposed to the LESP, the main unit of compute is a *container*, not a machine.
+In the KuSP, as opposed to the LeSP, the main unit of compute is a *container*, not a machine.
 At a high level, a container is just a semi-isolated process. Each container runs from an *image*,
 which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
 needed to create the environment in which the container runs.
@@ -165,12 +166,17 @@ configuring container networking, mounting container disk volumes, storing and e
 secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
 APIs for viewing logs, allowing developers to "exec" into containers for debugging purposes, etc.
 
-Not all of these things are required. You may, for instance, be able to keep using your LESP
+Not all of these things are required. You may, for instance, be able to keep using your LeSP
 secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
 be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
 extra work.
 
 ## Conclusion
 
-Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LESP)
-to a shiny, new, container-based one (the KUSP).
+Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LeSP)
+to a shiny, new, container-based one (the KuSP). This transition doesn't just change how
+processes are executed at a low-level, but also affects higher-level things like application
+identity.
+
+The [next post](/blog/migrating-to-kubernetes-is-hard) in this series describes why
+the migration is hard and what can be done to make it a bit less painful.
