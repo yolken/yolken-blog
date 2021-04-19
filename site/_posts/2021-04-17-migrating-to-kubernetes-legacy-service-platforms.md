@@ -176,7 +176,7 @@ extra work.
 Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LeSP)
 to a shiny, new, container-based one (the KuSP). This transition doesn't just change how
 processes are executed at a low-level, but also affects higher-level things like application
-identity.
+identity and deploys.
 
 The [next post](/blog/migrating-to-kubernetes-is-hard) in this series describes why
 the migration is hard and what can be done to make it a bit less painful.
