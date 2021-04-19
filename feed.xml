@@ -1,4 +1,362 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-18T16:27:08-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">The senior engineer plateau</title><link href="https://yolken.net/blog/senior-engineer-plateau" rel="alternate" type="text/html" title="The senior engineer plateau" /><published>2021-04-11T14:01:00-07:00</published><updated>2021-04-11T14:01:00-07:00</updated><id>https://yolken.net/blog/senior-engineer-plateau</id><content type="html" xml:base="https://yolken.net/blog/senior-engineer-plateau">&lt;p&gt;A large percentage of software engineers spend years at the “senior engineer” level. At
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-18T19:23:08-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Migrating to Kubernetes, part 2: Why it’s hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 2: Why it’s hard" /><published>2021-04-18T16:47:00-07:00</published><updated>2021-04-18T16:47:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;In my &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;previous post&lt;/a&gt;, I described
+how migrating to Kubernetes involves transitioning an organization’s infrastructure from a
+legacy service platform (LeSP) to a Kubernetes service platform (KuSP). In this post, I want
+to go into more details on why this migration is hard and what you can do to reduce the pain.&lt;/p&gt;
+
+&lt;p&gt;Unlike my previous post on &lt;a href=&quot;/blog/service-meshes&quot;&gt;why service meshes are hard&lt;/a&gt;, my goal
+here is not to dissuade you from doing the migration in the first place, but rather to
+make it clear that there are a lot of decisions to be made and lots of work to be done.
+Migrating to Kubernetes can be very valuable, but you need to be prepared!&lt;/p&gt;
+
+&lt;h2 id=&quot;why-its-hard&quot;&gt;Why it’s hard&lt;/h2&gt;
+
+&lt;h3 id=&quot;youre-migrating-a-platform-not-a-system&quot;&gt;You’re migrating a platform, not a system&lt;/h3&gt;
+
+&lt;p&gt;The main reason that migrating to Kubernetes is hard is that you’re not just updating a single
+component- you’re migrating to an entirely new &lt;em&gt;platform&lt;/em&gt;, the KuSP, that
+has its own set of assumptions, requirements, and interfaces.&lt;/p&gt;
+
+&lt;p&gt;As described in &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;part 1&lt;/a&gt;, the biggest shift
+in going from an LeSP to a KuSP is in the use of containers. Containers require images, which means
+that you need new workflows for defining, building, testing, and storing these. Containers usually
+have a different networking setup than that of “regular” LeSP application processes, which means
+that your networking infrastructure (how you allocate IPs, how service discovery works, how certs
+are provisioned, etc.) may have to change.&lt;/p&gt;
+
+&lt;p&gt;Having containers and orchestrating them via Kubernetes will typically also require changes to
+whatever frameworks you’re using for logging, metrics, secrets, performance monitoring, deploys,
+and other app lifecycle tooling. Although it’s possible to keep using the LeSP
+equivalents for these, at a minimum the interfaces will be slightly different; logs, for
+instance, will be written into a different place in the file system, and in a different format,
+which means that whatever log collector/forwarder you’re using will need to be reconfigured.&lt;/p&gt;
+
+&lt;p&gt;Many of these updates aren’t scary when considered independently. However, there are a lot of
+them to do and there are a lot of problems that can be encountered along the way, so the whole
+process can take a long time from end-to-end. And, it’s hard to any run mission-critical services in
+the KuSP in production before you have at least some basic implementations in place for each of the
+core platform components.&lt;/p&gt;
+
+&lt;h3 id=&quot;identity-is-at-a-different-granularity&quot;&gt;Identity is at a different granularity&lt;/h3&gt;
+
+&lt;p&gt;As mentioned in &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;part 1&lt;/a&gt;, a KuSP typically
+separates machine identity from application identity.
+While this is nice from a security and isolation standpoint, it can be a huge pain, particularly
+if legacy systems have ingrained the idea that machines map 1:1 to identities.&lt;/p&gt;
+
+&lt;p&gt;In the AWS world, for instance, IAM roles and network interfaces (with their associated IP
+addresses and security group designations) are typically tied to EC2 instances. Supporting
+container-level roles, externally addressable IPs, security groups, etc. is possible and has been
+getting slightly better over time, but is not yet super easy.&lt;/p&gt;
+
+&lt;p&gt;If you’re running a service mesh, then you’ll need to worry about pod-level certificates
+and proxies. Third party frameworks like &lt;a href=&quot;https://istio.io/&quot;&gt;Istio&lt;/a&gt; can help here, but
+they’re non-trivial to deploy and operate.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration-is-complex&quot;&gt;Configuration is complex&lt;/h3&gt;
+
+&lt;p&gt;The Kubernetes configuration for a simple, single-container application is
+&lt;a href=&quot;https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment&quot;&gt;not too terrible&lt;/a&gt;.
+However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
+health probes, and other features that production systems might need, these configs can get
+pretty hairy.&lt;/p&gt;
+
+&lt;p&gt;This complexity leads to at least two problems when adopting Kubernetes. First, you need
+to figure out how to set all of the knobs that the configs expose, which can require reading a
+lot of documentation and going through a lot of trial and error. Second, when multiplied out across
+dozens (or hundreds) of apps running across different environments, manually creating and updating
+the corpus of Kubernetes configs for an organization can become really tedious- you need some
+tooling to help.&lt;/p&gt;
+
+&lt;p&gt;Most companies address the second issue with a combination of YAML templating (via systems like
+&lt;a href=&quot;https://helm.sh/&quot;&gt;Helm&lt;/a&gt;) and higher-level, organization-specific config generation tools. These
+help, but none of the existing options here is really perfect. See
+&lt;a href=&quot;https://segment.com/blog/kubernetes-configuration/&quot;&gt;this post&lt;/a&gt; that
+I wrote for the Segment engineering blog last year for more detail.&lt;/p&gt;
+
+&lt;p&gt;As part of the migration process, you need to evaluate the various approaches here and either
+adopt a third-party tool or write you own, which can be a non-trivial amount of work.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-batteries-not-included&quot;&gt;Some batteries not included&lt;/h3&gt;
+
+&lt;p&gt;Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
+includes don’t cover 100% of what you need to run Kubernetes in production. Several big chunks,
+most significantly
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/cluster-administration/networking/&quot;&gt;service networking&lt;/a&gt;, are
+specified in high-level terms but not actually implemented.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
+identity mapping issues described above, however, there may be a lot of work involved to
+evaluate the various options, make a decision about which ones to use, and deploy them in your
+clusters.&lt;/p&gt;
+
+&lt;h2 id=&quot;tips-for-a-smoother-migration&quot;&gt;Tips for a smoother migration&lt;/h2&gt;
+
+&lt;h3 id=&quot;pad-your-estimates&quot;&gt;Pad your estimates&lt;/h3&gt;
+
+&lt;p&gt;Migrating to Kubernetes in any medium-to-large organization is a really big, multi-year
+project. If you estimate that it will only take two quarters of work from two engineers, then
+you’re probably a bit off the mark unless you’re at a small company.&lt;/p&gt;
+
+&lt;p&gt;Estimating realistically at the beginning isn’t just for the team’s sanity- it’s also really
+important for setting expectations among your (internal) customers, who may be eagerly awaiting
+Kubernetes to address the pain points they’re facing in the organization’s LeSP. If they
+believe that the KuSP can be flicked on with a switch and that it will magically wash away
+all of their infrastructure management woes, then they’re bound to be disappointed when
+reality sets in down the line.&lt;/p&gt;
+
+&lt;h3 id=&quot;identify-key-customers&quot;&gt;Identify key customers&lt;/h3&gt;
+
+&lt;p&gt;Rather than make Kubernetes work for everyone from the beginning, it’s helpful to initially
+focus on a small number of “key customers”. Ideally, these are engineering teams that are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Frustrated by one or more limitations in the existing LeSP&lt;/li&gt;
+  &lt;li&gt;Technically savvy when it comes to infrastructure&lt;/li&gt;
+  &lt;li&gt;Enthusiastic about Kubernetes in general&lt;/li&gt;
+  &lt;li&gt;Eager to get their hands dirty and make the project a success!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By working with just these customers, the team running the migration can focus on a limited
+subset of use cases and get active help on improving the associated tools and processes.
+Once these customers are migrated and happy with the results (hopefully), they can serve as examples
+of how to use the KuSP and also help evangelize the migration within the organization.&lt;/p&gt;
+
+&lt;p&gt;At Airbnb, we initially worked with the team that was running
+&lt;a href=&quot;https://airbnb.io/projects/superset/&quot;&gt;Superset&lt;/a&gt; internally. At Stripe, we partnered with the teams
+that were building the company’s
+&lt;a href=&quot;https://stripe.com/blog/railyard-training-models&quot;&gt;machine learning training pipelines&lt;/a&gt; and
+using these models to detect fraud in incoming charge requests. At both companies, doing these
+initial migrations was critical for proving that Kubernetes could work and provide value.&lt;/p&gt;
+
+&lt;h3 id=&quot;involve-the-entire-organization&quot;&gt;Involve the entire organization&lt;/h3&gt;
+
+&lt;p&gt;Migrating customers in a 1:1, “white glove” manner is fine, but unless you have a 30 person
+migration team, this high-touch approach won’t efficiently scale. Once you’re migrated
+the initial “key customers”, proved that Kubernetes will work, and worked out the initial bugs, you
+need to get help from the larger organization.&lt;/p&gt;
+
+&lt;p&gt;Ideally, most teams are responsible for migrating their services themselves. This frees up the
+Kubernetes team to answer questions, monitor the shared infrastructure, improve general usability
+and reliability, and focus on the hairier migrations that need more hand-holding.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, some teams might prioritize other things above helping out with a messy
+infrastructure migration that doesn’t directly benefit them. This is where management really needs
+to step in, set priorities, and make it clear that product features will be pushed back to
+make room for migration work. If management isn’t willing to this this, then that’s fine, but
+they’ll need to understand that the project will go on for a very, very long time without this
+help.&lt;/p&gt;
+
+&lt;h3 id=&quot;dont-just-focus-on-the-long-tail&quot;&gt;Don’t just focus on the long tail&lt;/h3&gt;
+
+&lt;p&gt;It’s tempting when doing a Kubernetes migration to start with small, non-critical services and then
+gradually work up to the big, “monster” services that lots of people work on and are key for
+delivering the company’s products.&lt;/p&gt;
+
+&lt;p&gt;While it’s fine to focus on the long tail at the beginning, I think procrastinating too much on
+attacking whatever “the beasts” are at an organization (e.g., that old, crufty service that
+handles all the API requests) can really be a detriment and reduce the project’s momentum.&lt;/p&gt;
+
+&lt;p&gt;First, these larger services are typically where there’s the most pain and where a migration
+can have the biggest impact on engineer productivity. Second, the only way to really flush out
+the bugs and rough edges, both in terms of usability and also in terms of the performance and
+reliability of the technology, is to exercise the KuSP in a high-usage, high-traffic environment.&lt;/p&gt;
+
+&lt;p&gt;If you’re only using Kubernetes for the less critical components of your stack, then it’s hard
+to claim that Kubernetes (and, by extension, your team’s work) is critical to the success of your
+company.&lt;/p&gt;
+
+&lt;h3 id=&quot;avoid-scope-creep&quot;&gt;Avoid scope creep&lt;/h3&gt;
+
+&lt;p&gt;Handling just the “must haves” in a Kubernetes migration is hard enough. Resist the temptation
+to treat this as an opportunity to fix every other legacy platform component that’s in a
+non-optimal state, particularly if the migration makes these things no worse than before.&lt;/p&gt;
+
+&lt;p&gt;While it would be great to get Kubernetes bundled with a new networking stack, a new secrets system,
+a new logging system, etc. each of these extra dimensions adds more more things that will be
+unfamiliar to users, and more things that can break in production. Focus on what is needed to
+migrate successfully, then handle the “nice to haves” in later phases of the project.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Migrating to Kubernetes is a big deal because it’s a complicated system, and it touches on so many
+different aspects of the “platform” that apps run on in an organization.&lt;/p&gt;
+
+&lt;p&gt;Even with strong execution, the migration can take years and require contributions from
+engineering teams across the company. It’s hard work, and there are definitely still some rough
+edges in the Kubernetes ecosystem, but I think the end result can really improve developer
+happiness and productivity if implemented in a sensible way. Good luck!&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">In my previous post, I described how migrating to Kubernetes involves transitioning an organization's infrastructure from a legacy service platform (LeSP) to a Kubernetes service platform (KuSP). In this post, I want to go into more details on why this migration is hard and what you can do to reduce the pain associated with this transition.</summary></entry><entry><title type="html">Migrating to Kubernetes, part 1: Moving on from the legacy service platform</title><link href="https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 1: Moving on from the legacy service platform" /><published>2021-04-17T13:06:00-07:00</published><updated>2021-04-17T13:06:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms">&lt;p&gt;Over the last few years, I’ve worked on
+&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; migrations at several companies-
+Airbnb, Stripe, and, most recently, Segment (my current employer). In this post, I want to talk
+about why these migrations are done and what they involve from the platform standpoint.&lt;/p&gt;
+
+&lt;p&gt;Note that this post is the first of two in my “migrating to Kubernetes” series. Once you’re
+read this one, check out &lt;a href=&quot;/blog/migrating-to-kubernetes-is-hard&quot;&gt;part 2&lt;/a&gt; on why these
+migrations are hard and some tips for a smoother transition to Kubernetes.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-migrate&quot;&gt;Why migrate?&lt;/h2&gt;
+
+&lt;p&gt;There’s lots of existing documentation about what Kubernetes is and how it works (e.g.,
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/&quot;&gt;this one&lt;/a&gt;), so
+I won’t cover those here. It is worth noting, however, the primary reasons that many companies
+decide to migrate to Kubernetes from their legacy platforms (discussed more in the next section):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;The ecosystem:&lt;/em&gt; A vast ecosystem of tools and apps has developed around
+  Kubernetes over the last few years. By using Kubernetes internally, it’s easier to take
+  advantage of the work that others have done, both in the infrastructure layer (e.g.,
+  for networking, service discovery, etc.) and in the applications that are
+  being run on top.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Vendor agnosticism:&lt;/em&gt; Kubernetes provides a layer of abstraction on top of whatever
+  you’re using to provision individual machines and the associated infrastructure (networking,
+  persistent disks, etc.). In theory, switching to Kubernetes makes it easier to do things
+  like switch between cloud providers, although in practice this is still hard because
+  of all the non-Kubernetes-related infrastructure you need to migrate as well.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Easier, more self-service workload management:&lt;/em&gt; Kubernetes exposes a rich set of APIs
+  and controllers for deploying applications, ensuring that they run reliably, and enabling
+  developers to debug them when things go wrong. In theory, developers can take advantage
+  of these features “out of the box”, without worrying about low-level machine details,
+  writing lots of custom tooling, or depending on a separate “infra” team in the organization
+  to set things up.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;legacy-service-platforms&quot;&gt;Legacy service platforms&lt;/h2&gt;
+
+&lt;p&gt;The process for migrating to Kubernetes depends a lot on what you’re migrating from.
+This includes not just whatever is being used to build and deploy applications, but
+also the wider set of infrastructure and tooling used for managing application environments
+in production.&lt;/p&gt;
+
+&lt;p&gt;By analogy to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Platform_as_a_service&quot;&gt;PaaS&lt;/a&gt; products that are
+offered by some cloud providers, I’ll call this pre-Kubernetes “bundle of stuff” a
+&lt;em&gt;legacy service platform&lt;/em&gt; or &lt;em&gt;LeSP&lt;/em&gt; for short. Normally I hate the term “platform” since it’s so
+overused (seems like it’s super trendy at the moment for companies to be building “platforms”
+instead of “products”), but in this case I think it’s actually appropriate- the LeSP is literally a
+base on which applications in an organization are created and run.&lt;/p&gt;
+
+&lt;p&gt;The exact details of the LeSP will vary a lot from company to company. Typically, though,
+they have some common characteristics.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img src=&quot;/assets/kubernetes1.png&quot; alt=&quot;legacy service platform&quot; width=&quot;700&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;its-about-machines&quot;&gt;It’s about machines&lt;/h4&gt;
+
+&lt;p&gt;In an LeSP, the main unit of compute is a &lt;em&gt;machine&lt;/em&gt;, either a virtual machine (VM) like
+one provided by &lt;a href=&quot;https://aws.amazon.com/ec2&quot;&gt;AWS EC2&lt;/a&gt; or a physical box sitting in a data
+center somewhere.&lt;/p&gt;
+
+&lt;p&gt;Machines are provisioned from a &lt;em&gt;base image&lt;/em&gt; that includes the operating system and other,
+low-level software. There is then a &lt;em&gt;configuration management&lt;/em&gt; process, typically orchestrated
+by a framework like &lt;a href=&quot;https://www.chef.io&quot;&gt;Chef&lt;/a&gt; or &lt;a href=&quot;https://puppet.com/&quot;&gt;Puppet&lt;/a&gt;, that
+installs the higher-level tools and systems needed to run applications on the box- these might
+include language runtimes for things like Python and Ruby, log and metrics collectors, performance
+monitoring tools, and company-specific automation scripts, among other things.&lt;/p&gt;
+
+&lt;h4 id=&quot;applications-and-identities&quot;&gt;Applications and identities&lt;/h4&gt;
+
+&lt;p&gt;Each machine is configured and provisioned for a specific application. So, if you have ten different
+services running in production, you’ll typically have ten different machine variants, each
+running in a separate pool. The “zebra” service will have “zebra machines” that contain
+the specific things it needs to run (maybe a
+&lt;a href=&quot;https://www.infoworld.com/article/3304858/what-is-the-jre-introduction-to-the-java-runtime-environment.html&quot;&gt;JRE&lt;/a&gt;),
+the “cheetah” service will have “cheetah machines” that contain what it needs (maybe a Ruby
+interpreter and an Nginx process), and so forth.&lt;/p&gt;
+
+&lt;p&gt;Identity, as it pertains to networking and authentication, is at the granularity of a
+machine. All processes running on the same host use the same IP address(es), the same cloud role,
+the same x509 certificates, etc. So, the “zebra machines” will run with the “zebra” role,
+use a “zebra” certificate, live in a “zebra” network security group, etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;deploys&quot;&gt;Deploys&lt;/h4&gt;
+
+&lt;p&gt;The primary application processes on each instance are typically created and updated by a
+higher-level &lt;em&gt;deploy system&lt;/em&gt;. So, for instance, if a developer wants to update the
+“zebra” service in production from version 1234 to version 1235, they would give the deploy system
+the new version (or this would be automatically detected), and then the latter system would
+handle getting onto each of the “zebra machines”, pulling down an updated artifact, extracting out
+whatever binaries, scripts, and configs the application needs to run the new version, and
+restarting the app.&lt;/p&gt;
+
+&lt;p&gt;These deploy systems are typically pretty complicated because they need to support all of the
+various rules, workflows, and infrastructure quirks specific to each organization. A few, like
+Netflix’s &lt;a href=&quot;https://spinnaker.io/&quot;&gt;Spinnaker&lt;/a&gt;, have been open-sourced, but many companies still end
+up building their own because of the amount of customization required.&lt;/p&gt;
+
+&lt;h2 id=&quot;kubernetes-service-platforms&quot;&gt;Kubernetes service platforms&lt;/h2&gt;
+
+&lt;p&gt;When you migrate to Kubernetes, you’re replacing the LeSP with a new, Kubernetes-based service
+platform. Following the same naming style, let’s call this thing a &lt;em&gt;Kubernetes service platform&lt;/em&gt;
+or &lt;em&gt;KuSP&lt;/em&gt; for short.&lt;/p&gt;
+
+&lt;p&gt;KuSPs have a few big differences from LeSPs, which are described in the sections below.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;img src=&quot;/assets/kubernetes2.png&quot; alt=&quot;kubernetes service platform&quot; width=&quot;700&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;its-about-containers&quot;&gt;It’s about containers&lt;/h4&gt;
+
+&lt;p&gt;In the KuSP, as opposed to the LeSP, the main unit of compute is a &lt;em&gt;container&lt;/em&gt;, not a machine.
+At a high level, a container is just a semi-isolated process. Each container runs from an &lt;em&gt;image&lt;/em&gt;,
+which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
+needed to create the environment in which the container runs.&lt;/p&gt;
+
+&lt;p&gt;Containers run in machines, so you still need to provision them, but configuration for these
+machines can be simpler and more generic. The main requirement is to install
+a container runtime such as &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Once the latter is in place, you can
+use it to run containers for your applications and various helper services (for logs, metrics,
+networking, etc.). You can still use Chef or Puppet if you want to, but these are less important
+because much of the heavy lifting is now done in the higher-level container and orchestration
+layers.&lt;/p&gt;
+
+&lt;h4 id=&quot;applications-and-identities-1&quot;&gt;Applications and identities&lt;/h4&gt;
+
+&lt;p&gt;In a container-based service platform, applications are less coupled to specific
+machine variants. The “zebra” service can still have its own, “zebra machine” pool, but this
+is less necessary than before because most of the service-specific components can be baked into the
+service image as opposed to being installed on the instances on which the container runs.&lt;/p&gt;
+
+&lt;p&gt;Identity also moves from the machine to the container layer. Each container can now have its own
+IP address, x509 certificate, cloud service role, etc. independent of the identity of the host
+that it’s running on. This isn’t a drop-dead requirement (containers can use the host network,
+for instance), but it’s considered best practice from a security and isolation standpoint to
+enforce this separation.&lt;/p&gt;
+
+&lt;h4 id=&quot;orchestration-via-kubernetes&quot;&gt;Orchestration via Kubernetes&lt;/h4&gt;
+
+&lt;p&gt;Containers by themselves are fairly low-level and specific to individual machines. Kubernetes
+adds yet another level of abstraction on top of containers that &lt;em&gt;orchestrates&lt;/em&gt; changes across
+containers in a &lt;em&gt;cluster&lt;/em&gt; of machines. With Kubernetes, applications are updated by changing
+the associated resources in the Kubernetes API. The Kubernetes control plane then figures
+out which containers on which instances need to be changed, and a special agent on each machine,
+the &lt;a href=&quot;https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/&quot;&gt;&lt;em&gt;kubelet&lt;/em&gt;&lt;/a&gt;,
+actually carries out the updates.&lt;/p&gt;
+
+&lt;p&gt;Although it’s still possible to have a custom deploy system for managing workflows and such,
+this system ends up delegating most of the low-level details of each update to the Kubernetes API.&lt;/p&gt;
+
+&lt;p&gt;Kubernetes doesn’t just handle image updates for individual containers. It provides a ton of
+other functionality as well including bundling containers together as a unit (i.e. a
+&lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/pods/&quot;&gt;&lt;em&gt;pod&lt;/em&gt;&lt;/a&gt;),
+configuring container networking, mounting container disk volumes, storing and exposing application
+secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
+APIs for viewing logs, allowing developers to “exec” into containers for debugging purposes, etc.&lt;/p&gt;
+
+&lt;p&gt;Not all of these things are required. You may, for instance, be able to keep using your LeSP
+secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
+be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
+extra work.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LeSP)
+to a shiny, new, container-based one (the KuSP). This transition doesn’t just change how
+processes are executed at a low-level, but also affects higher-level things like application
+identity.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/blog/migrating-to-kubernetes-is-hard&quot;&gt;next post&lt;/a&gt; in this series describes why
+the migration is hard and what can be done to make it a bit less painful.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and Segment. In this post, I want to talk about why these migrations are done and what they involve from the platform standpoint.</summary></entry><entry><title type="html">The senior engineer plateau</title><link href="https://yolken.net/blog/senior-engineer-plateau" rel="alternate" type="text/html" title="The senior engineer plateau" /><published>2021-04-11T14:01:00-07:00</published><updated>2021-04-11T14:01:00-07:00</updated><id>https://yolken.net/blog/senior-engineer-plateau</id><content type="html" xml:base="https://yolken.net/blog/senior-engineer-plateau">&lt;p&gt;A large percentage of software engineers spend years at the “senior engineer” level. At
 many companies, including most of my former employers (i.e., Google, Twitter, Airbnb, and Stripe),
 this level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in
 advancing past “senior” can cause a lot of frustration and make people feel stuck in their
@@ -173,262 +531,7 @@ have experienced similar feelings.&lt;/p&gt;
 
 &lt;p&gt;The key thing is to realize how the system works and ensure that where you’re working and what
 you’re working on are aligned with your long-term career goals. Once you achieve this alignment,
-advancing can still be slow but at least there’s a clear, achievable path to follow.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">At many companies the &quot;senior engineer&quot; level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in advancing past &quot;senior&quot; can cause a lot of frustration and make people feel stuck in their careers. In this post, I want to share some observations about this &quot;senior engineer plateau&quot;, why it causes frustration, and how to navigate out of it.</summary></entry><entry><title type="html">Migrating to Kubernetes is hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes is hard" /><published>2021-04-05T13:06:00-07:00</published><updated>2021-04-05T13:06:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;Over the last few years, I’ve worked on
-&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; migrations at several companies-
-Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why
-these migrations are done, what they involve, and why they can be hard.&lt;/p&gt;
-
-&lt;p&gt;Unlike my previous post on &lt;a href=&quot;/blog/service-meshes&quot;&gt;why service meshes are hard&lt;/a&gt;, my goal
-here is not to dissuade you from doing the migration in the first place, but rather to
-make it clear that there are a lot of decisions to be made and lots of work to be done.
-Migrating to Kubernetes can be very valuable, but you need to be prepared!&lt;/p&gt;
-
-&lt;h2 id=&quot;why-migrate&quot;&gt;Why migrate?&lt;/h2&gt;
-
-&lt;p&gt;There’s lots of existing documentation about what Kubernetes is and how it works (e.g.,
-&lt;a href=&quot;https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/&quot;&gt;this one&lt;/a&gt;), so
-I won’t cover those here. It is worth noting, however, the primary reasons that many companies
-decide to migrate to Kubernetes from their legacy platforms (discussed more in the next section):&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;em&gt;The ecosystem:&lt;/em&gt; A vast ecosystem of tools and apps has developed around
-  Kubernetes over the last few years. By using Kubernetes internally, it’s easier to take
-  advantage of the work that others have done, both in the infrastructure layer (e.g.,
-  for networking, service discovery, etc.) and in the applications that are
-  being run on top.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Vendor agnosticism:&lt;/em&gt; Kubernetes provides a layer of abstraction on top of whatever
-  you’re using to provision individual machines and the associated infrastructure (networking,
-  persistent disks, etc.). In theory, switching to Kubernetes makes it easier to do things
-  like switch between cloud providers, although in practice this is still hard because
-  of all the non-Kubernetes-related infrastructure you need to migrate as well.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Easier, more self-service workload management:&lt;/em&gt; Kubernetes exposes a rich set of APIs
-  and controllers for deploying applications, ensuring that they run reliably, and enabling
-  developers to debug them when things go wrong. In theory, developers can take advantage
-  of these features “out of the box”, without worrying about low-level machine details,
-  writing lots of custom tooling, or depending on a separate “infra” team in the organization
-  to set things up.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;legacy-service-platforms&quot;&gt;Legacy service platforms&lt;/h2&gt;
-
-&lt;p&gt;The process for migrating to Kubernetes depends a lot on what you’re migrating from.
-This includes not just whatever is being used to build and deploy applications, but
-also the wider set of infrastructure and tooling used for managing application environments
-in production.&lt;/p&gt;
-
-&lt;p&gt;I’ll call this pre-Kubernetes “bundle of stuff” a &lt;em&gt;legacy service platform&lt;/em&gt; or &lt;em&gt;LSP&lt;/em&gt; for
-short. Normally I hate the term “platform” since it’s so overused (seems like it’s super trendy
-at the moment for companies to be building “platforms” instead of “products”), but in this case I
-think it’s actually appropriate- the LSP is literally a base on which applications in an
-organization are created and run.&lt;/p&gt;
-
-&lt;p&gt;The exact details of the LSP will vary a lot from company to company. Typically, though,
-they have some common characteristics.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img src=&quot;/assets/kubernetes1.png&quot; alt=&quot;legacy service platform&quot; width=&quot;700&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;its-about-machines&quot;&gt;It’s about machines&lt;/h4&gt;
-
-&lt;p&gt;In an LSP, the main unit of compute is a &lt;em&gt;machine&lt;/em&gt;, either a virtual machine (VM) like
-one provided by &lt;a href=&quot;https://aws.amazon.com/ec2&quot;&gt;AWS EC2&lt;/a&gt; or a physical box sitting in a data
-center somewhere.&lt;/p&gt;
-
-&lt;p&gt;Machines are provisioned from a &lt;em&gt;base image&lt;/em&gt; that includes the operating system and other,
-low-level software. There is then a &lt;em&gt;configuration management&lt;/em&gt; process, typically orchestrated
-by a framework like &lt;a href=&quot;https://www.chef.io&quot;&gt;Chef&lt;/a&gt; or &lt;a href=&quot;https://puppet.com/&quot;&gt;Puppet&lt;/a&gt;, that
-installs the higher-level tools and systems needed to run applications on the box- these might
-include language runtimes for things like Python and Ruby, log and metrics collectors, performance
-monitoring tools, and company-specific automation scripts, among other things.&lt;/p&gt;
-
-&lt;h4 id=&quot;applications-and-identities&quot;&gt;Applications and identities&lt;/h4&gt;
-
-&lt;p&gt;Each machine is configured and provisioned for a specific application. So, if you have ten different
-services running in production, you’ll typically have ten different machine variants, each
-running in a separate pool. The “zebra” service will have “zebra machines” that contain
-the specific things it needs to run (maybe a
-&lt;a href=&quot;https://www.infoworld.com/article/3304858/what-is-the-jre-introduction-to-the-java-runtime-environment.html&quot;&gt;JRE&lt;/a&gt;),
-the “cheetah” service will have “cheetah machines” that contain what it needs (maybe a Ruby
-interpreter and an Nginx process), and so forth.&lt;/p&gt;
-
-&lt;p&gt;Identity, as it pertains to networking and authentication, is at the granularity of a
-machine. All processes running on the same host use the same IP address(es), the same cloud role,
-the same x509 certificates, etc. So, the “zebra machines” will run with the “zebra” role,
-use a “zebra” certificate, live in a “zebra” network security group, etc.&lt;/p&gt;
-
-&lt;h4 id=&quot;deploys&quot;&gt;Deploys&lt;/h4&gt;
-
-&lt;p&gt;The primary application processes on each instance are typically created and updated by a
-higher-level &lt;em&gt;deploy system&lt;/em&gt;. So, for instance, if a developer wants to update the
-“zebra” service in production from version 1234 to version 1235, they would give the deploy system
-the new version (or this would be automatically detected), and then the latter system would
-handle getting onto each of the “zebra machines”, pulling down an updated artifact, extracting out
-whatever binaries, scripts, and configs the application needs to run the new version, and
-restarting the app.&lt;/p&gt;
-
-&lt;p&gt;These deploy systems are typically pretty complicated because they need to support all of the
-various rules, workflows, and infrastructure quirks specific to each organization. A few, like
-Netflix’s &lt;a href=&quot;https://spinnaker.io/&quot;&gt;Spinnaker&lt;/a&gt;, have been open-sourced, but many companies still end
-up building their own because of the amount of customization required.&lt;/p&gt;
-
-&lt;h2 id=&quot;kubernetes-service-platforms&quot;&gt;Kubernetes service platforms&lt;/h2&gt;
-
-&lt;p&gt;When you migrate to Kubernetes, you’re replacing the LSP with a new, Kubernetes-based service
-platform. Following the same naming style, let’s call this thing a &lt;em&gt;Kubernetes service platform&lt;/em&gt;
-or &lt;em&gt;KSP&lt;/em&gt; for short.&lt;/p&gt;
-
-&lt;p&gt;KSPs have a few big differences from LSPs, which are described in the sections below.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;img src=&quot;/assets/kubernetes2.png&quot; alt=&quot;kubernetes service platform&quot; width=&quot;700&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;its-about-containers&quot;&gt;It’s about containers&lt;/h4&gt;
-
-&lt;p&gt;In the KSP, as opposed to the LSP, the main unit of compute is a &lt;em&gt;container&lt;/em&gt;, not a machine.
-At a high level, a container is just a semi-isolated process. Each container runs from an &lt;em&gt;image&lt;/em&gt;,
-which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
-needed to create the environment in which the container runs.&lt;/p&gt;
-
-&lt;p&gt;Containers run in machines, so you still need to provision them, but configuration for these
-machines can be simpler and more generic. The main requirement is to install
-a container runtime such as &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Once the latter is in place, you can
-use it to run containers for your applications and various helper services (for logs, metrics,
-networking, etc.). You can still use Chef or Puppet if you want to, but these are less important
-because much of the heavy lifting is now done in the higher-level container and orchestration
-layers.&lt;/p&gt;
-
-&lt;h4 id=&quot;applications-and-identities-1&quot;&gt;Applications and identities&lt;/h4&gt;
-
-&lt;p&gt;In a container-based service platform, applications are less coupled to specific
-machine variants. The “zebra” service can still have its own, “zebra machine” pool, but this
-is less necessary than before because most of the service-specific components can be baked into the
-service image as opposed to being installed on the instances on which the container runs.&lt;/p&gt;
-
-&lt;p&gt;Identity also moves from the machine to the container layer. Each container can now have its own
-IP address, x509 certificate, cloud service role, etc. independent of the identity of the host
-that it’s running on. This isn’t a drop-dead requirement (containers can use the host network,
-for instance), but it’s considered best practice from a security and isolation standpoint to
-enforce this separation.&lt;/p&gt;
-
-&lt;h4 id=&quot;orchestration-via-kubernetes&quot;&gt;Orchestration via Kubernetes&lt;/h4&gt;
-
-&lt;p&gt;Containers by themselves are fairly low-level and specific to individual machines. Kubernetes
-adds yet another level of abstraction on top of containers that &lt;em&gt;orchestrates&lt;/em&gt; changes across
-containers in a &lt;em&gt;cluster&lt;/em&gt; of machines. With Kubernetes, applications are updated by changing
-the associated resources in the Kubernetes API. The Kubernetes control plane then figures
-out which containers on which instances need to be changed, and a special agent on each machine,
-the &lt;a href=&quot;https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/&quot;&gt;&lt;em&gt;kubelet&lt;/em&gt;&lt;/a&gt;,
-actually carries out the updates.&lt;/p&gt;
-
-&lt;p&gt;Although it’s still possible to have a custom deploy system for managing workflows and such,
-this system ends up delegating most of the low-level details of each update to the Kubernetes API.&lt;/p&gt;
-
-&lt;p&gt;Kubernetes doesn’t just handle image updates for individual containers. It provides a ton of
-other functionality as well including bundling containers together as a unit (i.e. a
-&lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/pods/&quot;&gt;&lt;em&gt;pod&lt;/em&gt;&lt;/a&gt;),
-configuring container networking, mounting container disk volumes, storing and exposing application
-secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
-APIs for viewing logs, allowing developers to “exec” into containers for debugging purposes, etc.&lt;/p&gt;
-
-&lt;p&gt;Not all of these things are required. You may, for instance, be able to keep using your LSP
-secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
-be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
-extra work.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-migrating-is-hard&quot;&gt;Why migrating is hard&lt;/h2&gt;
-
-&lt;h3 id=&quot;youre-migrating-a-platform-not-a-system&quot;&gt;You’re migrating a platform, not a system&lt;/h3&gt;
-
-&lt;p&gt;The main reason that migrating to Kubernetes is hard is that you’re not just updating a single
-component- you’re migrating to an entirely new &lt;em&gt;platform&lt;/em&gt;, the KSP, that
-has its own set of assumptions, requirements, and interfaces.&lt;/p&gt;
-
-&lt;p&gt;As described previously, the biggest shift in going from an LSP to a KSP is in the use of
-containers. Containers require images, which means that you need new workflows for defining,
-building, testing, and storing these. Containers usually have a different networking setup than
-that of “regular” LSP application processes, which means that your networking infrastructure
-(how you allocate IPs, how service discovery works, how certs are provisioned, etc.) may have to
-change.&lt;/p&gt;
-
-&lt;p&gt;Having containers and orchestrating them via Kubernetes will typically also require changes to
-whatever frameworks you’re using for logging, metrics, secrets, performance monitoring, deploys,
-and other app lifecycle tooling. Although it’s possible to keep using the LSP
-equivalents for these, at a minimum the interfaces will be slightly different; logs, for
-instance, will be written into a different place in the file system, and in a different format,
-which means that whatever log collector/forwarder you’re using will need to be reconfigured.&lt;/p&gt;
-
-&lt;p&gt;Many of these updates aren’t scary when considered independently. However, there are a lot of
-them to do and there are a lot of problems that can be encountered along the way, so the whole
-process can take a long time from end-to-end. And, it’s hard to any run mission-critical services in
-the KSP in production before you have at least some basic implementations in place for each of the
-core platform components.&lt;/p&gt;
-
-&lt;h3 id=&quot;identity-is-at-a-different-granularity&quot;&gt;Identity is at a different granularity&lt;/h3&gt;
-
-&lt;p&gt;As mentioned previously, a KSP typically separates machine identity from application identity.
-While this is nice from a security and isolation standpoint, it can be a huge pain, particularly
-if legacy systems have ingrained the idea that machines map 1:1 to identities.&lt;/p&gt;
-
-&lt;p&gt;In the AWS world, for instance, IAM roles and network interfaces (with their associated IP
-addresses and security group designations) are typically tied to EC2 instances. Supporting
-container-level roles, externally addressable IPs, security groups, etc. is possible and has been
-getting slightly better over time, but is not yet super easy.&lt;/p&gt;
-
-&lt;p&gt;If you’re running a service mesh, then you’ll need to worry about pod-level certificates
-and proxies. Third party frameworks like &lt;a href=&quot;https://istio.io/&quot;&gt;Istio&lt;/a&gt; can help here, but
-they’re non-trivial to deploy and operate.&lt;/p&gt;
-
-&lt;h3 id=&quot;configuration-is-complex&quot;&gt;Configuration is complex&lt;/h3&gt;
-
-&lt;p&gt;The Kubernetes configuration for a simple, single-container application is
-&lt;a href=&quot;https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment&quot;&gt;not too terrible&lt;/a&gt;.
-However, as you add in init and sidecar containers, shared volumes, scheduling constraints,
-health probes, and other features that production systems might need, these configs can get
-pretty hairy.&lt;/p&gt;
-
-&lt;p&gt;This complexity leads to at least two problems when adopting Kubernetes. First, you need
-to figure out how to set all of the knobs that the configs expose, which can require reading a
-lot of documentation and going through a lot of trial and error. Second, when multiplied out across
-dozens (or hundreds) of apps running across different environments, manually creating and updating
-the corpus of Kubernetes configs for an organization can become really tedious- you need some
-tooling to help.&lt;/p&gt;
-
-&lt;p&gt;Most companies address the second issue with a combination of YAML templating (via systems like
-&lt;a href=&quot;https://helm.sh/&quot;&gt;Helm&lt;/a&gt;) and higher-level, organization-specific config generation tools. These
-help, but none of the existing options here is really perfect. See
-&lt;a href=&quot;https://segment.com/blog/kubernetes-configuration/&quot;&gt;this post&lt;/a&gt; that
-I wrote for the Segment engineering blog last year for more detail.&lt;/p&gt;
-
-&lt;p&gt;As part of the migration process, you need to evaluate the various approaches here and either
-adopt a third-party tool or write you own, which can be a non-trivial amount of work.&lt;/p&gt;
-
-&lt;h3 id=&quot;some-batteries-not-included&quot;&gt;Some batteries not included&lt;/h3&gt;
-
-&lt;p&gt;Kubernetes includes a powerful set of base API primitives and tooling. However, the pieces it
-includes don’t cover 100% of what you need to run Kubernetes in production. Several big chunks,
-most significantly
-&lt;a href=&quot;https://kubernetes.io/docs/concepts/cluster-administration/networking/&quot;&gt;service networking&lt;/a&gt;, are
-specified in high-level terms but not actually implemented.&lt;/p&gt;
-
-&lt;p&gt;Thankfully, there are solid, third-party solutions available for these missing pieces. As with the
-identity mapping issues described above, however, there may be a lot of work involved to
-evaluate the various options, make a decision about which ones to use, and deploy them in your
-clusters.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Migrating to Kubernetes is a big deal because it’s a complicated system, and it touches on so many
-different aspects of the “platform” that apps run on in an organization. As with
-&lt;a href=&quot;http://localhost:4000/blog/service-meshes&quot;&gt;migrating to a service mesh&lt;/a&gt;, my advice here is to
-allocate lots of time, plan out the work carefully, and use third-party solutions (e.g., clusters
-managed by cloud providers) whenever possible as opposed to building things from scratch.&lt;/p&gt;
-
-&lt;p&gt;Even with strong execution, the migration can take years and require contributions from
-engineering teams across the company. It’s hard work, and there are definitely still some rough
-edges in the Kubernetes ecosystem, but I think the end result can really improve developer
-happiness and productivity if implemented in a sensible way. Good luck!&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and Segment (my current employer). In this post, I want to talk about why these migrations are done, what they involve, and why they can be hard.</summary></entry><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
+advancing can still be slow but at least there’s a clear, achievable path to follow.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">At many companies the &quot;senior engineer&quot; level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in advancing past &quot;senior&quot; can cause a lot of frustration and make people feel stuck in their careers. In this post, I want to share some observations about this &quot;senior engineer plateau&quot;, why it causes frustration, and how to navigate out of it.</summary></entry><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T13:15:00-08:00</published><updated>2021-02-15T13:15:00-08:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas">&lt;p&gt;Software engineers are an interesting bunch. Over the course of my career thus far,
 I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
 won’t wear shoes, people who refuse to have their ID picture taken, people who voluntarily start
 their day at 9PM, and many other behaviors that would be considered “weird” in normal workplaces.&lt;/p&gt;
@@ -1776,197 +1879,4 @@ new positions, but once you’re settled in a job, having the degree isn’t a b
 
 &lt;p&gt;Tech can be a great place for PhDs, and, although I’m a bit biased, I think it’s better than the
 alternative career choices for many people. If you’re finishing up a PhD or stuck in an
-unfulfilling academic job, it’s totally worth exploring your options in the space.&lt;/p&gt;</content><author><name></name></author><category term="interviews" /><summary type="html">I spent 5 years of my life getting a PhD, but like many others who've gotten this degree, I decided to leave academia after graduation. At the time, I explored several career choices but ultimately decided to take a Product Manager job at Google. In this post, I want to discuss why I think tech is a great destination for people with technical PhDs.</summary></entry><entry><title type="html">How to do an architecture interview</title><link href="https://yolken.net/blog/architecture-interviews" rel="alternate" type="text/html" title="How to do an architecture interview" /><published>2020-12-24T11:26:00-08:00</published><updated>2020-12-24T11:26:00-08:00</updated><id>https://yolken.net/blog/architecture-interviews</id><content type="html" xml:base="https://yolken.net/blog/architecture-interviews">&lt;p&gt;Many software engineering interview loops include an “architecture interview”, where the
-candidate is asked to develop a high-level design for a software system. Over the last few
-years, I’ve given many, many of these interviews, so I’ve seen a wide range of performances
-across the spectrum, from “absolutely terrible” to “we need to hire this person now!”.&lt;/p&gt;
-
-&lt;p&gt;Based on these experiences, I’d like to share what it takes to succeed in these interviews as
-the candidate, and some common behaviors to avoid.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
-
-&lt;p&gt;Although the exact format can vary, most architecture interviews begin with an open-ended
-prompt of the form “design &lt;em&gt;X&lt;/em&gt;”. The &lt;em&gt;X&lt;/em&gt; can be filled in with a generic software system,
-for instance:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;A distributed &lt;a href=&quot;https://en.wikipedia.org/wiki/Key%E2%80%93value_database&quot;&gt;key/value store&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_crawler&quot;&gt;web crawler&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A video streaming system&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;An alternative, which I think is the more interesting approach, is to fill in the blank with
-a well-known product or product feature; some examples here include:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Generating the Facebook news feed&lt;/li&gt;
-  &lt;li&gt;Executing a Robinhood user’s trade flow&lt;/li&gt;
-  &lt;li&gt;Matching Uber drivers and riders&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The target design, whether generic or product-based, might be something related to the company’s
-own systems or products, but it’s often not.&lt;/p&gt;
-
-&lt;p&gt;The question is left open-ended and high-level deliberately. The interviewer is not looking for
-a specific answer (usually), but rather wants to observe the process by which you break down
-the problem, dig into the pieces, and justify your decisions. As you discuss your solution,
-the interviewer will ask questions, steer you towards or away from specific areas, and really try
-to understand what it would be like to collaborate with you on the design of a real project.&lt;/p&gt;
-
-&lt;h2 id=&quot;structure-is-key&quot;&gt;Structure is key&lt;/h2&gt;
-
-&lt;p&gt;Because the questions are so open-ended, and because you’re being evaluated as much on your
-process as your specific solution, structuring your answer is really, really important. Here’s
-a structure that I think works well for most of these questions.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1-clarification&quot;&gt;Step 1: Clarification&lt;/h3&gt;
-
-&lt;p&gt;Once you get the question, the first step is to make sure you understand what you’re being asked
-to design. For the “design a system to match Uber drivers and riders” example, for instance,
-if you’ve never used Uber before it’s probably good to say that and ask for more details.
-Even if you’re familiar with the thing being asked about, it’s helpful to draw a simple picture
-with stick figures to make sure that you and the interviewer are on the same page.&lt;/p&gt;
-
-&lt;p&gt;This is also the time to ask about rough orders of magnitude scale (e.g., how many requests
-per second are expected, etc.). However, I wouldn’t get too bogged down in these numbers- a
-good design should have lots of room for growth and not be built to a specific set of static
-dimensions.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2-high-level-drawing&quot;&gt;Step 2: High-level drawing&lt;/h3&gt;
-
-&lt;p&gt;Next, you should draw out a high-level diagram that shows the major pieces and how they’re
-connected. As discussed later on, the idea here is to be high-level and not over-engineer at
-this phase. You should mention that you’re deliberately being simple and high-level,
-and that you’ll dig into improvements later so the interview knows that you’re not being sloppy.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/simple_architecture_diagram.png&quot; alt=&quot;Simple architecture diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the Uber case, as in many others, you’ll probably have clients, a layer of web servers,
-and some sort of storage layer that keeps track of the states of the users and other entities
-in the system.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3-interface-details&quot;&gt;Step 3: Interface details&lt;/h3&gt;
-
-&lt;p&gt;Once you have a picture of the main pieces, I think it’s really useful to describe the system
-interface, i.e. what are the specific inputs and outputs, independent
-of any internal implementation details. In the case of a client/server type design (most common),
-these map to the requests that the clients make and the responses that they get.&lt;/p&gt;
-
-&lt;p&gt;Being really specific about these (the different types, what they include, etc.) ensures that
-you and the interviewer are on the same page and also guides the discussion of the implementation
-details in later steps.&lt;/p&gt;
-
-&lt;p&gt;In the Uber example, you’ll have requests from the rider client (i.e., app) for a ride, requests
-from the driver client to change status, to accept a potential ride or not, etc. In this specific
-example, the request flows can be fairly complex and are probably an important part of the design.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-4-implementation-details&quot;&gt;Step 4: Implementation details&lt;/h3&gt;
-
-&lt;p&gt;Once you’ve defined the high-level pieces and the interfaces, it’s time to dig into the internal
-implementation details. There are many different things you could focus on here, so it’s really
-important to lean on your interviewer for guidance. Some potential topics to cover here include:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Tradeoffs in choices around specific components (e.g., using a relational DB vs. a
-  &lt;a href=&quot;https://en.wikipedia.org/wiki/NoSQL&quot;&gt;NoSQL&lt;/a&gt; solution)&lt;/li&gt;
-  &lt;li&gt;How a specific request type is handled end-to-end (including DB changes, etc.)&lt;/li&gt;
-  &lt;li&gt;Schemas for any data stores&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;step-5-enhancements-for-scalability-performance-etc&quot;&gt;Step 5: Enhancements for scalability, performance, etc.&lt;/h3&gt;
-
-&lt;p&gt;Once your interface and basic implementation are in place, you can then discuss how to increase the
-maximum load that your system can handle. This is also a good time to talk about the reliability of
-your design and what you could do to improve it, if applicable.&lt;/p&gt;
-
-&lt;p&gt;As with the previous step, it’s really important to lean on your interviewer here and try to
-dig into the areas that they feel are the most interesting to cover.&lt;/p&gt;
-
-&lt;p&gt;Although the exact solutions will vary based on the context, some general approaches that may
-be helpful here include:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Replication:&lt;/strong&gt; Stateless components can be replicated to handle more traffic and be
-  resilient to failures in individual instances. This may also help for stateful things like DBs if
-  you send the reads and writes to different instances and can hand-wave away
-  &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_consistency&quot;&gt;consistency&lt;/a&gt; issues.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sharding:&lt;/strong&gt; Splitting up your traffic by geography, user id, etc. and allocating each bucket to
-  a semi-independent copy of your system may allow you to increase scale without redesigning
-  everything from scratch.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Caching:&lt;/strong&gt; Adding caches in front of read-only data can significantly improve performance in
-  many cases and reduce DB load.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Queueing:&lt;/strong&gt; Adding queues in your system may improve reliability and shield downstream
-  components from load spikes. However, it can increase latency and also is hard to implement in
-  synchronous request flows, so it’s most appropriate for asynchronous data pipelines.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;common-mistakes&quot;&gt;Common mistakes&lt;/h2&gt;
-
-&lt;p&gt;Even with good structure, there are some very common traps that candidates fall into that
-reduce the quality of their answers in my view.&lt;/p&gt;
-
-&lt;h3 id=&quot;being-too-service-oriented&quot;&gt;Being too service-oriented&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Service-oriented_architecture&quot;&gt;Service-oriented-architecture (SOA)&lt;/a&gt;
-is a design pattern which eschews monolithic components for more specialized, distributed ones.
-Over time, it’s evolved into the idea of breaking up monolithic systems into lots of tiny
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Microservices&quot;&gt;microservices&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So, for instance, instead of having a single server that both accepts requests from clients
-and updates the DB, you might introduce a “database service” between the app server and the
-database. Now, you have two services instead of one. Over time, the original app server is split
-out further and further until it’s just a router without any business logic in it.&lt;/p&gt;
-
-&lt;p&gt;While SOA and its microservices variant have benefits in some cases, they’re super easy to abuse,
-make designs significantly more complex, and, without more understanding of the motivations, might
-not be necessary in a real-world, large-scale system at all.&lt;/p&gt;
-
-&lt;p&gt;Here’s an extreme example of what I don’t want to see:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/excessive_soa.png&quot; alt=&quot;Excessive SOA&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Err on the side of being monolithic, then split things out later in the interview if and only if
-there’s a good reason to do so.&lt;/p&gt;
-
-&lt;h3 id=&quot;over-engineering-too-early&quot;&gt;Over-engineering too early&lt;/h3&gt;
-
-&lt;p&gt;Related to SOA abuse is over-engineering your solution too early in the process. Yes,
-having 3 layers of caching, or a queue between your app servers and your DB, or a fancy sharded
-data store might make your system more scalable. However, it’s unlikely that you’ll need those
-in the first iteration, they make your design significantly more complex, and, without more testing
-and iteration, it’s impossible to know how much these things will actually help.&lt;/p&gt;
-
-&lt;p&gt;As mentioned earlier, start simple and then add complexity later in your answer if needed.
-Adding complexity is easier than removing it, and this also matches how many real-world systems
-are implemented.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-components-you-dont-fully-understand&quot;&gt;Using components you don’t fully understand&lt;/h3&gt;
-
-&lt;p&gt;Don’t include overly-hyped technologies in your solution (“Kafka!”, “Cassandra!”,
-“machine learning!”) unless you really understand them and have day-to-day experience using them.
-Otherwise, you’re likely to use them in the wrong way or look like an idiot when the interviewer
-asks you follow-ups about how they work.&lt;/p&gt;
-
-&lt;p&gt;It’s much better to stick to less-sexy things that you actually know, e.g. MySQL, which can still be
-(and actually are) the basis for many real-world, large scale systems. In the course of your
-answer, it’s fine to mention other technologies that might be relevant, but you should explain that
-you don’t have a lot of experience with them so you’d need to do more investigation before including
-them in your design.&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-specific-in-the-wrong-areas&quot;&gt;Getting specific in the wrong areas&lt;/h3&gt;
-
-&lt;p&gt;It’s impossible to cover all of the details of a complex system like Uber’s ride matching
-in a 45-60 minute interview. When you focus too much on one specific thing (e.g., the database
-schema), you’re necessarily omitting the chance to cover other aspects of the problem in a very
-detailed way.&lt;/p&gt;
-
-&lt;p&gt;As mentioned earlier, start at a high-level and then dig into the lower-level components that your
-interviewer steers you towards. Don’t waste time on details that your interviewer doesn’t care
-about.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Doing well in an architecture interview is prerequisite for many software positions, particularly
-the higher-level ones. Having a solid structure, starting from a high-level, avoiding
-over-engineering, and sticking to what you know are the keys to success.&lt;/p&gt;</content><author><name></name></author><category term="interviews" /><summary type="html">Many software engineering interview loops include an &quot;architecture interview&quot;, where the candidate is asked to develop a high-level design for a software system. Over the last few years, I've given many, many of these interviews. Based on these experiences, I'd like to share what it takes to succeed in them, and some common behaviors to avoid.</summary></entry></feed>
+unfulfilling academic job, it’s totally worth exploring your options in the space.&lt;/p&gt;</content><author><name></name></author><category term="interviews" /><summary type="html">I spent 5 years of my life getting a PhD, but like many others who've gotten this degree, I decided to leave academia after graduation. At the time, I explored several career choices but ultimately decided to take a Product Manager job at Google. In this post, I want to discuss why I think tech is a great destination for people with technical PhDs.</summary></entry></feed>

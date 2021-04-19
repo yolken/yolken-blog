@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Migrating to Kubernetes, part 1: Moving on from the legacy service platform | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Migrating to Kubernetes, part 1: Moving on from the legacy service platform" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Over the last few years, I’ve worked on migrations at several companies- Airbnb, Stripe, and Segment. In this post, I want to talk about why these migrations are done and what they involve from the platform standpoint." />
+<meta property="og:description" content="Over the last few years, I’ve worked on migrations at several companies- Airbnb, Stripe, and Segment. In this post, I want to talk about why these migrations are done and what they involve from the platform standpoint." />
+<link rel="canonical" href="https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms" />
+<meta property="og:url" content="https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-17T13:06:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Migrating to Kubernetes, part 1: Moving on from the legacy service platform" />
+<script type="application/ld+json">
+{"url":"https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms","headline":"Migrating to Kubernetes, part 1: Moving on from the legacy service platform","dateModified":"2021-04-17T13:06:00-07:00","datePublished":"2021-04-17T13:06:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/migrating-to-kubernetes-legacy-service-platforms"},"description":"Over the last few years, I’ve worked on migrations at several companies- Airbnb, Stripe, and Segment. In this post, I want to talk about why these migrations are done and what they involve from the platform standpoint.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Migrating to Kubernetes, part 1: Moving on from the legacy service platform</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-04-17T13:06:00-07:00" itemprop="datePublished">Apr 17, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Over the last few years, I’ve worked on
+<a href="https://kubernetes.io/">Kubernetes</a> migrations at several companies-
+Airbnb, Stripe, and, most recently, Segment (my current employer). In this post, I want to talk
+about why these migrations are done and what they involve from the platform standpoint.</p>
+
+<p>Note that this post is the first of two in my “migrating to Kubernetes” series. Once you’re
+read this one, check out <a href="/blog/migrating-to-kubernetes-is-hard">part 2</a> on why these
+migrations are hard and some tips for a smoother transition to Kubernetes.</p>
+
+<h2 id="why-migrate">Why migrate?</h2>
+
+<p>There’s lots of existing documentation about what Kubernetes is and how it works (e.g.,
+<a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">this one</a>), so
+I won’t cover those here. It is worth noting, however, the primary reasons that many companies
+decide to migrate to Kubernetes from their legacy platforms (discussed more in the next section):</p>
+
+<ol>
+  <li><em>The ecosystem:</em> A vast ecosystem of tools and apps has developed around
+  Kubernetes over the last few years. By using Kubernetes internally, it’s easier to take
+  advantage of the work that others have done, both in the infrastructure layer (e.g.,
+  for networking, service discovery, etc.) and in the applications that are
+  being run on top.</li>
+  <li><em>Vendor agnosticism:</em> Kubernetes provides a layer of abstraction on top of whatever
+  you’re using to provision individual machines and the associated infrastructure (networking,
+  persistent disks, etc.). In theory, switching to Kubernetes makes it easier to do things
+  like switch between cloud providers, although in practice this is still hard because
+  of all the non-Kubernetes-related infrastructure you need to migrate as well.</li>
+  <li><em>Easier, more self-service workload management:</em> Kubernetes exposes a rich set of APIs
+  and controllers for deploying applications, ensuring that they run reliably, and enabling
+  developers to debug them when things go wrong. In theory, developers can take advantage
+  of these features “out of the box”, without worrying about low-level machine details,
+  writing lots of custom tooling, or depending on a separate “infra” team in the organization
+  to set things up.</li>
+</ol>
+
+<h2 id="legacy-service-platforms">Legacy service platforms</h2>
+
+<p>The process for migrating to Kubernetes depends a lot on what you’re migrating from.
+This includes not just whatever is being used to build and deploy applications, but
+also the wider set of infrastructure and tooling used for managing application environments
+in production.</p>
+
+<p>By analogy to the <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> products that are
+offered by some cloud providers, I’ll call this pre-Kubernetes “bundle of stuff” a
+<em>legacy service platform</em> or <em>LeSP</em> for short. Normally I hate the term “platform” since it’s so
+overused (seems like it’s super trendy at the moment for companies to be building “platforms”
+instead of “products”), but in this case I think it’s actually appropriate- the LeSP is literally a
+base on which applications in an organization are created and run.</p>
+
+<p>The exact details of the LeSP will vary a lot from company to company. Typically, though,
+they have some common characteristics.</p>
+
+<div style="text-align:center">
+<img src="/assets/kubernetes1.png" alt="legacy service platform" width="700" />
+</div>
+
+<h4 id="its-about-machines">It’s about machines</h4>
+
+<p>In an LeSP, the main unit of compute is a <em>machine</em>, either a virtual machine (VM) like
+one provided by <a href="https://aws.amazon.com/ec2">AWS EC2</a> or a physical box sitting in a data
+center somewhere.</p>
+
+<p>Machines are provisioned from a <em>base image</em> that includes the operating system and other,
+low-level software. There is then a <em>configuration management</em> process, typically orchestrated
+by a framework like <a href="https://www.chef.io">Chef</a> or <a href="https://puppet.com/">Puppet</a>, that
+installs the higher-level tools and systems needed to run applications on the box- these might
+include language runtimes for things like Python and Ruby, log and metrics collectors, performance
+monitoring tools, and company-specific automation scripts, among other things.</p>
+
+<h4 id="applications-and-identities">Applications and identities</h4>
+
+<p>Each machine is configured and provisioned for a specific application. So, if you have ten different
+services running in production, you’ll typically have ten different machine variants, each
+running in a separate pool. The “zebra” service will have “zebra machines” that contain
+the specific things it needs to run (maybe a
+<a href="https://www.infoworld.com/article/3304858/what-is-the-jre-introduction-to-the-java-runtime-environment.html">JRE</a>),
+the “cheetah” service will have “cheetah machines” that contain what it needs (maybe a Ruby
+interpreter and an Nginx process), and so forth.</p>
+
+<p>Identity, as it pertains to networking and authentication, is at the granularity of a
+machine. All processes running on the same host use the same IP address(es), the same cloud role,
+the same x509 certificates, etc. So, the “zebra machines” will run with the “zebra” role,
+use a “zebra” certificate, live in a “zebra” network security group, etc.</p>
+
+<h4 id="deploys">Deploys</h4>
+
+<p>The primary application processes on each instance are typically created and updated by a
+higher-level <em>deploy system</em>. So, for instance, if a developer wants to update the
+“zebra” service in production from version 1234 to version 1235, they would give the deploy system
+the new version (or this would be automatically detected), and then the latter system would
+handle getting onto each of the “zebra machines”, pulling down an updated artifact, extracting out
+whatever binaries, scripts, and configs the application needs to run the new version, and
+restarting the app.</p>
+
+<p>These deploy systems are typically pretty complicated because they need to support all of the
+various rules, workflows, and infrastructure quirks specific to each organization. A few, like
+Netflix’s <a href="https://spinnaker.io/">Spinnaker</a>, have been open-sourced, but many companies still end
+up building their own because of the amount of customization required.</p>
+
+<h2 id="kubernetes-service-platforms">Kubernetes service platforms</h2>
+
+<p>When you migrate to Kubernetes, you’re replacing the LeSP with a new, Kubernetes-based service
+platform. Following the same naming style, let’s call this thing a <em>Kubernetes service platform</em>
+or <em>KuSP</em> for short.</p>
+
+<p>KuSPs have a few big differences from LeSPs, which are described in the sections below.</p>
+
+<div style="text-align:center">
+<img src="/assets/kubernetes2.png" alt="kubernetes service platform" width="700" />
+</div>
+
+<h4 id="its-about-containers">It’s about containers</h4>
+
+<p>In the KuSP, as opposed to the LeSP, the main unit of compute is a <em>container</em>, not a machine.
+At a high level, a container is just a semi-isolated process. Each container runs from an <em>image</em>,
+which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
+needed to create the environment in which the container runs.</p>
+
+<p>Containers run in machines, so you still need to provision them, but configuration for these
+machines can be simpler and more generic. The main requirement is to install
+a container runtime such as <a href="https://www.docker.com/">Docker</a>. Once the latter is in place, you can
+use it to run containers for your applications and various helper services (for logs, metrics,
+networking, etc.). You can still use Chef or Puppet if you want to, but these are less important
+because much of the heavy lifting is now done in the higher-level container and orchestration
+layers.</p>
+
+<h4 id="applications-and-identities-1">Applications and identities</h4>
+
+<p>In a container-based service platform, applications are less coupled to specific
+machine variants. The “zebra” service can still have its own, “zebra machine” pool, but this
+is less necessary than before because most of the service-specific components can be baked into the
+service image as opposed to being installed on the instances on which the container runs.</p>
+
+<p>Identity also moves from the machine to the container layer. Each container can now have its own
+IP address, x509 certificate, cloud service role, etc. independent of the identity of the host
+that it’s running on. This isn’t a drop-dead requirement (containers can use the host network,
+for instance), but it’s considered best practice from a security and isolation standpoint to
+enforce this separation.</p>
+
+<h4 id="orchestration-via-kubernetes">Orchestration via Kubernetes</h4>
+
+<p>Containers by themselves are fairly low-level and specific to individual machines. Kubernetes
+adds yet another level of abstraction on top of containers that <em>orchestrates</em> changes across
+containers in a <em>cluster</em> of machines. With Kubernetes, applications are updated by changing
+the associated resources in the Kubernetes API. The Kubernetes control plane then figures
+out which containers on which instances need to be changed, and a special agent on each machine,
+the <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/"><em>kubelet</em></a>,
+actually carries out the updates.</p>
+
+<p>Although it’s still possible to have a custom deploy system for managing workflows and such,
+this system ends up delegating most of the low-level details of each update to the Kubernetes API.</p>
+
+<p>Kubernetes doesn’t just handle image updates for individual containers. It provides a ton of
+other functionality as well including bundling containers together as a unit (i.e. a
+<a href="https://kubernetes.io/docs/concepts/workloads/pods/"><em>pod</em></a>),
+configuring container networking, mounting container disk volumes, storing and exposing application
+secrets (e.g., DB passwords), monitoring container health, restarting failed containers, exposing
+APIs for viewing logs, allowing developers to “exec” into containers for debugging purposes, etc.</p>
+
+<p>Not all of these things are required. You may, for instance, be able to keep using your LeSP
+secrets system instead of migrating to Kubernetes secrets. But, there are a lot of choices to
+be made here, and using non-standard or non-Kubernetes-aware solutions here might require some
+extra work.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Migrating to Kubernetes involves moving from a machine-based, legacy service platform (LeSP)
+to a shiny, new, container-based one (the KuSP). This transition doesn’t just change how
+processes are executed at a low-level, but also affects higher-level things like application
+identity.</p>
+
+<p>The <a href="/blog/migrating-to-kubernetes-is-hard">next post</a> in this series describes why
+the migration is hard and what can be done to make it a bit less painful.</p>
+
+  </div>
+
+  <a class="u-url" href="/blog/migrating-to-kubernetes-legacy-service-platforms" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
