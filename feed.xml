@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-18T19:38:32-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Migrating to Kubernetes, part 2: Why it’s hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 2: Why it’s hard" /><published>2021-04-18T16:47:00-07:00</published><updated>2021-04-18T16:47:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;In my &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;previous post&lt;/a&gt;, I described
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-25T20:31:23-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Migrating to Kubernetes, part 2: Why it’s hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 2: Why it’s hard" /><published>2021-04-18T16:47:00-07:00</published><updated>2021-04-18T16:47:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;In my &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;previous post&lt;/a&gt;, I described
 how migrating to Kubernetes involves transitioning an organization’s infrastructure from a
 legacy service platform (LeSP) to a Kubernetes service platform (KuSP). In this post, I want
 to go into more details on why this migration is hard and what you can do to reduce the pain.&lt;/p&gt;
@@ -17,7 +17,7 @@ component- you’re migrating to an entirely new &lt;em&gt;platform&lt;/em&gt;, 
 has its own set of assumptions, requirements, and interfaces.&lt;/p&gt;
 
 &lt;p&gt;As described in &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;part 1&lt;/a&gt;, the biggest shift
-in going from an LeSP to a KuSP is in the use of containers. Containers require images, which means
+in going from a LeSP to a KuSP is in the use of containers. Containers require images, which means
 that you need new workflows for defining, building, testing, and storing these. Containers usually
 have a different networking setup than that of “regular” LeSP application processes, which means
 that your networking infrastructure (how you allocate IPs, how service discovery works, how certs
@@ -32,7 +32,7 @@ which means that whatever log collector/forwarder you’re using will need to be
 
 &lt;p&gt;Many of these updates aren’t scary when considered independently. However, there are a lot of
 them to do and there are a lot of problems that can be encountered along the way, so the whole
-process can take a long time from end-to-end. And, it’s hard to any run mission-critical services in
+process can take a long time from end-to-end. And, it’s hard to run any mission-critical services in
 the KuSP in production before you have at least some basic implementations in place for each of the
 core platform components.&lt;/p&gt;
 
@@ -172,7 +172,7 @@ to treat this as an opportunity to fix every other legacy platform component tha
 non-optimal state, particularly if the migration makes these things no worse than before.&lt;/p&gt;
 
 &lt;p&gt;While it would be great to get Kubernetes bundled with a new networking stack, a new secrets system,
-a new logging system, etc. each of these extra dimensions adds more more things that will be
+a new logging system, etc. each of these extra dimensions adds more things that will be
 unfamiliar to users, and more things that can break in production. Focus on what is needed to
 migrate successfully, then handle the “nice to haves” in later phases of the project.&lt;/p&gt;
 
@@ -242,7 +242,7 @@ they have some common characteristics.&lt;/p&gt;
 
 &lt;h4 id=&quot;its-about-machines&quot;&gt;It’s about machines&lt;/h4&gt;
 
-&lt;p&gt;In an LeSP, the main unit of compute is a &lt;em&gt;machine&lt;/em&gt;, either a virtual machine (VM) like
+&lt;p&gt;In a LeSP, the main unit of compute is a &lt;em&gt;machine&lt;/em&gt;, either a virtual machine (VM) like
 one provided by &lt;a href=&quot;https://aws.amazon.com/ec2&quot;&gt;AWS EC2&lt;/a&gt; or a physical box sitting in a data
 center somewhere.&lt;/p&gt;
 
@@ -302,7 +302,7 @@ At a high level, a container is just a semi-isolated process. Each container run
 which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
 needed to create the environment in which the container runs.&lt;/p&gt;
 
-&lt;p&gt;Containers run in machines, so you still need to provision them, but configuration for these
+&lt;p&gt;Containers run in machines, so you still need to provision them, but the configuration for these
 machines can be simpler and more generic. The main requirement is to install
 a container runtime such as &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Once the latter is in place, you can
 use it to run containers for your applications and various helper services (for logs, metrics,
@@ -372,7 +372,7 @@ companies beyond a small size have well-defined career ladders for software engi
 least 4 levels. The details vary from company to company, but in most of these ladders the
 “senior” level is what employees get to after 5+ years of industry experience.&lt;/p&gt;
 
-&lt;p&gt;At most places, this rung on the latter is also considered the “career level”, which implies a few
+&lt;p&gt;At most places, this rung on the ladder is also considered the “career level”, which implies a few
 things. First, this means that once you get to it, you can stay in it forever- as long as you meet
 expectations, you can spend 30+ years as a senior engineer, and no one will ever complain about
 your lack of ambition or try to push you out for not advancing further.&lt;/p&gt;
