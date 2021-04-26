@@ -65,7 +65,7 @@ they have some common characteristics.
 
 #### It's about machines
 
-In an LeSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
+In a LeSP, the main unit of compute is a *machine*, either a virtual machine (VM) like
 one provided by [AWS EC2](https://aws.amazon.com/ec2) or a physical box sitting in a data
 center somewhere.
 
@@ -125,7 +125,7 @@ At a high level, a container is just a semi-isolated process. Each container run
 which is effectively a layered, read-only bundle that contains the binaries, tools, and configs
 needed to create the environment in which the container runs.
 
-Containers run in machines, so you still need to provision them, but configuration for these
+Containers run in machines, so you still need to provision them, but the configuration for these
 machines can be simpler and more generic. The main requirement is to install
 a container runtime such as [Docker](https://www.docker.com/). Once the latter is in place, you can
 use it to run containers for your applications and various helper services (for logs, metrics,
