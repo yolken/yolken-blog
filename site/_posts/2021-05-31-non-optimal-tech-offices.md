@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Non-optimal tech offices"
-date:   2021-05-03 15:02:00 -0700
+date:   2021-05-31 15:02:00 -0700
 categories: general tech
 excerpt: |
     Looking back over the last decade, I've had a lot of great experiences in the offices
