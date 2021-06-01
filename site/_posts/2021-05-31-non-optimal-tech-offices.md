@@ -86,11 +86,6 @@ but the floor.
 
 ### Overly decorated offices
 
-<figure>
-  <img src="/assets/airbnb_office.jpg" alt="Airbnb office"/>
-  <figcaption>Conference room in Airbnb's Portland office. Source: <a href="https://medium.com/airbnb-engineering/airbnb-product-and-engineering-teams-now-landing-in-portland-3a0bf4bf58fe">Airbnb engineering blog.</a></figcaption>
-</figure>
-
 Decorations like plants and wall artwork can really improve the environment in an office.
 Some companies, however, take the decoration process too far, to the point that the form
 overwhelms the function and makes it harder to get work done.
