@@ -26,6 +26,8 @@ In this post, I want to call these features out and describe how they can be fix
 
 ### Open offices
 
+<img src="/assets/open_office.jpg" alt="Open office"/>
+
 Let's start with the giant elephant in the room- the trend of throwing hundreds of desks
 in a giant, open space, with no visual or auditory blockers between people. Companies
 claim that creating spaces as open as aircraft hangars "improves collaboration" but the research
@@ -84,14 +86,19 @@ but the floor.
 
 ### Overly decorated offices
 
+<figure>
+  <img src="/assets/airbnb_office.jpg" alt="Airbnb office"/>
+  <figcaption>Conference room in Airbnb's Portland office. Source: <a href="https://medium.com/airbnb-engineering/airbnb-product-and-engineering-teams-now-landing-in-portland-3a0bf4bf58fe">Airbnb engineering blog.</a></figcaption>
+</figure>
+
 Decorations like plants and wall artwork can really improve the environment in an office.
 Some companies, however, take the decoration process too far, to the point that the form
 overwhelms the function and makes it harder to get work done.
 
 At this point, I'm going to abandon my normal discretion here and name names- Airbnb's headquarters
-in San Francisco (where I worked for two years) was really bad in this regard. The main issue was
-that nearly every conference room was outfitted not like a normal conference room but rather as an
-actual Airbnb listing from somewhere around the world.
+in San Francisco (where I worked for two years) was really suboptimal in this regard. The main issue
+was that nearly every conference room was outfitted not like a normal conference room but rather as
+an actual Airbnb listing from somewhere around the world.
 
 Don't get me wrong, the office was absolutely beautiful, and it was really fun to explore the
 various rooms and admire the cute furniture and clever touches that were included in the designs.
