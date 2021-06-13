@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-04-25T20:31:23-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Migrating to Kubernetes, part 2: Why it’s hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 2: Why it’s hard" /><published>2021-04-18T16:47:00-07:00</published><updated>2021-04-18T16:47:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;In my &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;previous post&lt;/a&gt;, I described
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-06-12T18:18:07-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal tech offices</title><link href="https://yolken.net/blog/non-optimal-tech-offices" rel="alternate" type="text/html" title="Non-optimal tech offices" /><published>2021-05-31T15:02:00-07:00</published><updated>2021-05-31T15:02:00-07:00</updated><id>https://yolken.net/blog/non-optimal-tech-offices</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-tech-offices">&lt;p&gt;For the last year, I’ve been working from home (and mostly liking it!). As pandemic
+restrictions ease over the next few months, however, I, along with many others in the tech
+world, may be headed back to the office.&lt;/p&gt;
+
+&lt;p&gt;Looking back over the last decade, I’ve had a lot of great experiences in the offices
+of my employers and for the most part these spaces have been comfortable. However,
+there are certain office features that I’ve encountered at company after company that are not
+optimal and end up unnecessarily lowering productivity and happiness.&lt;/p&gt;
+
+&lt;p&gt;In this post, I want to call these features out and describe how they can be fixed.&lt;/p&gt;
+
+&lt;h2 id=&quot;non-optimal-office-features&quot;&gt;Non-optimal office features&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/open_office.jpg&quot; alt=&quot;Open office&quot; /&gt;
+  &lt;figcaption&gt;
+    Stock photograph of a high-density, overly open office with non-adjustable, countertop surfaces.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;overly-open-offices&quot;&gt;Overly open offices&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with the giant elephant in the room- the trend of throwing hundreds of desks
+in a giant, open space, with no visual or auditory blockers between people. Companies
+claim that creating spaces as open as aircraft hangars “improves collaboration” but the research
+&lt;a href=&quot;https://www.workfront.com/blog/what-science-says-about-open-offices&quot;&gt;consistently shows that open offices are a net negative&lt;/a&gt;,
+and common sense dictates that a big motivation is saving money on real estate costs.&lt;/p&gt;
+
+&lt;p&gt;At this point, I realize that we’re not all going to get private offices- real estate in tech hubs
+like San Francisco is just too expensive for that to be feasible. However, at the
+very least open spaces should be broken up so that the noise I hear is from people that I
+directly collaborate with on my team and not from some random person 200 feet away who’s doing sales
+calls for an unrelated product.&lt;/p&gt;
+
+&lt;p&gt;The best shared office layout I had was when I was working for Google in Paris. The building was
+really old and thus had lots of internal walls and other, “old-fashioned” architectural features
+that couldn’t be completely torn out. Thus, by no other choice, each team was given a private room
+or semi-private alcove to share, and it was great! We could collaborate as a team when we needed to
+while at the same time not disturbing everyone else in the office. And yet, it was still open
+enough that you could walk around and see what others were doing.&lt;/p&gt;
+
+&lt;p&gt;It would be great if other offices, even more modern ones, had the same approach to open space.&lt;/p&gt;
+
+&lt;h3 id=&quot;desks-next-to-noise-sources&quot;&gt;Desks next to noise sources&lt;/h3&gt;
+
+&lt;p&gt;Related to the trend of open space, some offices put desks immediately adjacent to large
+sources of non-work-related noise including cafeterias, all-hands meeting spaces, open atria,
+office circulation paths, and service help desks.&lt;/p&gt;
+
+&lt;p&gt;Over the years, I’ve been seated next to break-area coffee grinders (that noise drives me crazy!),
+tech support desks (hearing people complaining about the slow WiFi on their laptops over and over),
+and busy walkways (including frequent and very noisy tours being given to visitors). By far the
+worst experience, though, was a job where I sat directly next to the kitchen and had to spend all
+day listening to the head chef plan his menus and discipline the cafeteria staff.&lt;/p&gt;
+
+&lt;p&gt;Unless you’re trying to encourage collaboration between your product team and your food team,
+there’s no rational reason to do this, and it just causes frustration on both sides. Desk areas
+should be completely separated from the places where food is prepared and served, where meetings
+are held, and where every person in the building needs to walk by to get to or from their work
+areas.&lt;/p&gt;
+
+&lt;h3 id=&quot;non-adjustable-desks&quot;&gt;Non-adjustable desks&lt;/h3&gt;
+
+&lt;p&gt;A decade ago, height-adjustable desks were exotic and expensive, and thus very few offices
+had them. In 2021, though, they’re cheap and ubiquitous (even
+&lt;a href=&quot;https://www.ikea.com/us/en/p/bekant-desk-sit-stand-white-s49022538/&quot;&gt;Ikea sells them&lt;/a&gt;!), and thus
+there’s no excuse to not have them.&lt;/p&gt;
+
+&lt;p&gt;For me, the biggest benefit of these “standing desks” isn’t the standing part but rather that I can
+make the surface very low. Since I’m shorter than average, the “standard” desk
+height is too high for me and makes it uncomfortable to type for long periods. Other people
+are most productive when work surfaces are higher than “standard” or at full standing height, so
+these desks can make everyone happy.&lt;/p&gt;
+
+&lt;p&gt;Even worse than individual, non-adjustable desks is the “shared countertop” layout that became
+popular a few years ago. These not only have the issue that the height is non-optimal, but also
+that you can feel the surface vibrate with each keystroke made by your neighbors. At one job,
+these vibrations were so distracting that I just couldn’t get any work done; thankfully, after
+multiple rounds of escalation, I managed to get a “private” desk that was attached to nothing else
+but the floor.&lt;/p&gt;
+
+&lt;h3 id=&quot;overly-decorated-offices&quot;&gt;Overly decorated offices&lt;/h3&gt;
+
+&lt;p&gt;Decorations like plants and wall artwork can really improve the environment in an office.
+Some companies, however, take the decoration process too far, to the point that the form
+overwhelms the function and makes it harder to get work done.&lt;/p&gt;
+
+&lt;p&gt;At this point, I’m going to abandon my normal discretion here and name names- Airbnb’s headquarters
+in San Francisco (where I worked for two years) was really suboptimal in this regard. The main issue
+was that nearly every conference room was outfitted not like a normal conference room but rather as
+an actual Airbnb listing from somewhere around the world.&lt;/p&gt;
+
+&lt;p&gt;Don’t get me wrong,
+&lt;a href=&quot;https://officesnapshots.com/2019/01/29/airbnb-headquarters-san-francisco/&quot;&gt;the office was absolutely beautiful&lt;/a&gt;,
+and it was really fun to explore the various rooms and admire the cute furniture and clever touches
+that were included in the designs. But, it’s just not optimal to have long business meetings in a
+replica Moroccan hut with limited whiteboard space or a fake Spanish dining room with seating on
+shared wooden benches. At the time, I was suffering from back and neck issues, so these non-standard
+designs were particularly painful- I spent many meetings sitting on the floor with my back against
+the wall since this was the least uncomfortable place to be in many of these rooms.&lt;/p&gt;
+
+&lt;p&gt;Decorations are nice, but at a certain point they’re just too much. Regular conference rooms
+and desk areas may look “boring”, but when your goal is to create a space where people can get
+work done, boring (while still being neat and pretty) is probably better.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;/h2&gt;
+
+&lt;p&gt;Over the years, I’ve gotten a surprising amount of pushback when advocating for improved office
+environments. Even when requesting relatively minor things like better window shades so the sun
+doesn’t blind me at my desk, I’m sometimes told that the fixes are “too expensive”, “not that
+important”, or will “reduce the aesthetics of the office”.&lt;/p&gt;
+
+&lt;p&gt;The main flaw in these arguments, and the one that gets people to change their minds (sometimes)
+is that reduced productivity due to a poor office environment is &lt;em&gt;extremely&lt;/em&gt; expensive. In a
+high-cost location like California, for instance, the fully loaded cost of an engineer
+including taxes, benefits, food, office space, etc. can be more than $300 / hour. If loud noises,
+uncomfortable chairs, bright sunlight, or other annoyances reduce the productivity, say, of
+100 people by 10%, the cost will be around $24,000 per day, which works out to several million per
+year. Installing new window coverings or putting up glass around a noisy atrium is going to be
+significantly cheaper.&lt;/p&gt;
+
+&lt;p&gt;The costs are even higher if you consider other, less direct effects, like people being less
+happy at work and thus more likely to switch jobs. Although I’ve never quit a job solely due to a
+suboptimal office environment, it’s certainly been a factor that’s made me less excited about
+my work and more willing to interview elsewhere. In a tight employment market, companies need
+to do everything they can to keep their employees happy and productive.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Tech offices can be beautiful and productive places, but in many cases the push to increase
+density while still looking spacious and “cutting edge” can lead to problems, particularly
+when it comes to noise.&lt;/p&gt;
+
+&lt;p&gt;It’s understandable that smaller companies with limited resources won’t be able to optimize
+every aspect of their office environments. However, it’s really frustrating when large,
+multi-billion dollar companies deliberately build out offices with suboptimal designs.&lt;/p&gt;
+
+&lt;p&gt;At least now, even the most traditional companies are open to remote work. If I encounter a
+noisy or unproductive office in the future, I’m just going to return to working from home. Hopefully
+others who are as sensitive to their environment as I am will have the same flexibility.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Looking back over the last decade, I've had a lot of great experiences in the offices of my employers and for the most part these spaces have been comfortable. However, there are certain office features that I've encountered at company after company that are not optimal and end up unnecessarily lowering productivity and happiness. In this post, I want to call these features out and describe how they can be fixed.</summary></entry><entry><title type="html">Migrating to Kubernetes, part 2: Why it’s hard</title><link href="https://yolken.net/blog/migrating-to-kubernetes-is-hard" rel="alternate" type="text/html" title="Migrating to Kubernetes, part 2: Why it’s hard" /><published>2021-04-18T16:47:00-07:00</published><updated>2021-04-18T16:47:00-07:00</updated><id>https://yolken.net/blog/migrating-to-kubernetes-is-hard</id><content type="html" xml:base="https://yolken.net/blog/migrating-to-kubernetes-is-hard">&lt;p&gt;In my &lt;a href=&quot;/blog/migrating-to-kubernetes-legacy-service-platforms&quot;&gt;previous post&lt;/a&gt;, I described
 how migrating to Kubernetes involves transitioning an organization’s infrastructure from a
 legacy service platform (LeSP) to a Kubernetes service platform (KuSP). In this post, I want
 to go into more details on why this migration is hard and what you can do to reduce the pain.&lt;/p&gt;
@@ -1686,197 +1825,4 @@ and Airbnb, and in both cases the “second team” was what really opened up ne
 &lt;h3 id=&quot;addendum&quot;&gt;Addendum&lt;/h3&gt;
 
 &lt;p&gt;This post was submitted to Hacker News after publication and got
-&lt;a href=&quot;https://news.ycombinator.com/item?id=25637922&quot;&gt;a lot of comments&lt;/a&gt;! Feel free to add more there.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">Two years ago, I did something that I'd never done in my career before- I left a job (at Nuro) only a few months after starting it. In this post, I want to explain what happened and what I learned from the experience.</summary></entry><entry><title type="html">Going into tech with a PhD</title><link href="https://yolken.net/blog/phd-to-tech" rel="alternate" type="text/html" title="Going into tech with a PhD" /><published>2020-12-25T12:04:00-08:00</published><updated>2020-12-25T12:04:00-08:00</updated><id>https://yolken.net/blog/phd-to-tech</id><content type="html" xml:base="https://yolken.net/blog/phd-to-tech">&lt;p&gt;I spent 5 years of my life getting a PhD, but like many others who’ve gotten this degree,
-I decided to leave academia after graduation. At the time, I explored several career choices
-but ultimately decided to take a Product Manager job at Google.&lt;/p&gt;
-
-&lt;p&gt;Since then, I’ve &lt;a href=&quot;/blog/switching-from-product-to-eng&quot;&gt;switched ladders once&lt;/a&gt; and
-&lt;a href=&quot;https://www.linkedin.com/in/yolken/&quot;&gt;switched companies a few times&lt;/a&gt;, but overall have absolutely
-no regrets about going into tech versus the other paths that I could have taken.&lt;/p&gt;
-
-&lt;p&gt;In this post, I want to discuss why I think it’s a great destination for people with technical PhDs
-and also dig into the “career ladders” that most tech companies have.&lt;/p&gt;
-
-&lt;h4 id=&quot;quick-note-on-terminology&quot;&gt;Quick note on terminology&lt;/h4&gt;
-
-&lt;p&gt;I’m using “tech” to mean computer software and/or hardware technology companies. There’s
-also biotech, but given that I haven’t done anything bio-related since my high school science
-classes, I’m not really qualified to discuss that side of the world.&lt;/p&gt;
-
-&lt;p&gt;Also, the intended audience here is “technical” PhDs, i.e. those in the sciences and engineering.
-You can certainly go into tech with a PhD in French Literature, but the degree will be less of a
-benefit, and you’ll have to prove your technical skills in some other way.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-tech&quot;&gt;Why tech&lt;/h2&gt;
-
-&lt;p&gt;Tech jobs are a great fit with technical PhDs because they both require a similar set of skills
-to succeed:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Ability to break down large technical problems into smaller chunks, work on them over many
-  years despite roadblocks&lt;/li&gt;
-  &lt;li&gt;Comfort with complex quantitative analysis, particularly when the underlying data are messy or
-  incomplete&lt;/li&gt;
-  &lt;li&gt;Strong communication skills&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In some cases, the degree might also provide knowledge that’s directly relevant for a job- for
-instance, if your PhD was in software compiler design and your job is on the compiler team at a
-company.&lt;/p&gt;
-
-&lt;p&gt;That’s great if you’re able to find such a fit, and it will definitely help your career
-at the beginning, but it’s not a requirement, and seems to be more the exception than the rule.
-My research, for instance, was on &lt;a href=&quot;/pubs&quot;&gt;using game theory for resource allocation&lt;/a&gt;, but
-aside from a little bit in my first job, my work has been completely unrelated.&lt;/p&gt;
-
-&lt;p&gt;In addition to the natural skills fit, there are a number of other great things about tech, which
-apply whether you’re a PhD or not:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Great salaries, benefits, and work environment (casual, friendly, flexible hours, etc.)&lt;/li&gt;
-  &lt;li&gt;Fast-moving, constantly changing, hard to get bored for too long&lt;/li&gt;
-  &lt;li&gt;Ability to build and create things that people actually use&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;alternative-paths&quot;&gt;Alternative paths&lt;/h2&gt;
-
-&lt;p&gt;Before digging into the details of various tech career ladders, it’s worth briefly discussing some
-non-tech destinations that are also popular among technical PhDs.&lt;/p&gt;
-
-&lt;h3 id=&quot;corporate-research-labs&quot;&gt;Corporate research labs&lt;/h3&gt;
-
-&lt;p&gt;A few companies such as &lt;a href=&quot;https://www.research.ibm.com/&quot;&gt;IBM&lt;/a&gt;,
-&lt;a href=&quot;https://www.microsoft.com/en-us/research/&quot;&gt;Microsoft&lt;/a&gt;, and
-&lt;a href=&quot;https://www8.hp.com/us/en/hp-labs/&quot;&gt;HP&lt;/a&gt;, run “labs” or “research” divisions that are sort of a
-cross between a research university and a large corporation. Staff in these places
-do research, write papers, and present at academic conferences like professors but are expected
-to work on problems that are relevant to the businesses of their parent companies.&lt;/p&gt;
-
-&lt;p&gt;I briefly worked at &lt;a href=&quot;https://www.research.ibm.com/labs/almaden/&quot;&gt;IBM’s Almaden Lab&lt;/a&gt; (and hated it-
-details to be covered in a future post!) and have met a few people at some of the other labs
-in the SF Bay Area. I think it can be a good fit if you absolutely love research but don’t want
-to deal with writing grants, teaching students, or doing the other, non-research-related work of a
-professor. On the other hand, you have less freedom than an academic researcher, and the work can
-be more boring and slower-paced than what you’d be doing in a more conventional tech job.&lt;/p&gt;
-
-&lt;h3 id=&quot;management-consulting&quot;&gt;Management consulting&lt;/h3&gt;
-
-&lt;p&gt;The big, traditional management consulting companies (e.g., &lt;a href=&quot;https://www.mckinsey.com/&quot;&gt;McKinsey&lt;/a&gt;)
-love hiring PhDs, particularly those from prestigious schools. I halfheartedly applied to a few of
-these jobs as I was finishing up my degree, but didn’t get any offers and then never considered
-them again.&lt;/p&gt;
-
-&lt;p&gt;From what I’ve heard, these jobs can involve a rough lifestyle (lots of travel and long hours)
-and the work is often boring and repetitive. Every person I’ve known who’s gone into consulting
-has left the profession after 2-3 years, which I think says a lot about it as a career path.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, the jobs are considered prestigious, and they can serve as stepping stones
-into high-level leadership roles in lots of different industries, including tech.&lt;/p&gt;
-
-&lt;h3 id=&quot;finance&quot;&gt;Finance&lt;/h3&gt;
-
-&lt;p&gt;Several of my schoolmates ended up as “quants” at hedge funds and other financial firms.
-I don’t have any personal experience with these jobs, but from what I’ve heard they can be
-extremely lucrative. I’m personally not very interested in finance or the idea of crunching
-numbers all day, but if you are it might be a career path to explore.&lt;/p&gt;
-
-&lt;p&gt;If you’re interested in finance, I’d highly recommend reading
-&lt;a href=&quot;https://www.amazon.com/My-Life-Quant-Reflections-Physics/dp/0470192739&quot;&gt;this memoir&lt;/a&gt; to
-get a somewhat dated (but still relevant) perspective on transitioning from academic research to
-Wall Street.&lt;/p&gt;
-
-&lt;h2 id=&quot;ladders&quot;&gt;Ladders&lt;/h2&gt;
-
-&lt;p&gt;Once you’ve decided to go into tech, the next step is to figure out which “career ladder”
-is the best fit for you. The members of the various ladders collaborate and there’s often some
-overlap in the work, but the choice of ladder determines how the interview process works
-and how you’re evaluated once you’re on the job.&lt;/p&gt;
-
-&lt;p&gt;The ladder names and associated job titles will vary from company to company, but there
-are generally three main buckets that technical PhDs are hired into. The following sections
-describe each in more detail.&lt;/p&gt;
-
-&lt;h3 id=&quot;engineering&quot;&gt;Engineering&lt;/h3&gt;
-
-&lt;p&gt;Engineers, whether in software (like me) or hardware, are the people responsible for most of
-the hands-on technical work. This work, to put it colloquially, is a mixture of creating new
-things, updating existing things, fixing problems in existing things, and/or managing people
-doing any of the previous.&lt;/p&gt;
-
-&lt;p&gt;In addition to being the most hands-on of the ladder choices, engineering is also the intellectual
-core of a tech company. As a result, it’s often the “power center” where decisions
-are made and upper management is drawn from. This is not always the case, though- at a few
-tech companies, it’s product or design that runs the show.&lt;/p&gt;
-
-&lt;p&gt;The downside of engineering, particularly at larger companies, is that you’re typically focused
-on a very narrow slice of the company’s technology. This gets better as you become more senior,
-but other ladders like product management offer more breadth starting from the beginning.&lt;/p&gt;
-
-&lt;p&gt;Another limitation of engineering is that very specific skills are required, e.g. coding for
-software jobs. Many PhDs don’t have the necessary background here or enjoy these activities
-enough to do them every day.&lt;/p&gt;
-
-&lt;h3 id=&quot;product-management&quot;&gt;Product management&lt;/h3&gt;
-
-&lt;p&gt;Product managers are responsible for ensuring the high-level success of the products they work on.
-They do this by talking to customers, writing up requirements documents, setting priorities
-for engineering work, and developing relationships with other teams inside the company, among
-other activities. The work can be all over the place, and really varies a lot based on the needs of
-the product and the structure of the teams you’re working with.&lt;/p&gt;
-
-&lt;p&gt;The nice thing about product management, and the reason that I went into it originally, is that
-it’s super flexible and broad, even early on in your career. As an entry-level PM at Google,
-I not only interacted with lots of senior engineers, but also got exposure to legal, PR,
-design, internationalization, research, and other specializations within the company.&lt;/p&gt;
-
-&lt;p&gt;The downside of product management, and the reason that I eventually switched into engineering,
-is that it’s less technical and more relationship-oriented than the other ladders. Some people love
-this kind of work, though, so don’t let me dissuade you if you have the right personality for it.&lt;/p&gt;
-
-&lt;h3 id=&quot;data-science&quot;&gt;Data science&lt;/h3&gt;
-
-&lt;p&gt;Data science, at least when called as such, is the newest of the ladder choices. Data scientists
-do quantitative analysis to support product development. The exact day-to-day projects vary a lot,
-but some examples here include designing and evaluating product experiments, building models
-to detect malicious user behavior, and forecasting the company’s future product demand.&lt;/p&gt;
-
-&lt;p&gt;When I started my career 12 years ago, most of the jobs in this space were much more specialized,
-e.g. “financial analyst” or “experimental statistician”, so I didn’t apply for them. Since
-then, the more general field of “data science” has developed and become broad enough that it’s a
-good fit for many technical PhDs.&lt;/p&gt;
-
-&lt;p&gt;Data science is the most quantitative and “researchy” of the ladders, so it’s probably the one
-where PhDs have the biggest advantage over those with non-PhD backgrounds. On the other hand,
-it’s usually less about building new things and more about analyzing existing things (e.g.,
-whether an experiment around a product feature was successful), so I think the potential
-scope and impact of the work is more limited compared to the other ladders.&lt;/p&gt;
-
-&lt;p&gt;Another downside of data science is that many tech companies don’t have a data science ladder.
-Or, if they do, it might be limited to just a very small part of the overall business. This will
-probably improve in the future, though.&lt;/p&gt;
-
-&lt;h2 id=&quot;applying-and-leveling-as-a-phd&quot;&gt;Applying and leveling as a PhD&lt;/h2&gt;
-
-&lt;p&gt;Unlike academic jobs, most of the positions in the tech ladders above don’t require a PhD. Instead,
-it might be listed as “desired” or “a plus” in the associated job descriptions. The impact
-of having a PhD versus not having one in the interview process will vary a lot based on the
-company and specific position you’re applying for. You might be asked to give a seminar on your
-research, or, as is the case for many software engineering jobs, it might make zero difference
-in how you’re interviewed.&lt;/p&gt;
-
-&lt;p&gt;Once you pass the interviews, having a PhD should improve the initial level you’re assigned
-and the associated compensation you’re offered (see
-&lt;a href=&quot;/blog/stop-hiding-levels&quot;&gt;this previous post on levels&lt;/a&gt;). When I started at Google, for instance,
-my PhD allowed me to skip the first two rungs on the PM ladder even though I had little prior
-job experience. This put me several years ahead of new grads entering with only bachelor’s
-degrees.&lt;/p&gt;
-
-&lt;p&gt;Wherever you end up, you’re likely to be working with and working for many people who don’t have
-PhDs. It’s nice being special, and people will definitely notice your PhD when you’re applying for
-new positions, but once you’re settled in a job, having the degree isn’t a big deal.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Tech can be a great place for PhDs, and, although I’m a bit biased, I think it’s better than the
-alternative career choices for many people. If you’re finishing up a PhD or stuck in an
-unfulfilling academic job, it’s totally worth exploring your options in the space.&lt;/p&gt;</content><author><name></name></author><category term="interviews" /><summary type="html">I spent 5 years of my life getting a PhD, but like many others who've gotten this degree, I decided to leave academia after graduation. At the time, I explored several career choices but ultimately decided to take a Product Manager job at Google. In this post, I want to discuss why I think tech is a great destination for people with technical PhDs.</summary></entry></feed>
+&lt;a href=&quot;https://news.ycombinator.com/item?id=25637922&quot;&gt;a lot of comments&lt;/a&gt;! Feel free to add more there.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">Two years ago, I did something that I'd never done in my career before- I left a job (at Nuro) only a few months after starting it. In this post, I want to explain what happened and what I learned from the experience.</summary></entry></feed>
