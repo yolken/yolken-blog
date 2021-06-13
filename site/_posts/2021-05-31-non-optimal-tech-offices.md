@@ -24,9 +24,14 @@ In this post, I want to call these features out and describe how they can be fix
 
 ## Non-optimal office features
 
-### Open offices
+<figure>
+  <img src="/assets/open_office.jpg" alt="Open office"/>
+  <figcaption>
+    Stock photograph of a high-density, overly open office with non-adjustable, countertop surfaces.
+  </figcaption>
+</figure>
 
-<img src="/assets/open_office.jpg" alt="Open office"/>
+### Overly open offices
 
 Let's start with the giant elephant in the room- the trend of throwing hundreds of desks
 in a giant, open space, with no visual or auditory blockers between people. Companies
@@ -46,6 +51,8 @@ that couldn't be completely torn out. Thus, by no other choice, each team was gi
 or semi-private alcove to share, and it was great! We could collaborate as a team when we needed to
 while at the same time not disturbing everyone else in the office. And yet, it was still open
 enough that you could walk around and see what others were doing.
+
+It would be great if other offices, even more modern ones, had the same approach to open space.
 
 ### Desks next to noise sources
 
@@ -68,8 +75,9 @@ areas.
 ### Non-adjustable desks
 
 A decade ago, height-adjustable desks were exotic and expensive, and thus very few offices
-had them. In 2021, though, they're cheap and ubiquitous (even Ikea sells them), and thus there's
-no excuse to not have them.
+had them. In 2021, though, they're cheap and ubiquitous (even
+[Ikea sells them](https://www.ikea.com/us/en/p/bekant-desk-sit-stand-white-s49022538/)!), and thus
+there's no excuse to not have them.
 
 For me, the biggest benefit of these "standing desks" isn't the standing part but rather that I can
 make the surface very low. Since I'm shorter than average, the "standard" desk
@@ -95,13 +103,14 @@ in San Francisco (where I worked for two years) was really suboptimal in this re
 was that nearly every conference room was outfitted not like a normal conference room but rather as
 an actual Airbnb listing from somewhere around the world.
 
-Don't get me wrong, the office was absolutely beautiful, and it was really fun to explore the
-various rooms and admire the cute furniture and clever touches that were included in the designs.
-But, it's just not optimal to have long business meetings in a replica Moroccan hut with
-limited whiteboard space or a fake Spanish dining room with seating on shared wooden benches. At the
-time, I was suffering from back and neck issues, so these non-standard designs were particularly
-painful- I spent many meetings sitting on the floor with my back against the wall since this was the
-least uncomfortable place to be in many of these rooms.
+Don't get me wrong,
+[the office was absolutely beautiful](https://officesnapshots.com/2019/01/29/airbnb-headquarters-san-francisco/),
+and it was really fun to explore the various rooms and admire the cute furniture and clever touches
+that were included in the designs. But, it's just not optimal to have long business meetings in a
+replica Moroccan hut with limited whiteboard space or a fake Spanish dining room with seating on
+shared wooden benches. At the time, I was suffering from back and neck issues, so these non-standard
+designs were particularly painful- I spent many meetings sitting on the floor with my back against
+the wall since this was the least uncomfortable place to be in many of these rooms.
 
 Decorations are nice, but at a certain point they're just too much. Regular conference rooms
 and desk areas may look "boring", but when your goal is to create a space where people can get
