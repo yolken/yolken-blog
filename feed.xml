@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-06-12T18:18:07-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Non-optimal tech offices</title><link href="https://yolken.net/blog/non-optimal-tech-offices" rel="alternate" type="text/html" title="Non-optimal tech offices" /><published>2021-05-31T15:02:00-07:00</published><updated>2021-05-31T15:02:00-07:00</updated><id>https://yolken.net/blog/non-optimal-tech-offices</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-tech-offices">&lt;p&gt;For the last year, I’ve been working from home (and mostly liking it!). As pandemic
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-08-07T21:37:42-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Most core values are meaningless</title><link href="https://yolken.net/blog/most-core-values-are-meaningless" rel="alternate" type="text/html" title="Most core values are meaningless" /><published>2021-08-07T20:03:00-07:00</published><updated>2021-08-07T20:03:00-07:00</updated><id>https://yolken.net/blog/most-core-values-are-meaningless</id><content type="html" xml:base="https://yolken.net/blog/most-core-values-are-meaningless">&lt;p&gt;Over the last few years, many tech companies have embraced “core values”
+with religious fervor. Although this process is done with good intentions,
+the result is often a bland mixture of generic, feel-good principles that
+do little to distinguish the company or improve employee behavior.&lt;/p&gt;
+
+&lt;p&gt;In this post, I want to explain what core values are, why most are meaningless,
+and what can be done to make them better.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-are-core-values&quot;&gt;What are core values?&lt;/h2&gt;
+
+&lt;p&gt;Core values are a set of behavioral, non-job-specific traits that companies
+expect or aspire their employees to uphold. They’re most commonly a mixture of
+rules for civilized behavior (e.g., “treat your coworkers with respect”),
+tips for getting things done in a productive way (e.g., “be resourceful”, “be rigorous”,
+etc.), and aspirations that are never fully attainable (e.g. “never settle”, “only hire the best”,
+and “simplify to the core”).&lt;/p&gt;
+
+&lt;p&gt;Although the term “core values” seems to be the most common one, some companies refer to these
+lists of traits by other names like “operating guidelines” or “leadership principles”. When I use
+the term “core values” in this post, I’m also including the latter.&lt;/p&gt;
+
+&lt;p&gt;The idea is to not just write down core values on a page in the employee handbook
+but rather to “live” them day-to-day. Companies do this by posting their
+values prominently on their webpages (examples from companies I’ve worked or interviewed
+at: &lt;a href=&quot;https://careers.airbnb.com/&quot;&gt;Airbnb&lt;/a&gt;,
+&lt;a href=&quot;https://stripe.com/jobs/culture&quot;&gt;Stripe&lt;/a&gt;,
+&lt;a href=&quot;https://www.facebook.com/careers/facebook-life/&quot;&gt;Facebook&lt;/a&gt;,
+&lt;a href=&quot;https://www.microsoft.com/en-us/about/corporate-values&quot;&gt;Microsoft&lt;/a&gt;,
+&lt;a href=&quot;https://slack.com/careers&quot;&gt;Slack&lt;/a&gt;), evaluating
+candidates against them during the interview process, holding multi-hour-long
+sessions about them during new hire orientation, inserting examples of them
+into company all-hands meetings, and using them to grade employees during the
+performance evaluation process.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-most-are-meaningless&quot;&gt;Why most are meaningless&lt;/h2&gt;
+
+&lt;p&gt;The vast majority of corporate core values map to one of the following
+buckets:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Be nice to your coworkers&lt;/li&gt;
+  &lt;li&gt;Be nice to your customers / consider their needs&lt;/li&gt;
+  &lt;li&gt;Be innovative / resourceful / bold&lt;/li&gt;
+  &lt;li&gt;Be productive / get things done / prioritize&lt;/li&gt;
+  &lt;li&gt;Be rigorous / thoughtful / don’t be sloppy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Don’t get me wrong, these are all great things. However, they’re behaviors
+that &lt;em&gt;all&lt;/em&gt; tech companies should expect from their employees. If a company
+didn’t value one or more of these, then it would not be a good place to work
+and would have trouble attracting and retaining both employees and customers.&lt;/p&gt;
+
+&lt;p&gt;Because these values are so universal and because they’re so obviously
+associated with good employee behavior no matter which company you’re at,
+they’ve completely non-actionable. I’ve never at any point in my career
+had a tough decision where, for instance, the choice was between being nice
+to my coworkers and being nasty to them. Even if I wanted to be mean (which
+I don’t), it’s unlikely that having a core value of “be nice to your coworkers”
+would dissuade me from doing this; the actual disincentive would be losing
+my job for violating the standard norms of good behavior.&lt;/p&gt;
+
+&lt;p&gt;Overall, values in the five buckets above are generally meaningless.
+They’re the same at most companies, they don’t inform decisions in people’s
+day-to-day work, and no matter how companies try to spin them, they’re not
+magical, special, or unique.&lt;/p&gt;
+
+&lt;h2 id=&quot;better-core-values&quot;&gt;Better core values&lt;/h2&gt;
+
+&lt;p&gt;So, given that “most” core values are meaningless, what makes meaningful ones?&lt;/p&gt;
+
+&lt;p&gt;I think the most important feature of good core values is that they’re &lt;em&gt;actionable&lt;/em&gt;, i.e.
+they actually help people make decisions when the correct choice isn’t obvious. As an example,
+Airbnb (one of my former employers) had a core value of “every frame matters”, which
+effectively meant that how things looked was really important. Thus, if I were an
+engineer there and was trying to decide between making my product 30% prettier or 30%
+faster, the former would be the superior choice. Google, on the other hand (another of my
+former employers) had a value that “fast is better than slow”; there, the same engineer
+in the same situation would be incentivized to make the opposite choice.&lt;/p&gt;
+
+&lt;p&gt;A second feature of good core values is that they really help to &lt;em&gt;distinguish&lt;/em&gt; a company
+from its peers. Airbnb’s value of “every frame matters” actually reflected how design-oriented
+the company was and how obsessed they were with their brand and how users perceived them.
+This was a key differentiator against the bland, poorly-designed travel portals created by
+competitors like Expedia and Priceline. Another example is Google’s early value of “it’s best to do
+one thing really, really well”. At the time, Google was competing against companies like Yahoo
+that did search in addition to many other things too (personals, games, finance, email, etc.).
+Google’s focus on search allowed it to win over users and eventually dominate the space.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-other-tips&quot;&gt;Some other tips&lt;/h2&gt;
+
+&lt;p&gt;In addition to making core values actionable and distinguishable as just described, there are a
+few other things that I think can help make them more meaningful.&lt;/p&gt;
+
+&lt;h4 id=&quot;keep-the-count-low&quot;&gt;Keep the count low&lt;/h4&gt;
+
+&lt;p&gt;Having too many core values makes them harder to remember and may also reflect poorly on
+the company’s ability to prioritize (ironically, many companies that have a large number of
+core values include “prioritize” as one of them). I think 4-5 is a good number
+in most cases.&lt;/p&gt;
+
+&lt;p&gt;Just because something isn’t a core value doesn’t mean that it’s not important to the company.
+Many other things, including the more generic behavioral guidelines discussed previously, can
+also be valued, put on the website, used for candidate and employee evaluations, and so forth.&lt;/p&gt;
+
+&lt;h4 id=&quot;dont-apply-core-values-where-they-arent-appropriate&quot;&gt;Don’t apply core values where they aren’t appropriate&lt;/h4&gt;
+
+&lt;p&gt;Core values, no matter how important they are, are not, by themselves, sufficient conditions
+for a company to be successful or for a person to be a good employee. There are many, many other,
+non-behavioral things required at both the company and individual level.&lt;/p&gt;
+
+&lt;p&gt;This principle is often violated in the context of employee or candidate evaluations.
+At one former employer, it was decided to remove all of the technical feedback from the engineer
+performance evaluation process and just have questions about how well each person embodied the
+company’s core values. At other places, I’ve been asked to evaluate job candidates on the
+company’s core values, even for non-behavioral interviews like coding questions.&lt;/p&gt;
+
+&lt;p&gt;A good software engineer is strong on both technical and behavioral dimensions. A good company
+has good values but also has solid technology and products that customers like. Values are necessary
+but not sufficient conditions for success.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Many tech companies have adopted core values, but unfortunately only a subset of these
+are meaningful. Values like “be rigorous” and “be respectful” sound nice but don’t set your
+company apart or inspire people to behave in a way that they wouldn’t otherwise.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Over the last few years, many tech companies have embraced &quot;core values&quot; with religious fervor. In this post, I want to explain what core values are, why most are meaningless, and what can be done to make them better.</summary></entry><entry><title type="html">Non-optimal tech offices</title><link href="https://yolken.net/blog/non-optimal-tech-offices" rel="alternate" type="text/html" title="Non-optimal tech offices" /><published>2021-05-31T15:02:00-07:00</published><updated>2021-05-31T15:02:00-07:00</updated><id>https://yolken.net/blog/non-optimal-tech-offices</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-tech-offices">&lt;p&gt;For the last year, I’ve been working from home (and mostly liking it!). As pandemic
 restrictions ease over the next few months, however, I, along with many others in the tech
 world, may be headed back to the office.&lt;/p&gt;
 
@@ -1661,168 +1785,4 @@ to create prettier, more complex online destinations.&lt;/p&gt;
 
 &lt;p&gt;This blog consists of static HTML served by GitHub Pages. Although it’s not the fanciest
 approach, I’ve found that it provides a high degree of personal control while having
-minimal maintenance overhead.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share how my content is generated and hosted, and then describe some commonly-used, alternative approaches that I decided not to take.</summary></entry><entry><title type="html">Quitting a new job</title><link href="https://yolken.net/blog/quitting-a-new-job" rel="alternate" type="text/html" title="Quitting a new job" /><published>2021-01-01T17:40:00-08:00</published><updated>2021-01-01T17:40:00-08:00</updated><id>https://yolken.net/blog/quitting-a-new-job</id><content type="html" xml:base="https://yolken.net/blog/quitting-a-new-job">&lt;p&gt;Two years ago, I did something that I’d never done in my career before- I left a job
-(at &lt;a href=&quot;https://nuro.ai&quot;&gt;Nuro&lt;/a&gt;) only a few months after starting it. In this post, I want to explain
-what happened and what I learned from the experience.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-happened&quot;&gt;What happened&lt;/h2&gt;
-
-&lt;h4 id=&quot;the-job-switch&quot;&gt;The job switch&lt;/h4&gt;
-
-&lt;p&gt;Back in the spring of 2019, I decided to leave &lt;a href=&quot;https://www.stripe.com&quot;&gt;Stripe&lt;/a&gt;, where I’d
-been a software engineer for about a year and a half. The full details are best left
-to a separate post, but at a high level I just wasn’t very happy with my personal situation; the
-work I was doing in compute infrastructure had the unfortunate combination of being both
-overly stressful and underappreciated. At the same time, I felt like my career prospects
-were limited because the upper rungs of Stripe’s engineering individual contributor (IC) ladder put
-a lot of emphasis on cross-team coordination and other, managerial-like activities that I didn’t
-enjoy and felt I wasn’t very good at.&lt;/p&gt;
-
-&lt;p&gt;Given how hot the job market was at the time and the number of other, seemingly more interesting
-opportunities available, I figured that I had nothing to lose by interviewing elsewhere.&lt;/p&gt;
-
-&lt;p&gt;After a few weekends of furiously-paced &lt;a href=&quot;/blog/master-coding-interviews&quot;&gt;Leetcoding&lt;/a&gt;, I was ready.
-Unlike my previous job searches, there wasn’t any particular company that I was aspiring
-to get into; instead, I just went through my &lt;a href=&quot;/blog/six-years-of-emails&quot;&gt;backlog of recruiting emails&lt;/a&gt;
-and wrote back to a bunch that looked interesting. Among the messages I responded to was one
-about &lt;a href=&quot;https://nuro.ai&quot;&gt;Nuro&lt;/a&gt;, an autonomous vehicle startup that was attempting to do driverless
-grocery delivery.&lt;/p&gt;
-
-&lt;p&gt;Over the following weeks, I went through the full recruitment slog, starting with lots of
-recruiter phone calls, then following up with technical phone screens for a subset of
-those, then doing onsite interviews for a subset of those. In the end, I got offers from seven
-places, including Nuro.&lt;/p&gt;
-
-&lt;p&gt;During the process, I didn’t fall in love with any of the options. But, there
-was something that made me feel more optimistic about Nuro than the other choices. Being a
-hardware-oriented, robotics company, it was just really different from all of my previous employers,
-and, after years of feeling stuck in my career, maybe different was good.&lt;/p&gt;
-
-&lt;p&gt;The company was super secretive about its technology; I wasn’t allowed to tour the office, for
-instance, because they had hardware prototypes lying around that only employees were allowed to
-see. I also wasn’t invited to ride along in their test cars, which would have been both fun and
-informative. The external signs were good, though- they had raised a billion dollars from Softbank
-and others, and the employee reviews on &lt;a href=&quot;https://www.glassdoor.com&quot;&gt;Glassdoor&lt;/a&gt; were gushing.&lt;/p&gt;
-
-&lt;p&gt;Aside from being in a somewhat different space than my previous employers, another potential
-downside was the commute. Stripe and my three jobs before that were all within a 15 minute walk
-of my apartment in San Francisco. Nuro’s office was 40 miles away in Mountain View, which was
-more than an hour each way by train. But, I had done longer commutes earlier in my career and figured
-that I could handle it.&lt;/p&gt;
-
-&lt;p&gt;In the end, I went with my impulses and signed the offer. I had my last day at Stripe, took a short
-vacation, and then showed up at the Nuro office, brimming with optimism, for my first day two weeks
-later.&lt;/p&gt;
-
-&lt;h4 id=&quot;realizing-my-mistake&quot;&gt;Realizing my mistake&lt;/h4&gt;
-
-&lt;p&gt;Unfortunately, that optimism lasted for a grand total of 2 days. By Wednesday of my first week,
-as I was riding the train home, I realized that I had made a mistake. My colleagues were
-friendly and smart, and the company was doing interesting things, but the job just felt like a
-lifestyle downgrade to me.&lt;/p&gt;
-
-&lt;p&gt;At Stripe and each of my jobs before that, I had had a short commute to a beautiful office, and
-got to experience the instant gratification associated with developing purely software-based
-products. Now, I was stuck taking a crowded train to a dark office littered with hardware parts,
-working on a product that would take many years to reach mass-market adoption due to pesky little
-things like manufacturing and road safety.&lt;/p&gt;
-
-&lt;p&gt;I had left Stripe seeking an upgrade, but instead I got a downgrade. And, while minor improvements
-were possible, it seemed unlikely that things would completely change for the better in the near
-term.&lt;/p&gt;
-
-&lt;h4 id=&quot;getting-back-on-track&quot;&gt;Getting back on track&lt;/h4&gt;
-
-&lt;p&gt;At this point, I had three choices:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Quit immediately&lt;/li&gt;
-  &lt;li&gt;Start exploring new opportunities but don’t quit until something better is lined up&lt;/li&gt;
-  &lt;li&gt;Stick it out for at least a year&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;My first instinct was to take option 1 and just go back to Stripe. When I reached out to my HR
-contact, though, I found out that I’d have to go through team matching again and also get a new
-offer; even though I’d left on good terms less than a month before, I couldn’t just revert back to
-my previous position and pay. This was disappointing, but after giving it a little more thought,
-I figured it was for the best because I had left Stripe for specific reasons; going back
-to my old job wouldn’t fix those or make me feel better about them.&lt;/p&gt;
-
-&lt;p&gt;Another variant of option 1 would be to quit and take one of the other offers I had gotten
-during my search. But, I had already rejected those for what I thought were good reasons,
-so this didn’t feel like the best way out.&lt;/p&gt;
-
-&lt;p&gt;Option 3 was the one that would look the least bad from a resume perspective, and this seems to be
-what a lot of people in tech do when they don’t like a job. But, life is short, I was really feeling
-unhappy with the choice I had made, and I figured it wasn’t really fair to my colleagues at Nuro to
-stick in a job that my heart wasn’t in.&lt;/p&gt;
-
-&lt;p&gt;So, in the end, I decided that option 2 was the best fit for me. I continued at Nuro and did my best
-to get up-to-speed and to contribute to my team’s work, but at the same time jumped right back
-into the job market. In addition to keeping things open with Stripe, I
-&lt;a href=&quot;/blog/triplebyte-review&quot;&gt;tried Triplebyte&lt;/a&gt;, responded to more recruiter emails, and also
-reached out to some former colleagues about the companies they were now at.&lt;/p&gt;
-
-&lt;p&gt;I then went through the whole recruitment process with a new set of companies. This time,
-though, I was a lot pickier about where I interviewed (nothing in hardware or with long commutes!);
-after a few weeks, I had four new choices including an updated offer from Stripe. After
-a good amount of due diligence, significantly more than I had done in my previous search, I
-decided to go to &lt;a href=&quot;https://segment.com&quot;&gt;Segment&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;When I put in my notice at Nuro, people were surprised that I was leaving so soon, but ultimately
-were understanding. I left, took a short vacation, and then started at Segment. Thankfully,
-the new job was a much better fit for me, and I’m much happier now!&lt;/p&gt;
-
-&lt;h2 id=&quot;lessons-learned&quot;&gt;Lessons learned&lt;/h2&gt;
-
-&lt;h4 id=&quot;do-your-due-diligence&quot;&gt;Do your due diligence&lt;/h4&gt;
-
-&lt;p&gt;Switching jobs is a big deal, and it shouldn’t be done impulsively. Ideally, your due
-diligence before signing a new offer should include:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Meeting with the team you’ll be working with in a low-stress, non-interview setting&lt;/li&gt;
-  &lt;li&gt;Touring the office and understanding what your specific workspace will be like&lt;/li&gt;
-  &lt;li&gt;Trying out the commute for a few days (if it’s significantly different than your current one)&lt;/li&gt;
-  &lt;li&gt;Trying out any new languages/technologies that you’ll be using on the job&lt;/li&gt;
-  &lt;li&gt;Getting hands-on demos of the company’s products (if they’re not freely accessible to consumers
-  already)&lt;/li&gt;
-  &lt;li&gt;Seeing a summary of the company’s income and expenses over time (if not public)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Learning about these things doesn’t guarantee that you’ll be happy in your new job, but it
-at least reduces the risk of any unexpected surprises after you start.&lt;/p&gt;
-
-&lt;h4 id=&quot;its-ok-to-quit-after-a-few-weeks-just-dont-make-it-a-pattern&quot;&gt;It’s ok to quit after a few weeks (just don’t make it a pattern)&lt;/h4&gt;
-
-&lt;p&gt;When I started my second job search, I was worried that the short
-tenure in the job I was trying to leave would be a turn-off to perspective employers. In reality,
-however, it wasn’t a big deal- people asked about it, but seemed satisfied with my 20 second
-summary and then moved on to other things.&lt;/p&gt;
-
-&lt;p&gt;The sense I get is that you’re allowed to quit a new job once in your career without any
-repercussions. If you do it multiple times, however, then recruiters and hiring managers might
-have second thoughts about interviewing you without strong internal references or some other signal
-that you’ll be a good employee.&lt;/p&gt;
-
-&lt;h4 id=&quot;switch-teams-before-quitting&quot;&gt;Switch teams before quitting&lt;/h4&gt;
-
-&lt;p&gt;As I noted in a &lt;a href=&quot;/blog/leaving-a-job&quot;&gt;previous post&lt;/a&gt;, switching teams is a lot easier than
-switching jobs. I didn’t do this before I left Stripe because there weren’t any other teams that I
-was super enthusiastic about at the time. But, in retrospect, I probably should have given this a
-try before quitting.&lt;/p&gt;
-
-&lt;p&gt;Even if the new team hadn’t been a perfect fit, it would have at least bought some time and given
-me some additional experience that could help in future work. This is what I did at Google
-and Airbnb, and in both cases the “second team” was what really opened up new opportunities for me.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;addendum&quot;&gt;Addendum&lt;/h3&gt;
-
-&lt;p&gt;This post was submitted to Hacker News after publication and got
-&lt;a href=&quot;https://news.ycombinator.com/item?id=25637922&quot;&gt;a lot of comments&lt;/a&gt;! Feel free to add more there.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">Two years ago, I did something that I'd never done in my career before- I left a job (at Nuro) only a few months after starting it. In this post, I want to explain what happened and what I learned from the experience.</summary></entry></feed>
+minimal maintenance overhead.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Every now and then, I get asked how I made this blog from a technical standpoint. In this post, I want to share how my content is generated and hosted, and then describe some commonly-used, alternative approaches that I decided not to take.</summary></entry></feed>
