@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Most core values are meaningless"
-date:   2021-08-01 20:03:00 -0700
+date:   2021-08-07 20:03:00 -0700
 categories: general tech
 excerpt: |
   Over the last few years, many tech companies have embraced "core values"
@@ -22,20 +22,24 @@ and what can be done to make them better.
 Core values are a set of behavioral, non-job-specific traits that companies
 expect or aspire their employees to uphold. They're most commonly a mixture of
 rules for civilized behavior (e.g., "treat your coworkers with respect"),
-quick tips for getting things done in a productive way (e.g.,
-"be resourceful", "be rigorous", etc.), and aspirations that are never fully
-attainable (e.g. "never settle", "only hire the best", "simplify to the core", etc).
+tips for getting things done in a productive way (e.g., "be resourceful", "be rigorous",
+etc.), and aspirations that are never fully attainable (e.g. "never settle", "only hire the best",
+and "simplify to the core").
+
+Although the term "core values" seems to be the most common one, some companies refer to these
+lists of traits by other names like "operating guidelines" or "leadership principles". When I use
+the term "core values" in this post, I'm also including the latter.
 
 The idea is to not just write down core values on a page in the employee handbook
 but rather to "live" them day-to-day. Companies do this by posting their
-core values prominently on their webpages (examples from companies I've worked at
-or applied to: [Airbnb](https://careers.airbnb.com/),
+values prominently on their webpages (examples from companies I've worked or interviewed
+at: [Airbnb](https://careers.airbnb.com/),
 [Stripe](https://stripe.com/jobs/culture),
 [Facebook](https://www.facebook.com/careers/facebook-life/),
 [Microsoft](https://www.microsoft.com/en-us/about/corporate-values),
 [Slack](https://slack.com/careers)), evaluating
 candidates against them during the interview process, holding multi-hour-long
-sessions about them during new hire orientation, inserting random examples of them
+sessions about them during new hire orientation, inserting examples of them
 into company all-hands meetings, and using them to grade employees during the
 performance evaluation process.
 
@@ -58,13 +62,13 @@ and would have trouble attracting and retaining both employees and customers.
 Because these values are so universal and because they're so obviously
 associated with good employee behavior no matter which company you're at,
 they've completely non-actionable. I've never at any point in my career
-had a tough decision where, for instance, the choice is between being nice
+had a tough decision where, for instance, the choice was between being nice
 to my coworkers and being nasty to them. Even if I wanted to be mean (which
 I don't), it's unlikely that having a core value of "be nice to your coworkers"
 would dissuade me from doing this; the actual disincentive would be losing
-my job for violating the basic norms of good behavior.
+my job for violating the standard norms of good behavior.
 
-Overall, therefore, values in the five buckets above are generally meaningless.
+Overall, values in the five buckets above are generally meaningless.
 They're the same at most companies, they don't inform decisions in people's
 day-to-day work, and no matter how companies try to spin them, they're not
 magical, special, or unique.
@@ -105,7 +109,7 @@ in most cases.
 
 Just because something isn't a core value doesn't mean that it's not important to the company.
 Many other things, including the more generic behavioral guidelines discussed previously, can
-also be valued, put on the website, used for candidate and employee evaluations, etc.
+also be valued, put on the website, used for candidate and employee evaluations, and so forth.
 
 #### Don't apply core values where they aren't appropriate
 
@@ -116,12 +120,15 @@ non-behavioral things required at both the company and individual level.
 This principle is often violated in the context of employee or candidate evaluations.
 At one former employer, it was decided to remove all of the technical feedback from the engineer
 performance evaluation process and just have questions about how well each person embodied the
-company's core values. At other places, I've been asked to evaluate interview candidates on the
+company's core values. At other places, I've been asked to evaluate job candidates on the
 company's core values, even for non-behavioral interviews like coding questions.
 
-#### Consider other names
-
-The term "core values" often
+A good software engineer is strong on both technical and behavioral dimensions. A good company
+has good values but also has solid technology and products that customers like. Values are necessary
+but not sufficient conditions for success.
 
 ## Conclusion
 
+Many tech companies have adopted core values, but unfortunately only a subset of these
+are meaningful. Values like "be rigorous" and "be respectful" sound nice but don't set your
+company apart or inspire people to behave in a way that they wouldn't otherwise.
