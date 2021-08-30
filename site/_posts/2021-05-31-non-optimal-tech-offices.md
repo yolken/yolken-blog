@@ -150,4 +150,4 @@ multi-billion dollar companies deliberately build out offices with suboptimal de
 
 At least now, even the most traditional companies are open to remote work. If I encounter a
 noisy or unproductive office in the future, I'm just going to return to working from home. Hopefully
-others who are as sensitive to their environment as I am will have the same flexibility.
+others will have the same flexibility.
