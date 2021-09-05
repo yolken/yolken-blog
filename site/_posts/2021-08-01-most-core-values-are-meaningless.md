@@ -111,6 +111,17 @@ Just because something isn't a core value doesn't mean that it's not important t
 Many other things, including the more generic behavioral guidelines discussed previously, can
 also be valued, put on the website, used for candidate and employee evaluations, and so forth.
 
+#### Avoid (or at least explain) any contradictions
+
+One of my former employers had values of both "get things done quickly" and "be super
+rigorous". Hypothetically then, one could release horribly buggy software quickly, or
+spend 3 months changing the color of a single button in the UI, or do anything between
+these two extremes, and all of these behaviors would be defensible using some subset
+of the core values.
+
+Ideally, values shouldn't contradict each other. Or, if they do, it should be very carefully
+explained how to achieve a balance between them.
+
 #### Don't apply core values where they aren't appropriate
 
 Core values, no matter how important they are, are not, by themselves, sufficient conditions
