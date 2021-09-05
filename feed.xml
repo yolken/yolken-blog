@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-08-29T18:11:38-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Most core values are meaningless</title><link href="https://yolken.net/blog/most-core-values-are-meaningless" rel="alternate" type="text/html" title="Most core values are meaningless" /><published>2021-08-07T20:03:00-07:00</published><updated>2021-08-07T20:03:00-07:00</updated><id>https://yolken.net/blog/most-core-values-are-meaningless</id><content type="html" xml:base="https://yolken.net/blog/most-core-values-are-meaningless">&lt;p&gt;Over the last few years, many tech companies have embraced “core values”
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-09-04T20:18:35-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Most core values are meaningless</title><link href="https://yolken.net/blog/most-core-values-are-meaningless" rel="alternate" type="text/html" title="Most core values are meaningless" /><published>2021-08-07T20:03:00-07:00</published><updated>2021-08-07T20:03:00-07:00</updated><id>https://yolken.net/blog/most-core-values-are-meaningless</id><content type="html" xml:base="https://yolken.net/blog/most-core-values-are-meaningless">&lt;p&gt;Over the last few years, many tech companies have embraced “core values”
 with religious fervor. Although this process is done with good intentions,
 the result is often a bland mixture of generic, feel-good principles that
 do little to distinguish the company or improve employee behavior.&lt;/p&gt;
@@ -101,6 +101,17 @@ in most cases.&lt;/p&gt;
 &lt;p&gt;Just because something isn’t a core value doesn’t mean that it’s not important to the company.
 Many other things, including the more generic behavioral guidelines discussed previously, can
 also be valued, put on the website, used for candidate and employee evaluations, and so forth.&lt;/p&gt;
+
+&lt;h4 id=&quot;avoid-or-at-least-explain-any-contradictions&quot;&gt;Avoid (or at least explain) any contradictions&lt;/h4&gt;
+
+&lt;p&gt;One of my former employers had values of both “get things done quickly” and “be super
+rigorous”. Hypothetically then, one could release horribly buggy software quickly, or
+spend 3 months changing the color of a single button in the UI, or do anything between
+these two extremes, and all of these behaviors would be defensible using some subset
+of the core values.&lt;/p&gt;
+
+&lt;p&gt;Ideally, values shouldn’t contradict each other. Or, if they do, it should be very carefully
+explained how to achieve a balance between them.&lt;/p&gt;
 
 &lt;h4 id=&quot;dont-apply-core-values-where-they-arent-appropriate&quot;&gt;Don’t apply core values where they aren’t appropriate&lt;/h4&gt;
 
