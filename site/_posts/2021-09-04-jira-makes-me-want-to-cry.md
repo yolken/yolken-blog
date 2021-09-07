@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jira makes me want to cry"
-date:   2021-09-04 18:25:00 -0700
+date:   2021-09-06 18:25:00 -0700
 categories: general tech
 excerpt: |
   Every company I've worked at in the last 9 years, from small startups
@@ -118,13 +118,53 @@ correctly.
 
 #### (3) There are too many ways of doing things
 
+As with other complex software products, there are many ways to accomplish
+the same thing in Jira (e.g., updating the title of a ticket). The problem
+with Jira's design, however, is that the different ways of doing things are
+often confusing and inconsistent. A few examples:
 
+1. In some text boxes, I can use [Markdown](https://en.wikipedia.org/wiki/Markdown) to
+  format the text, but in others I have to use
+  [Jira's proprietary markup language](https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all).
+2. I can reorder issues in the Kanban and Roadmap pages, but not in the epic view, which
+  where I typically go to see all tickets for a particular subproject
+3. Clicking on an issue in the Roadmap page opens up a side panel where I can see and edit
+  the details, but in the Issues view I have to open a new page to do the same thing
+4. Different pages have different search UIs. In some, all I get is a box (Google-style),
+  whereas in others I also have the option (obligation?) to filter on issue fields like the
+  assignee.
 
 ## The result
 
+The end result of all this is that many engineers, myself included, avoid using Jira
+when possible. Is there a bug that will just take an hour to fix? Eh, just write it down
+on a notepad or, even better, commit it to memory. Are there lots of old issues in the
+project that could use some pruning and reorganization? Eh, it's too much of a hassle, just
+leave them as-is for now.
 
+It's really sad because I generally like organizing things (including my closet, my books,
+the pens on my desk, etc.) and I would love to spend lots of time doing the same for my
+team's engineering work, but Jira just takes the joy out of it.
+
+These avoidances end up having snowball effects. As others on the team also stop looking
+at Jira regularly, each person's incentive to contribute goes down. After a while,
+both ICs and managers lose trust in the quality of the information in the system and have
+to bother coworkers with theoretically-Jira-answerable questions such as "what's the status
+of the project?" and "what should I be working on next?". The system that was designed
+to keep everyone focused and organized becomes an administrative burden that reduces
+the team's focus and organization.
 
 ## Where to go from here
 
 Jira is such a productivity drain that I think companies should seriously consider
-replacing it with something else. Unfortunately, I don't have a lot of experience
+replacing it with something else. Atlassian has had many many years to fix the
+problems above and hasn't, so why continue supporting them?
+
+Unfortunately, I don't have a lot of hands-on experience with the alternatives, so I can't
+give precise recommendations at this time. I've heard some good things about
+[Clubhouse](https://clubhouse.io/), so this is one option that I plan on exploring
+in the future. For small companies, even the simple task-tracking features
+built-in to [Github](https://github.com/features/issues/) would be a reasonable
+choice.
+
+Whichever alternative you pick, your employees will thank you.
