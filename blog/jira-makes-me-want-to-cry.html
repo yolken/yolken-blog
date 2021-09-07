@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Jira makes me want to cry | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Jira makes me want to cry" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Every company I’ve worked at in the last 9 years, from small startups to multi-thousand-person public corporations, has used Jira for managing software projects internally. In this post, I want to explain what Jira is and why interacting with it at work makes me feel frustrated and unproductive." />
+<meta property="og:description" content="Every company I’ve worked at in the last 9 years, from small startups to multi-thousand-person public corporations, has used Jira for managing software projects internally. In this post, I want to explain what Jira is and why interacting with it at work makes me feel frustrated and unproductive." />
+<link rel="canonical" href="https://yolken.net/blog/jira-makes-me-want-to-cry" />
+<meta property="og:url" content="https://yolken.net/blog/jira-makes-me-want-to-cry" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-06T18:25:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jira makes me want to cry" />
+<script type="application/ld+json">
+{"url":"https://yolken.net/blog/jira-makes-me-want-to-cry","headline":"Jira makes me want to cry","dateModified":"2021-09-06T18:25:00-07:00","datePublished":"2021-09-06T18:25:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/jira-makes-me-want-to-cry"},"description":"Every company I’ve worked at in the last 9 years, from small startups to multi-thousand-person public corporations, has used Jira for managing software projects internally. In this post, I want to explain what Jira is and why interacting with it at work makes me feel frustrated and unproductive.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146787283-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-146787283-1');
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/pubs">Publications</a><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Jira makes me want to cry</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-09-06T18:25:00-07:00" itemprop="datePublished">Sep 6, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Every company I’ve worked at in the last 9 years, from small startups
+to multi-thousand-person public corporations, has used
+<a href="https://www.atlassian.com/software/jira">Jira</a> for managing software
+projects internally.</p>
+
+<p>While the goals of this system are admirable, I’ve found it to be a huge
+pain to use in practice. In this post, I want to explain what Jira is and why
+interacting with it makes me feel frustrated and unproductive at work.</p>
+
+<h2 id="aside-what-is-jira">Aside: What is Jira?</h2>
+
+<p>Jira is an online project management system created by
+<a href="https://www.atlassian.com/">Atlassian</a>, an Australian company that
+makes some other productivity tools as well.</p>
+
+<p>A company’s Jira account is divided into “projects” which, at many companies,
+map 1:1 with teams. Within each project/team, users create issues (sometimes
+referred to as “tickets”) to represent individual things that need to be done,
+e.g. bugs to fix or new features to add in the company’s products.</p>
+
+<p>Issues can be listed, categorized, and reordered within a number of different
+high-level views depending on how the associated project is
+configured. For instance, there might be a
+<a href="https://en.wikipedia.org/wiki/Kanban_board">Kanban board</a> that lists issues
+in columns by status (example below) or a “roadmap” view that shows a
+<a href="https://en.wikipedia.org/wiki/Gantt_chart">Gantt-chart</a>-like summary of when issues
+are projected to be done.</p>
+
+<p><img src="/assets/jira_kanban.png" alt="Jira Kanban board" width="800" /></p>
+
+<p>Each issue is assigned to a single member of the team, who’s then responsible
+for working on it. As they do this, they update the status of the ticket in the UI
+so that others at the company can track the progress. Finally,
+when the work is complete, the ticket is marked as “Done” and the assignee moves on
+to the next ticket in the team’s queue.</p>
+
+<h2 id="what-its-supposed-to-do">What it’s supposed to do</h2>
+
+<p>Managing software projects is tedious. Once you get beyond a handful of people
+working on something, you need some structure so that:</p>
+
+<ol>
+  <li>There’s a well-known place to file bugs and TODOs so that people don’t forget
+  about them</li>
+  <li>Bugs/tickets/issues (whatever you want to call them) can be prioritized by teams
+  so that the more important things are worked on before the less important ones</li>
+  <li>Issues can be assigned to developers so that each person knows what to do next and
+  work isn’t duplicated</li>
+  <li>Managers of various types (including project, program, product, and engineering)
+  can see the big picture, make promises to customers, and reallocate resources
+  as needed</li>
+</ol>
+
+<p>These requirements could be handled by post-its on a whiteboard or rows in a
+spreadsheet, but these quick-and-dirty solutions don’t scale too well when you have
+hundreds of people around the world, simultaneously working on dozens of interdependent
+projects.</p>
+
+<p>Jira, in theory, provides this structure at scale. It aims to allow companies
+of all sizes to manage the chaos around software development and keep teams
+well-organized, productive, and responsive to customer issues as they go about their
+day-to-day work.</p>
+
+<h2 id="the-reality">The reality</h2>
+
+<p>Although Jira is nice in theory, the reality in my experience is very suboptimal.
+There’s lots of other material out there that enumerates all of the problems
+(someone even made <a href="https://whyjirasucks.com/">https://whyjirasucks.com</a>), so
+I’m not going to rehash every one here. Instead, I want to focus on my top
+three frustrations.</p>
+
+<h4 id="1-its-slow">(1) It’s slow</h4>
+
+<p>Every operation in my work team’s Jira project, whether loading the details a
+single issue, doing a search across all of our issues, or updating the status
+on an issue, feels sluggish. It’s like I’m browsing the Internet through a modem
+in 1998.</p>
+
+<p>But wait, you might say, that’s just because your employer’s account is so
+big and has lots of optional add-ons installed (Jira, like many other enterprise
+SaaS products, offers a lot of customization). Well, I created a vanilla personal
+account through <a href="https://jira.com">jira.com</a> too, and, while it’s a bit better,
+the performance still isn’t great.</p>
+
+<p>The problem with the Jira sluggishness is that users are doing many operations
+per session. When I go in, for instance, I might need to review a couple dozen
+issues, mark some of these as done, create a few new issues, then reorder the
+updated corpus. If each operation involves multiple seconds of latency, it
+adds up to a lot of wasted time.</p>
+
+<h4 id="2-creating-new-issues-is-heavyweight">(2) Creating new issues is heavyweight</h4>
+
+<p>Creating issues is a key activity in an issue tracking system, so ideally
+the process should be fast and lightweight. Unfortunately, Jira’s ticket
+creation flow is about as fluid as filling out a tax form; here’s a screenshot
+from my personal test account:</p>
+
+<p><img src="/assets/jira_create_issue.png" alt="Creating an issue" width="500" /></p>
+
+<p>There are so many fields that I had to shrink down my browser font
+to fit everything in a single screen.</p>
+
+<p>Not all fields are required. However, if some of the optional fields
+aren’t set correctly, then the issue might not show up in the team’s
+Kanban board or be associated with the correct epic, which means that I’ll
+need to waste time in the future trying to find it and categorize it
+correctly.</p>
+
+<h4 id="3-there-are-too-many-ways-of-doing-things">(3) There are too many ways of doing things</h4>
+
+<p>As with other complex software products, there are many ways to accomplish
+the same thing in Jira (e.g., updating the title of a ticket). The problem
+with Jira’s design, however, is that the different ways of doing things are
+often confusing and inconsistent. A few examples:</p>
+
+<ol>
+  <li>In some text boxes, I can use <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> to
+  format the text, but in others I have to use
+  <a href="https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all">Jira’s proprietary markup language</a></li>
+  <li>I can reorder issues in the Kanban and Roadmap pages, but not in the epic view, which
+  where I typically go to see all tickets for a particular subproject</li>
+  <li>Clicking on an issue in the Roadmap page opens up a side panel where I can see and edit
+  the details, but in the Issues view I have to open a new page to do the same thing</li>
+  <li>Different pages have different search UIs. In some, all I get is a box (Google-style),
+  whereas in others I also have the option (obligation?) to filter on issue fields like the
+  assignee.</li>
+</ol>
+
+<h2 id="the-result">The result</h2>
+
+<p>The end result of all this is that many engineers, myself included, avoid using Jira
+when possible. Is there a bug that will just take an hour to fix? Eh, just write it down
+on a notepad or, even better, commit it to memory. Are there lots of old issues in the
+project that could use some pruning and reorganization? Eh, it’s too much of a hassle, just
+leave them as-is for now.</p>
+
+<p>It’s really sad because I generally like organizing things (including my closet, my books,
+the pens on my desk, etc.) and I would love to spend lots of time doing the same for my
+team’s engineering work, but Jira just takes the joy out of it.</p>
+
+<p>These avoidances end up having snowball effects. As others on the team also stop looking
+at Jira regularly, each person’s incentive to contribute goes down. After a while,
+both ICs and managers lose trust in the quality of the information in the system and have
+to bother coworkers with theoretically-Jira-answerable questions such as “what’s the status
+of the project?” and “what should I be working on next?”. The system that was designed
+to keep everyone focused and organized becomes an administrative burden that reduces
+the team’s focus and organization.</p>
+
+<h2 id="where-to-go-from-here">Where to go from here</h2>
+
+<p>Jira is such a productivity drain that I think companies should seriously consider
+replacing it with something else. Atlassian has had many many years to fix the
+problems above and hasn’t, so why continue supporting them?</p>
+
+<p>Unfortunately, I don’t have a lot of hands-on experience with the alternatives, so I can’t
+give precise recommendations at this time. I’ve heard some good things about
+<a href="https://clubhouse.io/">Clubhouse</a>, so this is one option that I plan on exploring
+in the future. For small companies, even the simple task-tracking features
+built-in to <a href="https://github.com/features/issues/">Github</a> would be a reasonable
+choice.</p>
+
+<p>Whichever alternative you pick, your employees will thank you.</p>
+
+  </div>
+
+  <a class="u-url" href="/blog/jira-makes-me-want-to-cry" hidden></a>
+</article>
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
