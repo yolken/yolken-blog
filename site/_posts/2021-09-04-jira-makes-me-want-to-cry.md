@@ -5,33 +5,33 @@ date:   2021-09-06 18:25:00 -0700
 categories: general tech
 excerpt: |
   Every company I've worked at in the last 9 years, from small startups
-  to multi-thousand-person public companies, has used Jira for managing software
+  to multi-thousand-person public corporations, has used Jira for managing software
   projects internally. In this post, I want to explain what Jira is and why
   interacting with it at work makes me feel frustrated and unproductive.
 ---
 
 Every company I've worked at in the last 9 years, from small startups
-to multi-thousand-person public companies, has used
+to multi-thousand-person public corporations, has used
 [Jira](https://www.atlassian.com/software/jira) for managing software
 projects internally.
 
 While the goals of this system are admirable, I've found it to be a huge
 pain to use in practice. In this post, I want to explain what Jira is and why
-interacting with it at work makes me feel frustrated and unproductive.
+interacting with it makes me feel frustrated and unproductive at work.
 
 ## Aside: What is Jira?
 
 Jira is an online project management system created by
 [Atlassian](https://www.atlassian.com/), an Australian company that
-makes some other software productivity tools as well.
+makes some other productivity tools as well.
 
 A company's Jira account is divided into "projects" which, at many companies,
-roughly map with teams. Within each project/team, users create issues (sometimes
+map 1:1 with teams. Within each project/team, users create issues (sometimes
 referred to as "tickets") to represent individual things that need to be done,
 e.g. bugs to fix or new features to add in the company's products.
 
 Issues can be listed, categorized, and reordered within a number of different
-high-level views, depending on how the associated project is
+high-level views depending on how the associated project is
 configured. For instance, there might be a
 [Kanban board](https://en.wikipedia.org/wiki/Kanban_board) that lists issues
 in columns by status (example below) or a "roadmap" view that shows a
@@ -42,7 +42,7 @@ are projected to be done.
 
 Each issue is assigned to a single member of the team, who's then responsible
 for working on it. As they do this, they update the status of the ticket in the UI
-so that others at the company can track its progress. Finally,
+so that others at the company can track the progress. Finally,
 when the work is complete, the ticket is marked as "Done" and the assignee moves on
 to the next ticket in the team's queue.
 
@@ -73,7 +73,7 @@ day-to-day work.
 
 ## The reality
 
-Although Jira is nice in theory, the reality in my experience is terrible.
+Although Jira is nice in theory, the reality in my experience is very suboptimal.
 There's lots of other material out there that enumerates all of the problems
 (someone even made [https://whyjirasucks.com](https://whyjirasucks.com/)), so
 I'm not going to rehash every one here. Instead, I want to focus on my top
@@ -100,7 +100,7 @@ adds up to a lot of wasted time.
 
 #### (2) Creating new issues is heavyweight
 
-Creating issues is a core activity of an issue tracking system, so ideally
+Creating issues is a key activity in an issue tracking system, so ideally
 the process should be fast and lightweight. Unfortunately, Jira's ticket
 creation flow is about as fluid as filling out a tax form; here's a screenshot
 from my personal test account:
@@ -125,7 +125,7 @@ often confusing and inconsistent. A few examples:
 
 1. In some text boxes, I can use [Markdown](https://en.wikipedia.org/wiki/Markdown) to
   format the text, but in others I have to use
-  [Jira's proprietary markup language](https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all).
+  [Jira's proprietary markup language](https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all)
 2. I can reorder issues in the Kanban and Roadmap pages, but not in the epic view, which
   where I typically go to see all tickets for a particular subproject
 3. Clicking on an issue in the Roadmap page opens up a side panel where I can see and edit
