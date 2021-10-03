@@ -139,7 +139,7 @@ these areas at peak times unless you don't mind crowds.
 #### The bike routes in Google Maps are amazing
 
 <figure>
-  <img height="400" src="/assets/nyc_biking_google_maps.png" alt="Google Maps screenshot"/>
+  <img src="/assets/nyc_biking_google_maps.png" alt="Google Maps screenshot"/>
   <figcaption style="font-size:0.8em">
     Screenshot of the NYC bike route layer in Google Maps.
   </figcaption>
