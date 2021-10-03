@@ -1,4 +1,178 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-09-06T21:16:32-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Jira makes me want to cry</title><link href="https://yolken.net/blog/jira-makes-me-want-to-cry" rel="alternate" type="text/html" title="Jira makes me want to cry" /><published>2021-09-06T18:25:00-07:00</published><updated>2021-09-06T18:25:00-07:00</updated><id>https://yolken.net/blog/jira-makes-me-want-to-cry</id><content type="html" xml:base="https://yolken.net/blog/jira-makes-me-want-to-cry">&lt;p&gt;Every company I’ve worked at in the last 9 years, from small startups
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-10-03T15:25:58-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">My NYC Bike-cation</title><link href="https://yolken.net/blog/my-nyc-bike-cation" rel="alternate" type="text/html" title="My NYC Bike-cation" /><published>2021-10-03T11:37:00-07:00</published><updated>2021-10-03T11:37:00-07:00</updated><id>https://yolken.net/blog/my-nyc-bike-cation</id><content type="html" xml:base="https://yolken.net/blog/my-nyc-bike-cation">&lt;p&gt;I recently got back from a vacation to the East Coast of the US. For two days during my trip,
+I biked around New York City and explored various neighborhoods, parks, and bridges.&lt;/p&gt;
+
+&lt;p&gt;In this post (my first that’s not about tech!), I want to share my routes and also some observations
+from the perspective of someone who has done most of their biking in the San Francisco Bay Area.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/nyc_biking_street.jpg&quot; alt=&quot;Street in upper Manhattan&quot; /&gt;
+  &lt;figcaption style=&quot;font-size:0.8em&quot;&gt;
+    View from my bike camera in upper Manhattan.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;logistics&quot;&gt;Logistics&lt;/h2&gt;
+
+&lt;p&gt;New York has a massive bike share program, &lt;a href=&quot;https://citibikenyc.com/homepage&quot;&gt;Citi Bike&lt;/a&gt;, with
+stations all over the city. These bikes are relatively cheap to rent ($15 / day), but they’re heavy
+and not designed for steep hills, so I decided to go a little more upscale and rent a nicer bike
+each day from a &lt;a href=&quot;https://bikerent.nyc/&quot;&gt;bike rental kiosk&lt;/a&gt; in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Central_Park&quot;&gt;Central Park&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The kiosk bikes were still not amazing as they were designed more for cruising than hardcore rides,
+but at least they had more gears, better brakes, and lighter frames.&lt;/p&gt;
+
+&lt;p&gt;Each day, I walked from my hotel in Times Square to the rental kiosk, paid $40 for a day-long
+rental, and then was off riding within a few minutes. Central Park, as implied by its name,
+is centrally located, so it was easy to go off in various directions based on the plan for the
+day.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-1-manhattan&quot;&gt;Day 1: Manhattan&lt;/h2&gt;
+
+&lt;p&gt;On the first day, I did Manhattan Island from end-to-end:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img height=&quot;600&quot; src=&quot;/assets/nyc_ride1_small.png&quot; alt=&quot;Manhattan ride map&quot; /&gt;
+  &lt;figcaption style=&quot;font-size:0.8em&quot;&gt;
+    &lt;strong&gt;Total distance:&lt;/strong&gt; 40.36 miles.&lt;br /&gt;
+    &lt;strong&gt;Net elevation gain:&lt;/strong&gt; 1,086 feet.&lt;br /&gt;
+    See &lt;a href=&quot;https://www.strava.com/activities/5981756660&quot;&gt;Strava&lt;/a&gt; for more details.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Starting in at the kiosk in the southwest corner of Central Park, I went up through the park
+then took local streets from the north side of the park to the upper tip of Manhattan. This
+took me through the neighborhoods of &lt;a href=&quot;https://en.wikipedia.org/wiki/Harlem&quot;&gt;Harlem&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Washington_Heights,_Manhattan&quot;&gt;Washington Heights&lt;/a&gt;, and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Inwood,_Manhattan&quot;&gt;Inwood&lt;/a&gt;, ending up at the beautiful
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Inwood_Hill_Park&quot;&gt;Inwood Hill Park&lt;/a&gt; at the northwestern corner
+of the island.&lt;/p&gt;
+
+&lt;p&gt;I then took the &lt;a href=&quot;https://ride.citibikenyc.com/rides/hudson-river-greenway&quot;&gt;Hudson River Greenway&lt;/a&gt;,
+a paved, off-street bike trail, down the entire west side of Manhattan to
+&lt;a href=&quot;https://en.wikipedia.org/wiki/The_Battery_(Manhattan)&quot;&gt;The Battery&lt;/a&gt; at the southern tip of the
+island.&lt;/p&gt;
+
+&lt;p&gt;Finally, I took local streets back up to midtown Manhattan, doing some loops among the
+high-rises of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Upper_East_Side&quot;&gt;Upper East Side&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Midtown_Manhattan&quot;&gt;Midtown&lt;/a&gt; before turning my bike in at the end
+of the day.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-2-brooklyn&quot;&gt;Day 2: Brooklyn&lt;/h2&gt;
+
+&lt;p&gt;On day two, I did a big loop through the Brooklyn Borough, bounded by some mileage in Queens and
+Manhattan:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img height=&quot;600&quot; src=&quot;/assets/nyc_ride2_small.png&quot; alt=&quot;Brooklyn ride map&quot; /&gt;
+  &lt;figcaption style=&quot;font-size:0.8em&quot;&gt;
+    &lt;strong&gt;Total distance:&lt;/strong&gt; 40.89 miles.&lt;br /&gt;
+    &lt;strong&gt;Net elevation gain:&lt;/strong&gt; 1,086 feet.&lt;br /&gt;
+    See &lt;a href=&quot;https://www.strava.com/activities/5987844467&quot;&gt;Strava&lt;/a&gt; for more details.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I started by going east across Midtown and then over the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Queensboro_Bridge&quot;&gt;Queensboro Bridge&lt;/a&gt; into Queens. I then went
+south into Brooklyn, passing by the hip and expensive new housing developments along the riverfront
+in &lt;a href=&quot;https://en.wikipedia.org/wiki/Greenpoint,_Brooklyn&quot;&gt;Greenpoint&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Williamsburg,_Brooklyn&quot;&gt;Williamsburg&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I then cut island and looped around some less gentrified areas of Brooklyn, including the
+neighborhoods of &lt;a href=&quot;https://en.wikipedia.org/wiki/Crown_Heights,_Brooklyn&quot;&gt;Crown Heights&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Flatbush,_Brooklyn&quot;&gt;Flatbush&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Borough_Park,_Brooklyn&quot;&gt;Borough Park&lt;/a&gt;, and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Sunset_Park,_Brooklyn&quot;&gt;Sunset Park&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was definitely the most interesting part of my ride. Far away from the touristy and yuppified
+parts of Manhattan, there was an incredible diversity of architecture, businesses, and people.
+Based on the specific location, the population varied from Orthodox Jews to Chinese immigrants,
+and the building stock from concrete high-rises to beautiful, suburban-like, single family
+homes.&lt;/p&gt;
+
+&lt;p&gt;In Sunset Park, I turned back north and ended up in Downtown Brooklyn. After a quick break, I
+crossed over the &lt;a href=&quot;https://en.wikipedia.org/wiki/Brooklyn_Bridge&quot;&gt;Brooklyn Bridge&lt;/a&gt; back into
+Manhattan, took local streets back up to Midtown, and then did some loops around
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Hell%27s_Kitchen,_Manhattan&quot;&gt;Hell’s Kitchen&lt;/a&gt; and the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Upper_West_Side&quot;&gt;Upper West Side&lt;/a&gt; before returning my bike.&lt;/p&gt;
+
+&lt;h2 id=&quot;observations&quot;&gt;Observations&lt;/h2&gt;
+
+&lt;h4 id=&quot;bike-infrastructure-has-improved-a-lot&quot;&gt;Bike infrastructure has improved a lot&lt;/h4&gt;
+
+&lt;p&gt;The last time I rode in New York City was in 2004. At the time, there were paths along the rivers,
+in the parks, and over the bridges, but most other areas of the city were a biking wasteland- street
+riding was really the realm of hardcore bike messengers and others not afraid to weave
+in and out of speeding taxis and perform other, death-defying stunts.&lt;/p&gt;
+
+&lt;p&gt;Now there is much improved, street-level bike infrastructure, particularly on some of the big,
+north/south avenues in Manhattan. Bikers often have an entire lane, and the street markings and
+traffic lights are designed so that turning drivers are forced to yield to bikes.&lt;/p&gt;
+
+&lt;p&gt;The lanes are definitely less dense and less protected outside of Lower and Midtown Manhattan. But
+at least they’re there and an improvement over riding in the middle of a busy street. Hopefully,
+the network will be expanded more in the future.&lt;/p&gt;
+
+&lt;h4 id=&quot;there-are-a-ton-of-bikers&quot;&gt;There are a ton of bikers&lt;/h4&gt;
+
+&lt;p&gt;As a result of the improved infrastructure, there were &lt;em&gt;a lot&lt;/em&gt; of bikers, particularly in
+Central Park and along the Hudson River in lower Manhattan. At times, I felt like I was in
+one of those giant, densely-packed racing groups in the Tour de France.&lt;/p&gt;
+
+&lt;p&gt;It was nice to see so many bikers (I’ve never seen so many anywhere else), but at the same time it
+felt a little confining. Clearly, there is a ton of demand for bike infrastructure, so the city
+should devote more space to bikes in these neighborhoods. Until then, I’d advise avoiding
+these areas at peak times unless you don’t mind crowds.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-bike-routes-in-google-maps-are-amazing&quot;&gt;The bike routes in Google Maps are amazing&lt;/h4&gt;
+
+&lt;figure&gt;
+  &lt;img height=&quot;400&quot; src=&quot;/assets/nyc_biking_google_maps.png&quot; alt=&quot;Google Maps screenshot&quot; /&gt;
+  &lt;figcaption style=&quot;font-size:0.8em&quot;&gt;
+    Screenshot of the NYC bike route layer in Google Maps.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The bike route layer in Google Maps is absolutely amazing for New York City. Not only does it show
+which streets have bike lanes, but it also allows you to navigate through the road labyrinths that
+obscure bike path entrances, like the ones at the bases of the East River bridges.&lt;/p&gt;
+
+&lt;p&gt;I used Google Maps for planning my NYC routes, and I found &lt;em&gt;zero&lt;/em&gt; inaccuracies while on the road.
+I’ve had similar experiences with the bike route layers in other US cities like San Francisco
+and Washington, DC. Google has done a great job here, and hopefully this coverage will expand
+to more cities around the world.&lt;/p&gt;
+
+&lt;h4 id=&quot;bikers-dont-follow-traffic-laws&quot;&gt;Bikers don’t follow traffic laws&lt;/h4&gt;
+
+&lt;p&gt;Bikers in San Francisco will definitely roll through stop signs and do other, “minor”
+violations when it’s convenient. However, the amount of traffic law breaking I saw in NYC was just
+at a completely different level. Even at big intersections, many bikers would routinely sail through
+red lights as if they were yield signs. I also saw some fun behaviors I had never seen elsewhere
+before, like motorcycles driving on off-street bike paths (super dangerous!).&lt;/p&gt;
+
+&lt;p&gt;According to a friend of mine who bikes in NYC a lot, enforcement is pretty rare. However, the
+police will sometimes set up “stings” at high traffic places like outside Penn Station. Apparently,
+those efforts aren’t sufficient to improve adherence to the rules.&lt;/p&gt;
+
+&lt;h4 id=&quot;non-protected-bike-lanes-are-routinely-ignored-by-cars&quot;&gt;Non-protected bike lanes are routinely ignored by cars&lt;/h4&gt;
+
+&lt;p&gt;Bikers weren’t the only ones violating traffic laws. In particular, the amount of disregard for
+bike lanes by cars was also above and beyond anything I had seen elsewhere. Non-protected lanes
+(i.e., the ones at the side of the road between the traffic and parking lanes), were routinely
+treated as loading zones and parking spots. In some neighborhoods, there were multiple obstructions
+per block, making the lanes themselves almost unusable.&lt;/p&gt;
+
+&lt;p&gt;As with bikers violating traffic laws, I saw zero enforcement of cars violating the rules. I guess
+New York is kind of just a free-for-all for both sides.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I had a ton of fun biking around New York City. There is definitely room for
+improvement in terms of infrastructure and enforcement, but the city has come a long, long way
+over the last 15 years and is now a super interesting and relatively safe place to ride.&lt;/p&gt;
+
+&lt;p&gt;The city is huge, and I only got to explore a small portion of it on this trip. On my next
+vacation, I want to go back and ride around more!&lt;/p&gt;</content><author><name></name></author><category term="biking" /><summary type="html">I recently got back from a vacation to the East Coast of the US. For two days during my trip, I biked around New York City and explored various neighborhoods, parks, and bridges. In this post I want to share my routes and also my observations from the perspective of someone who has done most of their biking in San Francisco Bay Area.</summary></entry><entry><title type="html">Jira makes me want to cry</title><link href="https://yolken.net/blog/jira-makes-me-want-to-cry" rel="alternate" type="text/html" title="Jira makes me want to cry" /><published>2021-09-06T18:25:00-07:00</published><updated>2021-09-06T18:25:00-07:00</updated><id>https://yolken.net/blog/jira-makes-me-want-to-cry</id><content type="html" xml:base="https://yolken.net/blog/jira-makes-me-want-to-cry">&lt;p&gt;Every company I’ve worked at in the last 9 years, from small startups
 to multi-thousand-person public corporations, has used
 &lt;a href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Jira&lt;/a&gt; for managing software
 projects internally.&lt;/p&gt;
@@ -1595,196 +1769,4 @@ The optimal onboarding path can vary a lot from person-to-person and from job-to
 may or may not be ideal for you. However, you may find some subset of them helpful the next time
 you’re struggling to get up-to-speed at a new job.&lt;/p&gt;
 
-&lt;p&gt;Good luck and, most importantly, don’t get too stressed!&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">In my last post, I discussed how companies can make their onboarding processes better for employees. In this post, I want to turn the tables and talk about the strategies I use personally to get up-to-speed when I'm starting at a new job.</summary></entry><entry><title type="html">Great engineer onboarding</title><link href="https://yolken.net/blog/great-engineer-onboarding" rel="alternate" type="text/html" title="Great engineer onboarding" /><published>2021-01-17T09:58:00-08:00</published><updated>2021-01-17T09:58:00-08:00</updated><id>https://yolken.net/blog/great-engineer-onboarding</id><content type="html" xml:base="https://yolken.net/blog/great-engineer-onboarding">&lt;p&gt;I’ve written a few posts previously about quitting a job
-(see &lt;a href=&quot;/blog/leaving-a-job&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;/blog/quitting-a-new-job&quot;&gt;here&lt;/a&gt;).
-Now, I want to turn my attention to a much happier and more exciting topic-
-what happens when you show up for the first day at your next company.&lt;/p&gt;
-
-&lt;p&gt;Starting a new software engineering job is hard, and making this process
-successful requires a lot of effort from both the employer and the
-employee. In this post, I want to focus on the former, and in particular
-how companies can make their onboarding processes better. A follow-up post
-will offer advice on getting up-to-speed from the employee perspective.&lt;/p&gt;
-
-&lt;h2 id=&quot;onboarding-approaches&quot;&gt;Onboarding approaches&lt;/h2&gt;
-
-&lt;p&gt;I’ve been through almost a dozen new hire ramp-ups in my career so far.
-Although the details have varied a lot from company to company, I’ve broadly
-seen four different styles of onboarding programs, each described below. Note
-that these aren’t mutually exclusive- some companies have adopted hybrid
-approaches that combine multiple styles.&lt;/p&gt;
-
-&lt;h3 id=&quot;full-bootcamp&quot;&gt;Full bootcamp&lt;/h3&gt;
-
-&lt;p&gt;The most intense onboarding process is what’s referred to as a new hire
-bootcamp.&lt;/p&gt;
-
-&lt;p&gt;The analogy here is to bootcamp or basic training programs in the
-military. These work by taking a bunch of people from different backgrounds,
-grinding them down, and then building them back up in a consistent, structured way
-that lays the foundation for being a good soldier. Those who graduate then go on
-to more specialized training for their specific roles (e.g., officer candidate
-school).&lt;/p&gt;
-
-&lt;p&gt;Tech onboarding bootcamps aren’t quite as intense (no head shaving or being
-yelled at by a drill sergeant, fortunately!), but the general idea is the same-
-to take a diverse set of new “recruits” and give them all the same, baseline
-skills required to be a productive software engineer at the company.&lt;/p&gt;
-
-&lt;p&gt;Typically the way it works is that each cohort of new hires is seated together
-in the office. For several weeks, they attend classes together and do various,
-small exercises (e.g., bug fixes) either alone or in smaller groups.&lt;/p&gt;
-
-&lt;p&gt;Most new hires are not pre-assigned to teams. Instead, towards the latter half
-of the bootcamp, a matching process takes place in which each person tries to find a
-team that they’re interested in, that has available headcount, and whose hiring
-manager is willing to bring them on. Hiring managers might assign small technical
-tasks to test out potential team members and ensure that they’ll find the work
-interesting.&lt;/p&gt;
-
-&lt;p&gt;At the end of the bootcamp, those who have met the minimum requirements “graduate”
-and move on to their chosen teams. The small subset of people who don’t graduate
-with their cohort are typically given a bit more time to figure things out, but will
-eventually be forced to leave the company if they don’t complete the program.&lt;/p&gt;
-
-&lt;p&gt;Facebook is the best-known adopter of this approach. I haven’t worked
-at Facebook, so I’m not familiar with all the details of their program,
-but I went through a new hire bootcamp when I started at Airbnb, who modeled
-theirs after the Facebook one.&lt;/p&gt;
-
-&lt;h3 id=&quot;mini-project-bootcamp&quot;&gt;Mini-project bootcamp&lt;/h3&gt;
-
-&lt;p&gt;A less intense variant of the full bootcamp is one in which the new engineers
-are all pre-assigned to teams, so there’s no weed-out or team selection process.
-Instead, the starting class is divided into smaller teams, each of which works
-on a mini-project for a few weeks to get more familiar with the company’s tools,
-systems, and products. After the project is done, the project teams are disbanded
-and people begin onboarding with their assigned, long-term teams.&lt;/p&gt;
-
-&lt;p&gt;I went through a process like this when I started at Stripe- they called it
-“dev/start”, and it took around 5 weeks. I’ve heard of other companies having
-programs like this, but they’re typically optional and intended primarily for
-more junior engineers.&lt;/p&gt;
-
-&lt;h3 id=&quot;lightweight-team-driven&quot;&gt;Lightweight, team-driven&lt;/h3&gt;
-
-&lt;p&gt;An alternative to having structured, multi-week training programs is to push
-most of the learning onto individual teams. After a few days of
-general orientation, new engineers go and sit with their assigned teams and
-start an onboarding process that’s customized by their manager for their specific
-role.&lt;/p&gt;
-
-&lt;p&gt;The details vary, but typically the manager will write up a personalized “new hire”
-doc with a specific list of tasks that the person is expected to do (e.g., meet with person X, read this design doc, etc.). The new hire is typically also assigned a
-“starter project” to get their feet wet and matched with a “new hire buddy” on the
-team who can help answer low-level technical questions.&lt;/p&gt;
-
-&lt;p&gt;The first few weeks may be interspersed with classes, social events, and other
-activities that the new hires can participate in together. But, they’re generally
-optional to attend and fairly low key.&lt;/p&gt;
-
-&lt;p&gt;Many companies of lots of different sizes have adopted this approach. I went
-through it at Google, and then more recently when I started at Segment.&lt;/p&gt;
-
-&lt;h3 id=&quot;bare-bones&quot;&gt;Bare bones&lt;/h3&gt;
-
-&lt;p&gt;The least intense onboarding is one that’s completely minimal. New hires
-sign some forms, are shown to their desks, and then immediately dive in to their
-work (with some manager guidance).&lt;/p&gt;
-
-&lt;p&gt;This is typically the approach taken by smaller startups that don’t yet
-have the critical mass to justify creating a formal onboarding program.
-I experienced this when I joined MoPub, which at the time had only
-around 45 employees.&lt;/p&gt;
-
-&lt;h2 id=&quot;lightweight-is-best&quot;&gt;Lightweight is best&lt;/h2&gt;
-
-&lt;p&gt;Based on my various job starting experiences, I personally feel that
-the lightweight, team-based approach described above is far and away the best
-choice for most companies.&lt;/p&gt;
-
-&lt;p&gt;Here are some reasons why.&lt;/p&gt;
-
-&lt;h3 id=&quot;onboarding-isnt-a-one-size-fits-all-activity&quot;&gt;Onboarding isn’t a one-size-fits-all activity&lt;/h3&gt;
-
-&lt;p&gt;The members of a new hire cohort might range from new grads to industry veterans with
-30+ years of experience. Even in small companies, people will most likely be assigned
-to different teams working on different parts of the product and using different
-technical stacks.&lt;/p&gt;
-
-&lt;p&gt;In this environment, it’s impossible to have a multi-week, general training program
-that’s optimal for everybody. Even if you break it up into subspecialties (e.g.,
-“frontend bootcamp” vs. “backend bootcamp”), there’s still a tendency for it to be
-too fast, too slow, too general, or too specialized for some subset of the
-participants.&lt;/p&gt;
-
-&lt;p&gt;A more efficient way to get engineers up-to-speed is to have them do
-real project work that’s like the work they’ll be doing after orientation is over.
-And, the best way to do this is to have engineers join their teams
-early on in the process and lean on their managers and peers for guidance.&lt;/p&gt;
-
-&lt;p&gt;The other nice thing about the guided, “dive in” approach is that it can be heavily
-customized on a person-by-person basis. A new grad or someone who’s never worked
-in the team’s tech stack might be given smaller, easier starter tasks than someone
-who’s already an expert in the technology. New hires are able to get up-to-speed
-at their own pace, without the wasted time or excess stress of a group training
-program.&lt;/p&gt;
-
-&lt;h3 id=&quot;group-classes-have-limited-utility&quot;&gt;Group classes have limited utility&lt;/h3&gt;
-
-&lt;p&gt;Orientation classes can be fun at the beginning, but, after hours and hours
-of sitting in a stuffy room and listening to presentations, attentions
-wane and the sessions all start to blend together. In addition, by their very
-structure these classes are very much “one-size-fits-all” activities that can’t
-be easily customized for the requirements of each person’s job.&lt;/p&gt;
-
-&lt;p&gt;Personally, I think a day or two of classes at the beginning is fine, provided
-that these are devoted to things that are necessary and relevant for
-all new hires (e.g., how to get paid, what the core values / operating principles
-of the company are, etc.). But, beyond that, classes should be optional and also
-non-continuous so that attendees can fit them in with their team-specific
-onboarding tasks.&lt;/p&gt;
-
-&lt;p&gt;An alternative to classes, and what I think is a much better use of resources,
-is to create great onboarding &lt;em&gt;documentation&lt;/em&gt;. Unlike a presentation, which
-tends to go in one ear and out the other, documentation sticks around forever and
-can easily be consulted after the onboarding is done. People can also work
-through documentation at their own pace and skip over topics that they already
-know about or aren’t relevant for their work.&lt;/p&gt;
-
-&lt;p&gt;Google had a particularly nice balance here. There were a few technical
-onboarding classes, but they were extremely high-level and designed to be more
-about the social and cultural aspects of engineering rather than the technical
-ones (as I recall, they also had cute names like “life an engineer”). Technical
-training, when needed, was instead done via written “code labs” that engineers
-worked on individually.&lt;/p&gt;
-
-&lt;h3 id=&quot;doing-team-assignments-during-onboarding-is-crazy&quot;&gt;Doing team assignments during onboarding is crazy&lt;/h3&gt;
-
-&lt;p&gt;I went through a team matching process during my Airbnb onboarding, and it was
-extremely stressful for everyone involved. Hiring managers, particularly those
-on the less-desired teams, spent days marketing their teams and convincing (and sometimes begging) people to join them. On the other side, the members of my
-starting class and I were bombarded with choices and forced to spend a lot of
-time talking to hiring managers, doing mini-tasks for the teams we were
-interested in, and, in general, stressing out over a decision that had to be made
-quickly and would play a big role in our careers at the company.&lt;/p&gt;
-
-&lt;p&gt;Everyone in my starting class was able to find a team that they liked and
-“graduate” on-time. But, I’ve heard anecdotally about people arriving at
-these bootcamp-style orientations only to learn that the team(s) that attracted
-them to the company aren’t accepting any new hires. Or, on the flip side, I’ve
-heard about hiring managers recruiting people with specialized skills that they
-need (e.g., database performance optimization) only to have
-these specialists choose completely different teams at the end of bootcamp.&lt;/p&gt;
-
-&lt;p&gt;All of this craziness can be avoided by simply matching people to teams before
-they arrive. Doing this reduces stress on both sides and ensures that candidates know
-what they’re getting themselves into. People should be allowed to switch teams within
-the first few weeks if they really need to, but this should be relatively rare.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;The best approach to onboarding engineers is to quickly integrate them with
-their preassigned teams. Organizing weeks of classes and/or letting new hires
-pick teams during orientation may seem like a better onboarding experience, but
-usually just wastes time and causes unnecessary stress.&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">Starting a new software engineering job is hard, and making this process successful requires a lot of effort from both the employer and the employee. In this post, I want to focus on the former, and in particular how companies can make their onboarding processes better.</summary></entry></feed>
+&lt;p&gt;Good luck and, most importantly, don’t get too stressed!&lt;/p&gt;</content><author><name></name></author><category term="general" /><category term="tech" /><summary type="html">In my last post, I discussed how companies can make their onboarding processes better for employees. In this post, I want to turn the tables and talk about the strategies I use personally to get up-to-speed when I'm starting at a new job.</summary></entry></feed>
