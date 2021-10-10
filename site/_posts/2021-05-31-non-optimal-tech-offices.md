@@ -4,7 +4,7 @@ title:  "Non-optimal tech offices"
 date:   2021-05-31 15:02:00 -0700
 tags: non-optimal-things tech-culture
 related_posts:
-  - title: "Non-optimal engineer-personas"
+  - title: "Non-optimal engineer personas"
     slug: "non-optimal-engineer-personas"
 excerpt: |
     Looking back over the last decade, I've had a lot of great experiences in the offices
