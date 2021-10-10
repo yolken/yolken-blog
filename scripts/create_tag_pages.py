@@ -11,10 +11,9 @@ logging.basicConfig(
 )
 
 POSTS_DIR = 'site/_posts'
-TAG_PAGES_DIR = 'tags'
+TAG_PAGES_DIR = 'site/tags'
 
-TAGS_TEMPLATE = """
----
+TAGS_TEMPLATE = """---
 layout: posts-by-tag
 title: "Tag: %s"
 tag: %s
