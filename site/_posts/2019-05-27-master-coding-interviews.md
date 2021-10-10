@@ -4,10 +4,8 @@ title:  "Using Leetcode to master coding interviews"
 date:   2019-05-27 14:38:04 -0700
 tags: interviews
 related_posts:
-  - title: "The rules for better coding interviews"
-    slug: "rules-for-better-interviews"
-  - title: "How to do an architecture interview"
-    slug: "architecture-interviews"
+  - slug: "rules-for-better-interviews"
+  - slug: "architecture-interviews"
 excerpt: |
   Having switched jobs a few times over the last few years, I've done a a lot of software
   engineering interviews. In my most recent job search, for instance, I did around eight phone

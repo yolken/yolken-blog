@@ -31,8 +31,18 @@ layout: default
     <hr />
     <h1>🔗 Related blog posts</h1>
     <ul>
-      {% for source in page.related_posts %}
-      <li><a href="/blog/{{ source.slug }}">{{ source.title }}</a></li>
+      {% for related_post in page.related_posts %}
+        {% assign related_post_url = "/blog/" | append: related_post.slug %}
+        {% assign matches = 0 %}
+        {% for post in site.posts %}
+          {% if post.url == related_post_url %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% assign matches = matches | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% unless matches == 1 %}
+        {{ 1 | divided_by: 0 }}
+        {% endunless %}
       {% endfor %}
     </ul>
   </div>

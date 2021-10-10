@@ -4,12 +4,9 @@ title:  "Quitting a new job"
 date:   2021-01-01 18:40:00 -0700
 tags: career
 related_posts:
-  - title: "Leaving a job"
-    slug: "leaving-a-job"
-  - title: "Great engineer onboarding"
-    slug: "great-engineer-onboarding"
-  - title: "Starting a job"
-    slug: "starting-a-job"
+  - slug: "leaving-a-job"
+  - slug: "great-engineer-onboarding"
+  - slug: "starting-a-job"
 excerpt: |
     Two years ago, I did something that I'd never done in my career before- I left a job
     (at Nuro) only a few months after starting it. In this post, I want to explain
