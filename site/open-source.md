@@ -9,7 +9,7 @@ The following are the open source projects that I've created and help maintain:
 
 | Project  | Description | More info |
 |---|---|---|
-| [golines](https://github.com/segmentio/golines) | A golang formatter that fixes long lines. | [Repo](https://github.com/segmentio/golines)<br/>[Blog post](/blog/cleaner-go-code-golines) |
+| [golines](https://github.com/segmentio/golines) | A golang formatter that fixes long lines | [Repo](https://github.com/segmentio/golines)<br/>[Blog post](/blog/cleaner-go-code-golines) |
 | [topicctl](https://github.com/segmentio/topicctl) | Tool for declarative management of Kafka topics | [Repo](https://github.com/segmentio/topicctl)<br/>[Blog post](https://segment.com/blog/easier-management-of-Kafka-topics-with-topicctl/) |
 | [kubeapply](https://github.com/segmentio/kubeapply) | A lightweight tool for git-based management of Kubernetes configs | [Repo](https://github.com/segmentio/kubeapply)<br/>[Blog post](https://segment.com/blog/kubernetes-configuration/) |
 | [data-digger](https://github.com/segmentio/data-digger) | Dig through structured messages in Kafka, S3, or local files | [Repo](https://github.com/segmentio/data-digger) |
