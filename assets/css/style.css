@@ -352,6 +352,9 @@ table {
 .post-meta {
   font-size: 14px;
   color: #828282; }
+  .post-meta code {
+    background: #f8f8f8;
+    color: #828282; }
 
 .post-link {
   display: block;
@@ -403,6 +406,27 @@ h3.post-header {
     @media screen and (min-width: 800px) {
       .post-content h4 {
         font-size: 20px; } }
+
+.post-related hr {
+  margin-top: 20px; }
+.post-related h1 {
+  margin-top: 10px; }
+
+.post-tags {
+  margin-top: -4px;
+  margin-bottom: 6px;
+  font-size: 12.8px;
+  color: #777; }
+  @media screen and (min-width: 800px) {
+    .post-tags {
+      font-size: 12.8px; } }
+  .post-tags code {
+    background: #f8f8f8;
+    color: #777;
+    font-size: 12.8px; }
+    @media screen and (min-width: 800px) {
+      .post-tags code {
+        font-size: 12.8px; } }
 
 .social-media-list {
   display: table;
