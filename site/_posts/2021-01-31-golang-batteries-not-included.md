@@ -2,7 +2,10 @@
 layout: post
 title:  "Golang: Some batteries not included"
 date:   2021-01-31 17:55:00 -0700
-categories: general tech
+tags: golang
+related_posts:
+  - title: "Cleaner go code with golines"
+    slug: "cleaner-go-code-golines"
 excerpt: |
     The go standard library is fairly rich. However, there are certain pieces of functionality
     that are either missing or insufficient and that, as a result, require the use of

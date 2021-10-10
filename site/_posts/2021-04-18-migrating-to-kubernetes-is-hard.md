@@ -2,7 +2,7 @@
 layout: post
 title:  "Migrating to Kubernetes, part 2: Why it's hard"
 date:   2021-04-18 16:47:00 -0700
-categories: general tech
+tags: kubernetes
 excerpt: |
     In my previous post, I described how migrating to Kubernetes involves transitioning an
     organization's infrastructure from a legacy service platform (LeSP) to a Kubernetes service

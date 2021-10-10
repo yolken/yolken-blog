@@ -2,7 +2,10 @@
 layout: post
 title:  "Transformative tools"
 date:   2020-11-29 13:06:00 -0700
-categories: tooling
+tags: tooling
+related_posts:
+    - title: "Jira makes me want to cry"
+      slug: "jira-makes-me-want-to-cry"
 excerpt: |
     Since I switched into engineering 8 years ago, I've witnessed a few productivity and
     organization tools that have really been "transformative" in terms of how I do my day-to-day

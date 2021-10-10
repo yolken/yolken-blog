@@ -242,7 +242,7 @@ h3.post-header {
   background-image: url("/assets/sf.jpg");
 
   /* Full height */
-  width: 100%; 
+  width: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -296,6 +296,15 @@ h3.post-header {
   }
 }
 
+
+.post-related {
+  hr {
+    margin-top: 20px;
+  }
+  h1 {
+    margin-top: 10px;
+  }
+}
 
 .social-media-list {
   display: table;

@@ -21,5 +21,17 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.related_posts %}
+  <div class="post-related">
+    <hr />
+    <h1>🔗 Related blog posts</h1>
+    <ul>
+      {% for source in page.related_posts %}
+      <li><a href="/blog/{{ source.slug }}">{{ source.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

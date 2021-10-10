@@ -2,7 +2,10 @@
 layout: post
 title:  "Cleaner go code with golines"
 date:   2020-07-23 12:37:00 -0700
-categories: golang
+tags: golang
+related_posts:
+  - title: "Golang: Some batteries not included"
+    slug: "golang-batteries-not-included"
 excerpt: |
     Last year, I open-sourced golines, a tool that automatically shortens long lines in go code.
     This post explains why I developed the tool and how it works.

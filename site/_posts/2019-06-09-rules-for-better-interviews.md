@@ -2,7 +2,12 @@
 layout: post
 title:  "The rules for better coding interviews"
 date:   2019-06-09 16:49:00 -0700
-categories: interviewing
+tags: interviewing
+related_posts:
+  - title: "Using Leetcode to master coding interviews"
+    slug: "master-coding-interviews"
+  - title: "How to do an architecture interview"
+    slug: "architecture-interviews"
 excerpt: |
   In a previous post, I discussed preparing for coding
   interviews as a candidate. In this post, I want to flip to the other side of the table

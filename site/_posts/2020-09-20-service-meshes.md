@@ -2,7 +2,7 @@
 layout: post
 title:  "Service meshes are hard"
 date:   2020-09-20 13:44:00 -0700
-categories: networking
+tags: networking
 excerpt: |
     Service meshes look great on paper but can be a huge pain to roll out
     and manage. In this post, I want to share some of my war stories

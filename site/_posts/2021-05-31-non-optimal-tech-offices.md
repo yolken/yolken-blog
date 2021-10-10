@@ -2,7 +2,10 @@
 layout: post
 title:  "Non-optimal tech offices"
 date:   2021-05-31 15:02:00 -0700
-categories: general tech
+tags: offices non-optimal-things
+related_posts:
+  - title: "Non-optimal engineer-personas"
+    slug: "non-optimal-engineer-personas"
 excerpt: |
     Looking back over the last decade, I've had a lot of great experiences in the offices
     of my employers and for the most part these spaces have been comfortable. However,

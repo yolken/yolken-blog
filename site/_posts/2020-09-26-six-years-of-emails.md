@@ -2,7 +2,7 @@
 layout: post
 title:  "Six years of recruiting emails"
 date:   2020-09-26 16:59:00 -0700
-categories: recruiting
+tags: recruiting
 excerpt: |
     As a software engineer working in the San Francisco Bay Area, I get a lot of
     unsolicited recruiting emails. I recently decided to dig through my email archives

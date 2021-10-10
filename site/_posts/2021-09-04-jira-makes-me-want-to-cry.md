@@ -2,7 +2,10 @@
 layout: post
 title:  "Jira makes me want to cry"
 date:   2021-09-06 18:25:00 -0700
-categories: general tech
+tags: tooling
+related_posts:
+    - title: "Transformative tools"
+      slug: "transformative-tools"
 excerpt: |
   Every company I've worked at in the last 9 years, from small startups
   to multi-thousand-person public corporations, has used Jira for managing software

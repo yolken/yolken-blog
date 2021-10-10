@@ -2,7 +2,10 @@
 layout: post
 title:  "How tech acquisitions work"
 date:   2020-12-06 13:50:00 -0700
-categories: tooling
+tags: mergers-acquisitions
+related_posts:
+  - title: "Signs you're about to be acquired"
+    slug: "youre-about-to-be-acquired"
 excerpt: |
     In an earlier post, I listed out signs that your employer is about to be acquired. In this
     one, I want to talk about how the tech acquisition process works from end-to-end, based on my
