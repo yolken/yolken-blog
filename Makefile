@@ -5,3 +5,7 @@ preview:
 .PHONY: publish
 publish:
 	./scripts/publish_blog.sh
+
+.PHONY: tags
+tags:
+	./scripts/create_tag_pages.py

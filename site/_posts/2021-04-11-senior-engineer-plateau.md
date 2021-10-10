@@ -2,7 +2,7 @@
 layout: post
 title:  "The senior engineer plateau"
 date:   2021-04-11 14:01:00 -0700
-categories: career
+tags: career
 published: true
 excerpt: |
   At many companies the "senior engineer" level is fairly straightforward to get into, but hard to

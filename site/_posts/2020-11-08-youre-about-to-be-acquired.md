@@ -2,7 +2,10 @@
 layout: post
 title:  "Signs you're about to be acquired"
 date:   2020-11-08 21:24:00 -0700
-categories: mergers and acquisitions
+tags: mergers-acquisitions
+related_posts:
+  - title: "How tech acquisitions work"
+    slug: "how-acquisitions-work"
 excerpt: |
     Over the course of my tech career thus far, I've been through two acquisitions. In each case,
     I was just a normal employee without any special inside knowledge, and found out only a few days

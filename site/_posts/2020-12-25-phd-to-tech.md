@@ -2,7 +2,7 @@
 layout: post
 title:  "Going into tech with a PhD"
 date:   2020-12-25 13:04:00 -0700
-categories: interviews
+tags: interviews career
 excerpt: |
     I spent 5 years of my life getting a PhD, but like many others who've gotten this degree,
     I decided to leave academia after graduation. At the time, I explored several career choices

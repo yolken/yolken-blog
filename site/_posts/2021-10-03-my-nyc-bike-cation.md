@@ -2,7 +2,7 @@
 layout: post
 title:  "My NYC Bike-cation"
 date:   2021-10-03 11:37:00 -0700
-categories: biking
+tags: biking
 excerpt: |
   I recently got back from a vacation to the East Coast of the US. For two days during my trip,
   I biked around New York City and explored various neighborhoods, parks, and bridges.

@@ -2,7 +2,14 @@
 layout: post
 title:  "Great engineer onboarding"
 date:   2021-01-17 10:58:00 -0700
-categories: general tech
+tags: career
+related_posts:
+  - title: "Leaving a job"
+    slug: "leaving-a-job"
+  - title: "Quitting a new job"
+    slug: "quitting-a-new-job"
+  - title: "Starting a job"
+    slug: "starting-a-job"
 excerpt: |
     Starting a new software engineering job is hard, and making this process
     successful requires a lot of effort from both the employer and the

@@ -2,7 +2,7 @@
 layout: post
 title:  "How I made this blog"
 date:   2021-01-10 14:10:00 -0700
-categories: general tech
+tags: general-tech
 excerpt: |
     Every now and then, I get asked how I made this blog from a technical standpoint. In this
     post, I want to share how my content is generated and hosted, and then describe some
@@ -28,7 +28,7 @@ For example, here's a sample of the Markdown for my recent post on
 layout: post
 title:  "Quitting a new job"
 date:   2021-01-01 18:40:00 -0700
-categories: career
+tags: career
 excerpt: |
     Two years ago, I did something ...
 ---

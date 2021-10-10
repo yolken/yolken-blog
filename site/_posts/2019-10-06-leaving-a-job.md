@@ -2,7 +2,14 @@
 layout: post
 title:  "Leaving a job"
 date:   2019-10-06 12:52:00 -0700
-categories: career
+tags: career
+related_posts:
+  - title: "Quitting a new job"
+    slug: "quitting-a-new-job"
+  - title: "Great engineer onboarding"
+    slug: "great-engineer-onboarding"
+  - title: "Starting a job"
+    slug: "starting-a-job"
 excerpt: |
     Over the course of my career, I've had many jobs which implies that I've also left many jobs.
     Leaving a job can be awkward and emotionally draining, but, depending on the circumstances,

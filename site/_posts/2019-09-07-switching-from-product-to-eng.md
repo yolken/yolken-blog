@@ -2,7 +2,7 @@
 layout: post
 title:  "Switching from product management to engineering"
 date:   2019-09-07 16:23:00 -0700
-categories: career
+tags: career
 excerpt: |
     I began my career as a product manager (PM)
     but then switched tracks and became a software engineer (SWE) three and a half years later.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Interviewing with Triplebyte"
 date:   2019-08-31 16:23:00 -0700
-categories: interviewing
+tags: interviewing
 excerpt: |
     In my most recent job search, I used a service called
     Triplebyte to connect with potential employers. I wanted to share my thoughts

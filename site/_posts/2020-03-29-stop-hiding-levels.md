@@ -2,7 +2,7 @@
 layout: post
 title:  "Stop hiding levels"
 date:   2020-03-29 13:27:00 -0700
-categories: career
+tags: career
 excerpt: |
     Most tech companies, even those without formal job titles,
     assign "levels" to engineers. Despite the importance of levels for determining compensation

@@ -2,7 +2,7 @@
 layout: post
 title:  "Migrating to Kubernetes, part 1: Moving on from the legacy service platform"
 date:   2021-04-17 13:06:00 -0700
-categories: general tech
+tags: kubernetes
 excerpt: |
     Over the last few years, I've worked on migrations at several companies- Airbnb, Stripe, and
     Segment. In this post, I want to talk about why these migrations are done and what they involve

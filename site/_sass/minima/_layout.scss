@@ -226,6 +226,11 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+
+  code {
+    background: #f8f8f8;
+    color: $grey-color;
+  }
 }
 
 .post-link {
@@ -242,7 +247,7 @@ h3.post-header {
   background-image: url("/assets/sf.jpg");
 
   /* Full height */
-  width: 100%; 
+  width: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -296,6 +301,39 @@ h3.post-header {
   }
 }
 
+
+.post-related {
+  hr {
+    margin-top: 20px;
+  }
+  h1 {
+    margin-top: 10px;
+  }
+}
+
+.post-tags {
+  margin-top: -4px;
+  margin-bottom: 6px;
+
+  @include relative-font-size(0.8);
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(0.8);
+  }
+
+  color: #777;
+
+  code {
+    background: #f8f8f8;
+    color: #777;
+
+    @include relative-font-size(0.8);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(0.8);
+    }
+  }
+}
 
 .social-media-list {
   display: table;
