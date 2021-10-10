@@ -2,7 +2,7 @@
 layout: post
 title:  "Jira makes me want to cry"
 date:   2021-09-06 18:25:00 -0700
-tags: tooling
+tags: tooling non-optimal-things
 related_posts:
     - title: "Transformative tools"
       slug: "transformative-tools"

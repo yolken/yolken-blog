@@ -2,7 +2,7 @@
 layout: post
 title:  "Most core values are meaningless"
 date:   2021-08-07 20:03:00 -0700
-tags: general-tech
+tags: tech-culture
 excerpt: |
   Over the last few years, many tech companies have embraced "core values"
   with religious fervor. In this post, I want to explain what core values are, why
