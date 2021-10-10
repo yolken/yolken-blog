@@ -1,6 +1,6 @@
 ---
-title: Publications
-short_title: Pubs
+title: Papers and Publications
+short_title: Papers
 layout: page
 order: 3
 ---

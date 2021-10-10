@@ -14,8 +14,8 @@ The following are the open source projects that I've created and help maintain:
 | [kubeapply](https://github.com/segmentio/kubeapply) | A lightweight tool for git-based management of Kubernetes configs | [Repo](https://github.com/segmentio/kubeapply)<br/>[Blog post](https://segment.com/blog/kubernetes-configuration/) |
 | [data-digger](https://github.com/segmentio/data-digger) | Dig through structured messages in Kafka, S3, or local files | [Repo](https://github.com/segmentio/data-digger) |
 
-I've also contributed to a few other projects as the non-primary author. Here are some that
-
+I've also contributed to a few other projects as the non-primary author. Here's
+a sample of those:
 
 | Project  | Description | More info |
 |---|---|---|

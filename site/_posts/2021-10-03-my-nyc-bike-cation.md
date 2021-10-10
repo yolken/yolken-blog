@@ -90,7 +90,7 @@ south into Brooklyn, passing by the hip and expensive new housing developments a
 in [Greenpoint](https://en.wikipedia.org/wiki/Greenpoint,_Brooklyn) and
 [Williamsburg](https://en.wikipedia.org/wiki/Williamsburg,_Brooklyn).
 
-I then cut island and looped around some less gentrified areas of Brooklyn, including the
+I then cut inland and looped around some less gentrified areas of Brooklyn, including the
 neighborhoods of [Crown Heights](https://en.wikipedia.org/wiki/Crown_Heights,_Brooklyn),
 [Flatbush](https://en.wikipedia.org/wiki/Flatbush,_Brooklyn),
 [Borough Park](https://en.wikipedia.org/wiki/Borough_Park,_Brooklyn), and
