@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Leetcode to master coding interviews"
 date:   2019-05-27 14:38:04 -0700
-tags: interviewing
+tags: interviews
 related_posts:
   - title: "The rules for better coding interviews"
     slug: "rules-for-better-interviews"
