@@ -428,6 +428,9 @@ h3.post-header {
       .post-tags code {
         font-size: 12.8px; } }
 
+.tag-title {
+  margin-bottom: 15px; }
+
 .social-media-list {
   display: table;
   margin: 0 auto; }
