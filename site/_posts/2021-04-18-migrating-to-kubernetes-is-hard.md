@@ -29,7 +29,7 @@ component- you're migrating to an entirely new *platform*, the KuSP, that
 has its own set of assumptions, requirements, and interfaces.
 
 As described in [part 1](/blog/migrating-to-kubernetes-legacy-service-platforms), the biggest shift
-in going from an LeSP to a KuSP is in the use of containers. Containers require images, which means
+in going from a LeSP to a KuSP is in the use of containers. Containers require images, which means
 that you need new workflows for defining, building, testing, and storing these. Containers usually
 have a different networking setup than that of "regular" LeSP application processes, which means
 that your networking infrastructure (how you allocate IPs, how service discovery works, how certs
@@ -44,7 +44,7 @@ which means that whatever log collector/forwarder you're using will need to be r
 
 Many of these updates aren't scary when considered independently. However, there are a lot of
 them to do and there are a lot of problems that can be encountered along the way, so the whole
-process can take a long time from end-to-end. And, it's hard to any run mission-critical services in
+process can take a long time from end-to-end. And, it's hard to run any mission-critical services in
 the KuSP in production before you have at least some basic implementations in place for each of the
 core platform components.
 
@@ -182,7 +182,7 @@ to treat this as an opportunity to fix every other legacy platform component tha
 non-optimal state, particularly if the migration makes these things no worse than before.
 
 While it would be great to get Kubernetes bundled with a new networking stack, a new secrets system,
-a new logging system, etc. each of these extra dimensions adds more more things that will be
+a new logging system, etc. each of these extra dimensions adds more things that will be
 unfamiliar to users, and more things that can break in production. Focus on what is needed to
 migrate successfully, then handle the "nice to haves" in later phases of the project.
 

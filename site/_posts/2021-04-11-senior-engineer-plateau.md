@@ -26,7 +26,7 @@ companies beyond a small size have well-defined career ladders for software engi
 least 4 levels. The details vary from company to company, but in most of these ladders the
 "senior" level is what employees get to after 5+ years of industry experience.
 
-At most places, this rung on the latter is also considered the "career level", which implies a few
+At most places, this rung on the ladder is also considered the "career level", which implies a few
 things. First, this means that once you get to it, you can stay in it forever- as long as you meet
 expectations, you can spend 30+ years as a senior engineer, and no one will ever complain about
 your lack of ambition or try to push you out for not advancing further.
