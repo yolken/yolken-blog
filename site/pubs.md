@@ -1,7 +1,8 @@
 ---
-title: Publications
+title: Papers and Publications
+short_title: Papers
 layout: page
-order: 2
+order: 3
 ---
 
 ## Non-Academic
