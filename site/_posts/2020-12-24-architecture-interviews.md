@@ -4,10 +4,8 @@ title:  "How to do an architecture interview"
 date:   2020-12-24 12:26:00 -0700
 tags: interviews
 related_posts:
-  - title: "Using Leetcode to master coding interviews"
-    slug: "master-coding-interviews"
-  - title: "The rules for better coding interviews"
-    slug: "rules-for-better-interviews"
+  - slug: "master-coding-interviews"
+  - slug: "rules-for-better-interviews"
 excerpt: |
     Many software engineering interview loops include an "architecture interview", where the
     candidate is asked to develop a high-level design for a software system. Over the last few

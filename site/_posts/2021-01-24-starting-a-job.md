@@ -4,12 +4,9 @@ title:  "Starting a job"
 date:   2021-01-24 15:20:00 -0700
 tags: career
 related_posts:
-  - title: "Leaving a job"
-    slug: "leaving-a-job"
-  - title: "Great engineering onboarding"
-    slug: "great-engineer-onboarding"
-  - title: "Quitting a new job"
-    slug: "quitting-a-new-job"
+  - slug: "leaving-a-job"
+  - slug: "great-engineer-onboarding"
+  - slug: "quitting-a-new-job"
 excerpt: |
     In my last post, I discussed how companies can make their onboarding processes
     better for employees. In this post, I want to turn the tables and talk about the

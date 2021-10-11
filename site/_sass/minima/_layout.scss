@@ -223,6 +223,24 @@
   }
 }
 
+.related-post-list {
+  margin-left: 0;
+  list-style: none;
+
+  h4 {
+    margin: 0;
+  }
+
+  .post-link {
+
+    @include relative-font-size(1.15);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.15);
+    }
+  }
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;

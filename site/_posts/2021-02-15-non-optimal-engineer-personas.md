@@ -4,8 +4,7 @@ title:  "Non-optimal engineer personas"
 date:   2021-02-15 14:15:00 -0700
 tags: career non-optimal-things
 related_posts:
-  - title: "Non-optimal tech offices"
-    slug: "non-optimal-tech-offices"
+  - slug: "non-optimal-tech-offices"
 excerpt: |
     Software engineers are an interesting bunch. While quirks are fine, and I have a few myself,
     there are certain traits that show up on the personality side that can be genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I
