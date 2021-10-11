@@ -30,14 +30,20 @@ layout: default
   <div class="post-related">
     <hr />
     <h1>🔗 Related blog posts</h1>
-    <ul>
+    <ul class="related-post-list">
       {% for related_post in page.related_posts %}
         {% assign related_post_url = "/blog/" | append: related_post.slug %}
         {% assign matches = 0 %}
         {% for post in site.posts %}
           {% if post.url == related_post_url %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% assign matches = matches | plus: 1 %}
+            <li>
+              <h4 class="post-header">
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h4>
+              {% assign matches = matches | plus: 1 %}
+            </li>
           {% endif %}
         {% endfor %}
         {% unless matches == 1 %}
@@ -50,3 +56,5 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+
