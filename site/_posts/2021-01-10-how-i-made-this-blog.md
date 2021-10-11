@@ -68,7 +68,7 @@ conversion to HTML:
     <header class="site-header">
       <div class="trigger">
         <a class="page-link" href="/blog">Blog</a>
-        <a class="page-link" href="/pubs">Publications</a>
+        <a class="page-link" href="/papers">Publications</a>
         <a class="page-link" href="/about">About</a>
       </div>
     </header>
