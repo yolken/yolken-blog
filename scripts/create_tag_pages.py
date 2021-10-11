@@ -17,6 +17,7 @@ TAGS_TEMPLATE = """---
 layout: posts-by-tag
 title: "Tag: %s"
 tag: %s
+order: -1
 robots: noindex
 ---
 """
