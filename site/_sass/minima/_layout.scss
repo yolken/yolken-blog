@@ -232,7 +232,6 @@
   }
 
   .post-link {
-
     @include relative-font-size(1.15);
 
     @media screen and (min-width: $on-large) {
@@ -246,7 +245,8 @@
   color: $grey-color;
 
   code {
-    background: #f8f8f8;
+    font-size: $small-font-size;
+    background: #fafafa;
     color: $grey-color;
   }
 }
@@ -333,22 +333,22 @@ h3.post-header {
   margin-top: -4px;
   margin-bottom: 6px;
 
-  @include relative-font-size(0.8);
+  @include relative-font-size(0.75);
 
   @media screen and (min-width: $on-large) {
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.75);
   }
 
-  color: #777;
+  color: $grey-color;
 
   code {
-    background: #f8f8f8;
-    color: #777;
+    background: #fafafa;
+    color: $grey-color;
 
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.75);
 
     @media screen and (min-width: $on-large) {
-      @include relative-font-size(0.8);
+      @include relative-font-size(0.75);
     }
   }
 }
