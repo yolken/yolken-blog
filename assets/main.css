@@ -364,7 +364,8 @@ table {
   font-size: 14px;
   color: #828282; }
   .post-meta code {
-    background: #f8f8f8;
+    font-size: 14px;
+    background: #fafafa;
     color: #828282; }
 
 .post-link {
@@ -426,18 +427,18 @@ h3.post-header {
 .post-tags {
   margin-top: -4px;
   margin-bottom: 6px;
-  font-size: 12.8px;
-  color: #777; }
+  font-size: 12px;
+  color: #828282; }
   @media screen and (min-width: 800px) {
     .post-tags {
-      font-size: 12.8px; } }
+      font-size: 12px; } }
   .post-tags code {
-    background: #f8f8f8;
-    color: #777;
-    font-size: 12.8px; }
+    background: #fafafa;
+    color: #828282;
+    font-size: 12px; }
     @media screen and (min-width: 800px) {
       .post-tags code {
-        font-size: 12.8px; } }
+        font-size: 12px; } }
 
 .tag-title {
   margin-bottom: 15px; }
