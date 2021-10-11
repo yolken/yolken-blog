@@ -48,7 +48,7 @@ company.
 
 That's great if you're able to find such a fit, and it will definitely help your career
 at the beginning, but it's not a requirement, and seems to be more the exception than the rule.
-My research, for instance, was on [using game theory for resource allocation](/pubs), but
+My research, for instance, was on [using game theory for resource allocation](/papers), but
 aside from a little bit in my first job, my work has been completely unrelated.
 
 In addition to the natural skills fit, there are a number of other great things about tech, which
