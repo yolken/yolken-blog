@@ -349,6 +349,17 @@ table {
   .post-list > li {
     margin-bottom: 30px; }
 
+.related-post-list {
+  margin-left: 0;
+  list-style: none; }
+  .related-post-list h4 {
+    margin: 0; }
+  .related-post-list .post-link {
+    font-size: 18.4px; }
+    @media screen and (min-width: 800px) {
+      .related-post-list .post-link {
+        font-size: 18.4px; } }
+
 .post-meta {
   font-size: 14px;
   color: #828282; }
