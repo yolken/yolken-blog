@@ -9,6 +9,7 @@ order: 3
 
 ### Segment Blog
 
+- [Updating topicctl to support the future of Kafka](https://segment.com/blog/topicctl-v1/)
 - [How we saved $100k a month with Kafka networking optimization](https://segment.com/blog/kafka-optimization/)
 - [How we moved to Github-based Kubernetes config management](https://segment.com/blog/kubernetes-configuration/)
 - [Topicctl - an easier way to manage Kafka topics](https://segment.com/blog/easier-management-of-Kafka-topics-with-topicctl/)
