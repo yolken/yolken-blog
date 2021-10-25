@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The pillars of engineering infrastructure productivity"
+title:  "The pillars of infrastructure productivity"
 date:   2021-10-10 11:37:00 -0700
 tags: tooling
 excerpt: |
@@ -31,3 +31,6 @@ Software
 ### Pillar 3: Self-service workflows
 
 ### Pillar 4: Fast iteration times
+
+## Conclusion
+
