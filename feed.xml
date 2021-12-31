@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-12-30T14:37:32-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">My NYC Bike-cation</title><link href="https://yolken.net/blog/my-nyc-bike-cation" rel="alternate" type="text/html" title="My NYC Bike-cation" /><published>2021-10-03T11:37:00-07:00</published><updated>2021-10-03T11:37:00-07:00</updated><id>https://yolken.net/blog/my-nyc-bike-cation</id><content type="html" xml:base="https://yolken.net/blog/my-nyc-bike-cation">&lt;p&gt;I recently got back from a vacation to the East Coast of the US. For two days during my trip,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-12-30T17:40:02-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Tech employee retention is a serious issue</title><link href="https://yolken.net/blog/tech-employee-retention" rel="alternate" type="text/html" title="Tech employee retention is a serious issue" /><published>2021-12-30T14:52:00-08:00</published><updated>2021-12-30T14:52:00-08:00</updated><id>https://yolken.net/blog/tech-employee-retention</id><content type="html" xml:base="https://yolken.net/blog/tech-employee-retention">&lt;p&gt;A lot of companies, both in tech and other industries, are having trouble
+retaining employees at the moment. The so-called
+&lt;a href=&quot;https://www.theatlantic.com/ideas/archive/2021/10/great-resignation-accelerating/620382/&quot;&gt;“great resignation”&lt;/a&gt;
+of 2021 has gotten a lot of newfound press coverage, but in reality these resignation waves are
+nothing new in tech; in an industry where companies can rise and fall quickly and where
+employees can easily move between jobs, individual companies will often have retention problems
+even if the broader economy does not.&lt;/p&gt;
+
+&lt;p&gt;In this post, I want to describe the various resignation waves that I’ve seen
+in my career thus far and what companies can do to respond to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;when-retention-is-a-problem&quot;&gt;When retention is a problem&lt;/h2&gt;
+
+&lt;p&gt;Even the best companies under the most auspicious circumstances will have some
+voluntary turnover. It’s just natural that in any given year, a small percentage of
+otherwise happy employees will want to retire, go back to school, move to a smaller
+company, or pursue some other opportunity that requires them to quit their jobs.&lt;/p&gt;
+
+&lt;p&gt;Companies build this kind of steady, predictable turnover into their hiring plans,
+and it generally doesn’t cause problems. New people come in to the replace the ones who
+leave, and the refresh rate is slow enough that it doesn’t disrupt operations or affect
+morale.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, however, internal or external circumstances can disrupt this balance, causing the rate
+of people voluntarily leaving to go beyond a comfortable threshold. This has a number of negative
+effects inside the company, including:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;People leave faster than they can be replaced. The workload on the remaining people goes up
+significantly and team plans need to be trimmed because of staffing shortages.&lt;/li&gt;
+  &lt;li&gt;The people leaving have special skills and knowledge that has been built up over their time
+at the company. Even if their positions are backfilled quickly, it takes a long time for the
+new people to become as productive as those they’re replacing.&lt;/li&gt;
+  &lt;li&gt;People lose colleagues who they enjoyed working with and made them motivated to stay.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The big problem here is that many of these things form amplifying feedback loops. As more and more
+good people leave, the burden on the remaining employees becomes higher and they themselves
+become more likely to quit, which just makes the retention problems worse.&lt;/p&gt;
+
+&lt;p&gt;I’ve personally observed various degrees of these resignation spirals at a few points in my career;
+some examples include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;At Google in 2010/11:&lt;/strong&gt; Facebook and others started aggressively poaching employees so they
+could build their own variants of Google’s technologies and products. This didn’t affect the
+teams I worked with at the time, but it apparently was causing a lot of specialized talent in
+certain areas (e.g., data center hardware and web search) to leave.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;At Twitter in 2015:&lt;/strong&gt; User growth came to a standstill, and the stock started tanking. Many
+employees received a significant fraction of their compensation in equity, which meant their pay
+decreased a lot. At the same time, various executives were also quitting or being forced out,
+which made the company seem rudderless and further lowered morale.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;At Segment (my current employer) this year:&lt;/strong&gt; The “great resignation” is happening and,
+moreover, some are feeling post-acquisition malaise (we were acquired by Twilio last year) and
+want to return to smaller companies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-wrong-response&quot;&gt;The wrong response&lt;/h2&gt;
+
+&lt;p&gt;Companies are continually monitoring internal data on employee departures and comparing their
+numbers to industry benchmarks. The most common response I’ve seen from company leadership when
+attrition numbers creep up is to dismiss them as not a serious concern as
+long as the company average stays under some pre-determined threshold, e.g. 20% per year. Even if
+employees start noticing that more and more of their colleagues are leaving and start raising
+concerns, it’s easiest to say “we’re ok because we’re well below X%” (whatever the threshold is).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/attrition_graph.png&quot; alt=&quot;Attrition graph&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This type of response is frustrating for so many reasons.&lt;/p&gt;
+
+&lt;p&gt;First, attrition isn’t going to be uniform across a company with hundreds or thousands of
+employees. It’s highly likely that certain classes of people (e.g., senior engineers or people
+in a particular division) are quitting at a higher rate than the average value. Within these
+groups, localized resignation feedback loops can form before they show up in a company average.&lt;/p&gt;
+
+&lt;p&gt;Second, attrition is a &lt;em&gt;trailing&lt;/em&gt; metric. The number only reflects the final outcome (employees
+leaving), which may happen many months after people become unhappy and start to look for new jobs.
+Half of the company could be in the process of leaving, but you won’t see that in the attrition
+numbers until they’re gone.&lt;/p&gt;
+
+&lt;p&gt;Third, it takes a while for any mitigation to take effect. Increasing salaries or giving people more
+equity, for instance, may take months (because of board approval, budgeting processes, etc.). The
+same applies for non-pay-related improvements like easier internal transfers, improved benefits,
+or more vacation time. If employees are already in the process of looking elsewhere and have
+momentum in that process, the promise of a pay raise or some other benefit six months down the
+road might be too late to have any effect.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-to-do-instead&quot;&gt;What to do instead&lt;/h2&gt;
+
+&lt;h4 id=&quot;respond-early&quot;&gt;Respond early&lt;/h4&gt;
+
+&lt;p&gt;The key to keeping retention problems under control is to respond to them &lt;em&gt;before&lt;/em&gt; the feedback
+loops described above can take hold. If attrition is low but steadily increasing, this
+is a sign of a serious problem that, at the very least, needs to be acknowledged and investigated.&lt;/p&gt;
+
+&lt;p&gt;As described above, it can take many months, even in the best run companies, for mitigations to
+be approved, rolled out, and felt by employees. Acting early allows for the latter to happen
+before the resignation wave crests, thus reducing its peak height.&lt;/p&gt;
+
+&lt;h4 id=&quot;aggressively-adjust-pay&quot;&gt;Aggressively adjust pay&lt;/h4&gt;
+
+&lt;p&gt;Increasing pay is a key lever for increasing retention and making people more reluctant to quit.
+Unfortunately, many larger companies have rigid schedules and procedures around pay adjustments,
+e.g. only considering merit increases once a year or only allocating a fixed budget (say, 3%
+per employee per year on average) for these increases.&lt;/p&gt;
+
+&lt;p&gt;If employees can get large raises by switching jobs now, but have to wait 6 months for the
+potential of maybe getting a pay bump that’s just slightly larger than inflation, they’re probably
+going to start exploring their options now.&lt;/p&gt;
+
+&lt;p&gt;While it may be hard to completely rework compensation update cycles on short notice, motivated
+companies can and should do out-of-band pay increases, either via one-time bonuses, new equity
+grants, or updates in base pay. Ideally, these are applied widely across the company and not just
+to a select few who are particularly at risk of leaving.&lt;/p&gt;
+
+&lt;p&gt;The best example I saw of this was at Google. The CEO got up at an all-hands meeting at the end
+of 2010 and announced that everyone was getting a 10% pay increase effective January 1 of the
+next year (only a few weeks away). Moreover, the bonus structure was being changed so that
+much of it would now be folded into base pay instead of being a discretionary, once-a-year
+payment.&lt;/p&gt;
+
+&lt;p&gt;The end result was that my biweekly paychecks and those of my colleagues in product and engineering
+increased by about 25% without any of us having to lift a finger. I didn’t have access to the
+numbers at that time, but I would guess that this aggressive pay bump reduced attrition and
+also increased the acceptance rates on new offers.&lt;/p&gt;
+
+&lt;h4 id=&quot;consider-non-pay-based-strategies-too&quot;&gt;Consider non-pay-based strategies too&lt;/h4&gt;
+
+&lt;p&gt;Pay isn’t everything, and many employees could still be unhappy and quit even if their pay
+is increased. A few other, non-pay-related things that can make a difference include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Easier internal transfers:&lt;/em&gt; A lot of people quit their jobs because they want to do something
+new. If they can do this easily inside the company, without requiring multiple rounds of
+interviews and other bureaucratic red tape that external candidates have to go through, then this
+might be seen as an easier path than switching companies.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;More time off:&lt;/em&gt; Giving people more vacation time, either officially or off-the-book, can increase
+happiness a lot without requiring any pay adjustments.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Better benefits:&lt;/em&gt; For US-based employees, options like $0 premium health insurance
+and access to &lt;a href=&quot;https://www.nerdwallet.com/article/investing/mega-backdoor-roths-work&quot;&gt;mega backdoor Roth&lt;/a&gt;
+transfers can be strong factors in keeping employees where they are, particularly when compared to
+smaller companies that often don’t have these.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dont-wait-for-people-to-give-notice&quot;&gt;Don’t wait for people to give notice&lt;/h4&gt;
+
+&lt;p&gt;Some companies are willing to aggressively improve pay or working conditions, but only if
+employees come to them with offers from other companies, i.e. effectively threaten to quit.
+While this may reduce attrition a bit, the incentive here is to be continually interviewing
+elsewhere; this is not only a huge time suck for employees but also provides lots of
+opportunities for competing employers to woo these interviewees and entice them to switch jobs
+before the original employer can counter.&lt;/p&gt;
+
+&lt;p&gt;Ideally, good employees in a tight market are rewarded with regular, market-aligned pay increases
+without requiring external interviews or threats to quit. This reduces stress on both sides
+and decreases the incentives for otherwise happy employees to dip their feet in the water and
+explore other opportunities.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Retention among employees is a serious issue that tech companies should be continuously
+monitoring and responding to. Keeping good employees from leaving is way, way cheaper
+and less disruptive than having a wave of departures followed by a months-long process of recruiting
+new people, hiring them, onboarding them, and giving time for them to ramp up. This is always
+true, but especially so in a tight job market like the one that we’re experiencing now.&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">A lot of companies, both in tech and other industries, are having trouble retaining employees at the moment. In this post, I want to describe the various resignation waves that I've seen in my career thus far and what companies can do to respond to them.</summary></entry><entry><title type="html">My NYC Bike-cation</title><link href="https://yolken.net/blog/my-nyc-bike-cation" rel="alternate" type="text/html" title="My NYC Bike-cation" /><published>2021-10-03T11:37:00-07:00</published><updated>2021-10-03T11:37:00-07:00</updated><id>https://yolken.net/blog/my-nyc-bike-cation</id><content type="html" xml:base="https://yolken.net/blog/my-nyc-bike-cation">&lt;p&gt;I recently got back from a vacation to the East Coast of the US. For two days during my trip,
 I biked around New York City and explored various neighborhoods, parks, and bridges.&lt;/p&gt;
 
 &lt;p&gt;In this post (my first that’s not about tech!), I want to share my routes and also some observations
@@ -1610,163 +1774,4 @@ actively maintained going forward.&lt;/p&gt;
 for some things like flags, logging, and testing. It would be great if these
 were improved in the standard library, but I’m not holding my breath- from what I’ve heard,
 the go maintainers are pretty adamant about what’s in the standard library and what’s not.
-Thankfully, the third-party solutions are pretty good at filling in the gaps.&lt;/p&gt;</content><author><name></name></author><category term="golang" /><summary type="html">The go standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main &quot;batteries not included&quot; in the standard library, and the alternatives that I typically use for each one.</summary></entry><entry><title type="html">Starting a job</title><link href="https://yolken.net/blog/starting-a-job" rel="alternate" type="text/html" title="Starting a job" /><published>2021-01-24T14:20:00-08:00</published><updated>2021-01-24T14:20:00-08:00</updated><id>https://yolken.net/blog/starting-a-job</id><content type="html" xml:base="https://yolken.net/blog/starting-a-job">&lt;p&gt;In my &lt;a href=&quot;/blog/great-engineer-onboarding&quot;&gt;last post&lt;/a&gt;, I discussed how companies can
-make their onboarding processes better for employees. In this post, I want to turn
-the tables and talk about the strategies I use personally to get up-to-speed when
-I’m starting at a new job.&lt;/p&gt;
-
-&lt;h2 id=&quot;starting-is-hard&quot;&gt;Starting is hard&lt;/h2&gt;
-
-&lt;p&gt;First off, it’s important for me to state that I find starting a new
-job as a software engineer really, really hard.&lt;/p&gt;
-
-&lt;p&gt;Even after many years of experience and even if the new company is using a tech
-stack that I’m already familiar with, there is
-just so much to learn about before one can become productive, including:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Where the code lives and how it’s organized&lt;/li&gt;
-  &lt;li&gt;The key software systems, their interfaces, and how they all fit together&lt;/li&gt;
-  &lt;li&gt;Standards and tools for testing, logging, metrics, code reviews, deploys, etc.&lt;/li&gt;
-  &lt;li&gt;What infrastructure the code is running on and how to interact with it&lt;/li&gt;
-  &lt;li&gt;Who knows what and how to get questions answered&lt;/li&gt;
-  &lt;li&gt;How planning is done, what the team’s current priorities are, what I should
-  be working on to make the biggest impact, etc.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;On top of this giant pile of things to learn about, the start of a new job
-is often when I’m feeling the most “buyer’s remorse” around my decision to
-switch employers. This can include thoughts like “maybe I should have stayed at my
-old job”. Or, I’ll be thinking that it was right to leave my old job, but that
-maybe I should have picked one of the other offers I had.&lt;/p&gt;
-
-&lt;p&gt;The end result is that the onboarding process is really stressful for me- I
-often feel kind of crappy, and then I may have trouble sleeping, which makes
-me feel even worse. Even if you’re not as uptight as I am, it’s generally not
-the time in your career when you’re going to be at your peak happiness.&lt;/p&gt;
-
-&lt;h2 id=&quot;coping-strategies&quot;&gt;Coping strategies&lt;/h2&gt;
-
-&lt;p&gt;Over the course of starting many new jobs, I’ve developed a collection of strategies
-for making the onboarding process less stressful and more productive. Here are the most
-helpful ones.&lt;/p&gt;
-
-&lt;h3 id=&quot;give-it-time&quot;&gt;Give it time&lt;/h3&gt;
-
-&lt;p&gt;The most important coping strategy for me is to realize that it takes time to get
-up-to-speed, and, at the same time, to realize that my colleagues know this
-and will cut me some slack in the interim.&lt;/p&gt;
-
-&lt;p&gt;The exact amount of time required varies from company to company, and it’s
-something that I ask my manager about in our first 1:1 meeting. However,
-at most of my previous jobs, the general guidance has been that it takes around
-3 months to start making non-trivial contributions, and around 6-9 months before
-new hires are expected to be fully productive.&lt;/p&gt;
-
-&lt;p&gt;During those first couple of months, I tell myself that I can relax- it’s ok to make
-mistakes, and it’s also perfectly fine to spend time doing background reading,
-getting to know colleagues, and attending internal tech talks as opposed to focusing
-completely on my team’s regular tasks.&lt;/p&gt;
-
-&lt;h3 id=&quot;get-work-environment-right&quot;&gt;Get work environment right&lt;/h3&gt;
-
-&lt;p&gt;I find that my work environment plays a big role in my productivity and happiness.
-This is particularly true when I’m starting at a new job and dealing with the
-firehose of technical things that I need to get up-to-speed on.&lt;/p&gt;
-
-&lt;p&gt;The first thing I try to optimize is the company-provided hardware that I’m touching
-or looking at for my day-to-day work, i.e. my laptop, mouse, keyboard, and monitor.
-If any of these is not ideal, I press very hard to get replacements ordered during
-my first few days on the job (within reasonable bounds, of course).&lt;/p&gt;
-
-&lt;p&gt;Beyond that, I then work to improve the other aspects of my environment, including
-my desk and chair, and the light, noise, and temperature of my immediate work area.
-Now that I’m working from home these are all under my direct personal control, but
-back when I was in an office I sometimes asked for help in dealing with noisy
-officemates, weird vibrations in my desk, or a less-than-comfortable chair.&lt;/p&gt;
-
-&lt;p&gt;Many of these things will take a while to resolve, so it’s important to raise
-concerns early on to get the process started.&lt;/p&gt;
-
-&lt;h3 id=&quot;do-coffee-chats&quot;&gt;Do coffee chats&lt;/h3&gt;
-
-&lt;p&gt;Getting to know your manager and the peers on your team is a critical part
-of the onboarding process that everyone does. Beyond this, though, I’ve found that
-it’s really informative to meet with colleagues beyond my direct team, even if I’m
-not going to be working with them at all. I usually just message these people
-in the company’s chatting system and ask for permission to put 30 minutes into their
-calendar (they almost always say yes!)&lt;/p&gt;
-
-&lt;p&gt;Staff in the extended organization can provide “big picture” perspective
-that’s useful to know about as I’m getting up-to-speed. Also, because they won’t
-be working with me day-to-day, I’ve found that they tend to be more honest and less
-inhibited when it comes to providing advice about how to be successful in the job.&lt;/p&gt;
-
-&lt;p&gt;When possible, I like to structure these as “coffee chats” as opposed to formal
-1:1’s. This makes them more fun and fosters an environment in which we can
-talk honestly.&lt;/p&gt;
-
-&lt;h3 id=&quot;create-personal-reference-document&quot;&gt;Create personal reference document&lt;/h3&gt;
-
-&lt;p&gt;Starting on my first day, I create a document in whatever system the company
-prefers for technical docs (e.g., Dropbox Paper, Quip, Google Docs, etc.) and
-start jotting down anything that I think will be helpful to refer to later;
-here are some made-up examples:&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Key documents:
-&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; Design doc for system X
-&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; Intro to technology Y
-&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; External tutorial on doing Z
-...
-
-How to deploy system X
-&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`cd ~/workspace/x`&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`deploy -x -b 123abc --production`&lt;/span&gt;
-
-Running tests for system Y
-&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`cd ~/workspace/y`&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`docker-compose up -d`&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`make tests`&lt;/span&gt;
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I treat this document as append-only- as I interact with more tools and systems, I
-just keep adding more sections. Later, if I need to refer to anything, I can do a
-quick search in the doc and then use the links or commands that I previously
-jotted down to complete the task I’m doing.&lt;/p&gt;
-
-&lt;p&gt;I keep adding to the document and referring back to it even after I’m fully onboarded. Over
-time, it can get so big that it becomes painful to load and search in whatever tool I’m using to
-host it. When this happens, I’ll just freeze the first document and start adding notes into
-a new one. In my current job, I’m at the beginning of my second reference doc. In previous
-jobs, I’ve gone through three or four of these over the course of a few years.&lt;/p&gt;
-
-&lt;h3 id=&quot;personal-code-sandbox&quot;&gt;Personal code sandbox&lt;/h3&gt;
-
-&lt;p&gt;In conjunction with my reference doc, I find it’s also helpful to have a personal
-“sandbox” for code-related notes and experiments.&lt;/p&gt;
-
-&lt;p&gt;At companies that use GitHub (including all of my recent employers), I just
-set up a repo that’s under my work account but separate from the
-company’s main GitHub organization. If I were at a company that didn’t have this
-functionality in its code systems, I would just throw my changes into an
-“experimental” branch that is never submitted for review.&lt;/p&gt;
-
-&lt;p&gt;Wherever it lives, I use this sandbox as a place to put longer scripts, to become more
-comfortable with the frameworks and technologies that the company uses, and to try out
-new approaches to my team’s work. Doing these things in a personal space allows for me
-to experiment and explore without judgement from colleagues.&lt;/p&gt;
-
-&lt;p&gt;As with the reference doc, I keep adding to my personal code sandbox even after the
-onboarding process is complete. However, I generally find that it becomes less useful over
-time as I become more comfortable with the company’s tech stack and more confident in
-my abilities to make changes out in the open directly.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Starting a new job is hard, but I’ve adopted a few strategies that have consistently helped.
-The optimal onboarding path can vary a lot from person-to-person and from job-to-job, so these
-may or may not be ideal for you. However, you may find some subset of them helpful the next time
-you’re struggling to get up-to-speed at a new job.&lt;/p&gt;
-
-&lt;p&gt;Good luck and, most importantly, don’t get too stressed!&lt;/p&gt;</content><author><name></name></author><category term="career" /><summary type="html">In my last post, I discussed how companies can make their onboarding processes better for employees. In this post, I want to turn the tables and talk about the strategies I use personally to get up-to-speed when I'm starting at a new job.</summary></entry></feed>
+Thankfully, the third-party solutions are pretty good at filling in the gaps.&lt;/p&gt;</content><author><name></name></author><category term="golang" /><summary type="html">The go standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main &quot;batteries not included&quot; in the standard library, and the alternatives that I typically use for each one.</summary></entry></feed>
