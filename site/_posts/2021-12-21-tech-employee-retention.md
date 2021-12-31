@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tech employee retention is a serious issue"
-date:   2021-12-21 14:52:00 -0800
+date:   2021-12-30 14:52:00 -0800
 tags: career
 excerpt: |
   A lot of companies, both in tech and other industries, are having trouble
