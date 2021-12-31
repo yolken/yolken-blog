@@ -5,6 +5,7 @@ date:   2019-10-06 12:52:00 -0700
 tags: career
 related_posts:
   - slug: "quitting-a-new-job"
+  - slug: "tech-employee-retention"
   - slug: "great-engineer-onboarding"
   - slug: "starting-a-job"
 excerpt: |

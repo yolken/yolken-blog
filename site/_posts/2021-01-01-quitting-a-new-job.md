@@ -5,6 +5,7 @@ date:   2021-01-01 18:40:00 -0700
 tags: career
 related_posts:
   - slug: "leaving-a-job"
+  - slug: "tech-employee-retention"
   - slug: "great-engineer-onboarding"
   - slug: "starting-a-job"
 excerpt: |
