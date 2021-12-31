@@ -3,6 +3,9 @@ layout: post
 title:  "Tech employee retention is a serious issue"
 date:   2021-12-30 14:52:00 -0800
 tags: career
+related_posts:
+  - slug: "leaving-a-job"
+  - slug: "quitting-a-new-job"
 excerpt: |
   A lot of companies, both in tech and other industries, are having trouble
   retaining employees at the moment. In this post, I want to describe the various resignation waves
