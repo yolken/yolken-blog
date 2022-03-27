@@ -1,4 +1,269 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2021-12-30T17:40:02-08:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Tech employee retention is a serious issue</title><link href="https://yolken.net/blog/tech-employee-retention" rel="alternate" type="text/html" title="Tech employee retention is a serious issue" /><published>2021-12-30T14:52:00-08:00</published><updated>2021-12-30T14:52:00-08:00</updated><id>https://yolken.net/blog/tech-employee-retention</id><content type="html" xml:base="https://yolken.net/blog/tech-employee-retention">&lt;p&gt;A lot of companies, both in tech and other industries, are having trouble
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2022-03-27T15:56:55-07:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Investing in venture capital</title><link href="https://yolken.net/blog/investing-in-venture-capital" rel="alternate" type="text/html" title="Investing in venture capital" /><published>2022-03-27T15:30:00-07:00</published><updated>2022-03-27T15:30:00-07:00</updated><id>https://yolken.net/blog/investing-in-venture-capital</id><content type="html" xml:base="https://yolken.net/blog/investing-in-venture-capital">&lt;p&gt;I recently had the opportunity to invest in a venture capital
+fund. In this post, I want to explain how these funds work and
+what I’ve learned from the experience so far.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer:&lt;/em&gt; The information in this post is based on my limited
+experience and personal research over the last few months. Please
+consult a true expert before investing, and also let me know if anything
+here is wrong so I can correct it.&lt;/p&gt;
+
+&lt;h2 id=&quot;intro-to-venture-capital&quot;&gt;Intro to venture capital&lt;/h2&gt;
+
+&lt;p&gt;Venture capital (VC) is a common form of private market financing
+for tech startups. Nearly every major, big-name tech company founded
+in the last 30 years, including Google, Facebook, and Amazon, got
+VC money when it was smaller.&lt;/p&gt;
+
+&lt;p&gt;The VC space is populated by a number of large and very famous
+firms including &lt;a href=&quot;https://www.sequoiacap.com/&quot;&gt;Sequoia&lt;/a&gt; and
+&lt;a href=&quot;https://a16z.com/&quot;&gt;Andreessen Horowitz&lt;/a&gt;. But, the barriers to
+entry aren’t that huge, so there’s also a long tail of less well-known
+firms, even going down to small, mom-and-pop shops like the one
+that I invested with (more on that later).&lt;/p&gt;
+
+&lt;p&gt;These firms, in turn, manage one or more &lt;em&gt;funds&lt;/em&gt;. The funds are what investors
+actually invest in, not the firms. By analogy to more traditional
+investments, the firms are the equivalent of Vanguard or Fidelity,
+and the funds are things like Vanguard’s Total Stock Market Index
+Fund (&lt;a href=&quot;https://investor.vanguard.com/mutual-funds/profile/fees/vtsax&quot;&gt;VTSAX&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As a VC investor, the funds are what you’re primarily interacting with,
+so let’s dig more into how those work.&lt;/p&gt;
+
+&lt;h3 id=&quot;all-about-funds&quot;&gt;All about funds&lt;/h3&gt;
+
+&lt;p&gt;More formally, a venture capital fund is the legal entity that
+collects investor money, writes checks to startups in exchange for
+equity (ownership) stakes, and distributes the profits (minus any
+expenses and fees) back to the investors when these companies are
+acquired or go public.&lt;/p&gt;
+
+&lt;p&gt;A large VC firm might have dozens of funds active at any given time.
+Sequoia, for instance, has ones like the
+&lt;a href=&quot;https://www.crunchbase.com/fund/sequoia-capital-raised-sequoia-capital-china-growth-fund-v--1833fa51&quot;&gt;Sequoia Capital China Growth Fund V&lt;/a&gt;
+and
+&lt;a href=&quot;https://www.crunchbase.com/fund/sequoia-capital-raised-sequoia-capital-u-s--growth-viii-principals-fund--a2ebdeae&quot;&gt;Sequoia Capital U.S. Growth Partners Fund VIII&lt;/a&gt;.
+Note that fund names are often suffixed in Roman numerals-
+we’ll talk about why in a bit.&lt;/p&gt;
+
+&lt;p&gt;Just as with more traditional mutual funds, VC funds typically have
+a specialization that drives the investment choices- these can
+include specific product sectors, company stages, or geographies.&lt;/p&gt;
+
+&lt;p&gt;Unlike mutual funds, however, VC funds have a number of interesting
+quirks that make them somewhat exotic and complex
+from the investor perspective. I describe these more in the sections below.&lt;/p&gt;
+
+&lt;h4 id=&quot;quirk-1-fixed-time-frame&quot;&gt;Quirk 1: Fixed time frame&lt;/h4&gt;
+
+&lt;p&gt;The first weird thing about venture capital funds is that
+they usually have a fixed time frame. Unlike a mutual fund that
+lives on for decades and has thousands of investors buying and selling
+shares each day, traditional venture capital funds are very restricted
+on when money comes in and when it gets paid out.&lt;/p&gt;
+
+&lt;p&gt;First, the fund gets commitments from investors. Once the target
+amount is raised, it’s closed to new investors; the fund managers
+then spend the next few years talking to startups, signing deals,
+and deploying the investors’ money. At a certain point, new
+investments stop and the fund is focused primarily on helping its
+portfolio companies grow and achieve some sort of liquidity event like an
+acquisition or an IPO. When the latter happens, the
+fund’s equity stake is sold and the proceeds are distributed back
+to the investors.&lt;/p&gt;
+
+&lt;p&gt;After a fixed time period, traditionally ten years, the fund is
+dissolved, and any remaining assets are liquidated and distributed.&lt;/p&gt;
+
+&lt;p&gt;Because of this rigid lifecycle, investors are necessarily locked in for
+the entire fund term. You can’t sell your stake and get out after five years,
+for instance, because you’ve changed your mind or need the money for
+something else.&lt;/p&gt;
+
+&lt;p&gt;Another side effect of these fixed-term fund schedules is that if a VC firm wants
+to be continuously collecting investor money and investing in companies,
+it needs to be continuously creating new funds. So, a firm will create
+a “US Growth Fund I”, then, a year or two later a “US Growth Fund II”,
+and so forth. If a firm has a long streak of successful investments,
+the Roman numeral suffixes can get quite big.&lt;/p&gt;
+
+&lt;h4 id=&quot;quirk-2-investor-restrictions&quot;&gt;Quirk 2: Investor restrictions&lt;/h4&gt;
+
+&lt;p&gt;Another big difference with traditional investments is that not everyone
+is eligible to invest in a VC fund. First,
+you generally need to be an
+&lt;a href=&quot;https://www.investopedia.com/terms/a/accreditedinvestor.asp&quot;&gt;accredited investor&lt;/a&gt;.
+In the US specifically, that means you
+need either an income of at least $200k per year or a net worth of at
+least $1M.&lt;/p&gt;
+
+&lt;p&gt;Even if you have a lot of money, though, it might not be enough. Large
+funds often have minimum investment thresholds in the millions of
+dollars, putting them out of reach to everyone but the super rich or
+institutional investors like pension funds.&lt;/p&gt;
+
+&lt;p&gt;And, there are yet more barriers- even if you’re super rich, you still have
+to convince the funds to take your money. They could refuse because they already
+have more than they can deploy or their legal structures (below) might restrict
+the total number of investors.&lt;/p&gt;
+
+&lt;h4 id=&quot;quirk-3-solicitation-restrictions&quot;&gt;Quirk 3: Solicitation restrictions&lt;/h4&gt;
+
+&lt;p&gt;Most VC funds are legally forbidden from doing “general solicitation”
+of investors. This is why if you go to the website of a firm like
+&lt;a href=&quot;https://www.sequoiacap.com/&quot;&gt;Sequoia&lt;/a&gt;, there’s no big, red
+“Open an account now” button, or even any basic information
+about contacting them to learn more about investing.
+Likewise, no matter how wealthy you are, you won’t get
+unsolicited emails or mailings about VC fund opportunities.&lt;/p&gt;
+
+&lt;p&gt;The fund managers can only solicit you if there’s a “pre-existing”
+relationship, e.g. you’re a friend or former work colleague. So, most
+opportunities are hidden unless you’re connected to someone
+in the VC community.&lt;/p&gt;
+
+&lt;p&gt;That being said, there are a few VC funds or fund-like entities that
+are allowed to do limited general solicitation. So, even if you don’t
+have connections, there are still some opportunities available.
+&lt;a href=&quot;https://www.angellist.com/&quot;&gt;AngelList&lt;/a&gt; is a well-known place for
+finding these, and there a few other, publicly accessible VC investment
+marketplaces as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;quirk-4-partnership-structure&quot;&gt;Quirk 4: Partnership structure&lt;/h4&gt;
+
+&lt;p&gt;Yet another weird feature of VC funds is that they’re usually
+structured as &lt;em&gt;partnerships&lt;/em&gt;, not corporations.&lt;/p&gt;
+
+&lt;p&gt;When you make a commitment to invest, you become a “limited partner” (LP)
+in the fund. The “limited” prefix means that you own a percentage of the
+fund / partnership, but you don’t have control over the specific investments.&lt;/p&gt;
+
+&lt;p&gt;The investment decisions and general day-to-day management of the fund are
+handled by a second, higher tier of “general partners” (GPs). These
+people (or an entity representing them) have typically invested money as well.
+Being a GP is a lot more work than being an LP, but it’s potentially a lot more
+lucrative because of the fees collected (see below).&lt;/p&gt;
+
+&lt;p&gt;So why are VC funds structured as limited partnerships? From what I can tell,
+it’s a combination of factors- these entities provide the ideal combination
+of lax regulatory oversight, low administrative overhead, and tax benefits.
+On the last item in particular, one nice thing about partnerships is that the
+profits are passed through directly to the partners; there’s no taxation
+of the funds themselves.&lt;/p&gt;
+
+&lt;h4 id=&quot;quirk-5-fee-structure&quot;&gt;Quirk 5: Fee structure&lt;/h4&gt;
+
+&lt;p&gt;Finally, VC funds have much higher fees than traditional investments.
+A typical fee structure is the so called “two and twenty” rule- 2% per year of
+the total amount you’ve committed, plus 20% of any profits. The former is meant
+to cover the fund’s operating expenses whereas the latter (also called “carried
+interest” or simply “the carry”) is paid to the fund’s managers /
+general partners as a performance-based bonus.&lt;/p&gt;
+
+&lt;p&gt;Thus, the fund needs to have pretty solid returns for investors to get
+their money back. And, if the fund happens to get lucky and invest in the
+next Google or Facebook, the general partners will be raking in a
+massive amount of money off the other investors’ profits.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-invest&quot;&gt;Why invest?&lt;/h2&gt;
+
+&lt;p&gt;Given all of the limitations, complexities, and expenses described above, why would
+anyone want to invest in these funds? The simple answer is that they provide
+a way to get “ground floor” access to early stage, high-growth companies in the
+tech space. These investment opportunities aren’t available in public markets, and
+historically have had pretty good returns.&lt;/p&gt;
+
+&lt;p&gt;Of course, many of these early stage companies will fail, so there’s a lot of risk
+involved too. But, the idea is that a venture capital fund, like a
+mutual fund, spreads out the risk across a diverse set of investments.
+In the VC case, because successful tech companies can become super valuable,
+it only takes a tiny number of “winners” in the fund to guarantee a good
+return for investors.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-process-so-far&quot;&gt;The process so far&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve discussed how VC funds work and why to invest, I’d
+like to describe how I came upon my VC investment opportunity and what
+the experience has been like so far.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1-solicitation&quot;&gt;Step 1: Solicitation&lt;/h4&gt;
+
+&lt;p&gt;Late last year, I got an email from some friends from college that I
+hadn’t been in touch with for a very long time. They were starting a
+venture capital fund and were wondering if I was possibly interested in
+investing. I replied with something along the lines of “tell me more”, and we
+went on from there.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2-the-pitch&quot;&gt;Step 2: The pitch&lt;/h4&gt;
+
+&lt;p&gt;The next step was to hear their pitch. I met with them on Zoom, and they
+gave me a short presentation on their investment thesis (&lt;a href=&quot;https://awf.vc/&quot;&gt;putting money
+into early stage companies run by experienced founders&lt;/a&gt;)
+and the basic terms of the fund (fees, lifespan, etc.).&lt;/p&gt;
+
+&lt;p&gt;Because their fund was really small and because most of their investors
+were VC novices like me, they spent a lot of time explaining how
+venture capital works and what I should expect if I were to join, which
+was helpful.&lt;/p&gt;
+
+&lt;p&gt;They also made the risks very clear and said (rightfully) that I shouldn’t
+invest anything that I couldn’t afford to lose.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3-signing-the-paperwork&quot;&gt;Step 3: Signing the paperwork&lt;/h4&gt;
+
+&lt;p&gt;After hearing the pitch and thinking about it for a while, I decided to
+put a small amount of money in. I told my friends (i.e., the general partners) the
+amount, and they sent over a 60 page legal contract with the full terms of my
+investment and the partnership. I signed and then officially became a limited partner!&lt;/p&gt;
+
+&lt;p&gt;No money was due at the time of signing. Instead, as is typical in
+venture capital, the terms of the fund stipulated that the general partners
+would make “capital calls” in the future to collect money from investors
+as needed.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4-first-capital-call&quot;&gt;Step 4: First capital call&lt;/h4&gt;
+
+&lt;p&gt;A few weeks after signing, my friends sent out the first “capital call”,
+requesting that the limited partners send them the first 15% of what they had
+committed. I mailed a check to their house, and they sent me an email a few
+days later acknowledging that they had gotten it.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5-first-investments&quot;&gt;Step 5: First investments&lt;/h4&gt;
+
+&lt;p&gt;Over the next few weeks, I started getting regular investor updates, including
+details on the first couple of companies that the fund was investing in.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-6-tax-time&quot;&gt;Step 6: Tax time&lt;/h4&gt;
+
+&lt;p&gt;In March of this year, I got a
+&lt;a href=&quot;https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065&quot;&gt;K-1 form&lt;/a&gt; that had
+been prepared by the fund’s accounting firm. This form included the name of
+the fund, the amount of my investment, and the total gains and losses for
+my share of the partnership in 2021 (all zeros because nothing interesting had
+happened yet).&lt;/p&gt;
+
+&lt;p&gt;I then entered the numbers into TurboTax, and filed my taxes as
+normal. I had been a bit worried about the extra overhead here, but overall it was no
+worse than dealing with the 1099 forms from my traditional investments.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-7-repeat-and-profit&quot;&gt;Step 7: Repeat (and profit?)&lt;/h4&gt;
+
+&lt;p&gt;Over the next nine and a half years, I expect the cycle of capital calls,
+investment updates, and tax forms to continue. In a few years, I’ll hopefully
+start to see some returns as the companies in the fund’s portfolio
+experience liquidity events.&lt;/p&gt;
+
+&lt;p&gt;Given the relatively modest amount I’ve invested, I don’t expect to make huge
+amounts of money. But, it would be cool if at least one of the companies my money
+is funnelled to becomes successful and well-known before the fund ends.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall, it’s been a lot of fun learning about the venture capital world and
+becoming a small VC investor myself. If you’re interested in early-stage
+tech companies and are feeling bored by the public markets, it might be worth
+looking into VC as a way to add some excitement to your financial life and some
+diversity to your portfolio.&lt;/p&gt;</content><author><name></name></author><category term="investing" /><summary type="html">I recently had the opportunity to invest in a venture capital fund. In this post, I want to explain how these funds work and what I've learned from the experience so far.</summary></entry><entry><title type="html">Tech employee retention is a serious issue</title><link href="https://yolken.net/blog/tech-employee-retention" rel="alternate" type="text/html" title="Tech employee retention is a serious issue" /><published>2021-12-30T14:52:00-08:00</published><updated>2021-12-30T14:52:00-08:00</updated><id>https://yolken.net/blog/tech-employee-retention</id><content type="html" xml:base="https://yolken.net/blog/tech-employee-retention">&lt;p&gt;A lot of companies, both in tech and other industries, are having trouble
 retaining employees at the moment. The so-called
 &lt;a href=&quot;https://www.theatlantic.com/ideas/archive/2021/10/great-resignation-accelerating/620382/&quot;&gt;“great resignation”&lt;/a&gt;
 of 2021 has gotten a lot of newfound press coverage, but in reality these resignation waves are
@@ -1558,220 +1823,4 @@ when taken to an extreme. Also, despite our best intentions, I think we all, mys
 exhibit them sometimes in our interactions with colleagues.&lt;/p&gt;
 
 &lt;p&gt;The important thing is to recognize when they’re reducing productivity and then make
-the necessary structural or personnel changes to unblock progress.&lt;/p&gt;</content><author><name></name></author><category term="career" /><category term="non-optimal-things" /><summary type="html">Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits that show up on the personality side that can be genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I try to deal with them.</summary></entry><entry><title type="html">Golang: Some batteries not included</title><link href="https://yolken.net/blog/golang-batteries-not-included" rel="alternate" type="text/html" title="Golang: Some batteries not included" /><published>2021-01-31T16:55:00-08:00</published><updated>2021-01-31T16:55:00-08:00</updated><id>https://yolken.net/blog/golang-batteries-not-included</id><content type="html" xml:base="https://yolken.net/blog/golang-batteries-not-included">&lt;p&gt;I use &lt;a href=&quot;https://golang.org/&quot;&gt;golang&lt;/a&gt; (aka “go”) a lot for my day-to-day work. Like other programming
-languages, it consists of a &lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;&lt;em&gt;core language spec&lt;/em&gt;&lt;/a&gt;, describing,
-for instance, how to declare variables, construct loops, etc., plus a
-&lt;a href=&quot;https://golang.org/pkg/&quot;&gt;&lt;em&gt;standard library&lt;/em&gt;&lt;/a&gt; that implements higher-level functionality
-needed for software that actually does useful things.&lt;/p&gt;
-
-&lt;p&gt;The go standard library is fairly rich- in addition to basic input/output, it covers
-HTTP client and server implementations, time and date processing, all of the standard cryptographic
-algorithms (e.g., SHA256), data compression and decompression, and lots of other goodies.
-However, there are certain pieces of functionality that are either missing or insufficient and
-that, as a result, require the use of third-party libraries in nearly all of my projects.&lt;/p&gt;
-
-&lt;p&gt;In this post, I want to go through the main “batteries not included” in the standard
-library, and the alternatives that I typically use for each one. Note that I’m &lt;em&gt;not&lt;/em&gt; covering
-missing language features like generics since those have been discussed extensively in
-&lt;a href=&quot;https://hn.algolia.com/?dateRange=all&amp;amp;page=0&amp;amp;prefix=false&amp;amp;query=golang%20generics&amp;amp;sort=byPopularity&amp;amp;type=story&quot;&gt;other forums&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;aside-what-do-batteries-have-to-do-with-programming-languages&quot;&gt;Aside: What do batteries have to do with programming languages?&lt;/h3&gt;
-
-&lt;p&gt;The term “batteries not included” was historically stamped on the boxes of electronic toys and other
-consumer goods to indicate that the batteries needed for the item to work were not provided in the
-box. When I was growing up, I remember getting gifts where the giver forgot to buy the batteries.
-I would then feverishly run around the house looking for instances of the right kind (either AA,
-AAA, C, D, or 9-volt) and raid my other toys or our TV remote controls as needed.&lt;/p&gt;
-
-&lt;p&gt;The phrase is less common today because items often include batteries in the box or they use
-built-in, rechargeable ones.&lt;/p&gt;
-
-&lt;p&gt;In any case, at some point the &lt;a href=&quot;https://www.python.org/&quot;&gt;Python programming language&lt;/a&gt; adopted the
-term “batteries included” to describe its standard library. This was a cheeky way of saying that
-unlike those cheap toys from childhood, you didn’t need to build or bring extra items (i.e.,
-libraries or tools) to make the language useful- it just worked “out of the box”.&lt;/p&gt;
-
-&lt;p&gt;Nowadays, the idea of including a rich, fully functional standard library with a programming
-language is pretty common. When Python was initially released in the early 1990’s, however, this
-was considered quite revolutionary- the main languages at the time (e.g., C) did not have very
-big standard libraries; if you wanted to do anything beyond the basics, you had to write it
-yourself or import a third-party implementation.&lt;/p&gt;
-
-&lt;p&gt;The “batteries included” philosophy for standard libraries has become common because it has
-a lot of benefits:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;It’s easier to get started in the language- no need to find, evaluate, and import third-party
-  libraries for common use cases&lt;/li&gt;
-  &lt;li&gt;It’s easier to distribute your code- people can just compile and/or run it with standard tooling&lt;/li&gt;
-  &lt;li&gt;Code is more standardized- if everyone uses the standard library for something (e.g., making
-  HTTP requests), then you’re unlikely to see lots of different implementations for it&lt;/li&gt;
-  &lt;li&gt;Maintenance is less of a burden- standard libraries tend to be well-maintained and regularly
-  patched for security issues. You don’t have to worry about the maintainer(s) disappearing and the
-  library accumulating a large bug backlog.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Unfortunately, there isn’t always agreement on which batteries to include and exactly how they
-should work. Also, including too many things can lead to bloat, making the core language harder to
-maintain and distribute. There are complex design and performance tradeoffs here, and as result
-no language is 100% “batteries included” for 100% of use cases.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-missing-batteries&quot;&gt;The missing batteries&lt;/h2&gt;
-
-&lt;p&gt;Now that we’ve reviewed what “batteries (not) included” means, let’s go into what I consider
-the main missing batteries in the go standard library.&lt;/p&gt;
-
-&lt;h3 id=&quot;flags&quot;&gt;Flags&lt;/h3&gt;
-
-&lt;p&gt;Many of the applications that I write in go are command-line tools that use flags for
-specifying options, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mytool --option1=value1 --option2=value2&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Golang includes a &lt;a href=&quot;https://golang.org/pkg/flag/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag&lt;/code&gt; package&lt;/a&gt; in its standard library for
-defining and parsing these flags. However, it’s pretty basic as it has no built-in support
-for accepting “complex” types like lists or time durations. Also, for whatever reason, it uses
-single dashes instead of double dashes for long flags- like most people (I think?), I find &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--help&lt;/code&gt;
-more canonical than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-help&lt;/code&gt; when interacting with a command-line tool.&lt;/p&gt;
-
-&lt;p&gt;As a result, the first thing I import when I’m creating a new command-line tool in go is a better
-flag library. Unfortunately, there isn’t a consistent standard on what to use here instead.
-I originally used &lt;a href=&quot;https://github.com/alecthomas/kingpin&quot;&gt;kingpin&lt;/a&gt;, but then switched
-to &lt;a href=&quot;https://github.com/spf13/cobra&quot;&gt;cobra&lt;/a&gt; a few years ago because that seemed to be more common in
-the code bases I was working on.&lt;/p&gt;
-
-&lt;p&gt;Recently, I discovered &lt;a href=&quot;https://github.com/segmentio/cli&quot;&gt;segmentio/cli&lt;/a&gt;, which I like a lot
-because it’s so simple- you just tag a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;struct&lt;/code&gt;, and then you get the flag functionality for free:&lt;/p&gt;
-
-&lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Age&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;          &lt;span class=&quot;s&quot;&gt;`flag:&quot;--age&quot;     help:&quot;your age&quot;     default:&quot;55&quot;`&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Hobbies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;`flag:&quot;--hobby&quot;   help:&quot;your hobbies&quot; default:&quot;-&quot;`&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;      &lt;span class=&quot;s&quot;&gt;`flag:&quot;-n,--name&quot; help:&quot;your name&quot;    default:&quot;Joe&quot;`&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;cli&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cli&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello %s!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This works well for simple CLIs, but becomes a little messy for more complicated ones, e.g. when
-the help text blurbs are really long or when you want to have multiple layers of subcommands.
-Therefore, I still find myself reverting back to cobra sometimes.&lt;/p&gt;
-
-&lt;h3 id=&quot;logging&quot;&gt;Logging&lt;/h3&gt;
-
-&lt;p&gt;Log output, whether to the console or to an external log collection service, is really important
-for understanding what’s going on in an application. As with flags,
-golang includes a &lt;a href=&quot;https://golang.org/pkg/log/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log&lt;/code&gt; package&lt;/a&gt;, but it’s quite
-basic and insufficient for many use cases. Among other problems, it doesn’t support log levels
-(e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INFO&lt;/code&gt; vs. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DEBUG&lt;/code&gt;) or structured output formats like JSON.&lt;/p&gt;
-
-&lt;p&gt;As with flags, there isn’t really a standard alternative here. I personally like
-&lt;a href=&quot;https://github.com/sirupsen/logrus&quot;&gt;logrus&lt;/a&gt; a lot and include it in all of the tools I build.
-Using it is as simple as importing the library and then calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log.Infof&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log.Debugf&lt;/code&gt;, etc.
-in place of the standard library’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log.Printf&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;github.com/sirupsen/logrus&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myArg&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Debugf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starting myFunc with myArg %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myArg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Warnf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Got an unexpected error: %+v&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In addition to supporting levels better than the standard &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log&lt;/code&gt; library, it also exposes
-a lot of controls over the output format.&lt;/p&gt;
-
-&lt;p&gt;There are many other choices here, and some of these may be better than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;logrus&lt;/code&gt; depending on
-your requirements. At Segment (my current employer), we use
-&lt;a href=&quot;https://github.com/segmentio/events&quot;&gt;segmentio/events&lt;/a&gt; in
-most of our backend systems. This library makes it easier to include structured key/value
-pairs alongside the primary message for each log. The former aren’t super useful for command-line
-tools but can be very helpful when trying to filter gigabytes of logs produced by replicated, remote
-systems.&lt;/p&gt;
-
-&lt;h3 id=&quot;test-assertions&quot;&gt;Test assertions&lt;/h3&gt;
-
-&lt;p&gt;Go contains decent, built-in tooling for executing tests. However, it doesn’t include any of the
-“assert” functions that are common in the unit testing libraries of other languages.
-This means that a simple test that two slices are equal looks like:&lt;/p&gt;
-
-&lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeepEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&quot;Wrong value for my special slice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&quot;expected&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&quot;got&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Thankfully, you can avoid this messiness by using
-&lt;a href=&quot;https://github.com/stretchr/testify&quot;&gt;stretchr/testify&lt;/a&gt;. With testify’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; package, the
-above becomes much more concise:&lt;/p&gt;
-
-&lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;My special slice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There’s also a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require&lt;/code&gt; package that has the same interface as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt;, but will stop the test
-execution if the condition isn’t met.&lt;/p&gt;
-
-&lt;p&gt;I use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;testify&lt;/code&gt; without exception in any project that is doing unit tests. It seems weird to me
-that some people still prefer the canonical manual check followed by a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;t.Error&lt;/code&gt; message,
-but to each their own!&lt;/p&gt;
-
-&lt;h3 id=&quot;yaml-parsing&quot;&gt;YAML parsing&lt;/h3&gt;
-
-&lt;p&gt;Go includes a fully functional package for handling &lt;a href=&quot;https://en.wikipedia.org/wiki/JSON&quot;&gt;JSON&lt;/a&gt;-formatted
-data but, like Python, doesn’t have any equivalent for &lt;a href=&quot;https://en.wikipedia.org/wiki/YAML&quot;&gt;YAML&lt;/a&gt;
-in its standard library. Many of the tools that I’ve worked on have some sort of human-created
-config file, and it’s much easier on users if these are YAML instead of JSON.&lt;/p&gt;
-
-&lt;p&gt;The standard here is &lt;a href=&quot;https://github.com/go-yaml/yaml&quot;&gt;go-yaml&lt;/a&gt;, which has the same interface
-as the standard &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; library but uses special &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaml&lt;/code&gt; struct tags instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt;
-ones. Personally, though, I prefer &lt;a href=&quot;https://github.com/ghodss/yaml&quot;&gt;ghodss/yaml&lt;/a&gt;, which wraps the
-former, because it supports &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt;-compatible tags and thus makes everything more consistent.&lt;/p&gt;
-
-&lt;h3 id=&quot;static-content-embedding&quot;&gt;Static content embedding&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Addendum:&lt;/strong&gt; Golang 1.16 finally added built-in &lt;a href=&quot;https://golang.org/pkg/embed/&quot;&gt;embedding support&lt;/a&gt;.
-Yay!!! However, I’ll keep this section here for historical reasons.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;One of the nice things about golang is that your entire program can be compiled into a single,
-self-contained binary. Among other benefits, this makes it easier to distribute your application
-or run it in bare-bones environments (e.g., scratch docker containers).&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, though, the standard go tooling only handles go code. It won’t include separate
-static assets like text templates and images in your binary. I commonly use the former,
-in conjunction with go’s excellent &lt;a href=&quot;https://golang.org/pkg/text/template/&quot;&gt;text/template&lt;/a&gt; package,
-to generate HTML documents or YAML configs in my tools.&lt;/p&gt;
-
-&lt;p&gt;To get around this, there’s a great tool called
-&lt;a href=&quot;https://github.com/go-bindata/go-bindata&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go-bindata&lt;/code&gt;&lt;/a&gt; that will automatically read
-these external assets and embed them into a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.go&lt;/code&gt; file that can be included in your binary. It
-then exposes an API for fetching the contents of each asset from your code.&lt;/p&gt;
-
-&lt;p&gt;The original creator of the tool, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jteeuwen&lt;/code&gt;, stopped maintaining it and then completely
-disappeared off Github a few years ago, which caused the proliferation of multiple,
-not-fully-compatible forks. Thankfully, it seems like the community has
-standardized on &lt;a href=&quot;https://github.com/go-bindata/go-bindata&quot;&gt;this one&lt;/a&gt;, which hopefully will be
-actively maintained going forward.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Golang is great for many use cases, but you’ll probably want to bring in third-party libraries
-for some things like flags, logging, and testing. It would be great if these
-were improved in the standard library, but I’m not holding my breath- from what I’ve heard,
-the go maintainers are pretty adamant about what’s in the standard library and what’s not.
-Thankfully, the third-party solutions are pretty good at filling in the gaps.&lt;/p&gt;</content><author><name></name></author><category term="golang" /><summary type="html">The go standard library is fairly rich. However, there are certain pieces of functionality that are either missing or insufficient and that, as a result, require the use of third-party libraries in nearly all of my projects. In this post, I want to go through the main &quot;batteries not included&quot; in the standard library, and the alternatives that I typically use for each one.</summary></entry></feed>
+the necessary structural or personnel changes to unblock progress.&lt;/p&gt;</content><author><name></name></author><category term="career" /><category term="non-optimal-things" /><summary type="html">Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits that show up on the personality side that can be genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I try to deal with them.</summary></entry></feed>
