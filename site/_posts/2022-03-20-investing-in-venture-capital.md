@@ -135,10 +135,11 @@ opportunities are hidden unless you're connected to someone
 in the VC community.
 
 That being said, there are a few VC funds or fund-like entities that
-are allowed to do limited general solicitation. So, if you don't
-have connections but still want to invest, you still have opportunities.
+are allowed to do limited general solicitation. So, even if you don't
+have connections, there are still some investment opportunities.
 [AngelList](https://www.angellist.com/) is a well-known place for
-finding these, and there a few other VC investment marketplaces as well.
+finding these, and there a few other, publicly accessible VC investment
+marketplaces as well.
 
 #### Quirk 4: Partnership structure
 
@@ -158,9 +159,9 @@ lucrative because of the fees collected (see below).
 So why are VC funds structured as limited partnerships? From what I can tell,
 it's a combination of factors- these entities provide the ideal combination
 of lax regulatory oversight, low administrative overhead, and tax benefits.
-On the last item in particular, one nice thing about a partnership is that the
+On the last item in particular, one nice thing about partnerships is that the
 profits are passed through directly to the partners; there's no taxation
-of the fund itself.
+of the funds themselves.
 
 #### Quirk 5: Fee structure
 
