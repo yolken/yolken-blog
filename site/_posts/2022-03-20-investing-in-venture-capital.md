@@ -16,7 +16,7 @@ what I've learned from the experience to far.
 *Disclaimer:* The information in this post is based on my limited
 experience and personal research. I've done my best to
 be correct, but I'm not an expert in the space; please let me know
-if anything here is glaringly wrong and I'll correct it.
+if anything here is wrong, and I'll correct it.
 
 ## Intro to venture capital
 
@@ -28,11 +28,11 @@ VC money when they were smaller.
 The VC space is populated by a number of large and very famous
 firms including [Sequoia](https://www.sequoiacap.com/) and
 [Andreessen Horowitz](https://a16z.com/). But, the barriers to
-entry aren't that huge, and there's also a long tail of less well-known
+entry aren't that huge, so there's also a long tail of less well-known
 firms, even going down to small, mom-and-pop shops like the one
 that I invested with (more on that later).
 
-These *firms* manage one or more *funds*. The funds are what investors
+These firms manage one or more *funds*. The funds are what investors
 actually invest in, not the firms. By analogy to more traditional
 investments, the firms are the equivalent of Vanguard or Fidelity,
 and the funds are things like Vanguard's Total Stock Market Index
@@ -58,55 +58,55 @@ Note that fund names are often suffixed in Roman numerals-
 we'll talk about why in a bit.
 
 Just as with more traditional mutual funds, VC funds typically have
-some sort of specialization that drives the investments- these can
-include specific types of companies (e.g., healthcare), company stages,
-or geographies.
+a specialization that drives the investment choices- these can
+include specific types product sectors, company stages, or geographies.
 
-Unlike mutual funds, however, VC funds have a number of unique
-characteristics that make them quite exotic and complex
-from the investor perspective. These are discussed in the
-sections below.
+Unlike mutual funds, however, VC funds have a number of interesting
+quirks that make them quite exotic and complex
+from the investor perspective. These are described more in the sections below.
 
-#### 1: Limited time frame
+#### Quirk 1: Fixed time frame
 
 The first weird thing about venture capital funds is that
-they usually have a limited time frame. Unlike a mutual fund that
+they usually have a fixed time frame. Unlike a mutual fund that
 lives for decades and has thousands of investors buying and selling
 shares every day, traditional venture capital funds are very restricted
 on when money comes in and when it gets paid out.
 
 First, the fund gets commitments from investors. Once the target
-amount is raised, it's closed to new investors and the fund managers
+amount is raised, it's closed to new investors; the fund managers
 then spend the next few years talking to startups, signing deals,
 and deploying the investors' money. At a certain point, new
 investments stop and the fund is focused primarily on helping its
-portfolio companies grow and achieve a liquidity event like an
-acquisition or, more rarely, an IPO. When the latter happen, the
-proceeds are distributed back to the investors.
+portfolio companies grow and achieve some sort of liquidity event like an
+acquisition or an IPO. When the latter happens, the
+fund's equity stake is sold and the proceeds are distributed back
+to the investors.
 
 After a fixed time period, traditionally ten years, the fund is
 dissolved, and any remaining assets are liquidated and distributed
 back to the investors.
 
-Because of this lifecycle, investors have to be locked in for the entire
-fund term. You can't sell your stake and get out after five years,
+Because of this rigid lifecycle, investors are necessarily locked in for
+the entire fund term. You can't sell your stake and get out after five years,
 for instance, because you've changed your mind or need the money for
 something else.
 
-Another side effect of these fund schedules is that if a VC firm wants
+Another side effect of these fixed-term fund schedules is that if a VC firm wants
 to be continuously collecting investor money and investing in companies,
-it needs to be constantly creating new funds. So, a firm will create
+it needs to be continuously creating new funds. So, a firm will create
 "US Growth Fund I", then, a year or two later "US Growth Fund II",
 and so forth. If a firm has a long streak of successful investments,
 the Roman numeral suffixes can get quite big.
 
-#### 2: Investor restrictions
+#### Quirk 2: Investor restrictions
 
 Another big difference with traditional investments is that not everyone
 is eligible to invest in a VC fund. First,
 you generally need to be an
-[accredited investor](https://www.investopedia.com/terms/a/accreditedinvestor.asp). In the US specifically, that means that you
-either need an income of at least $200k per year or a net worth of at
+[accredited investor](https://www.investopedia.com/terms/a/accreditedinvestor.asp).
+In the US specifically, that means you
+need either an income of at least $200k per year or a net worth of at
 least $1M.
 
 Even if you have a lot of money, though, it might not be enough. Large
@@ -114,44 +114,88 @@ funds often have minimum investment thresholds in the millions of
 dollars, putting them out of reach to everyone but the super rich or
 institutional investors like pension funds.
 
-There are yet more barriers- even if you're super rich, funds might not
+And, there are yet more barriers- even if you're super rich, funds might not
 want to take your money; they could already have more than they can
 deploy or their legal structure (below) might restrict the total
 number of investors.
 
-#### 3: Solicitation restrictions
+#### Quirk 3: Solicitation restrictions
 
 Most VC funds are legally not allowed to do "general solicitation"
 of investors. This is why if you go to the website of a VC firm like
 [Sequoia](https://www.sequoiacap.com/), there's no big, red
 "Open an account now!!" button, or even any basic information
 about contacting them to learn more about investing.
-Likewise, no matter how wealthy you are, you won't get any
+Likewise, no matter how wealthy you are, you won't get
 unsolicited emails or mailings about VC fund opportunities.
 
 The fund managers can only solicit you if there's a "pre-existing"
-relationship, e.g. you're a friend or former work colleague. So, it's hard
-to find opportunities unless you have connections in the VC
-community.
+relationship, e.g. you're a friend or former work colleague. So, most
+opportunities are hidden unless you're connected to someone
+in the VC community.
 
-#### 4: Partnership structure
+That being said, there are a few VC funds or fund-like entities that
+are allowed to do limited general solicitation. So, if you don't
+have connections but still want to invest, you still have opportunities.
+[AngelList](https://www.angellist.com/) is a well-known place for
+finding these, and there a few other VC investment marketplaces as well.
+
+#### Quirk 4: Partnership structure
 
 Yet another weird feature of VC funds is that they're usually
-structured as *partnerships*. When you put money in, you become
-a limited partner
+structured as *partnerships*, not corporations.
 
-#### 5: Fee structure
+When you make a commitment to invest, you become a "limited partner" (LP)
+in the fund. The "limited" prefix means that you own a percentage of the
+fund / partnership, but you don't have control over the specific investments.
+
+The investment decisions and general day-to-day management of the fund are
+handled by a second, higher tier of "general partners" (GPs). These
+people (or an entity representing them) can be investors as well. Being a GP
+is a lot more work than being an LP, but it's potentially a lot more
+lucrative because of the fees collected (see below).
+
+So why are VC funds structured as limited partnerships? From what I can tell,
+it's a combination of factors- these entities provide the ideal combination
+of lax regulatory oversight, low administrative overhead, and tax benefits.
+On the last item in particular, one nice thing about a partnership is that the
+profits are passed through directly to the partners; there's no taxation
+of the fund itself.
+
+#### Quirk 5: Fee structure
 
 Finally, VC funds have much higher fees than traditional investments.
-The typical structure is the so called "two and twenty"- 2% per year of the
-total amount you've committed, plus 20% of any profits.
+A typical fee structure is the so called "two and twenty" rule- 2% per year of
+the total amount you've committed, plus 20% of any profits. The former is meant
+to cover the fund's operating expenses whereas the latter (also called "carried
+interest" or simply "the carry") is paid to the fund's managers /
+general partners as a performance-based bonus.
 
 Thus, the fund needs to have pretty solid returns for investors to get
 their money back. And, if the fund happens to get lucky and invest in the
-next Google or Facebook, they'll be raking in a massive amount of money from
-their investors' profits.
+next Google or Facebook, the general partners will be raking in a
+massive amount of money off the other investors' profits.
+
+## Why invest?
+
+Given all of the limitations, complexities, and expenses described above, why would
+anyone want to invest in these funds? The simple answer is that they provide
+a way to get "ground floor" access to early stage, high-growth companies in the
+tech space. These investment opportunities aren't available in public markets, and
+historically have had pretty good returns.
+
+Of course, many of these early stage companies will fail, so there's a lot of risk
+involved too. But, the idea is that a venture capital fund, like a
+broad-based mutual fund, spreads out the risk across a diverse set of investments.
+In the VC case, because successful tech companies can become super valuable,
+it only takes a tiny number of "winners" in the fund to guarantee a good
+return for investors.
 
 ## The process so far
+
+Now that we've described how VC funds work and why to invest, I'd
+like to describe how I came upon my VC investment opportunity and what
+the experience has been like so far.
 
 #### 1: Solicitation
 
@@ -164,28 +208,70 @@ went on from there.
 #### 2: The pitch
 
 The next step was to hear their pitch. I met with them on Zoom, and they
-gave me a short presentation on their investment thesis (putting money
-into early stage companies run by experienced founders) and how
-the logistics would work if I signed up. Because their fund was
-really small and because most of their investors
+gave me a short presentation on their investment thesis ([putting money
+into early stage companies run by experienced founders](https://awf.vc/))
+and the basic terms of the fund (fees, lifespan, etc.).
+
+Because their fund was really small and because most of their investors
+were VC novices like me, they also spent a lot of time explaining how
+venture capital works and what I should expect if I were to join, which
+was helpful.
+
+They also made the risks very clear and said (rightfully) that I shouldn't
+invest anything that I couldn't afford to lose.
 
 #### 3: Signing the paperwork
 
-After hearing the pitch, I decided to put some money in.
+After hearing the pitch and thinking about it for a while, I decided to
+put a small amount of money in. I told my friends (i.e., the general partners) the
+amount, and they sent over a 60 page legal contract with the full terms of my
+investment and the partnership. I signed and then officially became a limited partner!
+
+No money was due at the time of signing. Instead, as is typical in
+venture capital, the terms of the fund stipulated that the general partners
+would make "capital calls" in the future to collect money from investors
+as needed.
 
 #### 4: First capital call
 
-
+A few weeks after signing, my friends sent out the first "capital call",
+requesting that the limited partners send them the first 15% of what they had
+committed. I mailed a check to their house, and they sent me an email a few
+days later acknowledging that they had gotten it.
 
 #### 5: First investments
 
+Over the next few weeks, I started getting regular investor updates, including
+details on the first couple of companies that the fund was investing in.
+
 #### 6: Tax time
+
+In March of this year, I got a
+[K-1 form](https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065) that had
+been prepared by the fund's accounting firm. This form included the name of
+the fund, the amount of my investment, and the total gains and losses for
+my share of the partnership in 2021 (all zeros because nothing interesting had
+happened yet).
+
+I then entered the numbers into TurboTax, and filed my taxes as
+normal. I had been a bit worried about the extra overhead here, but overall it was no
+worse than dealing with the 1099 forms from my traditional investments.
 
 #### 7: Profit?
 
-## Finding investment opportunities
+Over the next nine and a half years, I expect the cycle of capital calls,
+investment updates, and tax forms to continue. In a few years, I'll hopefully
+start to see some returns as the companies in the fund's portfolio
+experience liquidity events.
 
-
+Given the relatively modest amount I've invested, I don't expect to make huge
+amounts of money. But, it would be cool if at least one of the companies my money
+is funnelled to becomes successful and well-known before the fund ends.
 
 ## Conclusion
 
+Overall, it's been a lot of fun learning about the venture capital world and
+becoming a small VC investor myself. If you're interested in early-stage
+tech companies and are feeling bored by the public markets, it might be worth
+looking into VC as a way to add some excitement to your financial life and some
+diversity to your portfolio.
