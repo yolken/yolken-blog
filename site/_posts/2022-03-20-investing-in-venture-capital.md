@@ -1,29 +1,29 @@
 ---
 layout: post
 title:  "Investing in venture capital"
-date:   2022-03-20 18:11:00 -0800
+date:   2022-03-27 15:30:00 -0700
 tags: investing
 excerpt: |
   I recently had the opportunity to invest in a venture capital
   fund. In this post, I want to explain how these funds work and
-  what I've learned from the experience to far.
+  what I've learned from the experience so far.
 ---
 
 I recently had the opportunity to invest in a venture capital
 fund. In this post, I want to explain how these funds work and
-what I've learned from the experience to far.
+what I've learned from the experience so far.
 
 *Disclaimer:* The information in this post is based on my limited
-experience and personal research. I've done my best to
-be correct, but I'm not an expert in the space; please let me know
-if anything here is wrong, and I'll correct it.
+experience and personal research over the last few months. Please
+consult a true expert before investing, and also let me know if anything
+here is wrong so I can correct it.
 
 ## Intro to venture capital
 
 Venture capital (VC) is a common form of private market financing
 for tech startups. Nearly every major, big-name tech company founded
 in the last 30 years, including Google, Facebook, and Amazon, got
-VC money when they were smaller.
+VC money when it was smaller.
 
 The VC space is populated by a number of large and very famous
 firms including [Sequoia](https://www.sequoiacap.com/) and
@@ -32,7 +32,7 @@ entry aren't that huge, so there's also a long tail of less well-known
 firms, even going down to small, mom-and-pop shops like the one
 that I invested with (more on that later).
 
-These firms manage one or more *funds*. The funds are what investors
+These firms, in turn, manage one or more *funds*. The funds are what investors
 actually invest in, not the firms. By analogy to more traditional
 investments, the firms are the equivalent of Vanguard or Fidelity,
 and the funds are things like Vanguard's Total Stock Market Index
@@ -59,18 +59,18 @@ we'll talk about why in a bit.
 
 Just as with more traditional mutual funds, VC funds typically have
 a specialization that drives the investment choices- these can
-include specific types product sectors, company stages, or geographies.
+include specific product sectors, company stages, or geographies.
 
 Unlike mutual funds, however, VC funds have a number of interesting
-quirks that make them quite exotic and complex
-from the investor perspective. These are described more in the sections below.
+quirks that make them somewhat exotic and complex
+from the investor perspective. I describe these more in the sections below.
 
 #### Quirk 1: Fixed time frame
 
 The first weird thing about venture capital funds is that
 they usually have a fixed time frame. Unlike a mutual fund that
-lives for decades and has thousands of investors buying and selling
-shares every day, traditional venture capital funds are very restricted
+lives on for decades and has thousands of investors buying and selling
+shares each day, traditional venture capital funds are very restricted
 on when money comes in and when it gets paid out.
 
 First, the fund gets commitments from investors. Once the target
@@ -84,8 +84,7 @@ fund's equity stake is sold and the proceeds are distributed back
 to the investors.
 
 After a fixed time period, traditionally ten years, the fund is
-dissolved, and any remaining assets are liquidated and distributed
-back to the investors.
+dissolved, and any remaining assets are liquidated and distributed.
 
 Because of this rigid lifecycle, investors are necessarily locked in for
 the entire fund term. You can't sell your stake and get out after five years,
@@ -95,7 +94,7 @@ something else.
 Another side effect of these fixed-term fund schedules is that if a VC firm wants
 to be continuously collecting investor money and investing in companies,
 it needs to be continuously creating new funds. So, a firm will create
-"US Growth Fund I", then, a year or two later "US Growth Fund II",
+a "US Growth Fund I", then, a year or two later a "US Growth Fund II",
 and so forth. If a firm has a long streak of successful investments,
 the Roman numeral suffixes can get quite big.
 
@@ -114,17 +113,17 @@ funds often have minimum investment thresholds in the millions of
 dollars, putting them out of reach to everyone but the super rich or
 institutional investors like pension funds.
 
-And, there are yet more barriers- even if you're super rich, funds might not
-want to take your money; they could already have more than they can
-deploy or their legal structure (below) might restrict the total
-number of investors.
+And, there are yet more barriers- even if you're super rich, you still have
+to convince the funds to take your money. They could refuse because they already
+have more than they can deploy or their legal structures (below) might restrict
+the total number of investors.
 
 #### Quirk 3: Solicitation restrictions
 
-Most VC funds are legally not allowed to do "general solicitation"
-of investors. This is why if you go to the website of a VC firm like
+Most VC funds are legally forbidden from doing "general solicitation"
+of investors. This is why if you go to the website of a firm like
 [Sequoia](https://www.sequoiacap.com/), there's no big, red
-"Open an account now!!" button, or even any basic information
+"Open an account now" button, or even any basic information
 about contacting them to learn more about investing.
 Likewise, no matter how wealthy you are, you won't get
 unsolicited emails or mailings about VC fund opportunities.
@@ -136,7 +135,7 @@ in the VC community.
 
 That being said, there are a few VC funds or fund-like entities that
 are allowed to do limited general solicitation. So, even if you don't
-have connections, there are still some investment opportunities.
+have connections, there are still some opportunities available.
 [AngelList](https://www.angellist.com/) is a well-known place for
 finding these, and there a few other, publicly accessible VC investment
 marketplaces as well.
@@ -152,8 +151,8 @@ fund / partnership, but you don't have control over the specific investments.
 
 The investment decisions and general day-to-day management of the fund are
 handled by a second, higher tier of "general partners" (GPs). These
-people (or an entity representing them) can be investors as well. Being a GP
-is a lot more work than being an LP, but it's potentially a lot more
+people (or an entity representing them) have typically invested money as well.
+Being a GP is a lot more work than being an LP, but it's potentially a lot more
 lucrative because of the fees collected (see below).
 
 So why are VC funds structured as limited partnerships? From what I can tell,
@@ -187,18 +186,18 @@ historically have had pretty good returns.
 
 Of course, many of these early stage companies will fail, so there's a lot of risk
 involved too. But, the idea is that a venture capital fund, like a
-broad-based mutual fund, spreads out the risk across a diverse set of investments.
+mutual fund, spreads out the risk across a diverse set of investments.
 In the VC case, because successful tech companies can become super valuable,
 it only takes a tiny number of "winners" in the fund to guarantee a good
 return for investors.
 
 ## The process so far
 
-Now that we've described how VC funds work and why to invest, I'd
+Now that we've discussed how VC funds work and why to invest, I'd
 like to describe how I came upon my VC investment opportunity and what
 the experience has been like so far.
 
-#### 1: Solicitation
+#### Step 1: Solicitation
 
 Late last year, I got an email from some friends from college that I
 hadn't been in touch with for a very long time. They were starting a
@@ -206,7 +205,7 @@ venture capital fund and were wondering if I was possibly interested in
 investing. I replied with something along the lines of "tell me more", and we
 went on from there.
 
-#### 2: The pitch
+#### Step 2: The pitch
 
 The next step was to hear their pitch. I met with them on Zoom, and they
 gave me a short presentation on their investment thesis ([putting money
@@ -214,14 +213,14 @@ into early stage companies run by experienced founders](https://awf.vc/))
 and the basic terms of the fund (fees, lifespan, etc.).
 
 Because their fund was really small and because most of their investors
-were VC novices like me, they also spent a lot of time explaining how
+were VC novices like me, they spent a lot of time explaining how
 venture capital works and what I should expect if I were to join, which
 was helpful.
 
 They also made the risks very clear and said (rightfully) that I shouldn't
 invest anything that I couldn't afford to lose.
 
-#### 3: Signing the paperwork
+#### Step 3: Signing the paperwork
 
 After hearing the pitch and thinking about it for a while, I decided to
 put a small amount of money in. I told my friends (i.e., the general partners) the
@@ -233,19 +232,19 @@ venture capital, the terms of the fund stipulated that the general partners
 would make "capital calls" in the future to collect money from investors
 as needed.
 
-#### 4: First capital call
+#### Step 4: First capital call
 
 A few weeks after signing, my friends sent out the first "capital call",
 requesting that the limited partners send them the first 15% of what they had
 committed. I mailed a check to their house, and they sent me an email a few
 days later acknowledging that they had gotten it.
 
-#### 5: First investments
+#### Step 5: First investments
 
 Over the next few weeks, I started getting regular investor updates, including
 details on the first couple of companies that the fund was investing in.
 
-#### 6: Tax time
+#### Step 6: Tax time
 
 In March of this year, I got a
 [K-1 form](https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065) that had
@@ -258,7 +257,7 @@ I then entered the numbers into TurboTax, and filed my taxes as
 normal. I had been a bit worried about the extra overhead here, but overall it was no
 worse than dealing with the 1099 forms from my traditional investments.
 
-#### 7: Profit?
+#### Step 7: Repeat (and profit?)
 
 Over the next nine and a half years, I expect the cycle of capital calls,
 investment updates, and tax forms to continue. In a few years, I'll hopefully
