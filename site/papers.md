@@ -7,7 +7,13 @@ order: 3
 
 ## Non-Academic
 
-### Segment Blog
+### Work blogs
+
+#### Airplane.dev
+
+- [Migrating our infrastructure to Pulumi](https://www.airplane.dev/blog/migrating-to-pulumi)
+
+#### Segment
 
 - [Building an internal search engine at Segment](https://segment.com/blog/building-an-internal-search-engine-at-segment/)
 - [Updating topicctl to support the future of Kafka](https://segment.com/blog/topicctl-v1/)
