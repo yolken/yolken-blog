@@ -68,11 +68,12 @@ And, the threats seemed to get worse over time.
 ### Drugs
 
 Closely related to the issue of physical safety is drugs. When I moved to my
-neighborhood (Mission Street between 7th and 8th), it wasn't fancy but at
-least it was pretty clean and quiet. Then, a few years ago, gangs of drug dealers
-moved in. They first took over the 7th street corner and then, during the pandemic,
-also expanded to the 8th street side of my block. By the end, I couldn't leave the
-house without walking through them.
+neighborhood
+([Mission Street between 7th and 8th](https://www.google.com/maps/place/1160+Mission+St,+San+Francisco,+CA+94103)),
+it wasn't fancy but at least it was pretty clean and quiet. Then, a few years
+ago, gangs of drug dealers moved in. They first took over the 7th street
+corner and then, during the pandemic, also expanded to the 8th street side of
+my block. By the end, I couldn't leave the house without walking through them.
 
 Most of the time, this activity was peaceful. However, it brought more people
 to the neighborhood who were loud, destructive, and potentially threatening.
