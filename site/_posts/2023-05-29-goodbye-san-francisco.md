@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Goodbye, San Francisco"
-date:   2023-05-29 16:30:00 -0500
+date:   2023-05-29 15:30:00 -0500
 tags: san-francisco
 excerpt: |
   After nearly 10 years of living in San Francisco, I decided to
