@@ -42,8 +42,8 @@ low violent crime rate, at least by US standards, so I wasn't worried
 about getting shot or robbed or anything like that.
 
 Instead, the problem was that SF had (and still has today), thousands
-of people wandering around who are suffering from drug addiction and/or
-severe mental illness. The vast majority of these folks were completely
+of people wandering around who are suffering from untreated drug addiction
+and/or severe mental illness. The vast majority of these folks were completely
 harmless, but a small percentage were hostile, threatening, and, in some
 cases, violent.
 
