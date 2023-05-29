@@ -1,4 +1,251 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2023-05-29T16:28:09-04:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Investing in venture capital</title><link href="https://yolken.net/blog/investing-in-venture-capital" rel="alternate" type="text/html" title="Investing in venture capital" /><published>2022-03-27T18:30:00-04:00</published><updated>2022-03-27T18:30:00-04:00</updated><id>https://yolken.net/blog/investing-in-venture-capital</id><content type="html" xml:base="https://yolken.net/blog/investing-in-venture-capital"><![CDATA[<p>I recently had the opportunity to invest in a venture capital
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2023-05-29T16:32:00-04:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Goodbye, San Francisco</title><link href="https://yolken.net/blog/goodbye-san-francisco" rel="alternate" type="text/html" title="Goodbye, San Francisco" /><published>2023-05-29T16:30:00-04:00</published><updated>2023-05-29T16:30:00-04:00</updated><id>https://yolken.net/blog/goodbye-san-francisco</id><content type="html" xml:base="https://yolken.net/blog/goodbye-san-francisco"><![CDATA[<p>After nearly 10 years of living in San Francisco, I decided to
+leave at the end of last year. In this post, I explain what
+motivated my departure and how the city can improve in the future.</p>
+
+<figure>
+  <img src="/assets/sf_skyline.jpeg" alt="San Francisco skyline" />
+  <figcaption>
+    View of my former neighborhood from my apartment.
+  </figcaption>
+</figure>
+
+<h2 id="problems">Problems</h2>
+
+<p>For the majority of my time in SF, I was pretty happy with life there.
+I had a great apartment in a great location. Although I had a car,
+I rarely used it because I could easily walk to the train, the city’s
+main shopping district (Union Square), or the offices of my various
+employers over the years.</p>
+
+<p>Starting 4-5 years ago, however, things started changing for the
+worse, and then they accelerated downwards during the pandemic. It’s hard
+to pin down exactly what happened and when, but I think the core problem
+for me was that my sense of <em>safety</em> significantly degraded.</p>
+
+<h3 id="physical-safety">Physical safety</h3>
+
+<p>My biggest problem with SF was simply not feeling physically safe while
+walking down the street or sitting in a train. SF has a pretty
+low violent crime rate, at least by US standards, so I wasn’t worried
+about getting shot or robbed or anything like that.</p>
+
+<p>Instead, the problem was that SF had (and still has today), thousands
+of people wandering around who are suffering from drug addiction and/or
+severe mental illness. The vast majority of these folks were completely
+harmless, but a small percentage were hostile, threatening, and, in some
+cases, violent.</p>
+
+<p>In multiple cases over the last few years, I was followed, screamed at, and
+threatened in broad daylight. Thankfully, nothing physically happened
+to me, but it’s a really jarring experience to have this happen. Each time
+I reported these incidents to the police, they never responded. I got the
+sense that as long as no one was physically harmed, they didn’t really care.
+Thus, there were no mechanisms in place to control, contain, or treat this
+behavior.</p>
+
+<p>Over time, I realized that you needed to be hyper-vigilant every time you
+left the house, constantly evaluating everyone around you and being ready
+to cross the street or reverse direction at a moment’s notice. Is that
+person screaming and throwing trash at the side of a bus shelter a
+danger, or are they going to keep to themselves if I walk quickly past?
+What about that group that’s selling drugs in the middle of the sidewalk?</p>
+
+<p>It just got really stressful and draining dealing with this after a while.
+And, the threats seemed to get worse over time.</p>
+
+<h3 id="drugs">Drugs</h3>
+
+<p>Closely related to the issue of physical safety is drugs. When I moved to my
+neighborhood (Mission Street between 7th and 8th), it wasn’t fancy but at
+least it was pretty clean and quiet. Then, a few years ago, gangs of drug dealers
+moved in. They first took over the 7th street corner and then, during the pandemic,
+also expanded to the 8th street side of my block. By the end, I couldn’t leave the
+house without walking through them.</p>
+
+<p>Most of the time, this activity was peaceful. However, it brought more people
+to the neighborhood who were loud, destructive, and potentially threatening.
+The sidewalks became blocked in places, and I often had to walk in the street
+to get around the dealers, their customers, and the piles of trash they left
+behind.</p>
+
+<p>Occasionally, violence did flare up. There were two, drug-related murders
+on my block in the last year, one of which I heard the gunshots for. And, people
+were constantly overdosing, and often dying. In my final month, I walked by a
+dead body on the sidewalk being attended to by the coroner’s office.</p>
+
+<h3 id="traffic-safety">Traffic safety</h3>
+
+<p>The final safety dimension that affected me was my interactions with
+drivers in the street. As I mentioned above, I had a car but tried to
+walk or take transit whenever possible. I also biked a lot, particularly
+if I was going to places that were more than a few miles away.</p>
+
+<p>San Francisco was never the most pedestrian or bike friendly city in the
+world, but at least you could be reasonably confident that you wouldn’t
+be hit by a car when going outside. Then, a few years ago, the city made
+a conscious decision to stop nearly all traffic enforcement <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. As a
+result, the behavior of some drivers got terrible, to the point of being
+dangerous. I would routinely see people running red lights, going to the
+wrong way down one way streets, driving on roads closed to private
+vehicles, and speeding at 60+ in 25mph zones.</p>
+
+<p>In my last year, after nearly two decades of incident-free biking, a driver
+making an illegal right turn hit me while I was in a bike lane on Market Street.
+Thankfully, I escaped with only scrapes and bruises, but that was really upsetting
+for me, and I felt that it was only a matter of time before something
+worse happened.</p>
+
+<h2 id="why-its-frustrating">Why it’s frustrating</h2>
+
+<p>Many cities in the US and in other places around the world have problems
+with crime, drugs, safety, homelessness, and other issues. But, there are a
+couple aspects of San Francisco’s situation that make its problems
+especially frustrating.</p>
+
+<p>First, the city is incredibly wealthy, and has a massive budget at its
+disposal- nearly $14 billion dollars <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> for a population of only slightly more
+than 800,000 people, which, on a per-capita basis, is one of the highest
+in the country <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. Despite all this money and despite a budget has has grown
+much faster than the city’s population over the last few years, SF can’t
+keep its central areas safe and clean, and doesn’t seem to be providing
+much help to the thousands of people suffering on its streets.</p>
+
+<p>Second, and even worse, the people in charge including the mayor,
+the police leadership, and a majority of the Board of Supervisors (the
+legislative body for SF), really just don’t seem to care one bit about
+what’s happening. Sure, they will occasionally rant in public and promise
+to fix things <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>, but after a quick surge of activity, things just go back
+to their previous state or get worse.</p>
+
+<h2 id="why-it-matters">Why it matters</h2>
+
+<p>In the pre-pandemic days, most companies required employees to be in the
+office at least 4 days a week. Many Bay Area companies, including most
+of the big tech employers (Google, Facebook, etc.), had large offices
+in downtown San Francisco, and as a result, many of their employees lived
+in the city to avoid long commutes.</p>
+
+<p>With the pandemic, much of this disappeared. Companies that previously
+had office-centric cultures started allowing fully remote work or at
+least allowed people to come in less frequently than before.</p>
+
+<p>The result is that many tech employees, myself included, are no
+longer tied to locations within easy commuting distance of an SF
+office. They can live further away (e.g., in the suburbs) or
+just totally leave the area, as I did. There is less foot traffic in
+the central areas of the city, which has hurt retail businesses, who
+are now shutting down or moving away as well.</p>
+
+<p>People now have the power to vote with their feet, and many have
+taken advantage of and will continue to take advantage of this
+power as conditions deteriorate. The city can no longer rest on its laurels
+and spend from an infinite pile of money as it did in the good old days,
+it now has to control spending and actively fight to retain businesses
+and residents. Unfortunately, it hasn’t figured out how to do that yet.</p>
+
+<h2 id="moving-away">Moving away</h2>
+
+<p>After 10 years, I decided that I had had enough of feeling unsafe, of seeing
+people suffering and dying in the streets, of watching businesses in
+my neighborhood reduce their hours or shut down completely, and of seeing
+no significant response from the city leadership. I packed up my stuff,
+cancelled my lease, and moved back to the East Coast.</p>
+
+<p>I have a lot of great memories of my time in SF, and I feel really sad about
+what’s happened to the city. Will it ever recover? Maybe with completely new
+leadership and drastic policy changes it can. But, until that happens, I’m not
+holding my breath.</p>
+
+<h2 id="appendix-answers-to-predicted-commentary">Appendix: Answers to predicted commentary</h2>
+
+<p>Whenever anyone complains about SF in the news or social media, they’re barraged
+with a predictable set of retorts. I’m just going to respond to them here
+to save everyone’s time.</p>
+
+<h4 id="most-of-sf-is-perfectly-nice-you-should-have-just-moved-to-a-different-neighborhood">Most of SF is perfectly nice. You should have just moved to a different neighborhood.</h4>
+
+<p>First, I wanted to live in a dense, central area and not in a single-family-house
+that’s 4 miles from downtown. Second, my neighborhood was perfectly nice when
+I moved in, and then got bad. What’s to prevent that from happening to other
+places in the city as well?</p>
+
+<h4 id="i-drove-near-insert-some-place-mentioned-above-and-it-was-perfectly-fine-youre-exaggerating-or-making-thing-up">I drove near (insert some place mentioned above) and it was perfectly fine. You’re exaggerating or making thing up!</h4>
+
+<p>One quirky thing about SF is that there can be significant variation in street
+conditions by both location and time. One block could be perfectly fine, and a block
+one street over could be a disaster zone. Or, a corner could be quiet now but then
+get taken over by drug dealing next week.</p>
+
+<p>The city (when it does anything) typically just shuffles people around, does
+a quick cleanup, and then forgets about the area for a while. The conditions have
+little to do with the buildings, and more to do with whatever the city is happening
+to allow or not allow on the sidewalks at any particular time and place.</p>
+
+<h4 id="the-stats-show-that-sf-is-doing-well-assaults-burglaries-substitute-some-other-metric-here-are-down">The stats show that SF is doing well. Assaults, burglaries (substitute some other metric here) are down!</h4>
+
+<p>First of all, I care more about what I see with my eyes than any
+statistics. Secondly, when the police take hours to respond to even serious crimes
+like shootings <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> or commercial burglaries <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>, the incentive to report things
+goes way down.</p>
+
+<h4 id="other-cities-in-the-us-are-just-as-bad-stop-picking-on-sf">Other cities in the US are just as bad. Stop picking on SF!</h4>
+
+<p>This is simply false. I’ve spent a good amount of time over the last
+year visiting many other places in the US, including a bunch that the media love
+to hate on like Seattle, Baltimore, and New York, and I felt significantly safer
+in all of those places. Also, they don’t have giant, open-air drug markets in
+their city centers.</p>
+
+<p>Yes, lots of cities in the US have significant problems. But SF’s are genuine
+outliers in multiple dimensions.</p>
+
+<h4 id="sf-was-much-worse-in-the-90s-substitute-some-other-long-past-decade-here">SF was much worse in the 90’s (substitute some other, long-past decade here).</h4>
+
+<p>Who cares? The SF of today is a very different place from the one of 30+ years ago,
+with many more resources, technologies, and policy learnings at its disposal. By
+this same logic, we shouldn’t care about people dying from infectious diseases today
+because many more died from them in some past epoch (e.g., the early 20th century),
+which most would argue is a ridiculous assertion.</p>
+
+<h4 id="all-youre-doing-is-complaining-without-providing-solutions">All you’re doing is complaining without providing solutions</h4>
+
+<p>With all due respect, that’s not my job. I’m not an expert on criminology or
+drug addiction or urban planning or whatever, nor am I in a position where I
+control policy. When I lived in SF, I voted and paid taxes with the expectation
+that the people in charge would try to figure these things out or hire smart
+people who could. And, they failed miserably.</p>
+
+<h4 id="youre-a-terrible-negative-person--good-riddance">You’re a terrible, negative person- good riddance!</h4>
+
+<p>This kind of sentiment just drives more people and businesses away. Each departure
+reduces the city’s revenue (personally, I paid tens of thousands of dollars
+a year in state and local taxes) and activity, which makes the situation there
+even worse.</p>
+
+<h2 id="notes">Notes</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://transpomaps.org/san-francisco/ca/sfpd-traffic-enforcement/analysis">https://transpomaps.org/san-francisco/ca/sfpd-traffic-enforcement/analysis</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://www.sfchronicle.com/projects/2022/san-francisco-budget/">https://www.sfchronicle.com/projects/2022/san-francisco-budget/</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://ballotpedia.org/Analysis_of_spending_in_America%27s_largest_cities">https://ballotpedia.org/Analysis_of_spending_in_America%27s_largest_cities</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city">https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/">https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p><a href="https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php">https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="san-francisco" /><summary type="html"><![CDATA[After nearly 10 years of living in San Francisco, I decided to leave at the end of last year. In this post, I explain what motivated my departure and how the city can improve in the future.]]></summary></entry><entry><title type="html">Investing in venture capital</title><link href="https://yolken.net/blog/investing-in-venture-capital" rel="alternate" type="text/html" title="Investing in venture capital" /><published>2022-03-27T18:30:00-04:00</published><updated>2022-03-27T18:30:00-04:00</updated><id>https://yolken.net/blog/investing-in-venture-capital</id><content type="html" xml:base="https://yolken.net/blog/investing-in-venture-capital"><![CDATA[<p>I recently had the opportunity to invest in a venture capital
 fund. In this post, I want to explain how these funds work and
 what I’ve learned from the experience so far.</p>
 
@@ -1569,258 +1816,4 @@ have experienced similar feelings.</p>
 
 <p>The key thing is to realize how the system works and ensure that where you’re working and what
 you’re working on are aligned with your long-term career goals. Once you achieve this alignment,
-advancing can still be slow but at least there’s a clear, achievable path to follow.</p>]]></content><author><name></name></author><category term="career" /><summary type="html"><![CDATA[At many companies the "senior engineer" level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in advancing past "senior" can cause a lot of frustration and make people feel stuck in their careers. In this post, I want to share some observations about this "senior engineer plateau", why it causes frustration, and how to navigate out of it.]]></summary></entry><entry><title type="html">Non-optimal engineer personas</title><link href="https://yolken.net/blog/non-optimal-engineer-personas" rel="alternate" type="text/html" title="Non-optimal engineer personas" /><published>2021-02-15T16:15:00-05:00</published><updated>2021-02-15T16:15:00-05:00</updated><id>https://yolken.net/blog/non-optimal-engineer-personas</id><content type="html" xml:base="https://yolken.net/blog/non-optimal-engineer-personas"><![CDATA[<p>Software engineers are an interesting bunch. Over the course of my career thus far,
-I’ve interacted with hundreds of colleagues, and it feels like I’ve seen everything- people who
-won’t wear shoes, people who refuse to have their ID picture taken, people who voluntarily start
-their day at 9PM, and many other behaviors that would be considered “weird” in normal workplaces.</p>
-
-<p>Most of these quirks don’t bother me, and I have a few of my own. However, there are certain
-traits that show up on the personality side that can be genuinely counterproductive to my team’s
-work. In this post, I want to explain what these are and how I try to deal with them.</p>
-
-<p>Note that I’m <em>not</em> trying to demonize or stigmatize anyone here as I think everyone, myself
-included, exhibits these traits sometimes to a certain extent. Rather, the point is to understand
-what they are, recognize when they’re getting in the way, and mitigate their effects so that we can
-all be happier and more productive as we’re trying to get our work done.</p>
-
-<h2 id="non-optimal-personas">Non-optimal personas</h2>
-
-<p>The sections below go into more detail on each trait. I’m framing them as “personas” to make the
-discussion a little more fluid.</p>
-
-<h3 id="the-overanalyzer">The overanalyzer</h3>
-
-<p>The overanalyzer gets hung up on analyzing every technical decision they encounter in their
-day-to-day work.</p>
-
-<p>The problem with overanalysis in the context of software engineering is that there are so
-many choices to make on a daily basis. At the low-level, you have mundane things like variable names
-and function interfaces- should it be <code class="language-plaintext highlighter-rouge">myFunc(config struct)</code> or
-<code class="language-plaintext highlighter-rouge">myFunc(parameter1, parameter2, etc.)</code>? At the higher-level, there are bigger choices about
-architectures and technologies- for our new container orchestration system, should we use
-<a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://aws.amazon.com/ecs/">ECS</a>,
-<a href="https://www.nomadproject.io/">Nomad</a>, <a href="https://netflix.github.io/titus/">Titus</a>, or something else?</p>
-
-<p>The problem isn’t just the number of choices, it’s that for many of them there isn’t a single,
-“right” answer. In many cases, e.g. the container orchestration example above, there are
-perfectly valid reasons for picking any one of them over the others. A big part of software
-engineering, and one of the things that distinguishes it from just “coding”, is evaluating these
-tradeoffs and making decisions, even when the choices can’t be perfect on all dimensions.</p>
-
-<p>Overanalyzers get paralyzed by these choices and thus can’t make decisions quickly. As a result,
-their productivity is low and, if their work is in the critical path, they can block the team
-from making forward progress and meeting deadlines.</p>
-
-<h3 id="the-perfectionist">The perfectionist</h3>
-
-<p>The perfectionist, unlike the overanalyzer, has a clear vision for what they want. However,
-they refuse to accept anything short of their final vision- it has to be perfect, or it shouldn’t
-be done at all.</p>
-
-<p>Perfectionism is really hard to achieve in software for a few reasons. First off, <em>all</em> software
-has rough edges. No matter how much work you put into something, you’re going to have some bugs
-or errant pixels or missing features somewhere in your product. Secondly, most software progress
-is delivered incrementally- you don’t achieve perfection in your first release. Instead, you
-address the highest priority features and/or bugs, deliver your product, get feedback, and then
-repeat the cycle. Many large, successful software products like Microsoft Office or the Python
-programming language have been doing this for decades.</p>
-
-<p>Perfectionist software engineers get in the way by blocking your work unless you immediately address
-their long list of idealized requirements.</p>
-
-<p>Sometimes, the interactions are relatively mundane, e.g. in the context of a small code review:</p>
-
-<blockquote>
-  <p>Them: I need you to refactor class X and backfill tests as part of your change.</p>
-
-  <p>Me: My change only touched one line of X. I’m already rewriting Y as part of this change, I’m not
-making X worse, and I don’t have any context on the original X code so it will take me days to
-untangle this mess.</p>
-
-  <p>Them: Sorry, I can’t approve until you fix this.</p>
-</blockquote>
-
-<p>The blockers can be bigger when doing design or architecture reviews:</p>
-
-<blockquote>
-  <p>Them: I can’t allow you to roll out your new container orchestration system because it doesn’t
-have signed images and an interactive UI.</p>
-
-  <p>Me: Our current system doesn’t have those things. No one other than you is requesting them,
-and it will take months to add them. We can work on those features in v2 if needed.</p>
-
-  <p>Them: No. Either you have signed images and an interactive UI in v1 or there’s no point.</p>
-</blockquote>
-
-<p>Blocking regressions or things that explicitly prevent improvement in the future is definitely
-worthwhile, but perfectionists take this to the extreme of blocking non-regressive, incremental
-progress too.</p>
-
-<h3 id="the-luddite">The Luddite</h3>
-
-<p>The Luddite is unreasonably resistant to any sort of big, technological change. They believe
-that the current ways of doing things, despite their faults, are superior to any new approaches that
-come along.</p>
-
-<p>Luddism doesn’t mesh well with software engineering because software technologies, tools, and
-best practices are constantly evolving. Just because things like PHP and Java were state-of-the-art
-20 years ago doesn’t mean that they’re still the best choices for every project today. Of course,
-there are tradeoffs here- older technologies can still be very good, and there are definite
-downsides to switching things around just for the sake of using the latest and greatest tech.</p>
-
-<p>The Luddite, however, is uniformly and stubbornly insistent that new projects, even ones that
-are completely “greenfield”, make only minor adjustments on top of the company’s existing
-standards and technologies.</p>
-
-<p>Over the last few years, I’ve sometimes hit this persona when trying
-to roll out Kubernetes and other, big infrastructure improvements at a company:</p>
-
-<blockquote>
-  <p>Them: Our current orchestration system is great, we don’t need Kubernetes.</p>
-
-  <p>Me: Well, it has a lot of issues. For instance, it takes 7 days and approvals from 3 people to
-create a new service. And, the configs are spread across 6 repositories.</p>
-
-  <p>Them: We’re working on a big project to cut that down to 6 days, 2 people, and 5 repositories. It
-will be ready at the end of next year.</p>
-
-  <p>Me: Umm, maybe there’s a better way? Please hear me out.</p>
-</blockquote>
-
-<p>Often times, the resistance is rooted in personal feelings. The Luddite has invested a lot of time
-and energy in the current ways of doing things, and they feel that adopting something new will
-diminish their previous contributions. Or, they’re worried that new technology will take away
-their control and thus reduce their future influence inside the organization.</p>
-
-<h3 id="the-complainer">The complainer</h3>
-
-<p>The complainer spends an inordinate amount of time complaining about the faults in other
-people’s work in a way that blocks progress.</p>
-
-<p>Don’t get me wrong here- there’s something very cathartic about complaining, and I think we all
-enjoy doing it every now and then. However, it becomes a problem when the person complaining
-is giving feedback that’s not actionable or, if actionable, without any willingness to help make
-things better.</p>
-
-<p>A quick story- at the beginning of my career, I was a product manager on Google’s system
-for allocating compute and storage resources inside the company. Teams would get these resources
-and then build the company’s externally-facing products (e.g., search, Gmail, YouTube, etc.) on top
-of them.</p>
-
-<p>Our system, to put it mildly, was not the most popular among engineers at Google. I routinely heard
-complaints that it “sucked” or “should be deleted”. One very senior person even told me that he
-hated our system more than his recent experience of being stuck in the Atlanta
-airport with a screaming toddler for 12 hours.</p>
-
-<p>None of these people really had any ideas for how to make our system better. Instead, they just
-demoralized the team and blocked us from making progress since they would be fighting
-against us as we tried to get more resources or push through incremental improvements.</p>
-
-<p>Since moving on from my stint in Google’s resource management organization, this level of
-negativity has been pretty rare. However, I’m still sometimes blocked by complaints without much
-willingness to help.</p>
-
-<p>One example is in the context of security reviews, which many companies
-require for new product launches. At a previous job, my interactions with the security engineer
-went like this:</p>
-
-<blockquote>
-  <p>Them: Your service isn’t secure. You need to do more to ensure that only authorized users can
-make requests to your API endpoints.</p>
-
-  <p>Me: Hmm, I’m not really an expert on security. Can you help me with this or at least point me
-to an internal example that does things the “right” way?</p>
-
-  <p>Them: Oh no no, I’m way too busy to do that. You really need to figure it out yourself.</p>
-
-  <p>Me: <em>Sigh.</em></p>
-</blockquote>
-
-<p>I’ve also seen this behavior in interactions with lawyers (technically, they’re not engineers, but
-they interact with us a lot, so I’m including the example):</p>
-
-<blockquote>
-  <p>Them: Your product feature is not compliant with EU regulation 124-XZ. I can’t let you launch it
-in its current form since this would put the company at great legal risk.</p>
-
-  <p>Me: Ok, what specific things do I need to change to make the software compliant?</p>
-
-  <p>Them: Well, 124-XZ is really complicated, it’s hard to say. I’ll have to get back to you.
-<em>Silence for weeks.</em></p>
-</blockquote>
-
-<p>Complaints are fine, but if they don’t come with any offer of help (or at least specific details
-of what to fix), then they can really block progress on a project.</p>
-
-<h3 id="the-nexus">The nexus</h3>
-
-<p>The nexus wants to be at the center of all decisions, and gets upset when they’re not consulted
-about each one.</p>
-
-<p>As described in the “overanalyzer” section above, software development involves making a lot of
-decisions. Once you get beyond a small number of people, however, it’s really, really hard for any
-one person to be involved in each one. At a certain point, you just have to relax, trust
-other people to do the right thing, and realize that if someone does make a terrible decision
-without your knowledge, you can usually fix it after-the-fact.</p>
-
-<p>The nexus, on the contrary, will insist that they be included in every meeting and code review
-related to your project. By doing this, they necessarily slow down progress- nothing can be
-done until they approve, and since they’re only one person, the progress of the team is slowed
-down to the rate at which they’re able to process and critique each step of the project.</p>
-
-<p>If you go around them, the nexus may discover and get upset. Worse than that, though, they may
-overcompensate by jumping in and second-guessing all of the decisions you made without them- e.g.,
-“Why did you call this setting <code class="language-plaintext highlighter-rouge">x</code> as opposed to <code class="language-plaintext highlighter-rouge">y</code>?”- which slows you down even more than if
-you had consulted them at the beginning.</p>
-
-<p>Unfortunately, nexus behavior is often mixed with the other traits described above. In combination,
-these can be an especially big drain on engineering productivity.</p>
-
-<h2 id="coping">Coping</h2>
-
-<p>Here are some strategies for dealing with the above personas when they get in the way of your
-work.</p>
-
-<h3 id="be-direct">Be direct</h3>
-
-<p>The most direct strategy is to call out these non-optimal traits when you see them.
-If you’re in a code review, for instance, you can explicitly push back against the reviewer’s
-feedback because it’s not constructive or is requesting an unrealistic amount of perfectionism in a
-single change.</p>
-
-<p>The key here is to communicate sympathetically. You want to acknowledge the feedback and also
-explain nicely why it’s not 100% reasonable. In many cases, the person will understand
-what you’re saying and agree to back off.</p>
-
-<h3 id="evade">Evade</h3>
-
-<p>The more passive-aggressive approach is to evade the person with the unproductive trait(s) by
-avoiding contact with them. If these traits come through in code or design reviews, for instance,
-you can just request reviewers are who more likely to be helpful.</p>
-
-<p>This isn’t always doable (there may be only one person who can review your changes), but it
-avoids conflict and helps move things forward. If the person you evaded discovers a serious
-problem that their involvement would have detected, you can still apologize, beg for forgiveness,
-and ask for their help.</p>
-
-<h3 id="escalate">Escalate</h3>
-
-<p>A third option, and sometimes the only one that works, is to escalate your concerns to
-management. If someone is blocking progress and being completely unreasonable, managers have the
-power to push them aside and/or elevate someone more reasonable to unblock you.</p>
-
-<p>It may take a while to get results and it may burn some bridges, but at a well-run company
-management should be effective at removing blockers and ensuring that employees can be productive.
-If they can’t do this, then it might be time to switch teams or switch companies.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Certain traits in coworkers can really get in the way of being happy and productive as a
-software engineer.</p>
-
-<p>Many of these are actually beneficial in small doses (e.g., perfectionism), they’re just problematic
-when taken to an extreme. Also, despite our best intentions, I think we all, myself included,
-exhibit them sometimes in our interactions with colleagues.</p>
-
-<p>The important thing is to recognize when they’re reducing productivity and then make
-the necessary structural or personnel changes to unblock progress.</p>]]></content><author><name></name></author><category term="career" /><category term="non-optimal-things" /><summary type="html"><![CDATA[Software engineers are an interesting bunch. While quirks are fine, and I have a few myself, there are certain traits that show up on the personality side that can be genuinely counterproductive to my team's work. In this post, I want to explain what these are and how I try to deal with them.]]></summary></entry></feed>
+advancing can still be slow but at least there’s a clear, achievable path to follow.</p>]]></content><author><name></name></author><category term="career" /><summary type="html"><![CDATA[At many companies the "senior engineer" level is fairly straightforward to get into, but hard to get promoted beyond. The difficulty in advancing past "senior" can cause a lot of frustration and make people feel stuck in their careers. In this post, I want to share some observations about this "senior engineer plateau", why it causes frustration, and how to navigate out of it.]]></summary></entry></feed>
