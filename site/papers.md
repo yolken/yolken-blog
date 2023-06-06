@@ -11,6 +11,7 @@ order: 3
 
 #### Airplane.dev
 
+- [Caching Golang tests in CI](https://www.airplane.dev/blog/caching-golang-tests-in-ci)
 - [Migrating our infrastructure to Pulumi](https://www.airplane.dev/blog/migrating-to-pulumi)
 
 #### Segment
