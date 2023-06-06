@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2023-05-29T16:46:10-04:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Goodbye, San Francisco</title><link href="https://yolken.net/blog/goodbye-san-francisco" rel="alternate" type="text/html" title="Goodbye, San Francisco" /><published>2023-05-29T16:30:00-04:00</published><updated>2023-05-29T16:30:00-04:00</updated><id>https://yolken.net/blog/goodbye-san-francisco</id><content type="html" xml:base="https://yolken.net/blog/goodbye-san-francisco"><![CDATA[<p>After nearly 10 years of living in San Francisco, I decided to
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://yolken.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yolken.net/" rel="alternate" type="text/html" /><updated>2023-06-05T21:04:55-04:00</updated><id>https://yolken.net/feed.xml</id><title type="html">Benjamin Yolken</title><subtitle>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</subtitle><entry><title type="html">Goodbye, San Francisco</title><link href="https://yolken.net/blog/goodbye-san-francisco" rel="alternate" type="text/html" title="Goodbye, San Francisco" /><published>2023-05-29T16:30:00-04:00</published><updated>2023-05-29T16:30:00-04:00</updated><id>https://yolken.net/blog/goodbye-san-francisco</id><content type="html" xml:base="https://yolken.net/blog/goodbye-san-francisco"><![CDATA[<p>After nearly 10 years of living in San Francisco, I decided to
 leave at the end of last year. In this post, I explain what
 motivated my departure and how the city can improve in the future.</p>
 
@@ -14,13 +14,13 @@ motivated my departure and how the city can improve in the future.</p>
 <p>For the majority of my time in SF, I was pretty happy with life there.
 I had a great apartment in a great location. Although I had a car,
 I rarely used it because I could easily walk to the train, the city’s
-main shopping district (Union Square), or the offices of my various
+main shopping district (Union Square), and the offices of my various
 employers over the years.</p>
 
 <p>Starting 4-5 years ago, however, things started changing for the
 worse, and then they accelerated downwards during the pandemic. It’s hard
 to pin down exactly what happened and when, but I think the core problem
-for me was that my sense of <em>safety</em> significantly degraded.</p>
+for me was that my sense of safety significantly degraded.</p>
 
 <h3 id="physical-safety">Physical safety</h3>
 
@@ -30,7 +30,7 @@ low violent crime rate, at least by US standards, so I wasn’t worried
 about getting shot or robbed or anything like that.</p>
 
 <p>Instead, the problem was that SF had (and still has today), thousands
-of people wandering around who are suffering from untreated drug addiction
+of people wandering around who are suffering from untreated substance abuse
 and/or severe mental illness. The vast majority of these folks were completely
 harmless, but a small percentage were hostile, threatening, and, in some
 cases, violent.</p>
@@ -103,7 +103,7 @@ with crime, drugs, safety, homelessness, and other issues. But, there are a
 couple aspects of San Francisco’s situation that make its problems
 especially frustrating.</p>
 
-<p>First, the city is incredibly wealthy, and has a massive budget at its
+<p>First, the city is incredibly wealthy and has a massive budget at its
 disposal- nearly $14 billion dollars <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> for a population of only slightly more
 than 800,000 people, which, on a per-capita basis, is one of the highest
 in the country <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. Despite all this money and despite a budget has has grown
@@ -115,8 +115,8 @@ much help to the thousands of people suffering on its streets.</p>
 the police leadership, and a majority of the Board of Supervisors (the
 legislative body for SF), really just don’t seem to care one bit about
 what’s happening. Sure, they will occasionally rant in public and promise
-to fix things <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>, but after a quick surge of activity, things just go back
-to their previous state or get worse.</p>
+to fix things <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>, but after a quick surge of activity, the streets just
+go back to their previous state or get worse.</p>
 
 <h2 id="why-it-matters">Why it matters</h2>
 
@@ -165,7 +165,7 @@ to save everyone’s time.</p>
 
 <h4 id="most-of-sf-is-perfectly-nice-you-should-have-just-moved-to-a-different-neighborhood">Most of SF is perfectly nice. You should have just moved to a different neighborhood.</h4>
 
-<p>First, I wanted to live in a dense, central area and not in a single-family-house
+<p>First, I wanted to live in a dense, central area and not in a single family house
 that’s 4 miles from downtown. Second, my neighborhood was perfectly nice when
 I moved in, and then got bad. What’s to prevent that from happening to other
 places in the city as well?</p>
@@ -179,14 +179,14 @@ get taken over by drug dealing next week.</p>
 
 <p>The city (when it does anything) typically just shuffles people around, does
 a quick cleanup, and then forgets about the area for a while. The conditions have
-little to do with the buildings, and more to do with whatever the city is happening
-to allow or not allow on the sidewalks at any particular time and place.</p>
+little to do with the buildings, and more to do with whatever the city is allowing or
+not allowing on the sidewalks at any particular time and place.</p>
 
 <h4 id="the-stats-show-that-sf-is-doing-well-assaults-burglaries-substitute-some-other-metric-here-are-down">The stats show that SF is doing well. Assaults, burglaries (substitute some other metric here) are down!</h4>
 
 <p>First of all, I care more about what I see with my eyes than any
 statistics. Secondly, when the police take hours to respond to even serious crimes
-like shootings <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> or commercial burglaries <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>, the incentive to report things
+like commercial burglaries <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> or shootings <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>, the incentive to report things
 goes way down.</p>
 
 <h4 id="other-cities-in-the-us-are-just-as-bad-stop-picking-on-sf">Other cities in the US are just as bad. Stop picking on SF!</h4>
@@ -197,7 +197,7 @@ to hate on like Seattle, Baltimore, and New York, and I felt significantly safer
 in all of those places. Also, they don’t have giant, open-air drug markets in
 their city centers.</p>
 
-<p>Yes, lots of cities in the US have significant problems. But SF’s are genuine
+<p>Yes, lots of cities in the US have problems. But SF’s are genuine
 outliers in multiple dimensions.</p>
 
 <h4 id="sf-was-much-worse-in-the-90s-substitute-some-other-long-past-decade-here">SF was much worse in the 90’s (substitute some other, long-past decade here).</h4>
@@ -211,7 +211,7 @@ which most would argue is a ridiculous assertion.</p>
 <h4 id="all-youre-doing-is-complaining-without-providing-solutions">All you’re doing is complaining without providing solutions</h4>
 
 <p>With all due respect, that’s not my job. I’m not an expert on criminology or
-drug addiction or urban planning or whatever, nor am I in a position where I
+substance abuse or urban planning or whatever, nor am I in a position where I
 control policy. When I lived in SF, I voted and paid taxes with the expectation
 that the people in charge would try to figure these things out or hire smart
 people who could. And, they failed miserably.</p>
@@ -240,10 +240,10 @@ even worse.</p>
       <p><a href="https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city">https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:5" role="doc-endnote">
-      <p><a href="https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/">https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php">https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:6" role="doc-endnote">
-      <p><a href="https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php">https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/">https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>]]></content><author><name></name></author><category term="san-francisco" /><summary type="html"><![CDATA[After nearly 10 years of living in San Francisco, I decided to leave at the end of last year. In this post, I explain what motivated my departure and how the city can improve in the future.]]></summary></entry><entry><title type="html">Investing in venture capital</title><link href="https://yolken.net/blog/investing-in-venture-capital" rel="alternate" type="text/html" title="Investing in venture capital" /><published>2022-03-27T18:30:00-04:00</published><updated>2022-03-27T18:30:00-04:00</updated><id>https://yolken.net/blog/investing-in-venture-capital</id><content type="html" xml:base="https://yolken.net/blog/investing-in-venture-capital"><![CDATA[<p>I recently had the opportunity to invest in a venture capital
