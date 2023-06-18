@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Goodbye, San Francisco"
-date:   2023-05-29 15:30:00 -0500
+date:   2023-06-18 15:30:00 -0500
 tags: san-francisco
 excerpt: |
   After nearly 10 years of living in San Francisco, I decided to
@@ -98,7 +98,7 @@ world, but at least you could be reasonably confident that you wouldn't
 be hit by a car when going outside. Then, a few years ago, the city made
 a conscious decision to stop nearly all traffic enforcement [^1]. As a
 result, the behavior of some drivers got terrible, to the point of being
-dangerous. I would routinely see people running red lights, going to the
+dangerous. I would routinely see people running red lights, going the
 wrong way down one way streets, driving on roads closed to private
 vehicles, and speeding at 60+ in 25mph zones.
 
@@ -118,7 +118,7 @@ especially frustrating.
 First, the city is incredibly wealthy and has a massive budget at its
 disposal- nearly $14 billion dollars [^2] for a population of only slightly more
 than 800,000 people, which, on a per-capita basis, is one of the highest
-in the country [^3]. Despite all this money and despite a budget has has grown
+in the country [^3]. Despite all this money and despite a budget that has grown
 much faster than the city's population over the last few years, SF can't
 keep its central areas safe and clean, and doesn't seem to be providing
 much help to the thousands of people suffering on its streets.
@@ -128,7 +128,9 @@ the police leadership, and a majority of the Board of Supervisors (the
 legislative body for SF), really just don't seem to care one bit about
 what's happening. Sure, they will occasionally rant in public and promise
 to fix things [^4], but after a quick surge of activity, the streets just
-go back to their previous state or get worse.
+go back to their previous state or get worse. I got the sense that they just
+enjoyed the prestige and money of their jobs (SF officials are among the highest paid in
+the country [^5]), and were coasting until they could find something longer-term.
 
 ## Why it matters
 
@@ -169,22 +171,40 @@ what's happened to the city. Will it ever recover? Maybe with completely new
 leadership and drastic policy changes it can. But, until that happens, I'm not
 holding my breath.
 
-## Appendix: Answers to predicted commentary
+## FAQ
 
-Whenever anyone complains about SF in the news or social media, they're barraged
-with a predictable set of retorts. I'm just going to respond to them here
-to save everyone's time.
+#### Why didn't you just move to a different part of SF?
 
-#### Most of SF is perfectly nice. You should have just moved to a different neighborhood.
-
-First, I wanted to live in a dense, central area and not in a single family house
-that's 4 miles from downtown. Second, my neighborhood was perfectly nice when
+I wanted to live in a dense, central area and not in a single family house
+that's 4 miles from downtown. Also, my neighborhood was perfectly nice when
 I moved in, and then got bad. What's to prevent that from happening to other
 places in the city as well?
 
-#### I drove near (insert some place mentioned above) and it was perfectly fine. You're exaggerating or making thing up!
+#### What about homelessness? You didn't discuss it at all above despite the attention that issue has gotten.
 
-One quirky thing about SF is that there can be significant variation in street
+Yes, homelessness is a very serious problem in San Francisco. However, it wasn't
+super prevalent in my immediate neighborhood. I also felt that the safety and drug
+issues were more critical, and that homelessness was more of a symptom
+than a cause of the city's problems.
+
+#### What about property crime?
+
+Property crime in San Francisco is terrible, but it didn't affect me personally
+because I lived in a building with multiple security people on-site 24/7. I also
+kept my car in a secure garage and not on the street. If you're moving to SF or
+visiting, I would suggest you do the same.
+
+The sad thing about the city is that many people, particularly those with lower incomes,
+don't have this luxury, and it's a big financial burden when their possessions
+are stolen from their cars or homes. The city leadership, however, doesn't really
+care because burglaries and car break-ins are considered "victimless" crimes.
+
+#### I drove near (insert some place mentioned above) and it was perfectly fine. Are you exaggerating about how bad it is?
+
+No, I'm not. If anything, I'm understating how terrible things were in my neighborhood
+and others nearby.
+
+One quirky thing to note about SF is that there can be significant variation in street
 conditions by both location and time. One block could be perfectly fine, and a block
 one street over could be a disaster zone. Or, a corner could be quiet now but then
 get taken over by drug dealing next week.
@@ -198,29 +218,36 @@ not allowing on the sidewalks at any particular time and place.
 
 First of all, I care more about what I see with my eyes than any
 statistics. Secondly, when the police take hours to respond to even serious crimes
-like commercial burglaries [^5] or shootings [^6], the incentive to report things
+like commercial burglaries [^6] or shootings [^7], the incentive to report things
 goes way down.
 
-#### Other cities in the US are just as bad. Stop picking on SF!
+#### Other cities in the US are just as bad. Why are you picking on SF?
 
-This is simply false. I've spent a good amount of time over the last
-year visiting many other places in the US, including a bunch that the media love
-to hate on like Seattle, Baltimore, and New York, and I felt significantly safer
-in all of those places. Also, they don't have giant, open-air drug markets in
-their city centers.
+It's simply false that SF is "just as bad as everywhere else". I've spent a good
+amount of time over the last year visiting many other places in the US, including a
+bunch that the media love to hate on like Seattle, Baltimore, and New York, and I
+felt significantly safer in all of those places. Also, they don't have giant,
+open-air drug markets in their city centers.
 
 Yes, lots of cities in the US have problems. But SF's are genuine
 outliers in multiple dimensions.
 
-#### SF was much worse in the 90's (substitute some other, long-past decade here).
+#### SF was much worse in the 90's (substitute some other, long-past decade here). Shouldn't we be grateful about the progress made over the last few decades?
 
-Who cares? The SF of today is a very different place from the one of 30+ years ago,
-with many more resources, technologies, and policy learnings at its disposal. By
-this same logic, we shouldn't care about people dying from infectious diseases today
-because many more died from them in some past epoch (e.g., the early 20th century),
-which most would argue is a ridiculous assertion.
+I don't think that's relevant. The SF of today is a very different place from the
+one of 30+ years ago, with many more resources, technologies, and policy learnings
+at its disposal. By this same logic, we shouldn't care about people dying from
+infectious diseases today because many more died from them in some past epoch
+(e.g., the early 20th century), which most would argue is a ridiculous assertion.
 
-#### All you're doing is complaining without providing solutions
+#### Wow, this is so depressing. Is San Francisco going to become the next Detroit?
+
+It's hard to predict the future, but I think the chance of this happening is
+low. SF's geography and weather are pretty unique, and the broader metropolitan area
+is extremely prosperous and continues to grow. However, I have no idea how low it will
+go before it stabilizes and then, maybe, gets better again.
+
+#### Why are you complaining without providing solutions?
 
 With all due respect, that's not my job. I'm not an expert on criminology or
 substance abuse or urban planning or whatever, nor am I in a position where I
@@ -241,5 +268,6 @@ even worse.
 [^2]: [https://www.sfchronicle.com/projects/2022/san-francisco-budget/](https://www.sfchronicle.com/projects/2022/san-francisco-budget/)
 [^3]: [https://ballotpedia.org/Analysis_of_spending_in_America%27s_largest_cities](https://ballotpedia.org/Analysis_of_spending_in_America%27s_largest_cities)
 [^4]: [https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city](https://www.thedailybeast.com/san-francisco-mayor-london-breed-orders-police-to-tenderloin-to-fight-bullshit-that-has-destroyed-our-city)
-[^5]: [https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php](https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php)
-[^6]: [https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/](https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/)
+[^5]: [https://sfstandard.com/politics/city-hall/san-francisco-highest-paid-mayor-city-hall-employees/](https://sfstandard.com/politics/city-hall/san-francisco-highest-paid-mayor-city-hall-employees/)
+[^6]: [https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php](https://www.sfchronicle.com/sf/bayarea/heatherknight/article/san-francisco-police-crime-17755470.php)
+[^7]: [https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/](https://www.kron4.com/news/bay-area/thieves-break-into-cars-along-sfs-embarcadero-shoot-at-witness/)
