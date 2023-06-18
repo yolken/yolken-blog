@@ -129,9 +129,8 @@ legislative body for SF), really just don't seem to care one bit about
 what's happening. Sure, they will occasionally rant in public and promise
 to fix things [^4], but after a quick surge of activity, the streets just
 go back to their previous state or get worse. I got the sense that they just
-enjoyed the money (SF officials are among the highest paid in the country [^5])
-and prestige of their jobs, and were coasting until they could find something
-better.
+enjoyed the prestige and money of their jobs (SF officials are among the highest paid in
+the country [^5]), and were coasting until they could find something longer-term.
 
 ## Why it matters
 
