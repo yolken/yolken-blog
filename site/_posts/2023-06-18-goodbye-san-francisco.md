@@ -232,7 +232,7 @@ open-air drug markets in their city centers.
 Yes, lots of cities in the US have problems. But SF's are genuine
 outliers in multiple dimensions.
 
-#### SF was much worse in the 90's (substitute some other, long-past decade here). Shouldn't be be grateful about the progress made over the last few decades?
+#### SF was much worse in the 90's (substitute some other, long-past decade here). Shouldn't we be grateful about the progress made over the last few decades?
 
 I don't think that's relevant. The SF of today is a very different place from the
 one of 30+ years ago, with many more resources, technologies, and policy learnings
