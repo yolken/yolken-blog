@@ -2,14 +2,16 @@
 layout: post
 title:  "The end of Airplane.dev"
 date:   2023-06-18 15:42:00 -0500
-tags: mergers-acquisitions
+tags: mergers-acquisitions startups career
+related_posts:
+  - slug: "youre-about-to-be-acquired"
 excerpt: |
     I worked at Airplane, an internal tooling startup, for nearly two years. Earlier this year, it was announced that the company was being acquired by Airtable and that the product would be shut down. In this blog post, I want to explain what happened from my perspective as a former employee.
 ---
 
-I worked at Airplane, an internal tooling startup, for nearly two years.
-Earlier this year, it was announced that the company was being acquired by
-Airtable and that the product would be shut down. In this blog post, I want to
+I worked at [Airplane](https://airplane.dev), an internal tooling startup, for nearly two years.
+Earlier this year, [it was announced](https://news.ycombinator.com/item?id=38861271) that the company was being acquired by
+[Airtable](https://airtable.com) and that the product would be shut down. In this blog post, I want to
 explain what happened from my perspective as a former employee.
 
 ## Background
@@ -125,7 +127,7 @@ The exact details of our levels and roles were not known and would depend on the
 interviews to be done later in the week.
 
 Based on these discussions, we put the pieces together and realized that this was an
-acqui-hire. Airtable wasn’t interested in our product, our technology, or our
+[acqui-hire](https://en.wikipedia.org/wiki/Acqui-hiring). Airtable wasn’t interested in our product, our technology, or our
 customers. They wanted our CEO to lead their new AI effort, and the rest of the
 company was baggage that would be accommodated to the minimum degree required. It
 was depressing for all of us.
@@ -170,11 +172,11 @@ Several of my colleagues came to a similar conclusion and also declined.
 
 ## Winding down
 
-On January 3, the acquisition and product shutdown was publicly announced. As
+On January 3, the acquisition and product shutdown was [publicly announced](https://www.airplane.dev/blog/airtable). As
 expected, customers were shocked and upset. Many had been using Airplane for
 critical workflows within their organizations, and they now had to replace huge
 chunks of internal tooling before the final shutoff on March 1. The CEO tried to
-steer people to alternatives like windmill.dev and Retool, but neither of these is a
+steer people to alternatives like [windmill.dev](https://windmill.dev) and [Retool](https://retool.com), but neither of these is a
 drop-in replacement for Airplane. Even if users found replacement tools, it would
 take a lot of time and effort for them to do the migration.
 
