@@ -5,6 +5,7 @@ date:   2020-12-06 13:50:00 -0700
 tags: mergers-acquisitions
 related_posts:
   - slug: "youre-about-to-be-acquired"
+  - slug: "end-of-airplanedev"
 excerpt: |
     In an earlier post, I listed out signs that your employer is about to be acquired. In this
     one, I want to talk about how the tech acquisition process works from end-to-end, based on my

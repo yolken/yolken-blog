@@ -5,6 +5,7 @@ date:   2020-11-08 21:24:00 -0700
 tags: mergers-acquisitions
 related_posts:
   - slug: "how-acquisitions-work"
+  - slug: "end-of-airplanedev"
 excerpt: |
     Over the course of my tech career thus far, I've been through two acquisitions. In each case,
     I was just a normal employee without any special inside knowledge, and found out only a few days
