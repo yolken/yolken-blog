@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The end of Airplane.dev"
-date:   2023-06-18 15:42:00 -0500
+date:   2024-03-03 15:42:00 -0500
 tags: mergers-acquisitions startups career
 related_posts:
   - slug: "youre-about-to-be-acquired"
