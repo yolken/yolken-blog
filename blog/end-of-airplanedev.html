@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The end of Airplane.dev | Benjamin Yolken</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="The end of Airplane.dev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I worked at Airplane, an internal tooling startup, for nearly two years. Earlier this year, it was announced that the company was being acquired by Airtable and that the product would be shut down. In this blog post, I want to explain what happened from my perspective as a former employee." />
+<meta property="og:description" content="I worked at Airplane, an internal tooling startup, for nearly two years. Earlier this year, it was announced that the company was being acquired by Airtable and that the product would be shut down. In this blog post, I want to explain what happened from my perspective as a former employee." />
+<link rel="canonical" href="https://yolken.net/blog/end-of-airplanedev" />
+<meta property="og:url" content="https://yolken.net/blog/end-of-airplanedev" />
+<meta property="og:site_name" content="Benjamin Yolken" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-18T16:42:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The end of Airplane.dev" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-06-18T16:42:00-04:00","datePublished":"2023-06-18T16:42:00-04:00","description":"I worked at Airplane, an internal tooling startup, for nearly two years. Earlier this year, it was announced that the company was being acquired by Airtable and that the product would be shut down. In this blog post, I want to explain what happened from my perspective as a former employee.","headline":"The end of Airplane.dev","mainEntityOfPage":{"@type":"WebPage","@id":"https://yolken.net/blog/end-of-airplanedev"},"url":"https://yolken.net/blog/end-of-airplanedev"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yolken.net/feed.xml" title="Benjamin Yolken" /><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E5X8XS5KFN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-E5X8XS5KFN');
+</script>
+    
+
+
+
+
+
+  
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Benjamin Yolken</a>
+    <span class="site-subtitle">Adventures in software engineering</span><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/blog">Blog</a><a class="page-link" href="/open-source">OSS</a><a class="page-link" href="/papers">Papers</a><a class="page-link" href="/about">About</a></div>
+    </nav></div>
+</header><main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The end of Airplane.dev</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-06-18T16:42:00-04:00" itemprop="datePublished">Jun 18, 2023
+      </time><br />
+      [
+      <a href="/tags/mergers-acquisitions"><code class="highligher-rouge"><nobr>mergers-acquisitions</nobr></code></a>&nbsp;
+      
+      <a href="/tags/startups"><code class="highligher-rouge"><nobr>startups</nobr></code></a>&nbsp;
+      
+      <a href="/tags/career"><code class="highligher-rouge"><nobr>career</nobr></code></a>&nbsp;
+      ]
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I worked at <a href="https://airplane.dev">Airplane</a>, an internal tooling startup, for nearly two years.
+Earlier this year, <a href="https://news.ycombinator.com/item?id=38861271">it was announced</a> that the company was being acquired by
+<a href="https://airtable.com">Airtable</a> and that the product would be shut down. In this blog post, I want to
+explain what happened from my perspective as a former employee.</p>
+
+<h2 id="background">Background</h2>
+
+<p>I joined Airplane in March of 2022 because I was excited by the internal
+tooling space and, after some time at Twilio, wanted to work at a smaller
+company.</p>
+
+<p>For the first 16 months or so, it felt like the company was doing well. We
+were onboarding lots of new customers, we expanded the team from 12 people to
+more than 20, and there was a general sense of excitement about our prospects
+both internally and in conversations with users.</p>
+
+<p>Personally, I was also pretty happy. Although I had had some negative
+interactions with the CTO, I really liked all of my other coworkers, the
+mission of the company, and the technologies that I got to use day-to-day. I
+felt like I was learning a lot as an engineer, and I was hopeful that the
+company would continue to expand and provide growth opportunities for me in
+the future.</p>
+
+<h2 id="initial-headwinds">Initial headwinds</h2>
+
+<p>In the summer of 2023, the company hit some headwinds. First, although we were
+still adding customers, our revenue growth rate had noticeably slowed down.
+From what I understand, this was a trend across the entire SaaS tooling space
+that wasn’t unique to Airplane, but it still hurt morale and made us less
+optimistic about the company’s near-term future.</p>
+
+<p>In addition, people on the team started quitting. Up until that summer, we had
+had zero employee attrition. Then, within a three month period, we lost 4 engineers
+and the company’s head of growth. These colleagues had all been at the company
+for a while and all had legitimate reasons for resigning unrelated to the revenue
+slowdown (several, for instance, wanted to start their own companies), but the
+latter didn’t soften the blow. They were all well-respected and great at their
+jobs, so we were sad to see them go.</p>
+
+<p>To top it all off, the CEO (who was also a co-founder) announced that he was
+leaving so that he could work on some sort of personal, AI-related passion project.
+The CTO (the other co-founder) would be taking his place. His departure wasn’t a
+huge surprise- he had been very clearly burnt out and disengaged for months. But,
+it’s still never a good sign to lose the leader of your organization.</p>
+
+<p>My colleagues and I were obviously upset by these developments, but we figured
+that the new CEO knew what he was doing and would successfully navigate us through.</p>
+
+<h2 id="stabilization">Stabilization</h2>
+
+<p>By the fall of 2023, things had stabilized a bit. The employee attrition wave
+died down, and we added several new engineers and a new growth lead to the team.
+We also had some substantial product launches and signed two big, new enterprise
+customer deals. Our Q3 revenue numbers were strong, and we had new customers
+excited to sign with us in Q4.</p>
+
+<p>In early November, we did a company retreat in Napa Valley to hang out together
+in-person and hack on various new product features. The CEO was a little less
+engaged than usual, but otherwise morale was high and there were no signs that
+anything was wrong.</p>
+
+<h2 id="brewing-trouble">Brewing trouble</h2>
+
+<p>After we got back from the retreat, we got an abrupt message from the CEO in our
+team’s Slack workspace. Effective immediately, we were winding down our hiring
+pipeline. We were also rescinding two engineering offers that we had just extended.</p>
+
+<p>My colleagues and I knew that this was a bad sign. Rescinding offers is something
+that causes a lot of reputational harm and isn’t done casually. Companies generally
+only do this if they’re about to do layoffs or go through some sort of big
+transformation like an acquisition. The former didn’t make any sense, though,
+because we had lots of money in the bank (enough to last for many years at our
+current burn rate), had already slimmed the team down via voluntary attrition, and
+had an overflowing backlog of new features to work on. That left an acquisition as
+the most likely explanation.</p>
+
+<p>Several people on the team confronted the CEO, but he denied that there was an
+acquisition brewing. Instead, he made vague statements about “figuring out the
+direction of the company” and potentially doing some sort of product pivot to
+reignite growth. He claimed that any update would be good news and that he’d make
+sure we were taken care of.</p>
+
+<h2 id="the-announcement">The announcement</h2>
+
+<p>On the morning of December 4, around 3 weeks after the new hire offers were
+rescinded, the CEO scheduled an all-hands for 1PM that day. He also sent out a Slack
+message that this was a very important meeting and that we should cancel other
+things if needed to be there. We knew that we would finally be getting answers
+about what was going on.</p>
+
+<p>The CEO, who was presenting from his home in SF, started with his usual statement
+of Airplane’s mission, “We’re here because we believe that software is a force
+multiplier…”, but ended with the clause that we’d be continuing that mission as part
+of Airtable.</p>
+
+<p>He then explained that the Airplane product would be shut down, but that most of us
+would be getting “extremely strong” offers from Airtable. However, we’d have to do
+interviews for leveling purposes, and the financial details wouldn’t be made
+available to us until later. This was a great outcome for us, he said, much better
+than the alternatives he had considered, so we should be happy. The goal was to wrap
+everything up before the holidays.</p>
+
+<p>After the Zoom was turned off, our room in the NYC office was silent. While we were
+optimistic at the beginning when we heard about Airtable, the mood had clearly
+soured as we got more information. Basically, our product was being shut down, we’d
+have to interview for our new jobs, it was unclear what we’d be doing at the new
+company, and our stock was potentially worthless. It was also unclear why, exactly,
+we were doing this given that Airplane had many happy customers and tens of millions
+of dollars in the bank.</p>
+
+<p>For the remainder of the day, we met 1:1 with the CEO to talk more about our
+personal situations. For me and the other engineers, the CEO told us that he enjoyed
+working with us and hoped that we’d continue at Airtable together. Our common stock
+was worth $0, but we’d be getting extra cash bonuses from Airtable to compensate.
+The exact details of our levels and roles were not known and would depend on the
+interviews to be done later in the week.</p>
+
+<p>Based on these discussions, we put the pieces together and realized that this was an
+<a href="https://en.wikipedia.org/wiki/Acqui-hiring">acqui-hire</a>. Airtable wasn’t interested in our product, our technology, or our
+customers. They wanted our CEO to lead their new AI effort, and the rest of the
+company was baggage that would be accommodated to the minimum degree required. It
+was depressing for all of us.</p>
+
+<h2 id="figuring-out-next-steps">Figuring out next steps</h2>
+
+<p>From this point forward, all regular work stopped. We continued supporting our
+existing customers (who didn’t yet know anything was happening), but there would be
+no more feature development and all conversations with prospective customers were
+cut off.</p>
+
+<p>For the next week, we sat in the office doing interview prep and chatting with each
+other about our options.</p>
+
+<p>I was personally not very excited about Airtable. I had interviewed there and gotten
+an offer back in 2019 but had decided at the time that it wasn’t a fit for me. Since
+then, the company had expanded greatly but then contracted abruptly via two large
+layoffs. Airtable’s headcount was about half of what it had been a year before,
+which seemed kind of depressing to me.</p>
+
+<p>The interviews took place a week later and, thankfully, were fairly low stress. We
+were mostly asked about our previous experiences and projects. In my case, it was
+clear they were probing how high they would move me in the IC chain. My interviewers
+were interested in hearing about how I managed cross-company projects at the large
+companies on my resume as opposed to any of my technical work at Airplane.</p>
+
+<p>Later that week, we got our Airtable offers. They were strong but definitely not as
+out-of-this-world as the CEO had promised. In addition to a base salary and equity,
+we were each offered a $50-75k signing bonus that would have to be paid back in full
+if we quit in the first year. We were given three business days to make a decision,
+and there would be no severance if we declined.</p>
+
+<p>I said no, without much hesitation. As mentioned previously, I wasn’t excited about
+Airtable to begin with, and the whole acquisition process had left a sour taste in
+my mouth. In addition to shutting down the product and abandoning our customers,
+Airtable had never given us a product demo, detailed financial information about the
+company, or precise details on what we’d be working on aside from “AI-related
+features”. The whole process seemed like a rushed, disorganized mess, and I knew
+that there were better things out there.</p>
+
+<p>Several of my colleagues came to a similar conclusion and also declined.</p>
+
+<h2 id="winding-down">Winding down</h2>
+
+<p>On January 3, the acquisition and product shutdown was <a href="https://www.airplane.dev/blog/airtable">publicly announced</a>. As
+expected, customers were shocked and upset. Many had been using Airplane for
+critical workflows within their organizations, and they now had to replace huge
+chunks of internal tooling before the final shutoff on March 1. The CEO tried to
+steer people to alternatives like <a href="https://windmill.dev">windmill.dev</a> and <a href="https://retool.com">Retool</a>, but neither of these is a
+drop-in replacement for Airplane. Even if users found replacement tools, it would
+take a lot of time and effort for them to do the migration.</p>
+
+<p>Two days later was our last day of payroll. Our email and Slack access was shut off,
+and we were no longer Airplane employees. We were never given any termination
+paperwork to sign, and there were no formal goodbyes. The company had disintegrated
+with a sad whisper.</p>
+
+<h2 id="why">Why?</h2>
+
+<p>We were never told directly why the company was acquired under such unfavorable
+terms. Contrary to what one would logically think in these circumstances, we didn’t
+run out of money or even come close to that. In fact, we had tens of millions of
+dollars in the bank (allowing for years of runway) in addition to a great team,
+relatively happy customers, low churn, and solid revenue growth.</p>
+
+<p>When pressed in 1:1 conversations, the CEO said that he didn’t see a path to
+significantly higher revenue. He claimed we would have to do a significant product
+pivot and/or change our sales strategy to grow beyond a particular point, and that
+this transformation would be risky and hard. It was easier to quit while we were
+ahead, shut everything down, and work on something new.</p>
+
+<p>To me and others, it seemed like the CEO was tired of the startup grind and simply
+giving up. Ever since his fellow co-founder quit, he’d been running both the
+technical and go-to-market sides of the company, and it was clearly very draining.
+We felt that he wanted an easier life and a lower risk payday, and this kind of deal
+was the best way to achieve that.</p>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>Overall, I had a good experience at Airplane and up until the last month I was
+pretty happy. In looking back, the thing that upsets me the most is not the loss of
+money (I never put much value on my stock options anyways) but rather the multitude
+of customer relationships that were flushed down the drain by abandoning the
+product. Many of these customers had personally stuck their necks out within their
+organizations to drive adoption of Airplane, and had spent hundreds of hours
+migrating critical, internal workflows to our product. Now, they were being thrown
+under the bus.</p>
+
+<p>Were there any alternatives to what the CEO did? I obviously don’t know all the
+details of the offers that the CEO considered, but I feel like he could have either:
+(1) held out for an acquisition offer that involved keeping the product running, (2)
+separately sold the Airplane technology to another entity that would continue
+developing it, or (3) open-sourced the product. In the end, he unilaterally chose an
+outcome that I believe was not the best for our product or our customers, and it was
+sad that we all had to go along with it.</p>
+
+<p>Building Airplane was a great experience, and I hope to work at a small startup
+again at some point in my career. For now, though, I’m going to decompress at a
+bigger company.</p>
+
+  </div>
+
+  
+  <div class="post-related">
+    <hr />
+    <h1>🔗 Related blog posts</h1>
+    <ul class="related-post-list">
+      
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>
+              <h4 class="post-header">
+                <a class="post-link" href="/blog/youre-about-to-be-acquired">
+                  Signs you&#39;re about to be acquired
+                </a>
+              </h4>
+              
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+      
+    </ul>
+  </div>
+  
+
+  <a class="u-url" href="/blog/end-of-airplanedev" hidden></a>
+</article>
+
+
+
+    </div>
+  </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Benjamin Yolken</h2>
+        <ul class="contact-list">
+          <li class="p-name">© Benjamin Yolken</li><li><a class="u-email" href="mailto:benjamin@yolken.net">benjamin@yolken.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p>Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://www.linkedin.com/in/yolken"
+      title="yolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+      </svg></a></li><li><a href="https://twitter.com/bhyolken"
+      title="bhyolken"><svg class="svg-icon grey">
+        <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+      </svg></a></li></ul></div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
