@@ -28,9 +28,9 @@ both internally and in conversations with users.
 Personally, I was also pretty happy. Although I had had some negative
 interactions with the CTO, I really liked all of my other coworkers, the
 mission of the company, and the technologies that I got to use day-to-day. I
-felt like I was learning a lot as an engineer, and I was hopeful that the
-company would continue to expand and provide growth opportunities for me in
-the future.
+felt like I was [learning a lot as an engineer](https://www.airplane.dev/blog/category/hash-benjamin),
+and I was hopeful that the company would continue to expand and provide
+growth opportunities for me in the future.
 
 ## Initial headwinds
 
