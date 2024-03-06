@@ -202,8 +202,8 @@ ahead, shut everything down, and work on something new.
 To me and others, it seemed like the CEO was tired of the startup grind and simply
 giving up. Ever since his fellow co-founder quit, he’d been running both the
 technical and go-to-market sides of the company, and it was clearly very draining.
-We felt that he wanted an easier life and a lower risk payday, and this kind of deal
-was the best way to achieve that.
+We felt that he wanted a less stressful position with a lower risk payday, and
+this kind of deal was the best way to achieve that.
 
 ## Final thoughts
 
