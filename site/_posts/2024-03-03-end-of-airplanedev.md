@@ -49,7 +49,7 @@ latter didn’t soften the blow. They were all well-respected and great at their
 jobs, so we were sad to see them go.
 
 To top it all off, the CEO (who was also a co-founder) announced that he was
-leaving so that he could work on some sort of personal, AI-related passion project.
+leaving so that he could work on a personal, AI-related passion project.
 The CTO (the other co-founder) would be taking his place. His departure wasn’t a
 huge surprise- he had been very clearly burnt out and disengaged for months. But,
 it’s still never a good sign to lose the leader of your organization.
