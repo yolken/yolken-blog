@@ -11,10 +11,10 @@ order: 3
 
 #### Airplane.dev
 
-- [Migrating to OpenTelemetry](https://www.airplane.dev/blog/migrating-to-opentelemetry)
-- [Simple, Slack-based incident management](https://www.airplane.dev/blog/simple-slack-based-incident-management)
-- [Caching Golang tests in CI](https://www.airplane.dev/blog/caching-golang-tests-in-ci)
-- [Migrating our infrastructure to Pulumi](https://www.airplane.dev/blog/migrating-to-pulumi)
+- [Migrating to OpenTelemetry](https://web.archive.org/web/20240104061932/https://www.airplane.dev/blog/migrating-to-opentelemetry)
+- [Simple, Slack-based incident management](https://web.archive.org/web/20240308061717/https://www.airplane.dev/blog/simple-slack-based-incident-management)
+- [Caching Golang tests in CI](https://web.archive.org/web/20240308061717/https://www.airplane.dev/blog/caching-golang-tests-in-ci)
+- [Migrating our infrastructure to Pulumi](https://web.archive.org/web/20240308061718/https://www.airplane.dev/blog/migrating-to-pulumi)
 
 #### Segment
 
